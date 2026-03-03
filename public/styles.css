@@ -22,7 +22,7 @@
   --container: 1280px;
   --font-display: "Bodoni Moda", serif;
   --font-body: "Plus Jakarta Sans", sans-serif;
-  --font-section: "Syne", sans-serif;
+  --font-section: "Sora", sans-serif;
 }
 
 * {
@@ -172,10 +172,10 @@ img {
 .premium-strip {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  gap: 1rem;
+  gap: clamp(0.8rem, 1.4vw, 1.35rem);
   align-items: center;
   margin-top: 1rem;
-  padding: 0.9rem 1rem;
+  padding: 0.95rem 1.1rem;
   border-radius: 999px;
   border: 1px solid rgba(231, 184, 133, 0.25);
   background:
@@ -191,10 +191,10 @@ img {
   gap: 0.7rem;
   font-family: var(--font-section);
   white-space: nowrap;
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-weight: 800;
+  letter-spacing: 0.18em;
+  font-weight: 700;
   color: var(--accent-strong);
 }
 
@@ -206,25 +206,44 @@ img {
 
 .premium-track {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 0.55rem;
+  justify-content: flex-start;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.06rem 0.05rem 0.18rem 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+}
+
+.premium-track::-webkit-scrollbar {
+  display: none;
 }
 
 .premium-chip {
   display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-section);
-  padding: 0.48rem 0.78rem;
+  padding: 0.52rem 0.9rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--text);
-  font-size: 0.86rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .premium-dot {
+  flex: 0 0 auto;
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 50%;
@@ -1419,17 +1438,28 @@ img {
   }
 
   .hero-actions,
-  .page-actions,
-  .premium-track {
+  .page-actions {
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  .premium-chip,
   .route-card,
   .leader-link {
     width: 100%;
     justify-content: center;
+  }
+
+  .premium-track {
+    gap: 0.5rem;
+    padding-bottom: 0.12rem;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .premium-chip {
+    width: auto;
+    min-width: max-content;
+    justify-content: flex-start;
   }
 
   .cta-band {

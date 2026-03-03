@@ -282,12 +282,12 @@ export const siteContent = {
     }
   ],
   focusAreas: [
-    "Election war-room design",
-    "Voter intelligence systems",
+    "War-room design",
+    "Voter intelligence",
     "Grassroots mobilisation",
-    "Digital and WhatsApp outreach",
-    "Survey application and reporting",
-    "Narrative and reputation management"
+    "Digital + WhatsApp outreach",
+    "Survey systems",
+    "Narrative management"
   ],
   surveyOverview: {
     headline: "The survey application is the backbone of the consulting system.",
