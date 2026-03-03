@@ -416,16 +416,6 @@ function buildHomePage() {
             ${renderStatCards()}
           </div>
         </aside>
-        <aside class="page-panel reveal">
-          <p class="eyebrow">Why This Site</p>
-          <ul class="page-note-list">
-            ${renderSummaryList([
-              "Each menu item now opens a dedicated page.",
-              "The homepage stays concise and acts as a decision layer.",
-              "Deeper content now lives where it belongs."
-            ])}
-          </ul>
-        </aside>
       </div>
     </section>
   `;
