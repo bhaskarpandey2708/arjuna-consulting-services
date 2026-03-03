@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Survey quality system</title>
+  <desc id="desc">A timeline diagram for prevention before field, detection during field, and correction after field.</desc>
+  <rect width="760" height="420" rx="28" fill="#101a25"/>
+  <path d="M120 210 H640" fill="none" stroke="#5a88b6" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="170" cy="210" r="26" fill="#172838" stroke="#d9b184" stroke-width="4"/>
+  <circle cx="380" cy="210" r="26" fill="#172838" stroke="#d9b184" stroke-width="4"/>
+  <circle cx="590" cy="210" r="26" fill="#172838" stroke="#d9b184" stroke-width="4"/>
+  <g fill="#f1f5fa" font-family="Manrope, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+    <text x="170" y="215">1</text>
+    <text x="380" y="215">2</text>
+    <text x="590" y="215">3</text>
+  </g>
+  <g fill="#172838" stroke="#3d617d">
+    <rect x="80" y="82" width="180" height="82" rx="18"/>
+    <rect x="290" y="82" width="180" height="82" rx="18"/>
+    <rect x="500" y="82" width="180" height="82" rx="18"/>
+    <rect x="80" y="258" width="180" height="82" rx="18"/>
+    <rect x="290" y="258" width="180" height="82" rx="18"/>
+    <rect x="500" y="258" width="180" height="82" rx="18"/>
+  </g>
+  <g fill="#d9b184" font-family="Manrope, sans-serif" font-size="13" font-weight="800" text-anchor="middle">
+    <text x="170" y="111">Before Field</text>
+    <text x="380" y="111">During Field</text>
+    <text x="590" y="111">After Field</text>
+  </g>
+  <g fill="#f1f5fa" font-family="Manrope, sans-serif" font-size="12" text-anchor="middle">
+    <text x="170" y="134">cognitive review</text>
+    <text x="170" y="151">pilot + training</text>
+    <text x="380" y="134">live dashboards</text>
+    <text x="380" y="151">paradata + audits</text>
+    <text x="590" y="134">back-checks</text>
+    <text x="590" y="151">cleaning + weights</text>
+    <text x="170" y="286">definitions</text>
+    <text x="170" y="303">translations</text>
+    <text x="380" y="286">quota pacing</text>
+    <text x="380" y="303">anomaly flags</text>
+    <text x="590" y="286">QA report</text>
+    <text x="590" y="303">exclusion log</text>
+  </g>
+</svg>

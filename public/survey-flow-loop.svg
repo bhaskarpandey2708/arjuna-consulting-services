@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Survey flow correction loop</title>
+  <desc id="desc">A loop showing live monitoring, signal detection, revisions, retraining, and version control.</desc>
+  <rect width="760" height="420" rx="28" fill="#101a25"/>
+  <circle cx="380" cy="210" r="120" fill="none" stroke="#5a88b6" stroke-width="4"/>
+  <g fill="#172838" stroke="#d9b184">
+    <rect x="320" y="40" width="120" height="54" rx="16"/>
+    <rect x="540" y="180" width="150" height="54" rx="16"/>
+    <rect x="320" y="326" width="120" height="54" rx="16"/>
+    <rect x="70" y="180" width="150" height="54" rx="16"/>
+  </g>
+  <g fill="#f1f5fa" font-family="Manrope, sans-serif" font-size="14" font-weight="700" text-anchor="middle">
+    <text x="380" y="72">Live Signals</text>
+    <text x="615" y="212">Revise Wording</text>
+    <text x="380" y="358">Retrain + Tag</text>
+    <text x="145" y="212">Skip / Order Fix</text>
+  </g>
+  <g stroke="#d9b184" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M438 92 C530 100 560 140 575 180"/>
+    <path d="M576 234 C560 292 500 334 440 344"/>
+    <path d="M320 344 C235 328 175 288 148 234"/>
+    <path d="M145 180 C170 120 235 88 320 72"/>
+  </g>
+  <rect x="265" y="165" width="230" height="90" rx="20" fill="#172838" stroke="#3d617d"/>
+  <text x="380" y="198" text-anchor="middle" fill="#d9b184" font-family="Manrope, sans-serif" font-size="15" font-weight="800">Version Control</text>
+  <text x="380" y="221" text-anchor="middle" fill="#f1f5fa" font-family="Manrope, sans-serif" font-size="13">data tagged by instrument version</text>
+  <text x="380" y="244" text-anchor="middle" fill="#9db1c6" font-family="Manrope, sans-serif" font-size="12">clean analysis after mid-run corrections</text>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#d9b184"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Survey operations tree</title>
+  <desc id="desc">A branching diagram connecting survey backbone to sampling, instrument, field, quality, weighting, and insight.</desc>
+  <rect width="760" height="420" rx="28" fill="#101a25"/>
+  <path d="M140 210 C210 210 210 100 290 100" fill="none" stroke="#d9b184" stroke-width="4"/>
+  <path d="M140 210 C210 210 210 160 290 160" fill="none" stroke="#d9b184" stroke-width="4"/>
+  <path d="M140 210 C210 210 210 260 290 260" fill="none" stroke="#d9b184" stroke-width="4"/>
+  <path d="M140 210 C210 210 210 320 290 320" fill="none" stroke="#d9b184" stroke-width="4"/>
+  <path d="M430 100 C510 100 510 140 590 140" fill="none" stroke="#5a88b6" stroke-width="3"/>
+  <path d="M430 160 C510 160 510 200 590 200" fill="none" stroke="#5a88b6" stroke-width="3"/>
+  <path d="M430 260 C510 260 510 260 590 260" fill="none" stroke="#5a88b6" stroke-width="3"/>
+  <path d="M430 320 C510 320 510 320 590 320" fill="none" stroke="#5a88b6" stroke-width="3"/>
+  <rect x="40" y="160" width="140" height="100" rx="20" fill="#172838" stroke="#d9b184"/>
+  <text x="110" y="195" text-anchor="middle" fill="#f1f5fa" font-family="Manrope, sans-serif" font-size="18" font-weight="700">Survey</text>
+  <text x="110" y="220" text-anchor="middle" fill="#f1f5fa" font-family="Manrope, sans-serif" font-size="18" font-weight="700">Backbone</text>
+  <text x="110" y="244" text-anchor="middle" fill="#9db1c6" font-family="Manrope, sans-serif" font-size="12">Core operating layer</text>
+  <g fill="#132333" stroke="#274560">
+    <rect x="290" y="70" width="140" height="60" rx="16"/>
+    <rect x="290" y="130" width="140" height="60" rx="16"/>
+    <rect x="290" y="230" width="140" height="60" rx="16"/>
+    <rect x="290" y="290" width="140" height="60" rx="16"/>
+  </g>
+  <g fill="#f1f5fa" font-family="Manrope, sans-serif" font-size="16" font-weight="700" text-anchor="middle">
+    <text x="360" y="106">Sampling</text>
+    <text x="360" y="166">Instrument</text>
+    <text x="360" y="266">Field Ops</text>
+    <text x="360" y="326">QA + Weights</text>
+  </g>
+  <g fill="#9db1c6" font-family="Manrope, sans-serif" font-size="11" text-anchor="middle">
+    <text x="360" y="121">sample size, quotas</text>
+    <text x="360" y="181">logic, wording, flow</text>
+    <text x="360" y="281">CATI, CAPI, hybrid</text>
+    <text x="360" y="341">cleaning and correction</text>
+  </g>
+  <g fill="#172838" stroke="#3e6280">
+    <rect x="590" y="116" width="120" height="48" rx="14"/>
+    <rect x="590" y="176" width="120" height="48" rx="14"/>
+    <rect x="590" y="236" width="120" height="48" rx="14"/>
+    <rect x="590" y="296" width="120" height="48" rx="14"/>
+  </g>
+  <g fill="#f1f5fa" font-family="Manrope, sans-serif" font-size="14" font-weight="700" text-anchor="middle">
+    <text x="650" y="145">Bias Control</text>
+    <text x="650" y="205">Validation</text>
+    <text x="650" y="265">Weighting</text>
+    <text x="650" y="325">Insight</text>
+  </g>
+</svg>

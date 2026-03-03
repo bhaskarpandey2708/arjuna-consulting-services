@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Survey team loop</title>
+  <desc id="desc">A circular diagram connecting supervisor, caller, enumerator, respondent, and quality review.</desc>
+  <rect width="760" height="420" rx="28" fill="#101a25"/>
+  <circle cx="380" cy="210" r="118" fill="none" stroke="#d9b184" stroke-width="4" stroke-dasharray="8 10"/>
+  <g>
+    <circle cx="380" cy="78" r="42" fill="#172838" stroke="#3d617d"/>
+    <circle cx="380" cy="68" r="12" fill="#f1f5fa"/>
+    <path d="M360 95 C360 80 400 80 400 95" fill="none" stroke="#f1f5fa" stroke-width="6" stroke-linecap="round"/>
+    <text x="380" y="142" text-anchor="middle" fill="#d9b184" font-family="Manrope, sans-serif" font-size="14" font-weight="700">Supervisor</text>
+  </g>
+  <g>
+    <circle cx="585" cy="160" r="42" fill="#172838" stroke="#3d617d"/>
+    <path d="M566 150 h18 v12 h-18 z" fill="#f1f5fa"/>
+    <path d="M588 146 h12 v20 h-12 z" fill="#f1f5fa"/>
+    <text x="585" y="224" text-anchor="middle" fill="#d9b184" font-family="Manrope, sans-serif" font-size="14" font-weight="700">CATI Agent</text>
+  </g>
+  <g>
+    <circle cx="540" cy="315" r="42" fill="#172838" stroke="#3d617d"/>
+    <rect x="526" y="294" width="28" height="36" rx="4" fill="#f1f5fa"/>
+    <rect x="532" y="300" width="16" height="4" fill="#172838"/>
+    <text x="540" y="379" text-anchor="middle" fill="#d9b184" font-family="Manrope, sans-serif" font-size="14" font-weight="700">Enumerator</text>
+  </g>
+  <g>
+    <circle cx="220" cy="315" r="42" fill="#172838" stroke="#3d617d"/>
+    <circle cx="220" cy="303" r="10" fill="#f1f5fa"/>
+    <path d="M202 331 C202 316 238 316 238 331" fill="none" stroke="#f1f5fa" stroke-width="6" stroke-linecap="round"/>
+    <text x="220" y="379" text-anchor="middle" fill="#d9b184" font-family="Manrope, sans-serif" font-size="14" font-weight="700">Respondent</text>
+  </g>
+  <g>
+    <circle cx="175" cy="160" r="42" fill="#172838" stroke="#3d617d"/>
+    <path d="M160 145 h30 v22 h-30 z" fill="#f1f5fa"/>
+    <path d="M165 151 h20" stroke="#172838" stroke-width="3"/>
+    <path d="M165 158 h20" stroke="#172838" stroke-width="3"/>
+    <text x="175" y="224" text-anchor="middle" fill="#d9b184" font-family="Manrope, sans-serif" font-size="14" font-weight="700">QA Review</text>
+  </g>
+  <path d="M420 88 L550 145" fill="none" stroke="#5a88b6" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M592 201 L555 278" fill="none" stroke="#5a88b6" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M500 333 L262 333" fill="none" stroke="#5a88b6" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M185 277 L175 204" fill="none" stroke="#5a88b6" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M209 136 L340 88" fill="none" stroke="#5a88b6" stroke-width="3" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#5a88b6"/>
+    </marker>
+  </defs>
+</svg>

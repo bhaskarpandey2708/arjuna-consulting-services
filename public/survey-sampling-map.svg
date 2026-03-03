@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Survey sampling map</title>
+  <desc id="desc">A flow diagram for sampling, error control, weighting, and reporting.</desc>
+  <rect width="760" height="420" rx="28" fill="#101a25"/>
+  <g fill="#172838" stroke="#3d617d">
+    <rect x="50" y="64" width="160" height="70" rx="18"/>
+    <rect x="300" y="64" width="160" height="70" rx="18"/>
+    <rect x="550" y="64" width="160" height="70" rx="18"/>
+    <rect x="50" y="186" width="160" height="70" rx="18"/>
+    <rect x="300" y="186" width="160" height="70" rx="18"/>
+    <rect x="550" y="186" width="160" height="70" rx="18"/>
+    <rect x="175" y="308" width="160" height="70" rx="18"/>
+    <rect x="425" y="308" width="160" height="70" rx="18"/>
+  </g>
+  <g fill="#f1f5fa" font-family="Manrope, sans-serif" font-size="14" font-weight="700" text-anchor="middle">
+    <text x="130" y="96">Sampling Frame</text>
+    <text x="130" y="116">random / stratified</text>
+    <text x="380" y="96">Sample Size</text>
+    <text x="380" y="116">confidence + MoE</text>
+    <text x="630" y="96">Field Collection</text>
+    <text x="630" y="116">CATI / CAPI / hybrid</text>
+    <text x="130" y="218">Non-response</text>
+    <text x="130" y="238">adjustments</text>
+    <text x="380" y="218">Weights</text>
+    <text x="380" y="238">raking + trimming</text>
+    <text x="630" y="218">Testing</text>
+    <text x="630" y="238">significance + trend</text>
+    <text x="255" y="340">Model-Assisted</text>
+    <text x="255" y="360">small-area estimation</text>
+    <text x="505" y="340">Decision Reporting</text>
+    <text x="505" y="360">insight with bounds</text>
+  </g>
+  <g stroke="#d9b184" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M210 99 H300"/>
+    <path d="M460 99 H550"/>
+    <path d="M130 134 V186"/>
+    <path d="M380 134 V186"/>
+    <path d="M630 134 V186"/>
+    <path d="M210 221 H300"/>
+    <path d="M460 221 H550"/>
+    <path d="M380 256 V308"/>
+    <path d="M550 343 H425"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#d9b184"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Survey bias matrix</title>
+  <desc id="desc">A matrix linking bias sources to operational controls.</desc>
+  <rect width="760" height="420" rx="28" fill="#101a25"/>
+  <rect x="70" y="70" width="250" height="280" rx="22" fill="#172838" stroke="#3d617d"/>
+  <rect x="440" y="70" width="250" height="280" rx="22" fill="#172838" stroke="#3d617d"/>
+  <text x="195" y="108" text-anchor="middle" fill="#d9b184" font-family="Manrope, sans-serif" font-size="15" font-weight="800">Bias Sources</text>
+  <text x="565" y="108" text-anchor="middle" fill="#d9b184" font-family="Manrope, sans-serif" font-size="15" font-weight="800">Control Mechanisms</text>
+  <g fill="#f1f5fa" font-family="Manrope, sans-serif" font-size="13">
+    <text x="104" y="146">Interviewer / agent</text>
+    <text x="104" y="181">Questionnaire design</text>
+    <text x="104" y="216">Routing / skipping</text>
+    <text x="104" y="251">Coverage / non-response</text>
+    <text x="104" y="286">Recall / desirability</text>
+    <text x="104" y="321">Translation / processing</text>
+    <text x="474" y="146">Scripts + monitoring</text>
+    <text x="474" y="181">Neutral wording + testing</text>
+    <text x="474" y="216">Tool-enforced validations</text>
+    <text x="474" y="251">Mixed mode + weighting</text>
+    <text x="474" y="286">Sequence + privacy controls</text>
+    <text x="474" y="321">Back-translation + audit logs</text>
+  </g>
+  <g stroke="#5a88b6" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M320 142 H440"/>
+    <path d="M320 177 H440"/>
+    <path d="M320 212 H440"/>
+    <path d="M320 247 H440"/>
+    <path d="M320 282 H440"/>
+    <path d="M320 317 H440"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#5a88b6"/>
+    </marker>
+  </defs>
+</svg>
