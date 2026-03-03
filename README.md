@@ -1,8 +1,8 @@
 # Arjuna Strategy Consulting
 
-Standalone Node.js website for Arjuna Strategy Consulting with:
+Standalone Express.js website for Arjuna Strategy Consulting with:
 
-- a no-dependency HTTP server
+- an Express.js application server
 - a responsive single-page marketing site
 - a working `POST /api/contact` endpoint
 - local persistence for consultation requests in `data/inquiries.json`
@@ -24,7 +24,7 @@ PORT=4000 npm start
 
 ## Project structure
 
-- `server.js`: HTTP server, routes, API handling, static asset delivery
+- `server.js`: Express server, routes, API handling, static asset delivery
 - `src/site-content.js`: structured content and profile data
 - `src/template.js`: HTML rendering
 - `public/styles.css`: layout and visual system

@@ -1,4 +1,4 @@
-import http from "node:http";
+import express from "express";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
@@ -11,34 +11,24 @@ const publicDir = path.join(__dirname, "public");
 const dataDir = path.join(__dirname, "data");
 const inquiriesFile = path.join(dataDir, "inquiries.json");
 const port = Number.parseInt(process.env.PORT ?? "3000", 10);
-const host = process.env.HOST ?? "127.0.0.1";
+const host = process.env.HOST ?? "0.0.0.0";
 const maxRequestSize = 1024 * 1024;
-const pageRoutes = new Set(["/", "/capabilities", "/surveys", "/track-record", "/leadership", "/contact"]);
+const pageRoutes = ["/", "/capabilities", "/surveys", "/track-record", "/leadership", "/contact"];
 
-const mimeTypes = {
-  ".css": "text/css; charset=utf-8",
-  ".ico": "image/x-icon",
-  ".js": "application/javascript; charset=utf-8",
-  ".json": "application/json; charset=utf-8",
-  ".png": "image/png",
-  ".svg": "image/svg+xml",
-  ".txt": "text/plain; charset=utf-8",
-  ".webp": "image/webp"
-};
+const app = express();
 
-function send(res, statusCode, body, headers = {}) {
-  res.writeHead(statusCode, {
-    "Cache-Control": "no-store",
-    "Content-Type": "text/plain; charset=utf-8",
-    ...headers
-  });
-  res.end(body);
-}
+app.disable("x-powered-by");
 
-function sendJson(res, statusCode, payload) {
-  send(res, statusCode, JSON.stringify(payload), {
-    "Content-Type": "application/json; charset=utf-8"
-  });
+function normalizeRoute(pathname) {
+  if (!pathname || pathname === "/index.html") {
+    return "/";
+  }
+
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    return pathname.slice(0, -1);
+  }
+
+  return pathname;
 }
 
 async function ensureInquiryStore() {
@@ -115,160 +105,104 @@ function validateContact(payload) {
   };
 }
 
-function parseJsonBody(req) {
-  return new Promise((resolve, reject) => {
-    let body = "";
-    let received = 0;
+app.use((req, res, next) => {
+  res.set("Cache-Control", "no-store");
+  next();
+});
 
-    req.on("data", (chunk) => {
-      received += chunk.length;
+app.use(express.json({ limit: maxRequestSize }));
 
-      if (received > maxRequestSize) {
-        reject(new Error("Request body too large."));
-        req.destroy();
-        return;
-      }
+app.use((req, res, next) => {
+  const routePath = normalizeRoute(req.path);
 
-      body += chunk.toString("utf8");
-    });
+  if (routePath !== req.path) {
+    const query = req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : "";
+    res.redirect(308, `${routePath}${query}`);
+    return;
+  }
 
-    req.on("end", () => {
-      if (!body.trim()) {
-        resolve({});
-        return;
-      }
+  next();
+});
 
-      try {
-        resolve(JSON.parse(body));
-      } catch {
-        reject(new Error("Invalid JSON payload."));
-      }
-    });
+app.use(express.static(publicDir, {
+  setHeaders(res) {
+    res.set("Cache-Control", "no-store");
+  }
+}));
 
-    req.on("error", reject);
+app.get(pageRoutes, (req, res) => {
+  res.type("html").send(renderPage(normalizeRoute(req.path)));
+});
+
+app.get("/api/health", (req, res) => {
+  res.json({
+    ok: true,
+    service: "arjuna-strategy-consulting",
+    timestamp: new Date().toISOString()
   });
-}
+});
 
-async function serveStaticAsset(res, pathname) {
-  const relativePath = pathname.replace(/^\/+/, "");
-
-  if (!relativePath) {
-    return false;
-  }
-
-  const safePath = path.normalize(relativePath);
-  const filePath = path.join(publicDir, safePath);
-
-  if (!filePath.startsWith(publicDir)) {
-    return false;
-  }
-
+app.post("/api/contact", async (req, res, next) => {
   try {
-    const fileStats = await stat(filePath);
+    const { errors, value } = validateContact(req.body ?? {});
 
-    if (!fileStats.isFile()) {
-      return false;
-    }
-
-    const extension = path.extname(filePath).toLowerCase();
-    const data = await readFile(filePath);
-
-    res.writeHead(200, {
-      "Cache-Control": "no-store",
-      "Content-Type": mimeTypes[extension] ?? "application/octet-stream"
-    });
-    res.end(data);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-function normalizeRoute(pathname) {
-  if (!pathname || pathname === "/index.html") {
-    return "/";
-  }
-
-  if (pathname.length > 1 && pathname.endsWith("/")) {
-    return pathname.slice(0, -1);
-  }
-
-  return pathname;
-}
-
-const server = http.createServer(async (req, res) => {
-  const requestUrl = new URL(req.url ?? "/", `http://${req.headers.host ?? "localhost"}`);
-  const { pathname } = requestUrl;
-  const routePath = normalizeRoute(pathname);
-
-  if (req.method === "GET" && pageRoutes.has(routePath)) {
-    send(res, 200, renderPage(routePath), {
-      "Content-Type": "text/html; charset=utf-8"
-    });
-    return;
-  }
-
-  if (req.method === "GET" && pathname === "/api/health") {
-    sendJson(res, 200, {
-      ok: true,
-      service: "arjuna-strategy-consulting",
-      timestamp: new Date().toISOString()
-    });
-    return;
-  }
-
-  if (req.method === "POST" && pathname === "/api/contact") {
-    try {
-      const payload = await parseJsonBody(req);
-      const { errors, value } = validateContact(payload);
-
-      if (errors.length > 0) {
-        sendJson(res, 400, {
-          ok: false,
-          errors
-        });
-        return;
-      }
-
-      const entry = {
-        id: `inq_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`,
-        ...value,
-        createdAt: new Date().toISOString()
-      };
-
-      await persistInquiry(entry);
-
-      sendJson(res, 201, {
-        ok: true,
-        message: "Consultation request received. We will get back to you shortly.",
-        inquiryId: entry.id
-      });
-    } catch (error) {
-      const statusCode = error?.message === "Invalid JSON payload." ? 400 : 413;
-
-      sendJson(res, statusCode, {
+    if (errors.length > 0) {
+      res.status(400).json({
         ok: false,
-        errors: [error?.message ?? "Unable to process the request."]
+        errors
       });
-    }
-
-    return;
-  }
-
-  if (req.method === "GET") {
-    const served = await serveStaticAsset(res, pathname);
-
-    if (served) {
       return;
     }
-  }
 
-  sendJson(res, 404, {
+    const entry = {
+      id: `inq_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`,
+      ...value,
+      createdAt: new Date().toISOString()
+    };
+
+    await persistInquiry(entry);
+
+    res.status(201).json({
+      ok: true,
+      message: "Consultation request received. We will get back to you shortly.",
+      inquiryId: entry.id
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.use((req, res) => {
+  res.status(404).json({
     ok: false,
     message: "Not found"
   });
 });
 
-server.listen(port, host, () => {
-  console.log(`Arjuna Strategy Consulting site is running on http://${host}:${port}`);
+app.use((error, req, res, next) => {
+  if (error?.type === "entity.too.large") {
+    res.status(413).json({
+      ok: false,
+      errors: ["Request body too large."]
+    });
+    return;
+  }
+
+  if (error instanceof SyntaxError && "body" in error) {
+    res.status(400).json({
+      ok: false,
+      errors: ["Invalid JSON payload."]
+    });
+    return;
+  }
+
+  res.status(500).json({
+    ok: false,
+    errors: ["Unable to process the request."]
+  });
+});
+
+app.listen(port, host, () => {
+  const displayHost = host === "0.0.0.0" ? "127.0.0.1" : host;
+  console.log(`Arjuna Strategy Consulting site is running on http://${displayHost}:${port}`);
 });

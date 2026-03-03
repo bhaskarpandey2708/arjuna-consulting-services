@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "main": "server.js",
   "description": "Standalone Node.js website for Arjuna Strategy Consulting.",
   "scripts": {
+    "dev": "node server.js",
     "start": "node server.js"
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.22.1"
   }
 }
