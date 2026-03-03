@@ -586,9 +586,66 @@ img {
   border-color: rgba(17, 32, 47, 0.08);
 }
 
+.section-soft .page-panel,
+.section-soft .route-card,
+.section-soft .cta-band,
+.section-soft .contact-side-panel,
+.section-soft .ops-card,
+.section-soft .diagram-panel,
+.section-soft .bias-card,
+.section-soft .contact-direct {
+  background: rgba(255, 255, 255, 0.62);
+  border-color: rgba(17, 32, 47, 0.08);
+  color: var(--text-dark);
+}
+
 .section-soft .info-card h3,
 .section-soft .track-card h3,
 .section-soft .phase-card h3 {
+  color: var(--text-dark);
+}
+
+.section-soft .page-panel-title,
+.section-soft .route-card-title,
+.section-soft .ops-head h3,
+.section-soft .bias-card h3,
+.section-soft .contact-direct-grid a,
+.section-soft .route-card-link {
+  color: var(--text-dark);
+}
+
+.section-soft .page-note-list li,
+.section-soft .summary-list li,
+.section-soft .route-card-text,
+.section-soft .track-detail,
+.section-soft .ops-list,
+.section-soft .bias-issue,
+.section-soft .bias-control,
+.section-soft .contact-side-panel p,
+.section-soft .cta-band p:last-of-type {
+  color: var(--text-soft-dark);
+}
+
+.section-soft .page-note-list li,
+.section-soft .summary-list li,
+.section-soft .pill-list li {
+  background: rgba(17, 32, 47, 0.035);
+  border-color: rgba(17, 32, 47, 0.08);
+}
+
+.section-soft .pill-list li {
+  color: var(--text-dark);
+}
+
+.section-soft .diagram-caption,
+.section-soft .ops-tag,
+.section-soft .ops-label,
+.section-soft .route-card-link {
+  color: var(--accent-dark);
+}
+
+.section-soft .bias-issue strong,
+.section-soft .bias-control strong {
   color: var(--text-dark);
 }
 
