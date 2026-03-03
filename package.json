@@ -6,6 +6,7 @@
   "main": "server.js",
   "description": "Standalone Node.js website for Arjuna Strategy Consulting.",
   "scripts": {
+    "build": "node -e \"console.log('No build step required')\"",
     "dev": "node server.js",
     "start": "node server.js"
   },

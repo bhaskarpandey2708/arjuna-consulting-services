@@ -10,8 +10,9 @@ const __dirname = path.dirname(__filename);
 const publicDir = path.join(__dirname, "public");
 const dataDir = path.join(__dirname, "data");
 const inquiriesFile = path.join(dataDir, "inquiries.json");
-const port = Number.parseInt(process.env.PORT ?? "3000", 10);
-const host = process.env.HOST ?? "0.0.0.0";
+const parsedPort = Number.parseInt(process.env.PORT ?? "", 10);
+const port = Number.isFinite(parsedPort) ? parsedPort : 3000;
+const host = "0.0.0.0";
 const maxRequestSize = 1024 * 1024;
 const pageRoutes = ["/", "/capabilities", "/surveys", "/track-record", "/leadership", "/contact"];
 
