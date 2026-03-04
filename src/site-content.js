@@ -273,12 +273,12 @@ export const siteContent = {
   ],
   leaders: [
     {
-      name: "Bhaskar Pandey",
-      linkedin: "https://www.linkedin.com/in/bhaskar-pandey-a9b23018b/"
-    },
-    {
       name: "Rana Arjun",
       linkedin: "https://www.linkedin.com/in/rana-arjun/"
+    },
+    {
+      name: "Bhaskar Pandey",
+      linkedin: "https://www.linkedin.com/in/bhaskar-pandey-a9b23018b/"
     }
   ],
   focusAreas: [
