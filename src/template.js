@@ -40,6 +40,51 @@ function renderNav(currentPath) {
     .join("");
 }
 
+function renderBrandLogo() {
+  return `
+    <svg
+      class="brand-logo"
+      viewBox="0 0 256 256"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle cx="128" cy="128" r="122" fill="#111216" />
+      <path
+        d="M34 176 C78 183 55 102 108 74 C141 57 169 75 183 107"
+        fill="none"
+        stroke="#efe5d6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="18"
+      />
+      <path
+        d="M103 150 C129 146 157 144 192 145"
+        fill="none"
+        stroke="#efe5d6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="15"
+      />
+      <path
+        d="M152 84 L224 151"
+        fill="none"
+        stroke="#efe5d6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="15"
+      />
+      <path
+        d="M199 132 L224 151 L198 161"
+        fill="none"
+        stroke="#efe5d6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="12"
+      />
+    </svg>
+  `;
+}
+
 function renderPremiumBar() {
   return siteContent.focusAreas
     .map(
@@ -359,7 +404,7 @@ function renderLayout(currentPath, page) {
     <div class="site-shell">
       <header class="site-header">
         <a class="brand-mark" href="/">
-          <img class="brand-logo" src="/logo-arjuna.svg" alt="Arjuna Strategy Consulting logo" />
+          ${renderBrandLogo()}
           <span class="brand-text">${escapeHtml(siteContent.brand.name)}</span>
         </a>
         <nav class="site-nav" aria-label="Primary">
