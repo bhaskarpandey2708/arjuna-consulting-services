@@ -53,7 +53,7 @@ if (form instanceof HTMLFormElement) {
       submitButton.textContent = "Submitting...";
     }
 
-    setStatus("Sending your request...");
+    setStatus("Sending your brief...");
 
     try {
       const response = await fetch("/api/contact", {
@@ -78,7 +78,7 @@ if (form instanceof HTMLFormElement) {
     } finally {
       if (submitButton instanceof HTMLButtonElement) {
         submitButton.disabled = false;
-        submitButton.textContent = "Submit Consultation Request";
+        submitButton.textContent = "Send Campaign Brief";
       }
     }
   });

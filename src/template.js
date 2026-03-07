@@ -2,11 +2,9 @@ import { siteContent } from "./site-content.js";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/capabilities", label: "Capabilities" },
+  { href: "/capabilities", label: "Work" },
   { href: "/surveys", label: "Surveys" },
-  { href: "/track-record", label: "Track Record" },
-  { href: "/leadership", label: "Leadership" },
-  { href: "/contact", label: "Contact" }
+  { href: "/leadership", label: "Connect" }
 ];
 
 function escapeHtml(value) {
@@ -229,11 +227,11 @@ function renderOperatingModel() {
     .join("");
 }
 
-function renderLeaderProfiles() {
+function renderLeaderProfiles(className = "leader-card") {
   return siteContent.leaders
     .map(
       (leader) => `
-        <article class="leader-card reveal">
+        <article class="${className} reveal">
           <p class="eyebrow">Founding Team</p>
           <h3>${escapeHtml(leader.name)}</h3>
           <a
@@ -252,7 +250,32 @@ function renderLeaderProfiles() {
 
 function renderOrigins() {
   return siteContent.teamOrigins
-    .map((origin) => `<span class="origin-pill">${escapeHtml(origin)}</span>`)
+    .map((origin) => {
+      const label = typeof origin === "string" ? origin : origin.label;
+      const url = typeof origin === "string" ? "" : origin.url ?? "";
+
+      if (url) {
+        return `
+          <a class="origin-pill origin-pill-link" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">
+            ${escapeHtml(label)}
+          </a>
+        `;
+      }
+
+      return `<span class="origin-pill">${escapeHtml(label)}</span>`;
+    })
+    .join("");
+}
+
+function renderReferenceLinks() {
+  return siteContent.references
+    .map(
+      (reference) => `
+        <a href="${escapeHtml(reference.url)}" target="_blank" rel="noreferrer">
+          ${escapeHtml(reference.name)}
+        </a>
+      `
+    )
     .join("");
 }
 
@@ -260,32 +283,112 @@ function renderPillList(items) {
   return items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
 }
 
+function renderProofHighlights() {
+  return siteContent.proofHighlights
+    .map(
+      (item) => `
+        <article class="signal-card reveal">
+          <p class="signal-value">${escapeHtml(item.value)}</p>
+          <p class="signal-label">${escapeHtml(item.label)}</p>
+          <p class="signal-text">${escapeHtml(item.text)}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderAnswerCards(items) {
+  return items
+    .map(
+      (item) => `
+        <article class="answer-card reveal">
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.text)}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderCapabilityProofs() {
+  return siteContent.capabilityProofs
+    .map(
+      (item) => `
+        <article class="proof-note-card reveal">
+          <p class="eyebrow">Capability In Action</p>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p class="proof-note-strong">${escapeHtml(item.proof)}</p>
+          <p>${escapeHtml(item.detail)}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderFaqCards(items) {
+  return items
+    .map(
+      (item) => `
+        <article class="faq-card reveal">
+          <h3>${escapeHtml(item.question)}</h3>
+          <p>${escapeHtml(item.answer)}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderFaqSection({ eyebrow = "FAQs", title, intro, items = [], sectionClass = "section section-soft" }) {
+  if (!items.length) {
+    return "";
+  }
+
+  return `
+    <section class="${sectionClass}">
+      <div class="page-split">
+        <div class="section-heading reveal">
+          <p class="eyebrow">${escapeHtml(eyebrow)}</p>
+          <h2>${escapeHtml(title)}</h2>
+          <p>${escapeHtml(intro)}</p>
+        </div>
+        <div class="faq-grid">
+          ${renderFaqCards(items)}
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function renderEngagementSteps() {
+  return siteContent.engagementSteps
+    .map(
+      (item) => `
+        <article class="engagement-card reveal">
+          <span class="engagement-step">${escapeHtml(item.phase)}</span>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.text)}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
 function renderRouteCards() {
   const routes = [
     {
       href: "/capabilities",
-      title: "Capabilities",
-      text: "See the full consulting stack across strategy, data, field operations, and delivery."
+      title: "Work",
+      text: "See the political consulting stack together with the wins, scale programs, and operating proof behind it."
     },
     {
       href: "/surveys",
       title: "Surveys",
-      text: "Review the survey application, methodology, sample design, and reporting backbone."
-    },
-    {
-      href: "/track-record",
-      title: "Track Record",
-      text: "Review constituency-level wins, scale programs, and execution outcomes."
+      text: "Review the political survey research application, methodology, sample design, and reporting backbone."
     },
     {
       href: "/leadership",
-      title: "Leadership",
-      text: "Connect directly with the founding team through dedicated profile links."
-    },
-    {
-      href: "/contact",
-      title: "Contact",
-      text: "Send a campaign brief and start a focused strategy conversation."
+      title: "Connect",
+      text: "Meet the founders, review the operating context, and send a campaign brief in one place."
     }
   ];
 
@@ -309,6 +412,10 @@ function renderSummaryList(items) {
 function renderContactForm() {
   return `
     <form class="contact-form reveal" id="contact-form" novalidate>
+      <label class="honeypot-field" aria-hidden="true">
+        Website
+        <input type="text" name="website" tabindex="-1" autocomplete="off" />
+      </label>
       <label>
         Name
         <input type="text" name="name" placeholder="Full name" required />
@@ -350,7 +457,7 @@ function renderContactForm() {
           required
         ></textarea>
       </label>
-      <button class="button button-primary" type="submit">Submit Consultation Request</button>
+      <button class="button button-primary" type="submit">Send Campaign Brief</button>
       <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
     </form>
   `;
@@ -371,33 +478,290 @@ function renderContactDetails() {
   `;
 }
 
-function renderLayout(currentPath, page) {
-  const canonicalPath = currentPath === "/" ? "" : currentPath;
+function createPersonId(baseUrl, name) {
+  return `${baseUrl}#person-${String(name)
+    .toLowerCase()
+    .replaceAll(/[^a-z0-9]+/g, "-")
+    .replaceAll(/^-|-$/g, "")}`;
+}
+
+function buildAbsoluteUrl(baseUrl, pathname = "") {
+  const normalizedBase = String(baseUrl || "http://127.0.0.1:3000").replace(/\/+$/, "");
+
+  if (!pathname || pathname === "/") {
+    return normalizedBase;
+  }
+
+  return `${normalizedBase}${pathname.startsWith("/") ? pathname : `/${pathname}`}`;
+}
+
+function getCanonicalPath(pathname) {
+  return pathname === "/" ? "" : pathname;
+}
+
+function getPageLabel(pathname) {
+  return navItems.find((item) => item.href === pathname)?.label ?? "Home";
+}
+
+function buildBreadcrumbSchema(currentPath, baseUrl) {
+  const items = [{ name: "Home", url: buildAbsoluteUrl(baseUrl, "/") }];
+
+  if (currentPath !== "/") {
+    items.push({
+      name: getPageLabel(currentPath),
+      url: buildAbsoluteUrl(baseUrl, currentPath)
+    });
+  }
+
+  return {
+    "@type": "BreadcrumbList",
+    "@id": `${buildAbsoluteUrl(baseUrl, currentPath || "/")}#breadcrumb`,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url
+    }))
+  };
+}
+
+function buildPersonSchemas(baseUrl) {
+  return siteContent.leaders.map((leader) => ({
+    "@type": "Person",
+    "@id": createPersonId(baseUrl, leader.name),
+    name: leader.name,
+    url: buildAbsoluteUrl(baseUrl, "/leadership"),
+    sameAs: [leader.linkedin],
+    worksFor: { "@id": `${baseUrl}#organization` }
+  }));
+}
+
+function buildProfessionalServiceSchema(baseUrl, ogImageUrl) {
+  const { phones, email } = siteContent.contact.details;
+
+  return {
+    "@type": "ProfessionalService",
+    "@id": `${baseUrl}#organization`,
+    name: siteContent.brand.name,
+    url: baseUrl,
+    description: siteContent.meta.description,
+    image: ogImageUrl,
+    logo: buildAbsoluteUrl(baseUrl, "/logo-arjuna.svg"),
+    areaServed: {
+      "@type": "Country",
+      name: siteContent.seo.serviceArea
+    },
+    serviceArea: {
+      "@type": "Country",
+      name: siteContent.seo.serviceArea
+    },
+    telephone: [
+      `+91${phones[0].replaceAll(/\s+/g, "")}`,
+      `+91${phones[1].replaceAll(/\s+/g, "")}`
+    ],
+    email,
+    knowsAbout: siteContent.seo.serviceCatalog,
+    audience: siteContent.seo.audiences.map((name) => ({
+      "@type": "Audience",
+      audienceType: name
+    })),
+    founder: siteContent.leaders.map((leader) => ({
+      "@id": createPersonId(baseUrl, leader.name)
+    })),
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        areaServed: siteContent.seo.serviceArea,
+        email
+      },
+      ...phones.map((phone) => ({
+        "@type": "ContactPoint",
+        contactType: "sales",
+        areaServed: siteContent.seo.serviceArea,
+        telephone: `+91${phone.replaceAll(/\s+/g, "")}`
+      }))
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Political consulting services",
+      itemListElement: siteContent.seo.serviceCatalog.map((name) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name
+        }
+      }))
+    }
+  };
+}
+
+function buildServiceSchema(currentPath, canonicalUrl, baseUrl) {
+  if (currentPath === "/capabilities") {
+    return {
+      "@type": "Service",
+      "@id": `${canonicalUrl}#service`,
+      name: "Political consulting and campaign strategy in India",
+      serviceType: [
+        "Political consulting",
+        "Campaign strategy",
+        "Field operations",
+        "Digital outreach",
+        "War-room systems"
+      ],
+      provider: { "@id": `${baseUrl}#organization` },
+      areaServed: {
+        "@type": "Country",
+        name: siteContent.seo.serviceArea
+      },
+      url: canonicalUrl,
+      description:
+        "Political consulting services covering campaign strategy, voter intelligence, field operations, digital outreach, and reporting systems for Indian election campaigns."
+    };
+  }
+
+  if (currentPath === "/surveys") {
+    return {
+      "@type": "Service",
+      "@id": `${canonicalUrl}#service`,
+      name: "Political survey research and voter intelligence in India",
+      serviceType: [
+        "Political survey research",
+        "CATI surveys",
+        "CAPI surveys",
+        "Sampling and weighting",
+        "Voter intelligence"
+      ],
+      provider: { "@id": `${baseUrl}#organization` },
+      areaServed: {
+        "@type": "Country",
+        name: siteContent.seo.serviceArea
+      },
+      url: canonicalUrl,
+      description:
+        "Political survey research, voter intelligence, CATI, CAPI, sample design, QA, weighting, and reporting for campaign decisions in India."
+    };
+  }
+
+  return null;
+}
+
+function buildFaqSchema(canonicalUrl, faqs = []) {
+  if (!faqs.length) {
+    return null;
+  }
+
+  return {
+    "@type": "FAQPage",
+    "@id": `${canonicalUrl}#faq`,
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  };
+}
+
+function buildStructuredData(currentPath, page, context) {
+  const baseUrl = context.baseUrl;
+  const canonicalUrl = buildAbsoluteUrl(baseUrl, getCanonicalPath(currentPath));
+  const ogImageUrl = buildAbsoluteUrl(baseUrl, siteContent.seo.ogImagePath);
+  const pageSchema = {
+    "@type": page.schemaTypes ?? ["WebPage"],
+    "@id": `${canonicalUrl}#webpage`,
+    name: page.title,
+    url: canonicalUrl,
+    description: page.description,
+    inLanguage: "en-IN",
+    isPartOf: { "@id": `${baseUrl}#website` },
+    about: { "@id": `${baseUrl}#organization` },
+    breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: ogImageUrl
+    }
+  };
+
+  if (currentPath === "/leadership") {
+    pageSchema.mainEntity = siteContent.leaders.map((leader) => ({
+      "@id": createPersonId(baseUrl, leader.name)
+    }));
+  }
+
+  const graph = [
+    {
+      "@type": "WebSite",
+      "@id": `${baseUrl}#website`,
+      name: siteContent.brand.name,
+      url: baseUrl,
+      inLanguage: "en-IN",
+      description: siteContent.meta.description,
+      publisher: { "@id": `${baseUrl}#organization` }
+    },
+    buildProfessionalServiceSchema(baseUrl, ogImageUrl),
+    ...buildPersonSchemas(baseUrl),
+    buildBreadcrumbSchema(currentPath, baseUrl),
+    pageSchema
+  ];
+
+  const serviceSchema = buildServiceSchema(currentPath, canonicalUrl, baseUrl);
+  if (serviceSchema) {
+    graph.push(serviceSchema);
+  }
+
+  const faqSchema = buildFaqSchema(canonicalUrl, page.faqs);
+  if (faqSchema) {
+    graph.push(faqSchema);
+  }
+
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": graph
+  });
+}
+
+function renderLayout(currentPath, page, context) {
+  const canonicalPath = getCanonicalPath(currentPath);
+  const canonicalUrl = buildAbsoluteUrl(context.baseUrl, canonicalPath);
+  const ogImageUrl = buildAbsoluteUrl(context.baseUrl, siteContent.seo.ogImagePath);
+  const robots = context.allowIndexing ? "index, follow" : "noindex, nofollow";
+  const structuredData = buildStructuredData(currentPath, page, context);
 
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${escapeHtml(page.title)}</title>
     <meta name="description" content="${escapeHtml(page.description)}" />
+    <meta name="robots" content="${robots}" />
     <meta name="theme-color" content="#0f1b27" />
+    <link rel="canonical" href="${escapeHtml(canonicalUrl)}" />
     <meta property="og:title" content="${escapeHtml(page.title)}" />
     <meta property="og:description" content="${escapeHtml(page.description)}" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="${escapeHtml(canonicalUrl)}" />
+    <meta property="og:site_name" content="${escapeHtml(siteContent.seo.siteName)}" />
+    <meta property="og:locale" content="${escapeHtml(siteContent.seo.siteLocale)}" />
+    <meta property="og:image" content="${escapeHtml(ogImageUrl)}" />
+    <meta property="og:image:alt" content="${escapeHtml(siteContent.seo.ogImageAlt)}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${escapeHtml(page.title)}" />
+    <meta name="twitter:description" content="${escapeHtml(page.description)}" />
+    <meta name="twitter:image" content="${escapeHtml(ogImageUrl)}" />
+    <meta name="twitter:image:alt" content="${escapeHtml(siteContent.seo.ogImageAlt)}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/logo-arjuna.svg" type="image/svg+xml" />
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700;6..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Arjuna Strategy Consulting",
-        "description": ${JSON.stringify(page.description)},
-        "url": ${JSON.stringify(`http://localhost:3000${canonicalPath}`)},
-        "knowsAbout": ["Political strategy", "Campaign management", "Voter analytics", "Survey operations", "Digital outreach"]
-      }
+    <script type="application/ld+json" nonce="${escapeHtml(context.cspNonce ?? "")}">
+      ${structuredData}
     </script>
   </head>
   <body>
@@ -445,11 +809,11 @@ function buildHomePage() {
   const hero = `
     <section class="page-hero">
       <div class="page-hero-copy">
-        <p class="eyebrow">Political Strategy. Campaign Intelligence. Ground Execution.</p>
+        <p class="eyebrow">Political Consulting In India. Campaign Intelligence. Ground Execution.</p>
         <h1>${escapeHtml(siteContent.brand.tagline)}</h1>
         <p class="page-intro">${escapeHtml(siteContent.brand.narrative)}</p>
         <div class="page-actions">
-          <a class="button button-primary" href="/contact">${escapeHtml(siteContent.brand.primaryCta)}</a>
+          <a class="button button-primary" href="/leadership#contact-intake">${escapeHtml(siteContent.brand.primaryCta)}</a>
           <a class="button button-secondary" href="/capabilities">${escapeHtml(siteContent.brand.secondaryCta)}</a>
         </div>
       </div>
@@ -470,9 +834,9 @@ function buildHomePage() {
       <div class="page-split">
         <div class="section-heading reveal">
           <p class="eyebrow">Overview</p>
-          <h2>Campaign architecture built for speed and control.</h2>
+          <h2>Political consulting architecture built for speed and control.</h2>
           <p>
-            Arjuna Strategy Consulting combines strategy, analytics, and field execution into one operating system.
+            Arjuna Strategy Consulting combines campaign strategy, political survey research, voter intelligence, and field execution into one operating system for Indian election campaigns.
           </p>
         </div>
         <div class="card-grid card-grid-three">
@@ -484,10 +848,25 @@ function buildHomePage() {
     <section class="section">
       <div class="page-split">
         <div class="section-heading reveal">
+          <p class="eyebrow">Quick Answers</p>
+          <h2>What campaigns need to know before they reach out.</h2>
+          <p>
+            These are the basic questions search engines, AI overviews, and campaign teams ask first when they evaluate a political consulting partner in India.
+          </p>
+        </div>
+        <div class="answer-grid">
+          ${renderAnswerCards(siteContent.answerBlocks)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="page-split">
+        <div class="section-heading reveal">
           <p class="eyebrow">Survey Backbone</p>
           <h2>${escapeHtml(siteContent.surveyOverview.headline)}</h2>
           <p>
-            The survey layer powers constituency diagnostics, field validation, sentiment measurement, and downstream consulting recommendations.
+            The survey layer powers constituency diagnostics, political survey research, field validation, sentiment measurement, and downstream consulting recommendations.
           </p>
           <div class="page-actions">
             <a class="button button-secondary" href="/surveys">Explore Survey Systems</a>
@@ -522,9 +901,9 @@ function buildHomePage() {
       <div class="page-split">
         <div class="section-heading reveal">
           <p class="eyebrow">Structured Navigation</p>
-          <h2>Each menu item now leads to a dedicated page.</h2>
+          <h2>Fewer pages, clearer paths.</h2>
           <p>
-            The site is distributed by intent so visitors can review capabilities, proof, leadership, or contact without scrolling through everything at once.
+            The site now routes visitors into home, work, surveys, and founder-led contact so people can move directly from search intent to the right decision surface.
           </p>
         </div>
         <div class="route-card-grid">
@@ -539,7 +918,7 @@ function buildHomePage() {
           <p class="eyebrow">Credibility Layer</p>
           <h2>Backed by specialist alliances and institutional campaign experience.</h2>
           <p>
-            Technology, content, and campaign execution are supported by cross-functional partnerships and deep exposure to fast-moving political environments.
+            Technology, content, and campaign execution are supported by cross-functional partnerships and campaign environments that matter in India-wide political consulting.
           </p>
         </div>
         <div class="page-stack">
@@ -549,9 +928,25 @@ function buildHomePage() {
           <div class="origin-row reveal">
             ${renderOrigins()}
           </div>
+          <aside class="page-panel reveal">
+            <p class="eyebrow">Public References</p>
+            <h2 class="page-panel-title">Verifiable institutions and campaign ecosystems referenced on the page.</h2>
+            <div class="reference-links">
+              ${renderReferenceLinks()}
+            </div>
+          </aside>
         </div>
       </div>
     </section>
+
+    ${renderFaqSection({
+      eyebrow: "Home FAQs",
+      title: "Clear answers for campaign teams evaluating Arjuna.",
+      intro:
+        "These FAQs are written for search visibility and fast human review, so the site explains the political consulting model without vague agency language.",
+      items: siteContent.faqs.home,
+      sectionClass: "section section-soft"
+    })}
 
     <section class="section">
       <div class="cta-band reveal">
@@ -559,127 +954,190 @@ function buildHomePage() {
           <p class="eyebrow">Next Step</p>
           <h2>Move from overview to a campaign-specific conversation.</h2>
           <p>
-            Use the contact page to send a constituency brief, immediate challenge, or scoping request.
+            Use the leadership and contact page to send a constituency brief, immediate challenge, or scoping request.
           </p>
         </div>
-        <a class="button button-primary" href="/contact">Open Contact Page</a>
+        <a class="button button-primary" href="/leadership#contact-intake">Open Connect</a>
       </div>
     </section>
   `;
 
-  return { title, description, hero, body };
+  return { title, description, hero, body, faqs: siteContent.faqs.home, schemaTypes: ["WebPage"] };
 }
 
 function buildCapabilitiesPage() {
-  const title = `Capabilities | ${siteContent.brand.name}`;
+  const title = `Work | Political Consulting and Campaign Strategy in India | ${siteContent.brand.name}`;
   const description =
-    "Review Arjuna Strategy Consulting's campaign capabilities across strategy, data systems, field operations, and political execution.";
+    "Review Arjuna Strategy Consulting's political consulting services in India across campaign strategy, voter intelligence, field operations, digital outreach, and execution proof.";
 
   const hero = `
     <section class="page-hero">
       <div class="page-hero-copy">
-        <p class="eyebrow">Capabilities</p>
-        <h1>Integrated campaign capability from diagnosis to turnout.</h1>
+        <p class="eyebrow">Work</p>
+        <h1>What Arjuna can build,<br />prove, and deliver.</h1>
         <p class="page-intro">
-          This page is focused only on what Arjuna can build, run, and optimise across strategy, data, media, and operations.
+          Political consulting capability and campaign proof now sit on one page so visitors can move from the consulting stack to live execution outcomes without switching context.
         </p>
         <div class="page-actions">
-          <a class="button button-primary" href="/contact">Discuss Scope</a>
+          <a class="button button-primary" href="/leadership#contact-intake">Discuss Scope</a>
           <a class="button button-secondary" href="/surveys">Survey Systems</a>
         </div>
       </div>
-      <aside class="page-panel reveal">
-        <p class="eyebrow">Coverage</p>
-        <h2 class="page-panel-title">A full consulting stack, not isolated support modules.</h2>
-        <ul class="pill-list">
-          ${renderPillList(siteContent.focusAreas)}
-        </ul>
-      </aside>
+      <div class="page-stack">
+        <div class="signal-grid">
+          ${renderProofHighlights()}
+        </div>
+        <aside class="page-panel reveal">
+          <p class="eyebrow">Coverage</p>
+          <h2 class="page-panel-title">A consulting stack tied to measurable field proof.</h2>
+          <ul class="pill-list">
+            ${renderPillList(siteContent.focusAreas)}
+          </ul>
+        </aside>
+      </div>
     </section>
   `;
 
   const body = `
     <section class="section section-soft">
-      <div class="page-split">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Core Expertise</p>
-          <h2>Strategy systems designed for political complexity.</h2>
-          <p>
-            The consulting layer is structured around sharper targeting, stronger decision support, and faster execution loops.
-          </p>
+      <div class="section-stack">
+        <div class="page-split">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Core Expertise</p>
+            <h2>Strategy systems designed for political complexity.</h2>
+            <p>
+              The consulting layer is structured around sharper targeting, stronger decision support, and faster execution loops for campaigns operating in India.
+            </p>
+          </div>
+          <div class="card-grid card-grid-three">
+            ${renderCards(siteContent.pillars)}
+          </div>
         </div>
-        <div class="card-grid card-grid-three">
-          ${renderCards(siteContent.pillars)}
+        <div class="page-split section-divider">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Core Strengths</p>
+            <h2>Capabilities that strengthen both message and machinery.</h2>
+            <p>
+              Data systems, voter intelligence, field operations, and digital outreach workflows are aligned to reduce friction inside the campaign.
+            </p>
+          </div>
+          <div class="card-grid card-grid-two">
+            ${renderCards(siteContent.strengths)}
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="track-record">
       <div class="page-split">
         <div class="section-heading reveal">
-          <p class="eyebrow">Core Strengths</p>
-          <h2>Capabilities that strengthen both message and machinery.</h2>
+          <p class="eyebrow">Capability In Action</p>
+          <h2>Proof is built into the delivery story.</h2>
           <p>
-            Data systems, field intelligence, and execution workflows are aligned to reduce friction inside the campaign.
+            We merged the track record here because political consulting claims only matter when they are anchored to live campaign outcomes, named geographies, and operating scale.
           </p>
+          <ul class="summary-list">
+            ${renderSummaryList([
+              "Winner-led execution in Uttar Pradesh, Uttarakhand, Jharkhand, Jammu & Kashmir, and Haryana",
+              "66% strike rate across the 2025 Delhi AC portfolio",
+              "Scaled data and outreach systems across 94 ACs in Bihar"
+            ])}
+          </ul>
         </div>
-        <div class="card-grid card-grid-two">
-          ${renderCards(siteContent.strengths)}
+        <div class="proof-note-grid">
+          ${renderCapabilityProofs()}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contrast">
+      <div class="section-stack">
+        <div class="page-split">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Services</p>
+            <h2>Operational support across research, outreach, media, and campaign systems.</h2>
+            <p>
+              The service mix covers campaign communication, survey systems, field execution, analytics, and campaign technology, with a dedicated survey application sitting underneath the research layer.
+            </p>
+          </div>
+          <div class="card-grid card-grid-two">
+            ${renderCards(siteContent.services)}
+          </div>
+        </div>
+        <div class="page-split section-divider">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Track Record</p>
+            <h2>Execution ranges from targeted AC contests to scale programs.</h2>
+            <p>
+              The portfolio covers focused fights, multi-seat operations, and statewide systems that demand reporting discipline under pressure across India.
+            </p>
+          </div>
+          <div class="card-grid card-grid-two track-grid-detail">
+            ${renderTrackRecord(true)}
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section section-soft">
-      <div class="page-split">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Services</p>
-          <h2>Operational support across research, outreach, and media execution.</h2>
-          <p>
-            The service mix covers campaign communication, survey systems, field execution, analytics, and campaign technology, with a dedicated survey application sitting underneath the research layer.
-          </p>
+      <div class="section-stack">
+        <div class="page-split">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Operating Model</p>
+            <h2>A repeatable campaign rhythm built for adjustment under pressure.</h2>
+            <p>
+              Diagnostics, mobilisation, and continuous optimisation keep the campaign aligned from field input to leadership action across campaign strategy, surveys, and field operations.
+            </p>
+          </div>
+          <div class="phase-grid">
+            ${renderOperatingModel()}
+          </div>
         </div>
-        <div class="card-grid card-grid-two">
-          ${renderCards(siteContent.services)}
+        <div class="page-split section-divider">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Deliverables</p>
+            <h2>Outputs designed to move from insight to action.</h2>
+            <p>
+              Engagements can be modular, but the output always stays tied to execution, measurement, and decision-making.
+            </p>
+          </div>
+          <div class="card-grid card-grid-two">
+            ${renderCards(siteContent.deliverables)}
+          </div>
         </div>
       </div>
     </section>
+
+    ${renderFaqSection({
+      eyebrow: "Work FAQs",
+      title: "Common questions about Arjuna's political consulting services.",
+      intro:
+        "These answers clarify the scope of work so campaign teams can see whether they need strategy only, execution support, or a combined operating model.",
+      items: siteContent.faqs.capabilities,
+      sectionClass: "section section-contrast"
+    })}
 
     <section class="section">
       <div class="cta-band reveal">
         <div>
-          <p class="eyebrow">Survey Systems</p>
-          <h2>Our survey application deserves its own page because it supports the full consulting pipeline.</h2>
+          <p class="eyebrow">Next Step</p>
+          <h2>Meet the founders and send the brief directly.</h2>
           <p>
-            Review how we run CATI, CAPI, technical, subjective, and objective studies with correct sample planning and statistical reporting.
+            The leadership page now carries the contact flow as well, so the handoff from credibility to conversation is faster.
           </p>
         </div>
-        <a class="button button-primary" href="/surveys">Open Surveys Page</a>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="page-split">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Deliverables</p>
-          <h2>Consulting outputs designed to move from insight to action.</h2>
-          <p>
-            Engagements can be modular, but the deliverables always stay tied to execution, measurement, and decision-making.
-          </p>
-        </div>
-        <div class="card-grid card-grid-two">
-          ${renderCards(siteContent.deliverables)}
-        </div>
+        <a class="button button-primary" href="/leadership#contact-intake">Open Connect</a>
       </div>
     </section>
   `;
 
-  return { title, description, hero, body };
+  return { title, description, hero, body, faqs: siteContent.faqs.capabilities, schemaTypes: ["WebPage"] };
 }
 
 function buildSurveysPage() {
-  const title = `Surveys | ${siteContent.brand.name}`;
+  const title = `Surveys | Political Survey Research in India | ${siteContent.brand.name}`;
   const description =
-    "Detailed overview of Arjuna Strategy Consulting's survey application, including CATI, CAPI, sample-size calculation, software controls, and statistical reporting.";
+    "Detailed overview of Arjuna Strategy Consulting's political survey research stack in India, including CATI, CAPI, sample-size calculation, voter intelligence controls, and statistical reporting.";
 
   const hero = `
     <section class="page-hero">
@@ -688,8 +1146,8 @@ function buildSurveysPage() {
         <h1>${escapeHtml(siteContent.surveyOverview.headline)}</h1>
         <p class="page-intro">${escapeHtml(siteContent.surveyOverview.summary)}</p>
         <div class="page-actions">
-          <a class="button button-primary" href="/contact">Discuss A Survey Program</a>
-          <a class="button button-secondary" href="/capabilities">Back To Capabilities</a>
+          <a class="button button-primary" href="/leadership#contact-intake">Discuss A Survey Program</a>
+          <a class="button button-secondary" href="/capabilities#track-record">Back To Work</a>
         </div>
       </div>
       <div class="page-stack survey-visual-grid">
@@ -713,13 +1171,28 @@ function buildSurveysPage() {
   `;
 
   const body = `
+    <section class="section section-contrast">
+      <div class="page-split">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Why This Stack</p>
+          <h2>What makes the political survey research stack different.</h2>
+          <p>
+            This system is built for voter intelligence and campaign decisions, not just survey operations in isolation.
+          </p>
+        </div>
+        <div class="card-grid card-grid-three">
+          ${renderAnswerCards(siteContent.surveyDifferentiators)}
+        </div>
+      </div>
+    </section>
+
     <section class="section section-soft">
       <div class="page-split">
         <div class="section-heading reveal">
           <p class="eyebrow">Operational Methods</p>
           <h2>Choose the mode based on speed, depth, supervision, and risk.</h2>
           <p>
-            Reliable survey operations are not one-mode by default. We choose CATI, CAPI, CAWI, or hybrid execution based on coverage, respondent behavior, and deadline constraints.
+            Reliable political survey research is not one-mode by default. We choose CATI, CAPI, CAWI, or hybrid execution based on coverage, respondent behavior, and deadline constraints.
           </p>
         </div>
         <div class="ops-grid">
@@ -843,7 +1316,7 @@ function buildSurveysPage() {
           <p class="eyebrow">Deliverables</p>
           <h2>What you get at the end of the survey program.</h2>
           <p>
-            The output is not just a dataset. We deliver the instrument, operations structure, methodology note, reporting layers, and a documented integrity view.
+            The output is not just a dataset. We deliver the instrument, operations structure, methodology note, reporting layers, and a documented integrity view that can feed campaign strategy directly.
           </p>
         </div>
         <div class="check-grid">
@@ -872,35 +1345,47 @@ function buildSurveysPage() {
         </div>
       </div>
     </section>
+
+    ${renderFaqSection({
+      eyebrow: "Survey FAQs",
+      title: "Answers for teams comparing political survey research options.",
+      intro:
+        "These FAQs explain how the survey system supports campaign decisions, methodology control, and voter intelligence quality.",
+      items: siteContent.faqs.surveys,
+      sectionClass: "section section-soft"
+    })}
   `;
 
-  return { title, description, hero, body };
+  return { title, description, hero, body, faqs: siteContent.faqs.surveys, schemaTypes: ["WebPage"] };
 }
 
-function buildTrackRecordPage() {
-  const title = `Track Record | ${siteContent.brand.name}`;
+function buildLeadershipPage() {
+  const title = `Connect | Founder-Led Political Consulting in India | ${siteContent.brand.name}`;
   const description =
-    "Explore Arjuna Strategy Consulting's constituency-level campaign track record, scaled execution programs, and operating model.";
+    "Meet the Arjuna Strategy Consulting founders, review the operating context, and start a founder-led political consulting conversation for campaigns in India.";
 
   const hero = `
     <section class="page-hero">
       <div class="page-hero-copy">
-        <p class="eyebrow">Track Record</p>
-        <h1>Execution that scales from targeted AC contests to statewide systems.</h1>
+        <p class="eyebrow">Connect</p>
+        <h1>Meet the founders.<br />Start the conversation.</h1>
         <p class="page-intro">
-          This page isolates proof: wins, scale, execution patterns, and the operating model used to keep campaigns responsive.
+          Leadership context and contact now live on one page so the move from credibility to conversation is immediate, founder-led, and built for campaign teams in India.
         </p>
         <div class="page-actions">
-          <a class="button button-primary" href="/contact">Request A Review</a>
-          <a class="button button-secondary" href="/capabilities">See Capabilities</a>
+          <a class="button button-primary" href="#contact-intake">Send A Brief</a>
+          <a class="button button-secondary" href="/capabilities#track-record">See Work</a>
         </div>
       </div>
       <div class="page-stack">
+        <div class="founder-grid">
+          ${renderLeaderProfiles("founder-hero-card")}
+        </div>
         <aside class="page-panel reveal">
-          <p class="eyebrow">Performance Snapshot</p>
-          <h2 class="page-panel-title">Focused wins supported by scalable operating infrastructure.</h2>
-          <div class="metric-grid">
-            ${renderStatCards(siteContent.stats.slice(0, 4))}
+          <p class="eyebrow">Institutional Background</p>
+          <h2 class="page-panel-title">Built inside campaign, analytics, and political execution systems.</h2>
+          <div class="origin-row">
+            ${renderOrigins()}
           </div>
         </aside>
       </div>
@@ -908,87 +1393,36 @@ function buildTrackRecordPage() {
   `;
 
   const body = `
-    <section class="section">
-      <div class="page-split">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Election Cycles</p>
-          <h2>AC-level work with state-by-state execution depth.</h2>
-          <p>
-            The portfolio covers targeted contests, multi-seat operations, and scaled intelligence infrastructure.
-          </p>
-          <ul class="summary-list">
-            ${renderSummaryList([
-              "Winner-led execution in Uttar Pradesh, Uttarakhand, Jharkhand, J&K, and Haryana",
-              "66% strike rate across the 2025 Delhi AC portfolio",
-              "Scaled data and outreach systems across 94 ACs in Bihar"
-            ])}
-          </ul>
-        </div>
-        <div class="card-grid card-grid-two track-grid-detail">
-          ${renderTrackRecord(true)}
-        </div>
-      </div>
-    </section>
-
     <section class="section section-contrast">
-      <div class="page-split">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Operating Model</p>
-          <h2>A repeatable campaign rhythm built for adjustment under pressure.</h2>
-          <p>
-            Diagnostics, mobilisation, and continuous optimisation keep the campaign aligned from field input to leadership action.
-          </p>
+      <div class="section-stack">
+        <div class="page-split">
+          <div class="section-heading reveal">
+            <p class="eyebrow">How Leadership Works</p>
+            <h2>Access stays close to the people shaping the campaign architecture.</h2>
+            <p>
+              The page explains who leads the work and why the first conversation stays tightly connected to campaign realities rather than a generic agency intake.
+            </p>
+          </div>
+          <div class="card-grid card-grid-three">
+            ${renderCards(siteContent.leadershipNotes, "note-card")}
+          </div>
         </div>
-        <div class="phase-grid">
-          ${renderOperatingModel()}
-        </div>
-      </div>
-    </section>
-  `;
-
-  return { title, description, hero, body };
-}
-
-function buildLeadershipPage() {
-  const title = `Leadership | ${siteContent.brand.name}`;
-  const description =
-    "Connect with the Arjuna Strategy Consulting leadership team and review the institutional campaign environments that shaped the firm.";
-
-  const hero = `
-    <section class="page-hero">
-      <div class="page-hero-copy">
-        <p class="eyebrow">Leadership</p>
-        <h1>Direct access to the founding team, without a cluttered profile wall.</h1>
-        <p class="page-intro">
-          This page keeps leadership simple: names, access, and the institutional environments that shaped the consulting practice.
-        </p>
-        <div class="page-actions">
-          <a class="button button-primary" href="/contact">Start A Conversation</a>
-          <a class="button button-secondary" href="/track-record">See Track Record</a>
-        </div>
-      </div>
-      <aside class="page-panel reveal">
-        <p class="eyebrow">Institutional Background</p>
-        <h2 class="page-panel-title">Built inside campaign, analytics, and political execution systems.</h2>
-        <div class="origin-row">
-          ${renderOrigins()}
-        </div>
-      </aside>
-    </section>
-  `;
-
-  const body = `
-    <section class="section section-contrast">
-      <div class="page-split">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Founding Team</p>
-          <h2>Use the dedicated links to connect directly.</h2>
-          <p>
-            Leadership is intentionally presented without long bios so the page stays clean and direct.
-          </p>
-        </div>
-        <div class="leader-stack">
-          ${renderLeaderProfiles()}
+        <div class="page-split section-divider">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Partnership Context</p>
+            <h2>Leadership is supported by external specialist depth where needed.</h2>
+            <p>
+              AI, media, and technology partners extend execution capacity without diluting strategic control.
+            </p>
+          </div>
+          <div class="page-stack">
+            <div class="card-grid card-grid-three">
+              ${renderPartnerships()}
+            </div>
+            <div class="reference-links reveal">
+              ${renderReferenceLinks()}
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -996,57 +1430,40 @@ function buildLeadershipPage() {
     <section class="section section-soft">
       <div class="page-split">
         <div class="section-heading reveal">
-          <p class="eyebrow">Partnership Context</p>
-          <h2>Leadership is supported by external capability depth where needed.</h2>
+          <p class="eyebrow">First Conversation</p>
+          <h2>Simple intake, fast founder review, clear next move.</h2>
           <p>
-            AI, media, and technology partners extend specialist execution without diluting strategic control.
+            The redesigned page reduces friction. A visitor can understand the leadership context, see how the first review works, and send the brief without switching pages.
           </p>
         </div>
-        <div class="card-grid card-grid-three">
-          ${renderPartnerships()}
+        <div class="engagement-grid">
+          ${renderEngagementSteps()}
         </div>
       </div>
     </section>
-  `;
 
-  return { title, description, hero, body };
-}
+    ${renderFaqSection({
+      eyebrow: "Connect FAQs",
+      title: "What happens after a campaign team sends the brief.",
+      intro:
+        "This FAQ makes the founder-led intake process explicit so the contact page works for both search and direct outreach.",
+      items: siteContent.faqs.leadership,
+      sectionClass: "section section-contrast"
+    })}
 
-function buildContactPage() {
-  const title = `Contact | ${siteContent.brand.name}`;
-  const description =
-    "Send a campaign brief to Arjuna Strategy Consulting through the dedicated contact page and Node.js enquiry form.";
-
-  const hero = `
-    <section class="page-hero">
-      <div class="page-hero-copy">
-        <p class="eyebrow">Contact</p>
-        <h1>${escapeHtml(siteContent.contact.heading)}</h1>
-        <p class="page-intro">${escapeHtml(siteContent.contact.text)}</p>
-      </div>
-      <aside class="page-panel reveal">
-        <p class="eyebrow">What To Send</p>
-        <h2 class="page-panel-title">A concise brief helps us scope faster.</h2>
-        <ul class="page-note-list">
-          ${renderSummaryList([
-            "Constituency, district, or state",
-            "Immediate challenge or campaign objective",
-            "Expected support window or election timeline"
-          ])}
-        </ul>
-      </aside>
-    </section>
-  `;
-
-  const body = `
-    <section class="section section-contrast">
+    <section class="section" id="contact-intake">
       <div class="contact-page-grid">
         <aside class="contact-side-panel reveal">
-          <p class="eyebrow">Consultation Intake</p>
-          <h2 class="page-panel-title">The enquiry form writes directly into the project’s local intake pipeline.</h2>
-          <p>
-            Use this page for campaign briefs, diagnostic reviews, war-room setup requests, or constituency support needs.
-          </p>
+          <p class="eyebrow">Campaign Intake</p>
+          <h2 class="page-panel-title">${escapeHtml(siteContent.contact.heading)}</h2>
+          <p>${escapeHtml(siteContent.contact.text)}</p>
+          <ul class="page-note-list">
+            ${renderSummaryList([
+              "Constituency, district, or state",
+              "Immediate challenge or campaign objective",
+              "Expected support window or election timeline"
+            ])}
+          </ul>
           <ul class="pill-list">
             ${renderPillList(siteContent.focusAreas)}
           </ul>
@@ -1059,22 +1476,44 @@ function buildContactPage() {
     </section>
   `;
 
-  return { title, description, hero, body };
+  return {
+    title,
+    description,
+    hero,
+    body,
+    faqs: siteContent.faqs.leadership,
+    schemaTypes: ["WebPage", "AboutPage", "ContactPage"]
+  };
 }
 
 const pageBuilders = {
   "/": buildHomePage,
   "/capabilities": buildCapabilitiesPage,
   "/surveys": buildSurveysPage,
-  "/track-record": buildTrackRecordPage,
-  "/leadership": buildLeadershipPage,
-  "/contact": buildContactPage
+  "/leadership": buildLeadershipPage
 };
 
-export function renderPage(pathname = "/") {
+export function getCanonicalPageMetadata() {
+  return Object.keys(pageBuilders).map((pathname) => {
+    const page = pageBuilders[pathname]();
+
+    return {
+      pathname,
+      title: page.title,
+      description: page.description
+    };
+  });
+}
+
+export function renderPage(pathname = "/", context = {}) {
   const currentPath = normalizePath(pathname);
   const builder = pageBuilders[currentPath] ?? pageBuilders["/"];
   const page = builder();
+  const resolvedContext = {
+    baseUrl: context.baseUrl ?? "http://127.0.0.1:3000",
+    allowIndexing: context.allowIndexing ?? false,
+    cspNonce: context.cspNonce ?? ""
+  };
 
-  return renderLayout(currentPath, page);
+  return renderLayout(currentPath, page, resolvedContext);
 }

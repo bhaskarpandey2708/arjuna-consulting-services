@@ -1,16 +1,41 @@
 export const siteContent = {
   meta: {
-    title: "Arjuna Strategy Consulting | Political Strategy, Data Intelligence, Campaign Operations",
+    title: "Arjuna Strategy Consulting | Political Consulting, Campaign Strategy, Surveys in India",
     description:
-      "Arjuna Strategy Consulting delivers political strategy, campaign intelligence, and field execution for high-stakes constituencies."
+      "Arjuna Strategy Consulting is a political consulting firm in India delivering campaign strategy, voter intelligence, survey research, digital outreach, and field operations for high-stakes campaigns."
+  },
+  seo: {
+    siteName: "Arjuna Strategy Consulting",
+    siteLocale: "en_IN",
+    serviceArea: "India",
+    ogImagePath: "/og-card.png",
+    ogImageAlt:
+      "Arjuna Strategy Consulting social card for political consulting, campaign strategy, and voter intelligence in India.",
+    serviceCatalog: [
+      "Political consulting",
+      "Campaign strategy",
+      "Political survey research",
+      "Voter intelligence",
+      "Field operations",
+      "Digital outreach",
+      "War-room systems"
+    ],
+    audiences: [
+      "Candidates",
+      "Political parties",
+      "PACs",
+      "Campaign advisory groups"
+    ],
+    llmsSummary:
+      "Arjuna Strategy Consulting is a political consulting firm in India offering campaign strategy, voter intelligence, political survey research, digital outreach, war-room systems, and field operations."
   },
   brand: {
     name: "Arjuna Strategy Consulting",
     tagline: "Sharper political strategy for winning campaigns.",
     narrative:
-      "We combine campaign strategy, voter intelligence, and disciplined execution to help candidates move faster and perform better on the ground.",
+      "We deliver political consulting in India through campaign strategy, voter intelligence, survey research, digital outreach, and disciplined field execution so candidates and political organisations can move faster on the ground.",
     primaryCta: "Book A Strategy Session",
-    secondaryCta: "See Capabilities"
+    secondaryCta: "See Work"
   },
   stats: [
     {
@@ -28,6 +53,48 @@ export const siteContent = {
     {
       value: "66%",
       label: "Strike rate in the 2025 Delhi AC portfolio"
+    }
+  ],
+  proofHighlights: [
+    {
+      value: "103",
+      label: "ACs supported",
+      text:
+        "Constituency advisory, execution support, and systems work across targeted and scaled campaigns."
+    },
+    {
+      value: "66%",
+      label: "Delhi 2025 strike rate",
+      text:
+        "A tighter operating rhythm, sharper targeting, and faster feedback loops across a focused AC portfolio."
+    },
+    {
+      value: "94 ACs",
+      label: "Bihar scale program",
+      text:
+        "Data intelligence, outreach automation, and campaign systems rolled out across a large multi-seat program."
+    }
+  ],
+  answerBlocks: [
+    {
+      title: "What Arjuna does",
+      text:
+        "Arjuna provides political consulting in India across campaign strategy, voter intelligence, survey research, digital outreach, war-room reporting, and field execution."
+    },
+    {
+      title: "Who it serves",
+      text:
+        "The firm works with candidates, political parties, PACs, campaign advisory groups, and high-stakes constituency programs that need sharper political decision-making."
+    },
+    {
+      title: "Where it operates",
+      text:
+        "Arjuna supports campaigns across India, with recent work spanning Delhi, Bihar, Uttar Pradesh, Uttarakhand, Jharkhand, Jammu & Kashmir, and Haryana."
+    },
+    {
+      title: "When to hire Arjuna",
+      text:
+        "Bring Arjuna in when a campaign needs diagnosis before launch, survey-led intelligence mid-race, field correction under pressure, or integrated digital and on-ground execution close to polling."
     }
   ],
   pillars: [
@@ -65,12 +132,27 @@ export const siteContent = {
     }
   ],
   teamOrigins: [
-    "JOGGF",
-    "Dhruv Research",
-    "Indian Political Action Committee",
-    "NationwithNaMo",
-    "Mind Share Analytics",
-    "Jarvis Strategy and Consulting"
+    {
+      label: "JOGGF"
+    },
+    {
+      label: "Dhruv Research"
+    },
+    {
+      label: "Indian Political Action Committee",
+      url: "https://www.indianpac.com"
+    },
+    {
+      label: "Nation with NaMo / GILP",
+      url: "https://gilp.nationwithnamo.com"
+    },
+    {
+      label: "Mind Share Analytics"
+    },
+    {
+      label: "Jarvis Strategy and Consulting",
+      url: "https://jarvis.consulting"
+    }
   ],
   trackRecord: [
     {
@@ -128,6 +210,29 @@ export const siteContent = {
       result: "Data and outreach transformation",
       detail:
         "Delivered data intelligence, WhatsApp automation, SIR analytics, IVRs, SMS programs, and AI video campaign execution at scale."
+    }
+  ],
+  capabilityProofs: [
+    {
+      title: "Constituency strategy and field control",
+      proof:
+        "Uttar Pradesh, Uttarakhand, Jharkhand, Jammu & Kashmir, and Haryana: constituency strategy, field control, and campaign execution support in winner-led contests.",
+      detail:
+        "Campaign support is built around local diagnostics, candidate positioning, field review loops, and disciplined execution on the ground."
+    },
+    {
+      title: "War-room reporting and decision systems",
+      proof:
+        "Delhi 2025: war-room reporting, campaign diagnostics, and a performance-led operating rhythm across a 3 AC portfolio.",
+      detail:
+        "The analytics layer is designed to help leadership detect movement early, prioritise correctly, and correct execution without delay."
+    },
+    {
+      title: "Scale programs and outreach automation",
+      proof:
+        "Bihar 2025: data intelligence, WhatsApp automation, IVR, SMS, and AI-led outreach across 94 Assembly Constituencies.",
+      detail:
+        "When campaign complexity grows, Arjuna shifts from isolated advisory into full-stack execution infrastructure."
     }
   ],
   strengths: [
@@ -281,6 +386,43 @@ export const siteContent = {
       linkedin: "https://www.linkedin.com/in/bhaskar-pandey-a9b23018b/"
     }
   ],
+  leadershipNotes: [
+    {
+      title: "Founder-led scoping",
+      text:
+        "Initial conversations stay close to the founding team so the brief is shaped by campaign realities, not a generic intake script."
+    },
+    {
+      title: "Fast problem framing",
+      text:
+        "The first review is meant to isolate the real pressure point quickly, whether it sits in message, data, field operations, or reporting."
+    },
+    {
+      title: "Clear next move",
+      text:
+        "Each early conversation should end with a defined recommendation on scope, operating rhythm, and what needs to happen first."
+    }
+  ],
+  engagementSteps: [
+    {
+      phase: "01",
+      title: "Share the brief",
+      text:
+        "Send the constituency, election cycle, current pressure point, and the support window you are working against."
+    },
+    {
+      phase: "02",
+      title: "Founder review",
+      text:
+        "The brief is reviewed for urgency, fit, and whether the need is strategic, operational, survey-led, or full-stack."
+    },
+    {
+      phase: "03",
+      title: "Launch the workstream",
+      text:
+        "We define the first workstream, reporting rhythm, and the operating structure needed to move immediately."
+    }
+  ],
   focusAreas: [
     "War-room design",
     "Voter intelligence",
@@ -292,8 +434,25 @@ export const siteContent = {
   surveyOverview: {
     headline: "The survey application is the backbone of the consulting system.",
     summary:
-      "Every serious consulting recommendation starts with structured data collection. Our survey application is built to run CATI, CAPI, technical, objective, subjective, and mixed-format questionnaires in one controlled stack, with sampling, instrument design, field control, QA, and statistical correction working together."
+      "Every serious political consulting recommendation starts with structured data collection. Our survey application is built for political survey research in India across CATI, CAPI, technical, objective, subjective, and mixed-format questionnaires, with sampling, instrument design, field control, QA, and statistical correction working together."
   },
+  surveyDifferentiators: [
+    {
+      title: "Built for political decisions",
+      text:
+        "The survey stack is designed for campaign strategy, not just vendor data collection, so findings map directly into targeting, message, and field decisions."
+    },
+    {
+      title: "One controlled system",
+      text:
+        "CATI, CAPI, technical instruments, QA, weighting, and reporting sit in one workflow so political survey research stays auditable from sample design to topline."
+    },
+    {
+      title: "Methodology plus operations",
+      text:
+        "Sampling, instrument design, live monitoring, correction loops, and statistical reporting are managed together so speed does not degrade voter intelligence quality."
+    }
+  ],
   surveyStats: [
     {
       value: "5",
@@ -638,11 +797,56 @@ export const siteContent = {
   contact: {
     heading: "Let us plan the next move.",
     text:
-      "Share your constituency, objective, or immediate campaign challenge.",
+      "Share your constituency, objective, political survey need, or immediate campaign challenge.",
     details: {
       phones: ["70421 13797", "8210235445"],
       email: "bhaskarauthor@gmail.com"
     }
+  },
+  faqs: {
+    home: [
+      {
+        question: "What does Arjuna Strategy Consulting do?",
+        answer:
+          "Arjuna Strategy Consulting provides political consulting in India across campaign strategy, voter intelligence, political survey research, digital outreach, war-room systems, and field execution."
+      },
+      {
+        question: "Who should work with Arjuna?",
+        answer:
+          "The firm is built for candidates, political parties, PACs, and campaign advisory groups that need faster diagnostics, sharper execution, and better reporting in high-stakes races."
+      }
+    ],
+    capabilities: [
+      {
+        question: "What campaign services does Arjuna handle?",
+        answer:
+          "Arjuna handles campaign strategy, voter targeting, field operations, war-room reporting, digital outreach, survey systems, media support, and campaign technology."
+      },
+      {
+        question: "Does Arjuna work on both strategy and execution?",
+        answer:
+          "Yes. The model combines political consulting, survey-led intelligence, digital outreach, and on-ground execution so campaigns can move from diagnosis to implementation without fragmented vendors."
+      }
+    ],
+    surveys: [
+      {
+        question: "What makes Arjuna's survey stack different?",
+        answer:
+          "The survey stack is built for campaign decisions, not just raw data collection. Sampling, instrument design, field control, QA, weighting, and reporting are managed inside one system so voter intelligence stays decision-ready."
+      },
+      {
+        question: "When should a campaign use CATI, CAPI, or hybrid survey research?",
+        answer:
+          "CATI works for fast centralized trackers, CAPI works when field comprehension and coverage matter, and hybrid research works when a campaign needs both speed and representativeness across different respondent environments."
+      }
+    ],
+    leadership: [
+      {
+        question: "How does the founder-led intake process work?",
+        answer:
+          "A campaign brief is reviewed directly by the founders, who frame the real pressure point, recommend the first workstream, and define whether the mandate needs strategy, survey research, field operations, or a full-stack campaign system."
+      }
+    ]
   },
   references: [
     {

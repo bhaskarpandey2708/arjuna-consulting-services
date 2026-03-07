@@ -22,6 +22,29 @@ To use a different port:
 PORT=4000 npm start
 ```
 
+For production SEO and canonical URLs, set:
+
+```bash
+SITE_URL=https://your-production-domain.com npm start
+```
+
+If `SITE_URL` is not set, the app falls back to the request origin and emits `noindex` metadata so preview and local environments are not indexed.
+
+For production contact handling, you can also set:
+
+```bash
+CONTACT_WEBHOOK_URL=https://your-crm-or-form-endpoint.example.com
+DISABLE_LOCAL_INQUIRY_STORE=true
+```
+
+If `CONTACT_WEBHOOK_URL` is set, each valid contact submission is POSTed to that endpoint as JSON. If `DISABLE_LOCAL_INQUIRY_STORE=true`, the app requires `CONTACT_WEBHOOK_URL` so submissions still have a delivery target.
+
+## SEO endpoints
+
+- `GET /robots.txt`
+- `GET /sitemap.xml`
+- `GET /llms.txt`
+
 ## Project structure
 
 - `server.js`: Express server, routes, API handling, static asset delivery
