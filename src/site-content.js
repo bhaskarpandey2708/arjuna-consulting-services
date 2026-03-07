@@ -12,13 +12,22 @@ export const siteContent = {
     ogImageAlt:
       "Arjuna Strategy Consulting social card for political consulting, campaign strategy, and voter intelligence in India.",
     serviceCatalog: [
+      "Election management",
+      "Campaign management consulting",
       "Political consulting",
       "Campaign strategy",
+      "Research and surveys",
       "Political survey research",
       "Voter intelligence",
       "Field operations",
       "Digital outreach",
-      "War-room systems"
+      "War-room systems",
+      "Grassroots operations",
+      "Voter data analytics",
+      "Candidate positioning",
+      "Reputation and crisis response",
+      "Volunteer management",
+      "Full campaign consulting"
     ],
     audiences: [
       "Candidates",
@@ -376,6 +385,463 @@ export const siteContent = {
         "We use live reporting, voter feedback, and performance signals to refine message, targeting, and execution until polling day."
     }
   ],
+  servicePage: {
+    path: "/election-management-campaign-consulting",
+    hero: {
+      eyebrow: "Election Management & Campaign Consulting",
+      title: "Election management and campaign consulting built for modern political operations.",
+      intro:
+        "From strategy and research to war-room systems, digital outreach, and ground execution, Arjuna Strategy Consulting helps political teams build disciplined, data-aware, and execution-ready campaigns.",
+      supporting:
+        "We work with political leaders, campaign teams, constituency operators, and election stakeholders who need structured campaign planning, operational clarity, and coordinated execution across field, communication, and decision-making layers.",
+      primaryCta: "Discuss Your Campaign Needs",
+      secondaryCta: "Explore Service Areas",
+      image: {
+        src: "/service-assets/service-hero-command-center.jpg",
+        alt: "Campaign command center with constituency maps, dashboards, and decision desks."
+      },
+      badges: [
+        "Election management",
+        "Research & surveys",
+        "War-room systems",
+        "Digital outreach",
+        "Field execution"
+      ]
+    },
+    anchors: [
+      { href: "#service-positioning", label: "Positioning" },
+      { href: "#service-audience", label: "Who It Is For" },
+      { href: "#core-services", label: "Core Services" },
+      { href: "#service-systems", label: "System Visuals" },
+      { href: "#service-process", label: "Process" },
+      { href: "#service-faqs", label: "FAQs" }
+    ],
+    answerBlocks: [
+      {
+        title: "What Arjuna does",
+        text:
+          "Arjuna structures election management, campaign management, research, digital outreach, war-room workflows, grassroots operations, and leadership decision support for modern political teams."
+      },
+      {
+        title: "Who it is for",
+        text:
+          "The service model is built for candidates, constituency operators, advisory groups, regional leadership teams, and issue-led public campaigns that need sharper planning and tighter execution."
+      },
+      {
+        title: "What is included",
+        text:
+          "The page covers election management, campaign management, research and surveys, digital outreach, war-room setup, grassroots operations, voter data analytics, candidate positioning, media response, volunteer systems, and full campaign consulting."
+      },
+      {
+        title: "How the process works",
+        text:
+          "Every mandate starts with a diagnostic review, then moves into scope definition, system design, activation support, and continuous monitoring so decisions stay linked to execution."
+      },
+      {
+        title: "What makes the approach different",
+        text:
+          "The model is research-aware, systems-driven, and execution-first, with field, digital, communication, and leadership review layers designed to work together."
+      }
+    ],
+    positioning: {
+      heading: "A campaign is not built on messaging alone.",
+      paragraphs: [
+        "Successful election work requires more than speeches, social media, or isolated field efforts. It requires alignment between leadership intent, constituency realities, voter understanding, local execution, issue tracking, feedback systems, and rapid decision support.",
+        "Arjuna Strategy Consulting is designed to bring structure to that complexity. Our work integrates campaign planning, research, outreach systems, field coordination, data-led review, and operational problem-solving so that teams can move with greater clarity and discipline."
+      ],
+      principles: [
+        "Research-informed",
+        "Operationally executable",
+        "Locally adaptable",
+        "Digitally aware",
+        "Continuously reviewed"
+      ],
+      image: {
+        src: "/service-assets/service-campaign-operating-system.jpg",
+        alt: "Campaign operating system diagram connecting election management, campaign management, digital outreach, research, war room, grassroots operations, and voter analytics."
+      }
+    },
+    audience: {
+      heading: "Who this is for",
+      intro:
+        "Our services are relevant for political and public leadership environments that need sharper planning, tighter execution, better decision visibility, and coordinated campaign systems.",
+      items: [
+        "Candidates and emerging political leaders",
+        "Constituency-focused campaign teams",
+        "Assembly and parliamentary campaign structures",
+        "Political advisors and core committees",
+        "Issue-led public campaigns",
+        "Independent political operators and strategists",
+        "Regional leadership teams that need organized campaign support"
+      ]
+    },
+    servicesHeading: "Core service areas",
+    servicesIntro:
+      "We support campaigns through a combination of strategy, research, operations, communication systems, and execution frameworks.",
+    areas: [
+      {
+        id: "election-management",
+        title: "Election Management",
+        summary:
+          "Election management requires structured planning across timelines, stakeholders, resources, geography, messaging alignment, constituency feedback, and on-ground execution.",
+        points: [
+          "Campaign roadmap and phase planning",
+          "Constituency-level operational structuring",
+          "Timeline and milestone management",
+          "Candidate and team coordination systems",
+          "Polling-day readiness planning",
+          "Communication and escalation workflows"
+        ],
+        outcome:
+          "Designed for campaigns that need discipline, structure, and coordinated execution from planning to final-stage operations."
+      },
+      {
+        id: "campaign-management",
+        title: "Campaign Management",
+        summary:
+          "Campaign management is the day-to-day discipline of converting strategy into controlled execution across leadership, communication, field teams, and support functions.",
+        points: [
+          "Campaign structure design",
+          "Role clarity and coordination frameworks",
+          "Issue tracking and response systems",
+          "Review rhythm and reporting formats",
+          "Central-to-local communication alignment",
+          "Execution audits and course correction"
+        ],
+        outcome:
+          "Useful for campaign teams that need operational stability, accountability, and tighter execution control."
+      },
+      {
+        id: "research-surveys",
+        title: "Research & Surveys",
+        summary:
+          "Strong campaigns are not built on assumptions. They are built on structured understanding of public sentiment, constituency dynamics, issue salience, leadership perception, and local variation.",
+        points: [
+          "Constituency research frameworks",
+          "Voter sentiment studies and issue mapping",
+          "Perception analysis",
+          "Questionnaire design support",
+          "Survey structure and review",
+          "Strategic interpretation and summarization"
+        ],
+        outcome:
+          "Built for research quality and decision support, not noise or speculative guesswork."
+      },
+      {
+        id: "digital-outreach",
+        title: "Digital Outreach",
+        summary:
+          "Digital presence influences visibility, narrative continuity, issue response speed, and campaign coordination. We help structure digital systems that support broader campaign objectives.",
+        points: [
+          "Digital communication planning",
+          "Campaign content direction frameworks",
+          "Issue-based messaging streams",
+          "Response structures for ongoing developments",
+          "Channel coordination and continuity",
+          "Audience feedback capture systems"
+        ],
+        outcome:
+          "Built for teams that want digital outreach to function as a serious campaign system, not as scattered posting activity."
+      },
+      {
+        id: "war-room-setup",
+        title: "War-Room Setup",
+        summary:
+          "A war room is a command function that brings together monitoring, reporting, escalation, issue response, communication alignment, and decision support.",
+        points: [
+          "War-room operating framework",
+          "Monitoring dashboards",
+          "Escalation hierarchy",
+          "Issue logging systems",
+          "Rapid review and response workflows",
+          "Leadership briefing formats"
+        ],
+        outcome:
+          "Essential for campaigns that need live visibility, fast coordination, and structured response under pressure."
+      },
+      {
+        id: "grassroots-operations",
+        title: "Grassroots Operations",
+        summary:
+          "Ground presence remains critical in constituency-building, local trust development, organizational depth, and campaign mobilization.",
+        points: [
+          "Local operations structuring",
+          "Field activity planning",
+          "Booth and area-level coordination frameworks",
+          "Volunteer and worker alignment",
+          "Issue capture from the ground",
+          "Field-to-central communication loops"
+        ],
+        outcome:
+          "For campaigns that need ground strength to be organized, visible, and measurable."
+      },
+      {
+        id: "voter-data-analytics",
+        title: "Voter Data & Analytics",
+        summary:
+          "Modern campaigns need more than scattered spreadsheets. They need structured information systems that support review, prioritization, and better operational judgment.",
+        points: [
+          "Campaign data structuring",
+          "Segmentation logic for planning",
+          "Issue heatmaps and field input consolidation",
+          "Dashboarding frameworks",
+          "Trend monitoring",
+          "Decision-support summaries"
+        ],
+        outcome:
+          "Built to turn field inputs, outreach signals, and issue movement into usable campaign intelligence."
+      },
+      {
+        id: "candidate-positioning",
+        title: "Candidate Positioning & Message Architecture",
+        summary:
+          "Public leadership requires clarity of identity, issue alignment, credibility, and message consistency across campaign channels and stakeholder interactions.",
+        points: [
+          "Leadership narrative structuring",
+          "Issue-priority alignment",
+          "Public positioning frameworks",
+          "Speech and communication direction support",
+          "Perception-gap review",
+          "Message architecture for campaign phases"
+        ],
+        outcome:
+          "Useful when a campaign needs clearer leadership articulation and stronger narrative coherence."
+      },
+      {
+        id: "reputation-media-crisis",
+        title: "Reputation, Media & Crisis Response",
+        summary:
+          "Campaigns operate in volatile environments where perception can shift quickly. We help build structured response frameworks for issue escalation and reputational monitoring.",
+        points: [
+          "Issue monitoring structures",
+          "Response flow design",
+          "Escalation matrices",
+          "Media coordination logic",
+          "Narrative risk identification",
+          "Rapid briefing support formats"
+        ],
+        outcome:
+          "Important for teams that need calm, structured response capability in high-pressure moments."
+      },
+      {
+        id: "volunteer-cadre-management",
+        title: "Volunteer & Cadre Management",
+        summary:
+          "A campaign's strength depends heavily on how well people are aligned, informed, activated, and reviewed.",
+        points: [
+          "Onboarding structures",
+          "Role distribution frameworks",
+          "Training flow suggestions",
+          "Reporting discipline",
+          "Activity tracking systems",
+          "Communication structures and review loops"
+        ],
+        outcome:
+          "Useful when volunteer or cadre strength exists, but the operating discipline around it is weak."
+      },
+      {
+        id: "full-campaign-consulting",
+        title: "Full Campaign Consulting",
+        summary:
+          "For teams that require end-to-end advisory and execution support, we offer integrated campaign consulting across research, strategy, digital systems, war-room setup, grassroots operations, communication frameworks, and review mechanisms.",
+        points: [
+          "End-to-end campaign planning",
+          "Cross-functional coordination",
+          "Strategic reviews",
+          "System design across campaign functions",
+          "Continuous operational support",
+          "Integrated reporting and leadership visibility"
+        ],
+        outcome:
+          "Best suited for campaigns that require one coordinated strategic and operational partner instead of fragmented vendors."
+      }
+    ],
+    visualsHeading: "System visuals that make the campaign architecture legible",
+    visualsIntro:
+      "The service model is built around clear operating views. These visual blocks show how Arjuna approaches planning, feedback, response, and decision support across the campaign stack.",
+    visuals: [
+      {
+        eyebrow: "Election Lifecycle",
+        title: "Election management begins with sequencing, not improvisation.",
+        text:
+          "Assessment, planning, research, outreach, ground activation, war-room monitoring, review, and final-push preparation need one coherent operating timeline.",
+        image: {
+          src: "/service-assets/service-election-timeline.jpg",
+          alt: "Election operations timeline covering assessment, planning, research, outreach, ground activation, war-room monitoring, review, and final push."
+        }
+      },
+      {
+        eyebrow: "Research & Surveys",
+        title: "Research systems help leadership understand where movement is actually happening.",
+        text:
+          "Survey charts, issue heatmaps, sentiment categories, field feedback cards, and trend panels provide structured visibility into constituency realities and changing voter priorities.",
+        image: {
+          src: "/service-assets/service-research-dashboard.jpg",
+          alt: "Campaign insights dashboard with survey charts, constituency issue heatmaps, field feedback cards, and sentiment categories."
+        }
+      },
+      {
+        eyebrow: "Digital Outreach",
+        title: "Digital outreach works best when it is treated like an operating system.",
+        text:
+          "Planning boards, response dashboards, trend trackers, and message alignment panels help digital teams maintain continuity, speed, and accountability.",
+        image: {
+          src: "/service-assets/service-digital-outreach-dashboard.jpg",
+          alt: "Digital outreach dashboard with content planning boards, response panels, trend tracking, and audience engagement analytics."
+        }
+      },
+      {
+        eyebrow: "War Room",
+        title: "A war room should synthesize inputs before directing response.",
+        text:
+          "Field operations, media signals, digital tracking, research, leadership inputs, feedback, and analytics should converge into one decision desk that routes action clearly.",
+        image: {
+          src: "/service-assets/service-war-room-flow.jpg",
+          alt: "War-room operations flow diagram showing field ops, media, digital, research, leadership, feedback, and analytics feeding a decision desk."
+        }
+      },
+      {
+        eyebrow: "Voter Data & Analytics",
+        title: "Analytics should support prioritization, not drown campaigns in dashboards.",
+        text:
+          "Constituency segments, issue heatmaps, outreach metrics, field reports, and executive summaries should compress complexity into usable decision support.",
+        image: {
+          src: "/service-assets/service-analytics-dashboard.jpg",
+          alt: "Campaign analytics dashboard with constituency segments, issue heatmaps, outreach metrics, field reports, and executive summaries."
+        }
+      },
+      {
+        eyebrow: "Grassroots Operations",
+        title: "Ground coordination becomes stronger when reporting lines and escalation paths are visible.",
+        text:
+          "Booth clusters, zone coordinators, volunteer nodes, issue tracking points, and escalation channels should connect local activity back to the command center.",
+        image: {
+          src: "/service-assets/service-field-operations-map.jpg",
+          alt: "Constituency operations map showing booth clusters, zone coordinators, volunteer nodes, issue tracking, and escalation channels."
+        }
+      },
+      {
+        eyebrow: "Message Architecture",
+        title: "Leadership positioning needs hierarchy, not scattered talking points.",
+        text:
+          "Core leadership identity, public priorities, governance themes, core issues, field messaging, digital communication, and media notes should align inside one message framework.",
+        image: {
+          src: "/service-assets/service-message-architecture.jpg",
+          alt: "Strategic campaign architecture pyramid showing leadership identity, public priorities, governance themes, core issues, and communication layers."
+        }
+      }
+    ],
+    process: {
+      heading: "How we work",
+      intro:
+        "Campaign environments change quickly. We define service scope, build the required systems, support activation, and maintain review cycles so strategy does not drift away from execution.",
+      image: {
+        src: "/service-assets/service-consulting-process.jpg",
+        alt: "Five-step consulting process covering diagnostic review, strategic structuring, system design, activation support, and monitoring."
+      },
+      steps: [
+        {
+          phase: "01",
+          title: "Diagnostic Review",
+          text:
+            "We begin by understanding campaign context, geography, leadership requirements, operational realities, and immediate challenges."
+        },
+        {
+          phase: "02",
+          title: "Strategic Structuring",
+          text:
+            "We define service scope, operating priorities, campaign workflows, and decision-support needs."
+        },
+        {
+          phase: "03",
+          title: "System Design",
+          text:
+            "We shape the research, coordination, reporting, outreach, and review frameworks required for execution."
+        },
+        {
+          phase: "04",
+          title: "Activation Support",
+          text:
+            "We support implementation across selected workstreams with process discipline and review mechanisms."
+        },
+        {
+          phase: "05",
+          title: "Monitoring & Adaptation",
+          text:
+            "We establish structured review cycles so campaigns can adjust quickly as conditions, pressure points, and opportunities change."
+        }
+      ]
+    },
+    whyArjuna: {
+      heading: "Why Arjuna Strategy Consulting",
+      text:
+        "We approach election and campaign consulting as a structured operating discipline, not as fragmented activity. The emphasis is on clarity, planning, coordination, review, and execution support across the functions that shape modern political campaigns.",
+      points: [
+        "Strategy linked to execution",
+        "Research-aware campaign thinking",
+        "Digital and ground integration",
+        "Structured war-room orientation",
+        "Decision-support frameworks, not noise",
+        "Institutional and operational approach"
+      ]
+    },
+    useCases: {
+      heading: "Where our support becomes valuable",
+      items: [
+        {
+          title: "When campaign operations feel scattered",
+          text:
+            "We help create structure, review logic, and clearer execution ownership."
+        },
+        {
+          title: "When field and central teams are disconnected",
+          text:
+            "We build reporting and coordination systems that improve campaign flow."
+        },
+        {
+          title: "When the campaign lacks reliable feedback loops",
+          text:
+            "We help design research, input, and review mechanisms for better visibility."
+        },
+        {
+          title: "When rapid response is weak",
+          text:
+            "We support war-room, issue-monitoring, and escalation structures."
+        },
+        {
+          title: "When leadership positioning is unclear",
+          text:
+            "We help build stronger message architecture and narrative consistency."
+        }
+      ]
+    },
+    relatedLinks: [
+      {
+        href: "/capabilities",
+        label: "Campaign proof and capability",
+        text: "See the consulting stack together with execution outcomes and field proof."
+      },
+      {
+        href: "/surveys",
+        label: "Research and survey systems",
+        text: "Review the methodology, survey application, sample design, and reporting framework."
+      },
+      {
+        href: "/leadership",
+        label: "Founder-led consultation",
+        text: "Meet the founders and move directly into a campaign brief."
+      }
+    ],
+    cta: {
+      heading: "Build a more structured campaign.",
+      text:
+        "Whether you need support in election management, campaign coordination, research, digital outreach, war-room systems, or grassroots operations, Arjuna Strategy Consulting can help structure the work with greater clarity and execution discipline.",
+      primaryLabel: "Request A Consultation",
+      primaryHref: "/leadership#contact-intake",
+      secondaryLabel: "Speak With Our Team",
+      secondaryHref: "/leadership"
+    }
+  },
   leaders: [
     {
       name: "Rana Arjun",
@@ -845,6 +1311,43 @@ export const siteContent = {
         question: "How does the founder-led intake process work?",
         answer:
           "A campaign brief is reviewed directly by the founders, who frame the real pressure point, recommend the first workstream, and define whether the mandate needs strategy, survey research, field operations, or a full-stack campaign system."
+      }
+    ],
+    services: [
+      {
+        question: "What does an election management consulting firm do?",
+        answer:
+          "An election management consulting firm helps political teams structure campaign planning, operations, coordination systems, research, outreach workflows, and review mechanisms for more disciplined execution."
+      },
+      {
+        question: "What is included in campaign management services?",
+        answer:
+          "Campaign management services may include campaign planning, team coordination, activity monitoring, issue tracking, communication alignment, war-room structures, and operational review systems."
+      },
+      {
+        question: "Do you support research and survey strategy?",
+        answer:
+          "Yes. Arjuna Strategy Consulting supports research frameworks, survey direction, issue mapping, perception analysis, and interpretation for campaign decision support."
+      },
+      {
+        question: "Do you help with digital outreach for campaigns?",
+        answer:
+          "Yes. Arjuna supports digital outreach planning, content direction structures, narrative consistency, response systems, and performance review frameworks."
+      },
+      {
+        question: "Can you help set up a campaign war room?",
+        answer:
+          "Yes. Arjuna supports war-room design through monitoring structures, issue escalation systems, reporting formats, decision-support workflows, and communication routing."
+      },
+      {
+        question: "Do you work on grassroots operations?",
+        answer:
+          "Yes. Arjuna supports structured grassroots planning, field coordination models, local reporting systems, and operational clarity for constituency-based activity."
+      },
+      {
+        question: "Do you provide full campaign consulting?",
+        answer:
+          "Yes. Arjuna offers integrated consulting support across multiple campaign functions where end-to-end strategic and operational partnership is needed."
       }
     ]
   },

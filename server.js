@@ -16,7 +16,7 @@ const parsedPort = Number.parseInt(process.env.PORT ?? "", 10);
 const port = Number.isFinite(parsedPort) ? parsedPort : 3000;
 const host = "0.0.0.0";
 const maxRequestSize = 1024 * 1024;
-const pageRoutes = ["/", "/capabilities", "/surveys", "/leadership"];
+const pageRoutes = ["/", "/election-management-campaign-consulting", "/capabilities", "/surveys", "/leadership"];
 const routeAliases = new Map([
   ["/track-record", "/capabilities"],
   ["/contact", "/leadership"]

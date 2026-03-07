@@ -2,6 +2,7 @@ import { siteContent } from "./site-content.js";
 
 const navItems = [
   { href: "/", label: "Home" },
+  { href: "/election-management-campaign-consulting", label: "Services" },
   { href: "/capabilities", label: "Work" },
   { href: "/surveys", label: "Surveys" },
   { href: "/leadership", label: "Connect" }
@@ -359,6 +360,82 @@ function renderFaqSection({ eyebrow = "FAQs", title, intro, items = [], sectionC
   `;
 }
 
+function renderServiceAnchors(items) {
+  return items
+    .map(
+      (item) => `
+        <a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>
+      `
+    )
+    .join("");
+}
+
+function renderServiceAreaCards(items) {
+  return items
+    .map(
+      (item) => `
+        <article class="service-card reveal" id="${escapeHtml(item.id)}">
+          <p class="eyebrow">Service Area</p>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p class="service-card-summary">${escapeHtml(item.summary)}</p>
+          <ul class="service-list">
+            ${renderSummaryList(item.points)}
+          </ul>
+          <p class="service-outcome">${escapeHtml(item.outcome)}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderServiceVisualCards(items) {
+  return items
+    .map(
+      (item) => `
+        <article class="diagram-panel service-visual-card reveal">
+          <p class="diagram-caption">${escapeHtml(item.eyebrow)}</p>
+          <img
+            class="diagram-image"
+            src="${escapeHtml(item.image.src)}"
+            alt="${escapeHtml(item.image.alt)}"
+            loading="lazy"
+          />
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.text)}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderProcessCards(items) {
+  return items
+    .map(
+      (item) => `
+        <article class="engagement-card reveal">
+          <span class="engagement-step">${escapeHtml(item.phase)}</span>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.text)}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderRelatedRouteCards(items) {
+  return items
+    .map(
+      (item) => `
+        <a class="route-card reveal" href="${escapeHtml(item.href)}">
+          <span class="route-card-title">${escapeHtml(item.label)}</span>
+          <span class="route-card-text">${escapeHtml(item.text)}</span>
+          <span class="route-card-link">Open Page</span>
+        </a>
+      `
+    )
+    .join("");
+}
+
 function renderEngagementSteps() {
   return siteContent.engagementSteps
     .map(
@@ -375,6 +452,11 @@ function renderEngagementSteps() {
 
 function renderRouteCards() {
   const routes = [
+    {
+      href: "/election-management-campaign-consulting",
+      title: "Services",
+      text: "Review election management, campaign consulting, research, digital systems, war-room setup, and field operations in one long-form service page."
+    },
     {
       href: "/capabilities",
       title: "Work",
@@ -597,6 +679,27 @@ function buildProfessionalServiceSchema(baseUrl, ogImageUrl) {
 }
 
 function buildServiceSchema(currentPath, canonicalUrl, baseUrl) {
+  if (currentPath === siteContent.servicePage.path) {
+    return {
+      "@type": "Service",
+      "@id": `${canonicalUrl}#service`,
+      name: "Election management and campaign consulting services in India",
+      serviceType: siteContent.servicePage.areas.map((area) => area.title),
+      provider: { "@id": `${baseUrl}#organization` },
+      areaServed: {
+        "@type": "Country",
+        name: siteContent.seo.serviceArea
+      },
+      audience: siteContent.seo.audiences.map((name) => ({
+        "@type": "Audience",
+        audienceType: name
+      })),
+      url: canonicalUrl,
+      description:
+        "Election management, campaign consulting, research and surveys, digital outreach, war-room setup, grassroots operations, voter data analytics, and full campaign consulting for political teams in India."
+    };
+  }
+
   if (currentPath === "/capabilities") {
     return {
       "@type": "Service",
@@ -963,6 +1066,208 @@ function buildHomePage() {
   `;
 
   return { title, description, hero, body, faqs: siteContent.faqs.home, schemaTypes: ["WebPage"] };
+}
+
+function buildServicesPage() {
+  const servicePage = siteContent.servicePage;
+  const title = `Election Management & Campaign Consulting Services | ${siteContent.brand.name}`;
+  const description =
+    "Arjuna Strategy Consulting offers election management, campaign strategy, research and surveys, digital outreach, war-room setup, grassroots operations, voter data analytics, and full campaign consulting for modern political teams.";
+
+  const hero = `
+    <section class="page-hero service-hero">
+      <div class="page-hero-copy service-hero-copy">
+        <p class="eyebrow">${escapeHtml(servicePage.hero.eyebrow)}</p>
+        <h1>
+          <span class="page-hero-line">Election management</span>
+          <span class="page-hero-line">&amp; campaign consulting</span>
+          <span class="page-hero-line">built for modern</span>
+          <span class="page-hero-line">political operations.</span>
+        </h1>
+        <p class="page-intro">${escapeHtml(servicePage.hero.intro)}</p>
+        <p class="service-supporting">${escapeHtml(servicePage.hero.supporting)}</p>
+        <div class="page-actions">
+          <a class="button button-primary" href="/leadership#contact-intake">${escapeHtml(servicePage.hero.primaryCta)}</a>
+          <a class="button button-secondary" href="#core-services">${escapeHtml(servicePage.hero.secondaryCta)}</a>
+        </div>
+      </div>
+      <aside class="service-hero-visual reveal">
+        <img
+          class="diagram-image service-hero-image"
+          src="${escapeHtml(servicePage.hero.image.src)}"
+          alt="${escapeHtml(servicePage.hero.image.alt)}"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="service-badge-list">
+          ${servicePage.hero.badges
+            .map((badge) => `<span class="service-badge">${escapeHtml(badge)}</span>`)
+            .join("")}
+        </div>
+      </aside>
+    </section>
+
+    <section class="service-anchor-bar reveal" aria-label="Service section navigation">
+      <div class="service-anchor-list">
+        ${renderServiceAnchors(servicePage.anchors)}
+      </div>
+    </section>
+  `;
+
+  const body = `
+    <section class="section section-soft" id="service-positioning">
+      <div class="section-stack">
+        <div class="page-split">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Positioning</p>
+            <h2>${escapeHtml(servicePage.positioning.heading)}</h2>
+            ${servicePage.positioning.paragraphs
+              .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+              .join("")}
+          </div>
+          <aside class="diagram-panel reveal">
+            <p class="diagram-caption">Campaign Operating System</p>
+            <img
+              class="diagram-image"
+              src="${escapeHtml(servicePage.positioning.image.src)}"
+              alt="${escapeHtml(servicePage.positioning.image.alt)}"
+              loading="lazy"
+            />
+            <ul class="summary-list">
+              ${renderSummaryList(servicePage.positioning.principles)}
+            </ul>
+          </aside>
+        </div>
+        <div class="answer-grid service-answer-grid">
+          ${renderAnswerCards(servicePage.answerBlocks)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="service-audience">
+      <div class="page-split">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Who This Is For</p>
+          <h2>${escapeHtml(servicePage.audience.heading)}</h2>
+          <p>${escapeHtml(servicePage.audience.intro)}</p>
+        </div>
+        <aside class="page-panel reveal">
+          <ul class="summary-list service-audience-list">
+            ${renderSummaryList(servicePage.audience.items)}
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-contrast" id="core-services">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Core Service Areas</p>
+        <h2>${escapeHtml(servicePage.servicesHeading)}</h2>
+        <p>${escapeHtml(servicePage.servicesIntro)}</p>
+      </div>
+      <div class="service-area-grid">
+        ${renderServiceAreaCards(servicePage.areas)}
+      </div>
+    </section>
+
+    <section class="section" id="service-systems">
+      <div class="section-heading reveal">
+        <p class="eyebrow">System Visuals</p>
+        <h2>${escapeHtml(servicePage.visualsHeading)}</h2>
+        <p>${escapeHtml(servicePage.visualsIntro)}</p>
+      </div>
+      <div class="service-visual-grid">
+        ${renderServiceVisualCards(servicePage.visuals)}
+      </div>
+    </section>
+
+    <section class="section section-soft" id="service-process">
+      <div class="section-stack">
+        <div class="page-split">
+          <div class="section-heading reveal">
+            <p class="eyebrow">How We Work</p>
+            <h2>${escapeHtml(servicePage.process.heading)}</h2>
+            <p>${escapeHtml(servicePage.process.intro)}</p>
+          </div>
+          <aside class="diagram-panel reveal">
+            <p class="diagram-caption">Consulting Process</p>
+            <img
+              class="diagram-image"
+              src="${escapeHtml(servicePage.process.image.src)}"
+              alt="${escapeHtml(servicePage.process.image.alt)}"
+              loading="lazy"
+            />
+          </aside>
+        </div>
+        <div class="engagement-grid service-process-grid">
+          ${renderProcessCards(servicePage.process.steps)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contrast">
+      <div class="page-split">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Why Arjuna</p>
+          <h2>${escapeHtml(servicePage.whyArjuna.heading)}</h2>
+          <p>${escapeHtml(servicePage.whyArjuna.text)}</p>
+          <ul class="summary-list">
+            ${renderSummaryList(servicePage.whyArjuna.points)}
+          </ul>
+        </div>
+        <div class="answer-grid">
+          ${renderAnswerCards(servicePage.useCases.items)}
+        </div>
+      </div>
+    </section>
+
+    <div id="service-faqs"></div>
+    ${renderFaqSection({
+      eyebrow: "Service FAQs",
+      title: "Frequently asked questions about election management and campaign consulting.",
+      intro:
+        "These answers are written in plain language so search engines, AI systems, and campaign teams can quickly understand what the service page covers.",
+      items: siteContent.faqs.services,
+      sectionClass: "section section-soft"
+    })}
+
+    <section class="section">
+      <div class="section-stack">
+        <div class="page-split">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Related Pages</p>
+            <h2>Move from service overview into proof, methodology, or founder access.</h2>
+            <p>
+              The service page explains the operating architecture. The linked pages help a visitor evaluate campaign proof, survey depth, and the founder-led intake path.
+            </p>
+          </div>
+          <div class="route-card-grid service-related-grid">
+            ${renderRelatedRouteCards(servicePage.relatedLinks)}
+          </div>
+        </div>
+        <div class="cta-band reveal">
+          <div>
+            <p class="eyebrow">Next Step</p>
+            <h2>${escapeHtml(servicePage.cta.heading)}</h2>
+            <p>${escapeHtml(servicePage.cta.text)}</p>
+          </div>
+          <div class="page-actions">
+            <a class="button button-primary" href="${escapeHtml(servicePage.cta.primaryHref)}">${escapeHtml(servicePage.cta.primaryLabel)}</a>
+            <a class="button button-secondary" href="${escapeHtml(servicePage.cta.secondaryHref)}">${escapeHtml(servicePage.cta.secondaryLabel)}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+
+  return {
+    title,
+    description,
+    hero,
+    body,
+    faqs: siteContent.faqs.services,
+    schemaTypes: ["WebPage"]
+  };
 }
 
 function buildCapabilitiesPage() {
@@ -1496,6 +1801,7 @@ function buildLeadershipPage() {
 
 const pageBuilders = {
   "/": buildHomePage,
+  "/election-management-campaign-consulting": buildServicesPage,
   "/capabilities": buildCapabilitiesPage,
   "/surveys": buildSurveysPage,
   "/leadership": buildLeadershipPage
