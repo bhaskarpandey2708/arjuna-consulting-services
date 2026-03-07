@@ -942,7 +942,7 @@ function renderLayout(currentPath, page, context) {
           <span class="premium-label-line"></span>
           <span>Premium Campaign Stack</span>
         </div>
-        <div class="premium-track">
+        <div class="premium-track" data-live-ticker>
           ${renderPremiumBar()}
         </div>
       </section>

@@ -1,15 +1,85 @@
 const html = document.documentElement;
 html.classList.add("js-ready");
 
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const liveTickers = document.querySelectorAll("[data-live-ticker]");
+
+for (const ticker of liveTickers) {
+  const chips = Array.from(ticker.querySelectorAll(".premium-chip"));
+
+  chips.forEach((chip, index) => {
+    chip.style.setProperty("--ticker-index", String(index));
+  });
+
+  if (prefersReducedMotion.matches || chips.length === 0) {
+    continue;
+  }
+
+  const primaryTrack = document.createElement("div");
+  primaryTrack.className = "premium-track-motion";
+
+  chips.forEach((chip) => {
+    primaryTrack.appendChild(chip);
+  });
+
+  const cloneTrack = primaryTrack.cloneNode(true);
+  cloneTrack.classList.add("is-clone");
+  cloneTrack.setAttribute("aria-hidden", "true");
+
+  ticker.replaceChildren(primaryTrack, cloneTrack);
+  ticker.classList.add("is-live");
+}
+
+const stagedContainers = document.querySelectorAll(".page-hero, .hero, .site-footer");
+stagedContainers.forEach((container) => {
+  Array.from(container.children).forEach((node, index) => {
+    if (!(node instanceof HTMLElement)) {
+      return;
+    }
+
+    if (!node.classList.contains("reveal")) {
+      node.classList.add("reveal");
+    }
+
+    if (!node.style.getPropertyValue("--reveal-delay")) {
+      node.style.setProperty("--reveal-delay", `${index * 120}ms`);
+    }
+  });
+});
+
+const flowSections = Array.from(
+  document.querySelectorAll(".premium-strip, .page-main > section, .site-footer")
+);
+
+flowSections.forEach((section, sectionIndex) => {
+  if (!(section instanceof HTMLElement)) {
+    return;
+  }
+
+  section.classList.add("flow-section");
+  section.style.setProperty("--section-delay", `${Math.min(sectionIndex, 8) * 70}ms`);
+
+  const stagedReveals = section.querySelectorAll(".reveal");
+  stagedReveals.forEach((node, revealIndex) => {
+    if (!(node instanceof HTMLElement)) {
+      return;
+    }
+
+    if (!node.style.getPropertyValue("--reveal-delay")) {
+      node.style.setProperty("--reveal-delay", `${Math.min(revealIndex, 8) * 75}ms`);
+    }
+  });
+});
+
 const revealNodes = document.querySelectorAll(".reveal");
 
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
+if ("IntersectionObserver" in window && !prefersReducedMotion.matches) {
+  const revealObserver = new IntersectionObserver(
     (entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+          revealObserver.unobserve(entry.target);
         }
       }
     },
@@ -19,12 +89,28 @@ if ("IntersectionObserver" in window) {
     }
   );
 
-  revealNodes.forEach((node) => observer.observe(node));
+  const flowObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-flow-visible");
+          flowObserver.unobserve(entry.target);
+        }
+      }
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -10% 0px"
+    }
+  );
+
+  revealNodes.forEach((node) => revealObserver.observe(node));
+  flowSections.forEach((section) => flowObserver.observe(section));
 } else {
   revealNodes.forEach((node) => node.classList.add("is-visible"));
+  flowSections.forEach((section) => section.classList.add("is-flow-visible"));
 }
 
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const sliders = document.querySelectorAll("[data-auto-slider]");
 
 for (const slider of sliders) {
