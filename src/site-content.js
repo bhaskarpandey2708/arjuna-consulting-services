@@ -413,6 +413,7 @@ export const siteContent = {
       { href: "#service-audience", label: "Who It Is For" },
       { href: "#core-services", label: "Core Services" },
       { href: "#service-systems", label: "System Visuals" },
+      { href: "#service-gallery", label: "Visual Rail" },
       { href: "#service-process", label: "Process" },
       { href: "#service-faqs", label: "FAQs" }
     ],
@@ -731,6 +732,61 @@ export const siteContent = {
         }
       }
     ],
+    gallery: {
+      heading: "More system views from the campaign deck",
+      intro:
+        "These unused deck frames are now folded into the page as an auto-sliding visual rail so visitors can see alternate command-center, analytics, operating-system, and message-architecture views without leaving the service narrative.",
+      slides: [
+        {
+          eyebrow: "Leadership Review",
+          title: "A command-center view built for fast campaign review.",
+          text:
+            "This frame reinforces the campaign-management and war-room layers: leadership briefings, dashboard review, and coordinated decision-making under active timelines.",
+          image: {
+            src: "/service-assets/service-operations-room-alt.jpg",
+            alt: "Campaign leadership review room with map screens, analytics dashboards, and strategy tables."
+          },
+          href: "#war-room-setup",
+          linkLabel: "Jump To War-Room Setup"
+        },
+        {
+          eyebrow: "Operating Architecture",
+          title: "An alternate operating-system view showing how the service buckets connect.",
+          text:
+            "Election management, campaign management, research, analytics, grassroots operations, digital outreach, and volunteer systems sit inside one connected operating picture.",
+          image: {
+            src: "/service-assets/service-campaign-operating-system-alt.jpg",
+            alt: "Alternate campaign operating system diagram linking election management, campaign management, research, analytics, digital outreach, war room, grassroots operations, and volunteer management."
+          },
+          href: "#service-positioning",
+          linkLabel: "Back To Positioning"
+        },
+        {
+          eyebrow: "Intelligence Platform",
+          title: "A second analytics view for teams that need live decision support.",
+          text:
+            "Demographic filters, survey trends, issue heatmaps, sentiment analysis, and constituency insight cards align with the voter-data and research layers of the page.",
+          image: {
+            src: "/service-assets/service-strategic-analytics-platform.jpg",
+            alt: "Strategic analytics platform with demographic filters, survey trends, issue heatmaps, sentiment analysis, and constituency insight cards."
+          },
+          href: "#voter-data-analytics",
+          linkLabel: "See Analytics Service"
+        },
+        {
+          eyebrow: "Narrative Structure",
+          title: "A second message-architecture frame aligned to leadership positioning.",
+          text:
+            "Core leadership identity, priority issues, public values, governance themes, field messaging, digital themes, and media responses stay structured instead of drifting apart.",
+          image: {
+            src: "/service-assets/service-message-architecture-alt.jpg",
+            alt: "Alternative strategic message architecture pyramid with leadership identity, priority issues, public values, governance themes, and communication layers."
+          },
+          href: "#candidate-positioning",
+          linkLabel: "Open Positioning Service"
+        }
+      ]
+    },
     process: {
       heading: "How we work",
       intro:

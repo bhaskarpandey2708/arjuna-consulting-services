@@ -24,6 +24,91 @@ if ("IntersectionObserver" in window) {
   revealNodes.forEach((node) => node.classList.add("is-visible"));
 }
 
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const sliders = document.querySelectorAll("[data-auto-slider]");
+
+for (const slider of sliders) {
+  const track = slider.querySelector("[data-slider-track]");
+  const slides = Array.from(slider.querySelectorAll("[data-slider-slide]"));
+  const dots = Array.from(slider.querySelectorAll("[data-slide-to]"));
+
+  if (!(track instanceof HTMLElement) || slides.length === 0) {
+    continue;
+  }
+
+  const delay = Number.parseInt(slider.getAttribute("data-slider-delay") ?? "", 10) || 4600;
+  let activeIndex = 0;
+  let timerId = 0;
+
+  function setInteractiveState(slide, isActive) {
+    slide.setAttribute("aria-hidden", String(!isActive));
+
+    const interactiveNodes = slide.querySelectorAll("a, button");
+    interactiveNodes.forEach((node) => {
+      if (node instanceof HTMLAnchorElement || node instanceof HTMLButtonElement) {
+        node.tabIndex = isActive ? 0 : -1;
+      }
+    });
+  }
+
+  function renderSlider(nextIndex) {
+    activeIndex = (nextIndex + slides.length) % slides.length;
+    track.style.transform = `translateX(-${activeIndex * 100}%)`;
+
+    slides.forEach((slide, index) => setInteractiveState(slide, index === activeIndex));
+    dots.forEach((dot, index) => {
+      const isActive = index === activeIndex;
+      dot.classList.toggle("is-active", isActive);
+      dot.setAttribute("aria-pressed", String(isActive));
+    });
+  }
+
+  function stopSlider() {
+    if (timerId) {
+      window.clearInterval(timerId);
+      timerId = 0;
+    }
+  }
+
+  function startSlider() {
+    if (prefersReducedMotion.matches || slides.length < 2) {
+      return;
+    }
+
+    stopSlider();
+    timerId = window.setInterval(() => renderSlider(activeIndex + 1), delay);
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      const nextIndex = Number.parseInt(dot.getAttribute("data-slide-to") ?? "", 10);
+
+      if (Number.isNaN(nextIndex)) {
+        return;
+      }
+
+      renderSlider(nextIndex);
+      startSlider();
+    });
+  });
+
+  slider.addEventListener("mouseenter", stopSlider);
+  slider.addEventListener("mouseleave", startSlider);
+  slider.addEventListener("focusin", stopSlider);
+  slider.addEventListener("focusout", (event) => {
+    const nextTarget = event.relatedTarget;
+
+    if (nextTarget instanceof Node && slider.contains(nextTarget)) {
+      return;
+    }
+
+    startSlider();
+  });
+
+  renderSlider(0);
+  startSlider();
+}
+
 const form = document.querySelector("#contact-form");
 const statusNode = document.querySelector("#form-status");
 

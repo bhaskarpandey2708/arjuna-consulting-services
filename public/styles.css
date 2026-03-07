@@ -1419,6 +1419,103 @@ img {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.service-slider {
+  display: grid;
+  gap: 1rem;
+}
+
+.service-slider-viewport {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(17, 32, 47, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.service-slider-track {
+  display: flex;
+  transition: transform 420ms ease;
+  will-change: transform;
+}
+
+.service-slider-slide {
+  display: grid;
+  flex: 0 0 100%;
+  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
+  gap: 1.1rem;
+  align-items: stretch;
+  padding: 1rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.62)),
+    rgba(255, 255, 255, 0.6);
+}
+
+.service-slider-copy,
+.service-slider-media {
+  min-width: 0;
+}
+
+.service-slider-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.4rem;
+}
+
+.service-slider-copy h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.3vw, 3rem);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  color: var(--text-dark);
+}
+
+.service-slider-copy p:last-of-type {
+  margin: 0.95rem 0 0;
+  color: var(--text-soft-dark);
+  line-height: 1.72;
+}
+
+.service-slider-link {
+  width: fit-content;
+  margin-top: 1.1rem;
+}
+
+.service-slider-image {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.service-slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+}
+
+.service-slider-dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(17, 32, 47, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(17, 32, 47, 0.08);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.service-slider-dot:hover,
+.service-slider-dot:focus-visible {
+  background: rgba(205, 126, 47, 0.42);
+  transform: scale(1.04);
+}
+
+.service-slider-dot.is-active {
+  background: var(--accent);
+}
+
 .answer-grid,
 .faq-grid {
   display: grid;
@@ -1784,6 +1881,7 @@ img {
   .premium-strip,
   .content-distribution,
   .results-layout,
+  .service-slider-slide,
   .hero,
   .proof-layout,
   .split-layout,
@@ -1813,6 +1911,10 @@ img {
   .service-anchor-bar {
     position: static;
     top: auto;
+  }
+
+  .service-slider-copy {
+    padding: 0.2rem;
   }
 
   .leader-stack {
@@ -1927,6 +2029,10 @@ img {
     width: 100%;
     justify-content: center;
     text-align: center;
+  }
+
+  .service-slider-link {
+    width: 100%;
   }
 
   .route-card,

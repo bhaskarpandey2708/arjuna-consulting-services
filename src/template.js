@@ -408,6 +408,64 @@ function renderServiceVisualCards(items) {
     .join("");
 }
 
+function renderServiceGallery(items) {
+  const slides = items
+    .map(
+      (item, index) => `
+        <article
+          class="service-slider-slide"
+          data-slider-slide
+          aria-hidden="${index === 0 ? "false" : "true"}"
+        >
+          <div class="service-slider-copy">
+            <p class="eyebrow">${escapeHtml(item.eyebrow)}</p>
+            <h3>${escapeHtml(item.title)}</h3>
+            <p>${escapeHtml(item.text)}</p>
+            <a class="button button-secondary service-slider-link" href="${escapeHtml(item.href)}">
+              ${escapeHtml(item.linkLabel)}
+            </a>
+          </div>
+          <div class="service-slider-media">
+            <img
+              class="diagram-image service-slider-image"
+              src="${escapeHtml(item.image.src)}"
+              alt="${escapeHtml(item.image.alt)}"
+              loading="lazy"
+            />
+          </div>
+        </article>
+      `
+    )
+    .join("");
+
+  const dots = items
+    .map(
+      (_, index) => `
+        <button
+          class="service-slider-dot${index === 0 ? " is-active" : ""}"
+          type="button"
+          data-slide-to="${index}"
+          aria-label="Show slide ${index + 1}"
+          aria-pressed="${index === 0 ? "true" : "false"}"
+        ></button>
+      `
+    )
+    .join("");
+
+  return `
+    <div class="service-slider reveal" data-auto-slider data-slider-delay="4600">
+      <div class="service-slider-viewport">
+        <div class="service-slider-track" data-slider-track>
+          ${slides}
+        </div>
+      </div>
+      <div class="service-slider-controls" aria-label="Service gallery controls">
+        ${dots}
+      </div>
+    </div>
+  `;
+}
+
 function renderProcessCards(items) {
   return items
     .map(
@@ -1179,6 +1237,15 @@ function buildServicesPage() {
       <div class="service-visual-grid">
         ${renderServiceVisualCards(servicePage.visuals)}
       </div>
+    </section>
+
+    <section class="section section-soft" id="service-gallery">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Visual Rail</p>
+        <h2>${escapeHtml(servicePage.gallery.heading)}</h2>
+        <p>${escapeHtml(servicePage.gallery.intro)}</p>
+      </div>
+      ${renderServiceGallery(servicePage.gallery.slides)}
     </section>
 
     <section class="section section-soft" id="service-process">
