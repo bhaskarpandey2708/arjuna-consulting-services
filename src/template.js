@@ -232,7 +232,7 @@ function renderLeaderProfiles(className = "leader-card") {
     .map(
       (leader) => `
         <article class="${className} reveal">
-          <p class="eyebrow">Founding Team</p>
+          <p class="eyebrow">Founder</p>
           <h3>${escapeHtml(leader.name)}</h3>
           <a
             class="leader-link"
@@ -971,20 +971,24 @@ function buildCapabilitiesPage() {
     "Review Arjuna Strategy Consulting's political consulting services in India across campaign strategy, voter intelligence, field operations, digital outreach, and execution proof.";
 
   const hero = `
-    <section class="page-hero">
-      <div class="page-hero-copy">
+    <section class="page-hero page-hero-compact">
+      <div class="page-hero-copy page-hero-copy-compact">
         <p class="eyebrow">Work</p>
-        <h1>What Arjuna can build,<br />prove, and deliver.</h1>
+        <h1>
+          <span class="page-hero-line">Political strategy</span>
+          <span class="page-hero-line">built to perform</span>
+          <span class="page-hero-line">in the field.</span>
+        </h1>
         <p class="page-intro">
-          Political consulting capability and campaign proof now sit on one page so visitors can move from the consulting stack to live execution outcomes without switching context.
+          Arjuna's political consulting stack and campaign proof now sit on one page so visitors can move from capabilities to real execution outcomes without switching context.
         </p>
         <div class="page-actions">
           <a class="button button-primary" href="/leadership#contact-intake">Discuss Scope</a>
           <a class="button button-secondary" href="/surveys">Survey Systems</a>
         </div>
       </div>
-      <div class="page-stack">
-        <div class="signal-grid">
+      <div class="page-stack page-stack-tight">
+        <div class="signal-grid signal-grid-stack">
           ${renderProofHighlights()}
         </div>
         <aside class="page-panel reveal">
@@ -1365,10 +1369,14 @@ function buildLeadershipPage() {
     "Meet the Arjuna Strategy Consulting founders, review the operating context, and start a founder-led political consulting conversation for campaigns in India.";
 
   const hero = `
-    <section class="page-hero">
-      <div class="page-hero-copy">
+    <section class="page-hero page-hero-compact">
+      <div class="page-hero-copy page-hero-copy-compact">
         <p class="eyebrow">Connect</p>
-        <h1>Meet the founders.<br />Start the conversation.</h1>
+        <h1>
+          <span class="page-hero-line">Founder-led</span>
+          <span class="page-hero-line">from the</span>
+          <span class="page-hero-line">first brief.</span>
+        </h1>
         <p class="page-intro">
           Leadership context and contact now live on one page so the move from credibility to conversation is immediate, founder-led, and built for campaign teams in India.
         </p>
@@ -1377,8 +1385,8 @@ function buildLeadershipPage() {
           <a class="button button-secondary" href="/capabilities#track-record">See Work</a>
         </div>
       </div>
-      <div class="page-stack">
-        <div class="founder-grid">
+      <div class="page-stack page-stack-tight">
+        <div class="founder-grid founder-grid-stack">
           ${renderLeaderProfiles("founder-hero-card")}
         </div>
         <aside class="page-panel reveal">
