@@ -84,7 +84,7 @@ export function buildElectionAtlasPage(context = {}) {
           <span class="page-hero-line">campaign stack.</span>
         </h1>
         <p class="page-intro">
-          A live review surface for state-level election analysis, vote movement, seat pressure, constituency drilldown, and staged district rollups. The atlas now runs inside the Arjuna shell so beta rollout, daily improvements, and deeper normalization can happen without splitting the product too early.
+          A live election intelligence surface for state-level analysis, vote movement, seat pressure, constituency drilldown, and district rollups. The atlas runs inside the Arjuna shell so the product can improve continuously without breaking the main site experience.
         </p>
         <div class="page-actions">
           <a class="button button-primary" href="#atlas-app">Open Election Atlas</a>
@@ -97,11 +97,11 @@ export function buildElectionAtlasPage(context = {}) {
         <ul class="atlas-hero-list">
           <li>State-first read with turnout, vote movement, seat pressure, and margin diagnostics.</li>
           <li>Trend-ready model that can absorb district, AC, alliance, and later booth layers.</li>
-          <li>Geography versioning, source reconciliation, and local-only drilldown are baked in from the beta itself.</li>
+          <li>Geography versioning and local-only drilldown are built directly into the atlas surface.</li>
         </ul>
         <div class="atlas-hero-meta">
-          <span class="atlas-hero-badge">Default beta slice: ${escapeHtml(state.name)}</span>
-          <span class="atlas-hero-badge">Mode: Reconciled staged coverage with local-only drilldown</span>
+          <span class="atlas-hero-badge">Default view: ${escapeHtml(state.name)}</span>
+          <span class="atlas-hero-badge">Mode: Local drilldown with state and district intelligence</span>
         </div>
       </aside>
     </section>
@@ -110,15 +110,15 @@ export function buildElectionAtlasPage(context = {}) {
   const body = `
     <section class="section section-soft" id="atlas-app">
       <div class="section-heading reveal">
-        <p class="eyebrow">Live Beta</p>
-        <h2>Election Atlas beta surface</h2>
+        <p class="eyebrow">Election Atlas</p>
+        <h2>Election Atlas</h2>
         <p>
-          This section stays inside the Arjuna site shell so rollout, source refresh, normalization, QA, and daily improvement all happen on one product surface without forcing a separate shell too early.
+          This section stays inside the Arjuna site shell so review, iteration, and release all happen on one product surface without forcing a separate shell.
         </p>
       </div>
       <div class="atlas-app-shell">
         <div class="atlas-app" data-election-atlas>
-          <p class="atlas-loading">Loading the live beta election atlas...</p>
+          <p class="atlas-loading">Loading Election Atlas...</p>
         </div>
       </div>
       <script id="election-atlas-bootstrap" type="application/json">${serializeForHtml({
@@ -130,10 +130,10 @@ export function buildElectionAtlasPage(context = {}) {
     <section class="section">
       <div class="cta-band reveal">
         <div>
-          <p class="eyebrow">Next Stage</p>
-          <h2>National extraction is staged. The next stage is launch hardening, trust signaling, and daily release quality.</h2>
+          <p class="eyebrow">Build With Arjuna</p>
+          <h2>Move from election history to campaign decision support.</h2>
           <p>
-            The layout, local routing, constituency detail capture, district marts, mart-backed summaries, and source reconciliation are already live. The remaining work is visible launch status, broader historical enrichment, alliance coverage where sources expose it, and portal hardening without breaking the embedded atlas surface.
+            The atlas is designed to expand from state reading into district diagnostics, constituency drilldown, field intelligence, and custom campaign workflows without breaking the product surface.
           </p>
         </div>
         <div class="page-actions">

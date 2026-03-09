@@ -353,15 +353,15 @@ function formatTimestamp(value) {
 
 function formatAtlasSourceName(value) {
   if (!value) {
-    return "Source";
+    return "Data layer";
   }
 
   if (value === "lokdhaba") {
-    return "LokDhaba";
+    return "Primary dataset";
   }
 
   if (value === "indiavotes") {
-    return "IndiaVotes";
+    return "Supplementary dataset";
   }
 
   return String(value);
@@ -597,99 +597,11 @@ function buildDistrictPartyChips(parties, limit = 4) {
 }
 
 function buildAtlasStatusStrip(summary, options = {}) {
-  if (!summary) {
-    return "";
-  }
-
-  const quality = summary.quality ?? {};
-  const tone = quality.tone ?? "pending";
-  const secondaryNote = options.secondaryNote ? String(options.secondaryNote).trim() : "";
-  const includeSourceCopy = options.includeSourceCopy !== false;
-  const extraChips = Array.isArray(options.extraChips) ? options.extraChips : [];
-  const chips = [...(quality.chips ?? []), ...extraChips].filter((chip) => chip?.label);
-  const chipMarkup = chips
-    .map(
-      (chip) => `
-        <span class="atlas-status-chip atlas-status-chip-${escapeHtml(chip.tone ?? "pending")}">
-          ${escapeHtml(chip.label)}
-        </span>
-      `
-    )
-    .join("");
-  const sourceCopy = includeSourceCopy ? summary.sourceLabel : "";
-  const supplementalCopy = [sourceCopy, secondaryNote].filter(Boolean).join(" ");
-  const metaItems = [
-    summary.houseLabel,
-    summary.geographyVersion?.shortLabel,
-    quality.availableSources?.length > 0 ? `Sources ${quality.availableSources.map(formatAtlasSourceName).join(" + ")}` : "",
-    quality.updatedAt ? `Updated ${formatTimestamp(quality.updatedAt)}` : ""
-  ].filter(Boolean);
-
-  return `
-    <div class="atlas-note-bar atlas-note-bar-${escapeHtml(tone)}">
-      <div class="atlas-note-copy">
-        <p class="atlas-note-title">Launch status</p>
-        <p class="atlas-note-lead">
-          <strong>${escapeHtml(quality.statusLabel ?? "Atlas beta")}</strong>. ${escapeHtml(
-            quality.note ?? "Slice status will appear once the live summary loads."
-          )}
-        </p>
-        ${
-          supplementalCopy
-            ? `<p class="atlas-note-copy-secondary">${escapeHtml(supplementalCopy)}</p>`
-            : ""
-        }
-      </div>
-      <div class="atlas-note-side">
-        ${chipMarkup ? `<div class="atlas-note-chips">${chipMarkup}</div>` : ""}
-        ${
-          metaItems.length > 0
-            ? `
-              <div class="atlas-note-meta">
-                ${metaItems.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
-              </div>
-            `
-            : ""
-        }
-      </div>
-    </div>
-  `;
+  return "";
 }
 
 function buildAtlasCoverageBanner(summary, options = {}) {
-  if (!summary?.quality || summary.quality.tone === "ready") {
-    return "";
-  }
-
-  const quality = summary.quality;
-  const bannerTitle = quality.tone === "pending" ? "Fallback coverage" : "Coverage caveat";
-  const bannerCopy =
-    quality.tone === "pending"
-      ? "This slice is still running on seed fallback because a live staged source slice is not available locally yet."
-      : "This slice is live, but the staged overlap or detail layer still has a local gap. Treat it as beta intelligence until the gap is closed.";
-  const note = [bannerCopy, options.secondaryNote ? String(options.secondaryNote).trim() : ""]
-    .filter(Boolean)
-    .join(" ");
-
-  return `
-    <article class="atlas-coverage-banner atlas-coverage-banner-${escapeHtml(quality.tone)}">
-      <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
-        <div>
-          <p class="eyebrow">Coverage Mode</p>
-          <h3>${escapeHtml(bannerTitle)}</h3>
-        </div>
-        <p class="atlas-card-copy">${escapeHtml(note)}</p>
-      </div>
-      <div class="atlas-note-chips">
-        <span class="atlas-status-chip atlas-status-chip-${escapeHtml(quality.tone)}">${escapeHtml(
-          quality.statusLabel
-        )}</span>
-        <span class="atlas-status-chip atlas-status-chip-${escapeHtml(quality.tone)}">${escapeHtml(
-          quality.primarySourceLabel
-        )}</span>
-      </div>
-    </article>
-  `;
+  return "";
 }
 
 function formatMetricState(value, positiveLabel, negativeLabel) {
@@ -928,7 +840,7 @@ function buildAtlasDistrictPageMarkup(model) {
         ${buildAtlasDetailHeader(selection, title, subtitle, "District Detail")}
         <div class="atlas-empty-state">
           <h3>District detail pending</h3>
-          <p>${escapeHtml(detailState.note ?? "This district page is not staged locally yet.")}</p>
+          <p>${escapeHtml(detailState.note ?? "This district page is not available yet.")}</p>
         </div>
       </div>
     `;
@@ -1089,7 +1001,7 @@ function buildAtlasChart(series, key, metricLabel) {
     .filter((item) => item.points.length > 0);
 
   if (renderableSeries.length === 0) {
-    return '<p class="atlas-chart-empty">This metric will light up after the next ingestion layer lands.</p>';
+    return '<p class="atlas-chart-empty">This metric will appear here as complete data becomes available for the selected cycle.</p>';
   }
 
   const uniqueYears = [...new Set(renderableSeries.flatMap((item) => item.points.map((point) => point.year)))].sort(
@@ -1279,20 +1191,20 @@ function buildAtlasDashboardMarkup(model) {
     typeof summary.fragmentationIndex === "number" ? summary.fragmentationIndex.toFixed(2) : "Pending";
   const voteShareCopy = summary.voteShareAvailable
     ? "Vote share movement is separated from seat conversion so the page behaves like a campaign review board, not a directory."
-    : "Vote share is intentionally blank until candidate-level ingestion lands. The current live layer is seat, turnout, and margin safe.";
+    : "Vote share will appear here wherever complete candidate totals are available for the selected cycle.";
   const electionTableCopy = summary.voteShareAvailable
     ? "Every available cycle stays in one structured table so the atlas can compare seats, vote share, turnout, and pressure points without changing the surface model."
-    : "Every available extracted cycle stays in one structured table. Seat, turnout, and margin metrics are live; vote-share columns remain pending candidate-level normalization.";
+    : "Every available cycle stays in one structured table. Seat, turnout, and margin metrics are available here while vote-share depth continues to expand.";
   const constituencyCardTitle =
-    model.constituencies.coverage.liveRows > 0 ? "Live constituency results" : "Seeded constituency sample";
+    model.constituencies.coverage.liveRows > 0 ? "Constituency results" : "Constituency sample";
   const constituencyCaptionSource =
-    model.constituencies.coverage.liveRows > 0 ? "live rows" : "seeded rows";
+    model.constituencies.coverage.liveRows > 0 ? "rows" : "sample rows";
   const districtCardTitle =
-    districtCoverage.liveRows > 0 ? "District pressure board" : "District rollout status";
+    districtCoverage.liveRows > 0 ? "District pressure board" : "District view";
   const districtCardCopy =
     districtCoverage.liveRows > 0
-      ? "District intelligence is staged as a pressure board: leadership, seat conversion, turnout, close-seat density, and the winning-seat map inside each district."
-      : districtCoverage.note || "District intelligence is not staged for this selection yet.";
+      ? "District intelligence is organized as a pressure board: leadership, seat conversion, turnout, close-seat density, and the winning-seat map inside each district."
+      : districtCoverage.note || "District intelligence is not available for this selection yet.";
   const showDistrictSection = model.selection.house === "VS";
   const allianceSummary = summary.allianceSummary ?? { available: false, rows: [], note: "" };
   const allianceLineupEntries = allianceSummary.available
@@ -1421,9 +1333,9 @@ function buildAtlasDashboardMarkup(model) {
         <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
           <div>
             <p class="eyebrow">Alliance Read</p>
-            <h3>${escapeHtml(allianceSummary.configured === false && allianceSummary.source === "indiavotes" ? "Sourced coalition pressure" : "Mapped coalition pressure")}</h3>
+            <h3>Coalition pressure</h3>
           </div>
-          <p class="atlas-card-copy">${escapeHtml(allianceSummary.note || "Alliance mapping is explicit for this slice.")}</p>
+          <p class="atlas-card-copy">${escapeHtml(allianceSummary.note || "Coalition performance is summarized for this selection.")}</p>
         </div>
         <div class="atlas-alliance-grid">
           ${allianceCards}
@@ -1495,7 +1407,7 @@ function buildAtlasDashboardMarkup(model) {
           <article class="atlas-district-metric">
             <p class="atlas-kpi-label">Districts live</p>
             <p class="atlas-district-value">${escapeHtml(String(districtMetrics.totalDistricts ?? 0))}</p>
-            <p class="atlas-kpi-detail">District marts staged for this slice.</p>
+            <p class="atlas-kpi-detail">District rows available for this slice.</p>
           </article>
           <article class="atlas-district-metric">
             <p class="atlas-kpi-label">Seats covered</p>
@@ -1510,7 +1422,7 @@ function buildAtlasDashboardMarkup(model) {
           <article class="atlas-district-metric">
             <p class="atlas-kpi-label">Votes indexed</p>
             <p class="atlas-district-value">${escapeHtml(formatNumber(districtMetrics.totalVotes))}</p>
-            <p class="atlas-kpi-detail">${escapeHtml(districtCoverage.note || "District coverage note pending.")}</p>
+            <p class="atlas-kpi-detail">${escapeHtml(districtCoverage.note || "District coverage details will appear here.")}</p>
           </article>
         </div>
         ${
@@ -1545,9 +1457,9 @@ function buildAtlasDashboardMarkup(model) {
             `
             : `
               <div class="atlas-empty-state">
-                <p class="eyebrow">District coverage</p>
-                <h3>Not staged for this selection</h3>
-                <p>${escapeHtml(districtCoverage.note || "District marts are not available yet.")}</p>
+                <p class="eyebrow">District overview</p>
+                <h3>Not available for this selection</h3>
+                <p>${escapeHtml(districtCoverage.note || "District detail is not available yet.")}</p>
               </div>
             `
         }
@@ -2258,7 +2170,7 @@ async function initElectionAtlas(root, bootstrap) {
         ]);
 
         if (!electionsResponse.ok || !summaryResponse.ok || !constituenciesResponse.ok) {
-          throw new Error("Unable to refresh the election atlas beta.");
+          throw new Error("Unable to refresh the election atlas.");
         }
 
         const [electionsData, summaryData, constituenciesData] = await Promise.all([
@@ -2332,7 +2244,7 @@ async function initElectionAtlas(root, bootstrap) {
         <div class="atlas-error">
           <p class="eyebrow">Atlas error</p>
           <h3>Refresh failed</h3>
-          <p>${escapeHtml(error?.message ?? "The election atlas beta could not load.")}</p>
+          <p>${escapeHtml(error?.message ?? "The election atlas could not load.")}</p>
         </div>
       `;
     } finally {

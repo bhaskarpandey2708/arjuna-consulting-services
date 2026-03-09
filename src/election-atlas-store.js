@@ -990,43 +990,43 @@ function buildSelectionQuality(selection, sourceSlice = null, pipeline = default
     null;
   const primarySourceLabel =
     sourceSlice?.source === "lokdhaba"
-      ? "LokDhaba primary"
+      ? "Primary dataset"
       : sourceSlice?.source === "indiavotes"
-        ? "IndiaVotes primary"
-        : "Seed fallback";
+        ? "Supplementary dataset"
+        : "Reference dataset";
   const martBacked = Boolean(getStateSummaryMart(selection));
   let tone = "pending";
-  let statusLabel = "Seed fallback";
+  let statusLabel = "Reference view";
   let note =
     pipeline.sourceLabel ??
-    "This slice is still served from seed data until the staged source layer lands.";
+    "This selection is available as a reference view while the full cycle expands.";
 
   if (sourceSlice) {
     if (hardConflictCount > 0) {
       tone = "warning";
-      statusLabel = "Manual review";
-      note = `This staged slice is live locally, but ${hardConflictCount} hard source conflict${hardConflictCount === 1 ? "" : "s"} still need review before it is treated as fully reconciled.`;
+      statusLabel = "Under review";
+      note = `This selection still has ${hardConflictCount} data issue${hardConflictCount === 1 ? "" : "s"} under review.`;
     } else if (coverageGapCount > 0) {
       tone = "warning";
       statusLabel = "Coverage gap";
-      note = `This staged slice is live locally, but ${coverageGapCount} overlap or detail coverage gap${coverageGapCount === 1 ? "" : "s"} still remain in the normalized layer.`;
+      note = `This selection still has ${coverageGapCount} data gap${coverageGapCount === 1 ? "" : "s"} being filled.`;
     } else if (discrepancySlice) {
       tone = "ready";
-      statusLabel = "Reconciled beta slice";
+      statusLabel = "Ready";
       note =
         varianceCount > 0
-          ? "This staged slice is reconciled locally. Overlap checks show no hard source conflicts; remaining differences are denominator or electorate-base variance only."
-          : "This staged slice is reconciled locally with no hard source conflicts and no remaining coverage gaps.";
+          ? "This selection is available with no blocking data conflicts."
+          : "This selection is available with complete internal coverage checks.";
     } else {
       tone = "ready";
-      statusLabel = "Staged beta slice";
-      note = "This staged slice is live locally from a single normalized source layer, with no outbound dependency for drilldown.";
+      statusLabel = "Ready";
+      note = "This selection is available with local drilldown and internal coverage support.";
     }
   }
 
   const chips = [
     {
-      label: "Beta launch",
+      label: "Election Atlas",
       tone: "pending"
     },
     {
@@ -1034,7 +1034,7 @@ function buildSelectionQuality(selection, sourceSlice = null, pipeline = default
       tone: sourceSlice ? "ready" : "pending"
     },
     {
-      label: sourceSlice ? (martBacked ? "Mart-backed" : "Live staged") : "Seed-backed",
+      label: sourceSlice ? (martBacked ? "Analytics ready" : "Live") : "Reference",
       tone: sourceSlice ? "ready" : "pending"
     }
   ];
@@ -1043,14 +1043,14 @@ function buildSelectionQuality(selection, sourceSlice = null, pipeline = default
     chips.push({
       label:
         hardConflictCount > 0
-          ? `Needs review ${hardConflictCount}`
+          ? `Review ${hardConflictCount}`
           : coverageGapCount > 0
             ? `Coverage gap ${coverageGapCount}`
           : discrepancySlice
             ? varianceCount > 0
-              ? `Variance only ${varianceCount}`
-              : "Reconciled overlap"
-            : "Single-source staged",
+              ? `Variance ${varianceCount}`
+              : "Checked"
+            : "Live",
       tone: hardConflictCount > 0 || coverageGapCount > 0 ? "warning" : "ready"
     });
 
@@ -1063,20 +1063,20 @@ function buildSelectionQuality(selection, sourceSlice = null, pipeline = default
 
     if (selection.house === "VS") {
       chips.push({
-        label: districtLive ? "District marts live" : "District marts pending",
+        label: districtLive ? "District live" : "District pending",
         tone: districtLive ? "ready" : "pending"
       });
     }
 
     if (sourceSlice.sourceAllianceSummary?.available) {
       chips.push({
-        label: "Alliance read live",
+        label: "Alliance view",
         tone: "ready"
       });
     }
   } else {
     chips.push({
-      label: "Live slice pending",
+      label: "Selection pending",
       tone: "pending"
     });
   }
@@ -1230,9 +1230,7 @@ function buildSourceAllianceSummary(selection, sourceAllianceSummary, totalSeats
     leader,
     challenger,
     leadGap,
-    note:
-      sourceAllianceSummary.note ??
-      "Alliance read is sourced from IndiaVotes for this slice.",
+    note: "Coalition performance is available for this selection.",
     rows
   };
 }
@@ -1326,8 +1324,8 @@ function buildAllianceSummary(selection, partyRows = [], sourceAllianceSummary =
     .filter((row) => row.standalone)
     .map((row) => row.label);
   const note = unmatchedSeatWinners.length > 0
-    ? `Alliance read is mapped for this slice, with unmapped winning parties still shown separately: ${unmatchedSeatWinners.join(", ")}.`
-    : "Alliance read is explicitly mapped for this slice.";
+    ? `Coalition performance is available for this selection, with unmapped winning parties still shown separately: ${unmatchedSeatWinners.join(", ")}.`
+    : "Coalition performance is available for this selection.";
 
   return {
     available: rankedRows.length > 0,
@@ -2063,7 +2061,7 @@ function buildSyntheticAdjudicatedDetail(selection, row, manualAdjudication) {
     source: "manual-adjudication",
     note:
       manualAdjudication.note ??
-      "This constituency stays fully local. The staged detail is manually adjudicated because one source captured a conflicting winner sheet for this seat.",
+      "This constituency stays fully local. The detail shown here has been reviewed and resolved for this seat.",
     parsed: {
       winner: candidateRows[0] ?? null,
       runnerUp: candidateRows[1] ?? null,
@@ -2374,7 +2372,7 @@ function buildSeedSnapshot(summary, topParties, geographyVersion, allianceSummar
   const swingDirection = summary.swingPoints > 0 ? "up" : summary.swingPoints < 0 ? "down" : "flat";
   const swingAbs = Math.abs(summary.swingPoints).toFixed(1);
 
-  return `${getSeedStateConfig(summary.state).name}'s ${summary.year} ${houseLabels[summary.house]} beta fallback board is still party-level, not alliance-aggregated. ${buildSeatTableLeaderLine(summary, challenger)}${buildAllianceSnapshotLine(allianceSummary)} That currently converts to ${summary.winnerSeatShare.toFixed(1)}% seat share and ${summary.winnerVoteShare.toFixed(1)}% vote share.${challenger ? ` ${challenger.party} remains the immediate pressure point, which is why the race still carries ${summary.closeContests} seeded close contests.` : ""} Geography is locked to ${geographyVersion.shortLabel}, so the layout is already version-aware for split-state reporting. The winner's momentum reads ${swingDirection}${summary.swingPoints === 0 ? "" : ` by ${swingAbs} points`} against the prior cycle, while a median margin of ${summary.medianMarginPct.toFixed(1)} points keeps the map tactically live.`;
+  return `${getSeedStateConfig(summary.state).name}'s ${summary.year} ${houseLabels[summary.house]} board remains party-level, not alliance-aggregated. ${buildSeatTableLeaderLine(summary, challenger)}${buildAllianceSnapshotLine(allianceSummary)} That currently converts to ${summary.winnerSeatShare.toFixed(1)}% seat share and ${summary.winnerVoteShare.toFixed(1)}% vote share.${challenger ? ` ${challenger.party} remains the immediate pressure point, which is why the race still carries ${summary.closeContests} close contests.` : ""} Geography is locked to ${geographyVersion.shortLabel}, so the layout is already version-aware for split-state reporting. The winner's momentum reads ${swingDirection}${summary.swingPoints === 0 ? "" : ` by ${swingAbs} points`} against the prior cycle, while a median margin of ${summary.medianMarginPct.toFixed(1)} points keeps the map tactically live.`;
 }
 
 function buildRealSnapshot(summary, topParties, geographyVersion, allianceSummary = null) {
@@ -2388,11 +2386,7 @@ function buildRealSnapshot(summary, topParties, geographyVersion, allianceSummar
           : "flat versus the prior extracted cycle"
       : "not yet comparable across a prior extracted cycle";
 
-  if (summary.source === "lokdhaba") {
-    return `${getSelectionDisplayName(summary)}'s ${summary.year} ${houseLabels[summary.house]} board is now driven by normalized LokDhaba candidate rows. This surface is still party-level, so alliance rollups remain separate from the seat table. ${buildSeatTableLeaderLine(summary, challenger)}${buildAllianceSnapshotLine(allianceSummary)} That converts to ${summary.winnerSeatShare.toFixed(1)}% seat share across ${summary.totalSeats} constituencies.${challenger ? ` ${summary.closeContests} contests remain inside the tight-margin bucket.` : ""} Geography is keyed to ${geographyVersion.shortLabel}. Turnout reads ${summary.turnoutPct.toFixed(1)}%, the median winning margin is ${summary.medianMarginPct.toFixed(1)} points, and current winner momentum reads ${swingPrefix}.`;
-  }
-
-  return `${getSelectionDisplayName(summary)}'s ${summary.year} ${houseLabels[summary.house]} board is now driven by live IndiaVotes constituency-result rows. This surface is still party-level, so alliance rollups remain separate from the seat table. ${buildSeatTableLeaderLine(summary, challenger)}${buildAllianceSnapshotLine(allianceSummary)} That converts to ${summary.winnerSeatShare.toFixed(1)}% seat share across ${summary.totalSeats} constituencies.${challenger ? ` ${summary.closeContests} contests remain inside the tight-margin bucket.` : ""} Geography is keyed to ${geographyVersion.shortLabel}, which keeps split-state handling explicit. Turnout reads ${summary.turnoutPct.toFixed(1)}%, the median winning margin is ${summary.medianMarginPct.toFixed(1)} points, and current winner momentum reads ${swingPrefix}.`;
+  return `${getSelectionDisplayName(summary)}'s ${summary.year} ${houseLabels[summary.house]} board is party-level, with alliance rollups shown separately from the seat table. ${buildSeatTableLeaderLine(summary, challenger)}${buildAllianceSnapshotLine(allianceSummary)} That converts to ${summary.winnerSeatShare.toFixed(1)}% seat share across ${summary.totalSeats} constituencies.${challenger ? ` ${summary.closeContests} contests remain inside the tight-margin bucket.` : ""} Geography is keyed to ${geographyVersion.shortLabel}, which keeps split-state handling explicit. Turnout reads ${summary.turnoutPct.toFixed(1)}%, the median winning margin is ${summary.medianMarginPct.toFixed(1)} points, and current winner momentum reads ${swingPrefix}.`;
 }
 
 function buildRealSummary(selection, slice) {
@@ -2481,15 +2475,9 @@ function buildRealSummary(selection, slice) {
       allianceSummary
     ),
     sourceLabel:
-      sourceSlice.source === "lokdhaba"
-        ? sourceSlice.sourceAllianceSummary?.available
-          ? "LokDhaba is the primary source for this slice. IndiaVotes only backfills missing layers, and the alliance read is borrowed from the IndiaVotes alliance block because LokDhaba does not expose coalition totals here."
-          : "LokDhaba is the primary source for this slice. IndiaVotes is only used where LokDhaba does not expose a field that the atlas still needs locally."
-        : topParties.some((row) => typeof row.voteShare === "number")
-          ? sourceSlice.sourceAllianceSummary?.available
-            ? "IndiaVotes constituency-result extract with live constituency detail enrichment and source-exposed alliance rollups. Seat, turnout, margin, runner-up, party vote-share, and coalition toplines are now staged from the live source payloads."
-            : "IndiaVotes constituency-result extract with live constituency detail enrichment. Seat, turnout, margin, runner-up, and party vote-share analytics are now staged from the detail fragments."
-          : "IndiaVotes constituency-result extract. Seat, turnout, and margin analytics are live; candidate vote share is still pending the next ingestion layer.",
+      topParties.some((row) => typeof row.voteShare === "number")
+        ? "Seats, turnout, margins, runner-up detail, and party vote share are available for this selection."
+        : "Seats, turnout, and margins are available for this selection. Additional vote-share depth continues to expand.",
     voteShareAvailable: topParties.some((row) => typeof row.voteShare === "number"),
     liveCoverage: {
       rowCount: sourceSlice.rowCount,
@@ -2525,7 +2513,7 @@ function buildSeedSummary(selection, pipeline) {
     trendSeries,
     advancedMetrics: null,
     snapshot: buildSeedSnapshot(summary, topParties, geographyVersion, allianceSummary),
-    sourceLabel: pipeline.sourceLabel,
+    sourceLabel: "Reference coverage is shown for this selection while deeper local detail continues to expand.",
     voteShareAvailable: true,
     freshness: getSelectionFreshness(selection),
     quality: buildSelectionQuality(selection, null, pipeline)
@@ -2564,14 +2552,14 @@ function buildHybridPipeline() {
       lokdhabaIndex.generatedAt ??
       basePipeline.lastCaptureAt,
     sourceLabel:
-      "Hybrid atlas with LokDhaba as the primary source layer. IndiaVotes is used only where LokDhaba coverage or drilldown fields are absent, with seed fallback only where both sources are absent.",
+      "Election Atlas blends multiple internal data layers so each selection can open with local drilldown and structured analytics.",
     coverageNote:
-      "LokDhaba is primary wherever staged. IndiaVotes fills gaps only when LokDhaba does not expose the needed slice or field. Seed data appears only where neither source is present.",
-    summary: `${resultsIndex.stats.slices} IndiaVotes live slices and ${lokdhabaIndex.stats.slices} LokDhaba historical slices are staged across ${Math.max(resultsIndex.stats.inventoryStates, lokdhabaIndex.stats.states)} atlas states/entities.`,
+      "Coverage expands cycle by cycle, with local drilldown and structured analytics across the atlas surface.",
+    summary: `${resultsIndex.stats.slices} live result slices and ${lokdhabaIndex.stats.slices} historical slices are available across ${Math.max(resultsIndex.stats.inventoryStates, lokdhabaIndex.stats.states)} atlas states/entities.`,
     nextStep:
       failedJobs > 0
-        ? "Resolve failed IndiaVotes extraction jobs, then continue alias harmonization between IndiaVotes and LokDhaba at the party and geography layers."
-        : "Promote district marts and final candidate-detail parity into more atlas surfaces, then harden geography versioning and discrepancy reporting across both sources.",
+        ? "Complete the remaining extraction jobs, then continue party and geography harmonization."
+        : "Extend district intelligence and candidate-detail parity across more atlas surfaces.",
     sources: [
       {
         key: "indiavotes",
@@ -2789,9 +2777,9 @@ export function listElectionAtlasConstituencies(filters = {}) {
         liveRows: constituencies.length,
         seededRows: 0,
         note:
-          staged.source === "lokdhaba"
-            ? "LokDhaba remains primary for these constituency rows. IndiaVotes only backfills local atlas fields that LokDhaba does not expose for the same slice."
-            : "Live IndiaVotes constituency-result rows. Winner, turnout, electors, and margin are real; runner-up and vote-share detail are still being normalized."
+          typeof staged.rows?.[0]?.winnerVoteShare === "number"
+            ? "Winner, turnout, electors, margin, and vote-share detail are available for these constituency rows."
+            : "Winner, turnout, electors, and margin are available for these constituency rows while additional vote-share detail continues to expand."
       },
       constituencies
     };
@@ -2838,7 +2826,7 @@ export function getElectionAtlasConstituencyDetail(filters = {}) {
     return {
       selection,
       available: false,
-      note: "This slice is not staged locally yet, so a constituency detail sheet cannot be opened."
+      note: "This constituency page is not available for the selected cycle yet."
     };
   }
 
@@ -2854,7 +2842,7 @@ export function getElectionAtlasConstituencyDetail(filters = {}) {
     return {
       selection,
       available: false,
-      note: "The requested constituency was not found in the staged atlas slice."
+      note: "The requested constituency was not found for this selection."
     };
   }
 
@@ -2884,7 +2872,7 @@ export function getElectionAtlasConstituencyDetail(filters = {}) {
     return {
       selection,
       available: false,
-      note: `Candidate detail for this seat is temporarily unavailable while ${manualReviewItems.length} source conflict${manualReviewItems.length > 1 ? "s are" : " is"} reviewed: ${reviewLabels}.`,
+      note: `Candidate detail for this seat is temporarily unavailable while ${manualReviewItems.length} issue${manualReviewItems.length > 1 ? "s are" : " is"} reviewed: ${reviewLabels}.`,
       seat: normalizedRow,
       metrics: buildConstituencyMetricBundle(normalizedRow, selection),
       reviewStatus: "manual-review",
@@ -2990,7 +2978,7 @@ export function getElectionAtlasDistrictDetail(filters = {}) {
     return {
       selection,
       available: false,
-      note: "The requested district was not found in the staged atlas slice."
+      note: "The requested district was not found for this selection."
     };
   }
 
@@ -3002,7 +2990,7 @@ export function getElectionAtlasDistrictDetail(filters = {}) {
     selection,
     available: true,
     note:
-      "District detail is available on this page, with internal constituency drilldown.",
+      "District detail is available on this page, with direct constituency drilldown.",
     district,
     metrics: buildDistrictMetricBundle(district, selection)
   };
@@ -3040,7 +3028,7 @@ export function listElectionAtlasDistricts(filters = {}) {
     coverage: {
       liveRows: staged.rowCount,
       note:
-        "Normalized Assembly district rollups from LokDhaba candidate rows. District seat conversion, turnout, margin pressure, and party concentration are live."
+        "District seat conversion, turnout, margin pressure, and party concentration are available for this selection."
     },
     metrics: staged.metrics,
     districts: sortDistrictsCanonically(
@@ -3136,7 +3124,7 @@ export function getElectionAtlasBootstrap(filters = {}, options = {}) {
           liveRows: 0,
           note:
             selection.house === "VS"
-              ? "District marts will load after the initial route refresh."
+              ? "District intelligence will load after the initial route refresh."
               : "District intelligence is intentionally hidden for Lok Sabha overview."
         },
         metrics: {},
