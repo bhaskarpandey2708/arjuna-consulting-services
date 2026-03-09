@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -296,15 +296,39 @@ const defaultConstituencyDetailIndex = {
 
 let rawConstituencyDetailFileNamesCache = null;
 let stagedConstituencyDetailFileNamesCache = null;
+const jsonFileCache = new Map();
+let constituencyAliasIndexCache = null;
+let candidateAliasIndexCache = null;
+let stateSummaryMartLookupCache = null;
+let partyTrendMartLookupCache = null;
+let detailIndexSliceLookupCache = null;
+let detailIndexSeatLookupCache = null;
 
-function readJsonFile(filePath) {
+function readJsonFile(filePath, options = {}) {
+  const useCache = options.cache !== false;
+
   if (!existsSync(filePath)) {
+    jsonFileCache.delete(filePath);
     return null;
   }
 
   try {
+    if (useCache) {
+      const mtimeMs = statSync(filePath).mtimeMs;
+      const cached = jsonFileCache.get(filePath);
+
+      if (cached && cached.mtimeMs === mtimeMs) {
+        return cached.value;
+      }
+
+      const value = JSON.parse(readFileSync(filePath, "utf8"));
+      jsonFileCache.set(filePath, { mtimeMs, value });
+      return value;
+    }
+
     return JSON.parse(readFileSync(filePath, "utf8"));
   } catch {
+    jsonFileCache.delete(filePath);
     return null;
   }
 }
@@ -561,41 +585,80 @@ function buildSelectionSeatKey(selection, seatNumber) {
   return `${selection.state}::${selection.house}::${selection.year}::${seatNumber}`;
 }
 
+function buildSelectionKey(selection) {
+  return `${selection.state}::${selection.house}::${selection.year}`;
+}
+
+function getConstituencyAliasIndexes() {
+  if (constituencyAliasIndexCache) {
+    return constituencyAliasIndexCache;
+  }
+
+  const bySeatKey = new Map();
+  const byAliasKey = new Map();
+
+  (constituencyNameMap.entries ?? []).forEach((entry) => {
+    const selection = {
+      state: entry.selectionKey ?? entry.state,
+      house: entry.house,
+      year: entry.year
+    };
+    const selectionKey = buildSelectionKey(selection);
+
+    if (Number.isFinite(entry.constituencyNumber)) {
+      bySeatKey.set(buildSelectionSeatKey(selection, entry.constituencyNumber), entry);
+    }
+
+    (entry.aliases ?? []).forEach((alias) => {
+      byAliasKey.set(`${selectionKey}::${compactAtlasText(alias.name)}`, entry);
+    });
+  });
+
+  constituencyAliasIndexCache = { bySeatKey, byAliasKey };
+  return constituencyAliasIndexCache;
+}
+
+function getCandidateAliasIndex() {
+  if (candidateAliasIndexCache) {
+    return candidateAliasIndexCache;
+  }
+
+  const bySelectionSeat = new Map();
+
+  (candidateAliasMap.entries ?? []).forEach((entry) => {
+    const key = buildSelectionSeatKey(
+      {
+        state: entry.selectionKey,
+        house: entry.house,
+        year: entry.year
+      },
+      entry.constituencyNumber
+    );
+
+    if (!bySelectionSeat.has(key)) {
+      bySelectionSeat.set(key, []);
+    }
+
+    bySelectionSeat.get(key).push(entry);
+  });
+
+  candidateAliasIndexCache = bySelectionSeat;
+  return candidateAliasIndexCache;
+}
+
 function findConstituencyAliasEntry(selection, row = {}) {
   const seatNumber = Number.parseInt(
     String(row.constituencyNumber ?? row.seat ?? ""),
     10
   );
+  const indexes = getConstituencyAliasIndexes();
 
   if (Number.isFinite(seatNumber)) {
-    const seatKey = buildSelectionSeatKey(selection, seatNumber);
-
-    return (
-      constituencyNameMap.entries.find(
-        (entry) =>
-          buildSelectionSeatKey(
-            {
-              state: entry.selectionKey ?? entry.state,
-              house: entry.house,
-              year: entry.year
-            },
-            entry.constituencyNumber
-          ) === seatKey
-      ) ?? null
-    );
+    return indexes.bySeatKey.get(buildSelectionSeatKey(selection, seatNumber)) ?? null;
   }
 
   const aliasKey = compactAtlasText(row.constituency ?? row.slug ?? "");
-
-  return (
-    constituencyNameMap.entries.find(
-      (entry) =>
-        entry.selectionKey === selection.state &&
-        entry.house === selection.house &&
-        entry.year === selection.year &&
-        entry.aliases?.some((alias) => compactAtlasText(alias.name) === aliasKey)
-    ) ?? null
-  );
+  return indexes.byAliasKey.get(`${buildSelectionKey(selection)}::${aliasKey}`) ?? null;
 }
 
 function getCanonicalConstituencyLabel(selection, row = {}) {
@@ -643,17 +706,12 @@ function normalizeCandidateLabel(selection, row = {}, candidate) {
     10
   );
 
-  const match = candidateAliasMap.entries.find((entry) => {
-    if (entry.selectionKey !== selection.state || entry.house !== selection.house || entry.year !== selection.year) {
-      return false;
-    }
-
-    if (Number.isFinite(seatNumber) && entry.constituencyNumber !== seatNumber) {
-      return false;
-    }
-
-    return entry.aliases?.some((alias) => areCandidateNamesCompatible(alias.name, normalizedCandidate));
-  });
+  const candidates = Number.isFinite(seatNumber)
+    ? getCandidateAliasIndex().get(buildSelectionSeatKey(selection, seatNumber)) ?? []
+    : [];
+  const match = candidates.find((entry) =>
+    entry.aliases?.some((alias) => areCandidateNamesCompatible(alias.name, normalizedCandidate))
+  );
 
   return match?.canonicalName ?? normalizedCandidate;
 }
@@ -763,33 +821,63 @@ function hasSourceCoverage() {
 }
 
 function getStateSummaryMart(selection) {
-  return (
-    getElectionAtlasStateSummaryMarts().slices.find(
-      (slice) =>
-        slice.selectionKey === selection.state &&
-        slice.house === selection.house &&
-        slice.year === selection.year
-    ) ?? null
-  );
+  const marts = getElectionAtlasStateSummaryMarts();
+
+  if (!stateSummaryMartLookupCache || stateSummaryMartLookupCache.source !== marts) {
+    stateSummaryMartLookupCache = {
+      source: marts,
+      map: new Map(
+        (marts.slices ?? []).map((slice) => [
+          buildSelectionKey({
+            state: slice.selectionKey,
+            house: slice.house,
+            year: slice.year
+          }),
+          slice
+        ])
+      )
+    };
+  }
+
+  return stateSummaryMartLookupCache.map.get(buildSelectionKey(selection)) ?? null;
 }
 
 function getPartyTrendMart(selection) {
-  return (
-    getElectionAtlasPartyTrendMarts().groups.find(
-      (group) => group.state === selection.state && group.house === selection.house
-    ) ?? null
-  );
+  const trendMarts = getElectionAtlasPartyTrendMarts();
+
+  if (!partyTrendMartLookupCache || partyTrendMartLookupCache.source !== trendMarts) {
+    partyTrendMartLookupCache = {
+      source: trendMarts,
+      map: new Map(
+        (trendMarts.groups ?? []).map((group) => [`${group.state}::${group.house}`, group])
+      )
+    };
+  }
+
+  return partyTrendMartLookupCache.map.get(`${selection.state}::${selection.house}`) ?? null;
 }
 
 function getDetailIndexSlice(selection) {
-  return (
-    getElectionAtlasConstituencyDetailIndex().slices.find(
-      (slice) =>
-        slice.selectionKey === selection.state &&
-        slice.house === selection.house &&
-        slice.year === selection.year
-    ) ?? null
-  );
+  const detailIndex = getElectionAtlasConstituencyDetailIndex();
+
+  if (!detailIndexSliceLookupCache || detailIndexSliceLookupCache.source !== detailIndex) {
+    detailIndexSliceLookupCache = {
+      source: detailIndex,
+      map: new Map(
+        (detailIndex.slices ?? []).map((slice) => [
+          buildSelectionKey({
+            state: slice.selectionKey,
+            house: slice.house,
+            year: slice.year
+          }),
+          slice
+        ])
+      )
+    };
+    detailIndexSeatLookupCache = new WeakMap();
+  }
+
+  return detailIndexSliceLookupCache.map.get(buildSelectionKey(selection)) ?? null;
 }
 
 function getDetailIndexSeat(selection, row = {}) {
@@ -803,15 +891,31 @@ function getDetailIndexSeat(selection, row = {}) {
     return null;
   }
 
-  return (
-    detailSlice.seats?.find((seat) => {
-      if (Number.isFinite(seatNumber)) {
-        return seat.constituencyNumber === seatNumber;
+  let seatLookup = detailIndexSeatLookupCache?.get(detailSlice);
+
+  if (!seatLookup) {
+    const byNumber = new Map();
+    const bySlug = new Map();
+
+    (detailSlice.seats ?? []).forEach((seat) => {
+      if (Number.isFinite(seat.constituencyNumber)) {
+        byNumber.set(seat.constituencyNumber, seat);
       }
 
-      return seat.constituencySlug === getCanonicalConstituencySlug(selection, row);
-    }) ?? null
-  );
+      if (seat.constituencySlug) {
+        bySlug.set(seat.constituencySlug, seat);
+      }
+    });
+
+    seatLookup = { byNumber, bySlug };
+    detailIndexSeatLookupCache?.set(detailSlice, seatLookup);
+  }
+
+  if (Number.isFinite(seatNumber)) {
+    return seatLookup.byNumber.get(seatNumber) ?? null;
+  }
+
+  return seatLookup.bySlug.get(getCanonicalConstituencySlug(selection, row)) ?? null;
 }
 
 function getSelectionFreshness(selection) {
@@ -3005,16 +3109,18 @@ export function getElectionAtlasBootstrap(filters = {}, options = {}) {
   const minimal = options.minimal !== false;
 
   if (minimal) {
+    const summaryResponse = getElectionAtlasSummary(selection);
+
     return {
       meta: {
         ...meta,
         lastUpdated: new Date(meta.lastUpdated).toISOString()
       },
       states: listElectionAtlasStates(),
-      selection,
+      selection: summaryResponse.selection,
       pipeline,
-      elections: [],
-      summary: null,
+      elections: listElectionAtlasElections(selection).elections,
+      summary: summaryResponse.summary,
       constituencies: {
         selection,
         coverage: {
@@ -3054,4 +3160,18 @@ export function getElectionAtlasBootstrap(filters = {}, options = {}) {
     constituencies: listElectionAtlasConstituencies(selection),
     districts: listElectionAtlasDistricts(selection)
   };
+}
+
+export function prewarmElectionAtlasStore() {
+  const selection = getElectionAtlasDefaultSelection();
+
+  getElectionAtlasPipeline();
+  listElectionAtlasStates();
+  listElectionAtlasElections(selection);
+  getElectionAtlasSummary(selection);
+  listElectionAtlasConstituencies(selection);
+
+  if (selection.house === "VS") {
+    listElectionAtlasDistricts(selection);
+  }
 }

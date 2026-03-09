@@ -14,7 +14,8 @@ import {
   listElectionAtlasElections,
   listElectionAtlasStates,
   getElectionAtlasStateSummaryMartData,
-  getElectionAtlasPartyTrendData
+  getElectionAtlasPartyTrendData,
+  prewarmElectionAtlasStore
 } from "./election-atlas-store.js";
 
 function escapeHtml(value) {
@@ -38,6 +39,7 @@ export {
   getElectionAtlasDiscrepancies,
   getElectionAtlasPipeline,
   getElectionAtlasPartyTrendData,
+  prewarmElectionAtlasStore,
   getElectionAtlasStateSummaryMartData,
   getElectionAtlasStagedResults,
   listElectionAtlasConstituencies,

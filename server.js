@@ -12,6 +12,7 @@ import {
   getElectionAtlasDistrictDetail,
   getElectionAtlasPipeline,
   getElectionAtlasPartyTrendData,
+  prewarmElectionAtlasStore,
   getElectionAtlasStateSummaryMartData,
   getElectionAtlasSummary,
   getElectionAtlasStagedResults,
@@ -48,6 +49,7 @@ const atlasHtmlCacheControl = "public, max-age=60, must-revalidate";
 const crawlCacheControl = "public, max-age=300, must-revalidate";
 const staticAssetCacheControl = "public, max-age=86400";
 const apiCacheControl = "no-store";
+const atlasApiCacheControl = "public, max-age=60, stale-while-revalidate=300";
 const contactRateLimitWindowMs = 15 * 60 * 1000;
 const contactRateLimitMax = 5;
 const contactWebhookTimeoutMs = 5000;
@@ -408,6 +410,14 @@ app.use("/api", (req, res, next) => {
   next();
 });
 
+app.use("/api/election-atlas", (req, res, next) => {
+  if (req.method === "GET") {
+    res.set("Cache-Control", atlasApiCacheControl);
+  }
+
+  next();
+});
+
 app.use((req, res, next) => {
   const routePath = normalizeRoute(req.path);
   const finalPath = routeAliases.get(routePath) ?? routePath;
@@ -716,4 +726,12 @@ app.use((error, req, res, next) => {
 app.listen(port, host, () => {
   const displayHost = host === "0.0.0.0" ? "127.0.0.1" : host;
   console.log(`Arjuna Strategy Consulting site is running on http://${displayHost}:${port}`);
+
+  setImmediate(() => {
+    try {
+      prewarmElectionAtlasStore();
+    } catch (error) {
+      console.error("Election Atlas prewarm failed", error);
+    }
+  });
 });

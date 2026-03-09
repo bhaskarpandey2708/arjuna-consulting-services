@@ -2161,6 +2161,40 @@ async function initElectionAtlas(root, bootstrap) {
     model.selection = parsed.selection;
   };
 
+  const loadOverviewDistricts = async (params, activeRequest) => {
+    if (model.selection.house !== "VS") {
+      model.districts = {
+        selection: model.selection,
+        coverage: {
+          liveRows: 0,
+          note: "District intelligence is intentionally hidden for Lok Sabha overview."
+        },
+        metrics: {},
+        districts: []
+      };
+      return;
+    }
+
+    try {
+      const districtsResponse = await fetch(`/api/election-atlas/districts?${params.toString()}`);
+
+      if (!districtsResponse.ok) {
+        return;
+      }
+
+      const districtsData = await districtsResponse.json();
+
+      if (activeRequest !== requestSequence) {
+        return;
+      }
+
+      model.districts = districtsData;
+      render();
+    } catch {
+      // Keep the already-rendered overview in place if district loading lags or fails.
+    }
+  };
+
   const refresh = async () => {
     requestSequence += 1;
     const activeRequest = requestSequence;
@@ -2217,25 +2251,23 @@ async function initElectionAtlas(root, bootstrap) {
 
         payloads = { detailData, summaryData };
       } else {
-        const [electionsResponse, summaryResponse, constituenciesResponse, districtsResponse] = await Promise.all([
+        const [electionsResponse, summaryResponse, constituenciesResponse] = await Promise.all([
           fetch(`/api/election-atlas/elections?${params.toString()}`),
           fetch(`/api/election-atlas/state-summary?${params.toString()}`),
-          fetch(`/api/election-atlas/constituencies?${params.toString()}`),
-          fetch(`/api/election-atlas/districts?${params.toString()}`)
+          fetch(`/api/election-atlas/constituencies?${params.toString()}`)
         ]);
 
-        if (!electionsResponse.ok || !summaryResponse.ok || !constituenciesResponse.ok || !districtsResponse.ok) {
+        if (!electionsResponse.ok || !summaryResponse.ok || !constituenciesResponse.ok) {
           throw new Error("Unable to refresh the election atlas beta.");
         }
 
-        const [electionsData, summaryData, constituenciesData, districtsData] = await Promise.all([
+        const [electionsData, summaryData, constituenciesData] = await Promise.all([
           electionsResponse.json(),
           summaryResponse.json(),
-          constituenciesResponse.json(),
-          districtsResponse.json()
+          constituenciesResponse.json()
         ]);
 
-        payloads = { electionsData, summaryData, constituenciesData, districtsData };
+        payloads = { electionsData, summaryData, constituenciesData };
       }
 
       if (activeRequest !== requestSequence) {
@@ -2260,7 +2292,6 @@ async function initElectionAtlas(root, bootstrap) {
       } else {
         model.elections = payloads.electionsData.elections;
         model.constituencies = payloads.constituenciesData;
-        model.districts = payloads.districtsData;
         model.constituencyDetail = null;
         model.districtDetail = null;
         const overviewPath = buildAtlasOverviewPath(model.selection);
@@ -2268,9 +2299,34 @@ async function initElectionAtlas(root, bootstrap) {
         if (window.location.pathname !== overviewPath) {
           window.history.replaceState({}, "", overviewPath);
         }
+
+        model.districts =
+          model.selection.house === "VS"
+            ? {
+                selection: model.selection,
+                coverage: {
+                  liveRows: 0,
+                  note: "Loading district intelligence..."
+                },
+                metrics: {},
+                districts: []
+              }
+            : {
+                selection: model.selection,
+                coverage: {
+                  liveRows: 0,
+                  note: "District intelligence is intentionally hidden for Lok Sabha overview."
+                },
+                metrics: {},
+                districts: []
+              };
       }
 
       render();
+
+      if (model.routeState.type === "overview") {
+        loadOverviewDistricts(params, activeRequest);
+      }
     } catch (error) {
       root.innerHTML = `
         <div class="atlas-error">
@@ -2285,6 +2341,11 @@ async function initElectionAtlas(root, bootstrap) {
   };
 
   syncRouteState();
+
+  if (model.routeState?.type === "overview") {
+    render();
+  }
+
   await refresh();
 }
 
