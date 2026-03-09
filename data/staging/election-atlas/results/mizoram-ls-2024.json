@@ -1,0 +1,209 @@
+{
+  "generatedAt": "2026-03-08T20:15:17.692Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "mizoram",
+    "stateLabel": "Mizoram",
+    "stateVersionSlug": "mizoram",
+    "geographyVersionId": "mizoram-default",
+    "house": "LS",
+    "year": 2024,
+    "electionId": 18,
+    "stateId": 45
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "mizoram",
+      "stateLabel": "Mizoram",
+      "stateVersionSlug": "mizoram",
+      "geographyVersionId": "mizoram-default",
+      "house": "LS",
+      "year": 2024,
+      "electionId": 18,
+      "stateId": 45,
+      "constituency": "Mizoram",
+      "constituencyNumber": 1,
+      "reservationType": "ST",
+      "district": "",
+      "winner": "Richard Vanlalhmangaiha",
+      "winnerParty": "Zoram People’s Movement",
+      "totalElectors": 856364,
+      "totalVotes": 491336,
+      "turnoutPct": 57.4,
+      "marginVotes": 68288,
+      "marginPct": 13.9,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/2024/mizoram/mizoram/10805/45/18",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/2779/18/45",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/2024/mizoram/mizoram/10805/45/18",
+      "winnerVotes": 208552,
+      "winnerVoteShare": 42.4,
+      "runnerUp": "K Vanlalvena",
+      "runnerUpParty": "Mizo National Front",
+      "runnerUpVotes": 140264,
+      "runnerUpVoteShare": 28.5,
+      "detailAvailable": true,
+      "detailFileName": "mizoram-ls-2024-1-mizoram-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "sourceAllianceSummary": {
+    "available": true,
+    "source": "indiavotes",
+    "detailsUrl": "https://www.indiavotes.com/alliance/partyWise/18/45",
+    "leader": {
+      "id": "others",
+      "label": "Others",
+      "seats": 1,
+      "seatShare": 100,
+      "voteShare": 73,
+      "contestedVoteShare": null,
+      "parties": [],
+      "standalone": true
+    },
+    "challenger": {
+      "id": "india",
+      "label": "INDIA",
+      "seats": 0,
+      "seatShare": 0,
+      "voteShare": 20.1,
+      "contestedVoteShare": 20.1,
+      "parties": [
+        {
+          "party": "Indian National Congress",
+          "partyUrl": "https://www.indiavotes.com/party/info/1/18/45",
+          "contested": 1,
+          "won": 0,
+          "voteShare": 20.1,
+          "contestedVoteShare": 20.1
+        }
+      ],
+      "standalone": false,
+      "color": "#d2304e"
+    },
+    "leadGap": 1,
+    "note": "Alliance read and party makeup are sourced from IndiaVotes for this slice. 1 seat remains outside the named alliance blocks and stays under Others.",
+    "rows": [
+      {
+        "id": "others",
+        "label": "Others",
+        "seats": 1,
+        "seatShare": 100,
+        "voteShare": 73,
+        "contestedVoteShare": null,
+        "parties": [],
+        "standalone": true
+      },
+      {
+        "id": "india",
+        "label": "INDIA",
+        "seats": 0,
+        "seatShare": 0,
+        "voteShare": 20.1,
+        "contestedVoteShare": 20.1,
+        "parties": [
+          {
+            "party": "Indian National Congress",
+            "partyUrl": "https://www.indiavotes.com/party/info/1/18/45",
+            "contested": 1,
+            "won": 0,
+            "voteShare": 20.1,
+            "contestedVoteShare": 20.1
+          }
+        ],
+        "standalone": false,
+        "color": "#d2304e"
+      },
+      {
+        "id": "nda",
+        "label": "NDA",
+        "seats": 0,
+        "seatShare": 0,
+        "voteShare": 6.9,
+        "contestedVoteShare": 6.9,
+        "parties": [
+          {
+            "party": "Bharatiya Janta Party",
+            "partyUrl": "https://www.indiavotes.com/party/info/143/18/45",
+            "contested": 1,
+            "won": 0,
+            "voteShare": 6.9,
+            "contestedVoteShare": 6.9
+          }
+        ],
+        "standalone": false,
+        "color": "#C47451"
+      }
+    ]
+  },
+  "allianceEnrichment": {
+    "generatedAt": "2026-03-09T10:36:45.575Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_103621127Z",
+    "status": "ok",
+    "available": true,
+    "rowCount": 3,
+    "partyRowCount": 2,
+    "mappedSeatTotal": 0,
+    "omittedSeats": 1,
+    "detailsUrl": "https://www.indiavotes.com/alliance/partyWise/18/45"
+  },
+  "partyVoteShares": [
+    {
+      "party": "Zoram People’s Movement",
+      "votes": 208552,
+      "voteShare": 42.4
+    },
+    {
+      "party": "Mizo National Front",
+      "votes": 140264,
+      "voteShare": 28.5
+    },
+    {
+      "party": "Indian National Congress",
+      "votes": 98595,
+      "voteShare": 20.1
+    },
+    {
+      "party": "Bharatiya Janta Party",
+      "votes": 33533,
+      "voteShare": 6.8
+    },
+    {
+      "party": "Independent",
+      "votes": 4706,
+      "voteShare": 1
+    },
+    {
+      "party": "Mizoram People's Conference",
+      "votes": 3793,
+      "voteShare": 0.8
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T11:02:52.454Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_105652953Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

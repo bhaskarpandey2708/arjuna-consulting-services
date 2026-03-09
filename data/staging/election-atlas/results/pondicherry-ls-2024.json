@@ -1,0 +1,229 @@
+{
+  "generatedAt": "2026-03-08T20:15:19.530Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "puducherry",
+    "stateLabel": "Pondicherry",
+    "stateVersionSlug": "pondicherry",
+    "geographyVersionId": "puducherry-default",
+    "house": "LS",
+    "year": 2024,
+    "electionId": 18,
+    "stateId": 39
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "puducherry",
+      "stateLabel": "Pondicherry",
+      "stateVersionSlug": "pondicherry",
+      "geographyVersionId": "puducherry-default",
+      "house": "LS",
+      "year": 2024,
+      "electionId": 18,
+      "stateId": 39,
+      "constituency": "Puducherry",
+      "constituencyNumber": 1,
+      "reservationType": "GEN",
+      "district": "",
+      "winner": "Ve Vaithilingam",
+      "winnerParty": "Indian National Congress",
+      "totalElectors": 1023699,
+      "totalVotes": 807940,
+      "turnoutPct": 78.9,
+      "marginVotes": 136516,
+      "marginPct": 16.9,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/2024/pondicherry/puducherry/10807/39/18",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/1/18/39",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/2024/pondicherry/puducherry/10807/39/18",
+      "winnerVotes": 426005,
+      "winnerVoteShare": 52.7,
+      "runnerUp": "A Namassivayam",
+      "runnerUpParty": "Bharatiya Janta Party",
+      "runnerUpVotes": 289489,
+      "runnerUpVoteShare": 35.8,
+      "detailAvailable": true,
+      "detailFileName": "pondicherry-ls-2024-1-puducherry-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "sourceAllianceSummary": {
+    "available": true,
+    "source": "indiavotes",
+    "detailsUrl": "https://www.indiavotes.com/alliance/partyWise/18/39",
+    "leader": {
+      "id": "india",
+      "label": "INDIA",
+      "seats": 1,
+      "seatShare": 100,
+      "voteShare": 53.4,
+      "contestedVoteShare": 53.4,
+      "parties": [
+        {
+          "party": "Indian National Congress",
+          "partyUrl": "https://www.indiavotes.com/party/info/1/18/39",
+          "contested": 1,
+          "won": 1,
+          "voteShare": 53.4,
+          "contestedVoteShare": 53.4
+        }
+      ],
+      "standalone": false,
+      "color": "7ebd1"
+    },
+    "challenger": {
+      "id": "nda",
+      "label": "NDA",
+      "seats": 0,
+      "seatShare": 0,
+      "voteShare": 36.3,
+      "contestedVoteShare": 36.3,
+      "parties": [
+        {
+          "party": "Bharatiya Janta Party",
+          "partyUrl": "https://www.indiavotes.com/party/info/143/18/39",
+          "contested": 1,
+          "won": 0,
+          "voteShare": 36.3,
+          "contestedVoteShare": 36.3
+        }
+      ],
+      "standalone": false,
+      "color": "#C47451"
+    },
+    "leadGap": 1,
+    "note": "Alliance read and party makeup are sourced from IndiaVotes for this slice.",
+    "rows": [
+      {
+        "id": "india",
+        "label": "INDIA",
+        "seats": 1,
+        "seatShare": 100,
+        "voteShare": 53.4,
+        "contestedVoteShare": 53.4,
+        "parties": [
+          {
+            "party": "Indian National Congress",
+            "partyUrl": "https://www.indiavotes.com/party/info/1/18/39",
+            "contested": 1,
+            "won": 1,
+            "voteShare": 53.4,
+            "contestedVoteShare": 53.4
+          }
+        ],
+        "standalone": false,
+        "color": "7ebd1"
+      },
+      {
+        "id": "nda",
+        "label": "NDA",
+        "seats": 0,
+        "seatShare": 0,
+        "voteShare": 36.3,
+        "contestedVoteShare": 36.3,
+        "parties": [
+          {
+            "party": "Bharatiya Janta Party",
+            "partyUrl": "https://www.indiavotes.com/party/info/143/18/39",
+            "contested": 1,
+            "won": 0,
+            "voteShare": 36.3,
+            "contestedVoteShare": 36.3
+          }
+        ],
+        "standalone": false,
+        "color": "#C47451"
+      },
+      {
+        "id": "others",
+        "label": "Others",
+        "seats": 0,
+        "seatShare": 0,
+        "voteShare": 10.3,
+        "contestedVoteShare": null,
+        "parties": [],
+        "standalone": true
+      }
+    ]
+  },
+  "allianceEnrichment": {
+    "generatedAt": "2026-03-09T10:36:46.929Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_103621127Z",
+    "status": "ok",
+    "available": true,
+    "rowCount": 3,
+    "partyRowCount": 2,
+    "mappedSeatTotal": 1,
+    "omittedSeats": 0,
+    "detailsUrl": "https://www.indiavotes.com/alliance/partyWise/18/39"
+  },
+  "partyVoteShares": [
+    {
+      "party": "Indian National Congress",
+      "votes": 426005,
+      "voteShare": 52.7
+    },
+    {
+      "party": "Bharatiya Janta Party",
+      "votes": 289489,
+      "voteShare": 35.8
+    },
+    {
+      "party": "Naam Tamilar Katchi",
+      "votes": 39603,
+      "voteShare": 4.9
+    },
+    {
+      "party": "All India Anna Dravida Munnetra Kazhagam",
+      "votes": 25165,
+      "voteShare": 3.1
+    },
+    {
+      "party": "Independent",
+      "votes": 13320,
+      "voteShare": 1.6
+    },
+    {
+      "party": "Socialist Unity Centre Of India (COMMUNIST)",
+      "votes": 2066,
+      "voteShare": 0.3
+    },
+    {
+      "party": "Bahujan Samaj Party",
+      "votes": 1540,
+      "voteShare": 0.2
+    },
+    {
+      "party": "United Republican Party Of India",
+      "votes": 989,
+      "voteShare": 0.1
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T11:03:29.752Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_105652953Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

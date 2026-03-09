@@ -5,6 +5,21 @@ import { fileURLToPath } from "node:url";
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 
 import { siteContent } from "./src/site-content.js";
+import {
+  getElectionAtlasCatalog,
+  getElectionAtlasConstituencyDetail,
+  getElectionAtlasDiscrepancies,
+  getElectionAtlasDistrictDetail,
+  getElectionAtlasPipeline,
+  getElectionAtlasPartyTrendData,
+  getElectionAtlasStateSummaryMartData,
+  getElectionAtlasSummary,
+  getElectionAtlasStagedResults,
+  listElectionAtlasDistricts,
+  listElectionAtlasConstituencies,
+  listElectionAtlasElections,
+  listElectionAtlasStates
+} from "./src/election-atlas.js";
 import { getCanonicalPageMetadata, renderPage } from "./src/template.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -16,12 +31,20 @@ const parsedPort = Number.parseInt(process.env.PORT ?? "", 10);
 const port = Number.isFinite(parsedPort) ? parsedPort : 3000;
 const host = "0.0.0.0";
 const maxRequestSize = 1024 * 1024;
-const pageRoutes = ["/", "/election-management-campaign-consulting", "/capabilities", "/surveys", "/leadership"];
+const pageRoutes = [
+  "/",
+  "/election-atlas",
+  "/election-management-campaign-consulting",
+  "/capabilities",
+  "/surveys",
+  "/leadership"
+];
 const routeAliases = new Map([
   ["/track-record", "/capabilities"],
   ["/contact", "/leadership"]
 ]);
 const htmlCacheControl = "public, max-age=300, must-revalidate";
+const atlasHtmlCacheControl = "public, max-age=60, must-revalidate";
 const crawlCacheControl = "public, max-age=300, must-revalidate";
 const staticAssetCacheControl = "public, max-age=86400";
 const apiCacheControl = "no-store";
@@ -124,7 +147,7 @@ function buildContentSecurityPolicy(nonce) {
   return [
     "default-src 'self'",
     `script-src 'self' 'nonce-${nonce}'`,
-    "style-src 'self' https://fonts.googleapis.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com",
     "img-src 'self' data:",
     "connect-src 'self'",
@@ -432,6 +455,15 @@ app.get("/llms.txt", (req, res) => {
   res.send(renderLlmsTxt(context));
 });
 
+app.get(/^\/election-atlas(?:\/.*)?$/, (req, res) => {
+  const context = getRenderContext(req, res);
+
+  res.type("html");
+  res.set("Cache-Control", atlasHtmlCacheControl);
+  maybeSetNoIndexHeader(res, context.allowIndexing);
+  res.send(renderPage(normalizeRoute(req.path), context));
+});
+
 app.get(pageRoutes, (req, res) => {
   const context = getRenderContext(req, res);
 
@@ -446,6 +478,151 @@ app.get("/api/health", (req, res) => {
     ok: true,
     service: "arjuna-strategy-consulting",
     timestamp: new Date().toISOString()
+  });
+});
+
+app.get("/api/election-atlas/states", (req, res) => {
+  res.json({
+    ok: true,
+    states: listElectionAtlasStates()
+  });
+});
+
+app.get("/api/election-atlas/pipeline", (req, res) => {
+  res.json({
+    ok: true,
+    pipeline: getElectionAtlasPipeline()
+  });
+});
+
+app.get("/api/election-atlas/catalog", (req, res) => {
+  res.json({
+    ok: true,
+    catalog: getElectionAtlasCatalog()
+  });
+});
+
+app.get("/api/election-atlas/staged-results", (req, res) => {
+  const state = typeof req.query.state === "string" ? req.query.state : undefined;
+  const house = typeof req.query.house === "string" ? req.query.house : undefined;
+  const year = typeof req.query.year === "string" ? req.query.year : undefined;
+
+  res.json({
+    ok: true,
+    ...getElectionAtlasStagedResults({ state, house, year })
+  });
+});
+
+app.get("/api/election-atlas/elections", (req, res) => {
+  const state = typeof req.query.state === "string" ? req.query.state : undefined;
+  const house = typeof req.query.house === "string" ? req.query.house : undefined;
+  const year = typeof req.query.year === "string" ? req.query.year : undefined;
+
+  res.json({
+    ok: true,
+    ...listElectionAtlasElections({ state, house, year })
+  });
+});
+
+app.get("/api/election-atlas/state-summary", (req, res) => {
+  const state = typeof req.query.state === "string" ? req.query.state : undefined;
+  const house = typeof req.query.house === "string" ? req.query.house : undefined;
+  const year = typeof req.query.year === "string" ? req.query.year : undefined;
+
+  res.json({
+    ok: true,
+    ...getElectionAtlasSummary({ state, house, year })
+  });
+});
+
+app.get("/api/election-atlas/state-summary-mart", (req, res) => {
+  const state = typeof req.query.state === "string" ? req.query.state : undefined;
+  const house = typeof req.query.house === "string" ? req.query.house : undefined;
+  const year = typeof req.query.year === "string" ? req.query.year : undefined;
+
+  res.json({
+    ok: true,
+    ...getElectionAtlasStateSummaryMartData({ state, house, year })
+  });
+});
+
+app.get("/api/election-atlas/party-trend", (req, res) => {
+  const state = typeof req.query.state === "string" ? req.query.state : undefined;
+  const house = typeof req.query.house === "string" ? req.query.house : undefined;
+  const year = typeof req.query.year === "string" ? req.query.year : undefined;
+
+  res.json({
+    ok: true,
+    ...getElectionAtlasPartyTrendData({ state, house, year })
+  });
+});
+
+app.get("/api/election-atlas/constituencies", (req, res) => {
+  const state = typeof req.query.state === "string" ? req.query.state : undefined;
+  const house = typeof req.query.house === "string" ? req.query.house : undefined;
+  const year = typeof req.query.year === "string" ? req.query.year : undefined;
+
+  res.json({
+    ok: true,
+    ...listElectionAtlasConstituencies({ state, house, year })
+  });
+});
+
+app.get("/api/election-atlas/constituency-detail", (req, res) => {
+  const state = typeof req.query.state === "string" ? req.query.state : undefined;
+  const house = typeof req.query.house === "string" ? req.query.house : undefined;
+  const year = typeof req.query.year === "string" ? req.query.year : undefined;
+  const seat = typeof req.query.seat === "string" ? req.query.seat : undefined;
+  const slug = typeof req.query.slug === "string" ? req.query.slug : undefined;
+
+  res.json({
+    ok: true,
+    ...getElectionAtlasConstituencyDetail({
+      state,
+      house,
+      year,
+      seat,
+      slug
+    })
+  });
+});
+
+app.get("/api/election-atlas/district-detail", (req, res) => {
+  const state = typeof req.query.state === "string" ? req.query.state : undefined;
+  const house = typeof req.query.house === "string" ? req.query.house : undefined;
+  const year = typeof req.query.year === "string" ? req.query.year : undefined;
+  const slug = typeof req.query.slug === "string" ? req.query.slug : undefined;
+
+  res.json({
+    ok: true,
+    ...getElectionAtlasDistrictDetail({
+      state,
+      house,
+      year,
+      slug
+    })
+  });
+});
+
+app.get("/api/election-atlas/districts", (req, res) => {
+  const state = typeof req.query.state === "string" ? req.query.state : undefined;
+  const house = typeof req.query.house === "string" ? req.query.house : undefined;
+  const year = typeof req.query.year === "string" ? req.query.year : undefined;
+
+  res.json({
+    ok: true,
+    ...listElectionAtlasDistricts({ state, house, year })
+  });
+});
+
+app.get("/api/election-atlas/discrepancies", (req, res) => {
+  const state = typeof req.query.state === "string" ? req.query.state : undefined;
+  const house = typeof req.query.house === "string" ? req.query.house : undefined;
+  const year = typeof req.query.year === "string" ? req.query.year : undefined;
+
+  res.json({
+    ok: true,
+    ...getElectionAtlasDiscrepancies({ state, house, year })
   });
 });
 

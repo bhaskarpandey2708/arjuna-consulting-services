@@ -1,0 +1,2172 @@
+{
+  "generatedAt": "2026-03-09T13:37:32.250Z",
+  "source": "lokdhaba",
+  "coverage": "assembly-district-rollup",
+  "selection": {
+    "state": "himachal-pradesh",
+    "house": "VS",
+    "year": 2022
+  },
+  "metrics": {
+    "totalDistricts": 12,
+    "totalSeats": 68,
+    "totalElectors": 5592828,
+    "totalVotes": 4219635,
+    "turnoutPct": 75.4,
+    "advancedMetrics": {
+      "sourceNative": {
+        "enopAvailable": true,
+        "meanEnop": 2.44,
+        "medianEnop": 2.22,
+        "highFragmentationSeats": 0,
+        "highFragmentationSeatShare": 0
+      },
+      "custom": {
+        "lowPluralitySeats": 5,
+        "lowPluralitySeatShare": 7.4,
+        "majorityWinnerSeats": 34,
+        "majorityWinnerSeatShare": 50,
+        "ultraCloseSeats": 8,
+        "ultraCloseSeatShare": 11.8,
+        "turnoutMedian": 75.2,
+        "turnoutIqr": 6,
+        "turnoutRange": 22.5,
+        "winnerVoteShareMedian": 49.9,
+        "marginMedian": 8.4,
+        "reservationMix": {
+          "reservedSeats": 20,
+          "reservedSeatShare": 29.4,
+          "scSeats": 17,
+          "stSeats": 3
+        }
+      }
+    }
+  },
+  "rowCount": 12,
+  "rows": [
+    {
+      "district": "Bilaspur",
+      "districtSlug": "bilaspur",
+      "totalSeats": 4,
+      "turnoutPct": 77.4,
+      "totalElectors": 330200,
+      "totalVotes": 255724,
+      "winnerParty": "BJP",
+      "winnerSeats": 3,
+      "winnerSeatShare": 75,
+      "winnerVoteShare": 46.3,
+      "closeContests": 2,
+      "meanMarginPct": 4.6,
+      "medianMarginPct": 4.3,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.32,
+          "medianEnop": 2.25,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 25,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 50,
+          "turnoutMedian": 76.4,
+          "turnoutIqr": 3.4,
+          "turnoutRange": 8.1,
+          "winnerVoteShareMedian": 47.5,
+          "marginMedian": 4.3,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 25,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "BJP",
+          "seats": 3,
+          "seatShare": 75,
+          "voteShare": 46.3
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 25,
+          "voteShare": 46.1
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.1
+        },
+        {
+          "party": "Rashtriya Devbhumi Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.3
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.2
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        },
+        {
+          "party": "BSP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.3
+        },
+        {
+          "party": "CPI",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.2
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Jhanduta",
+          "constituencyNumber": 46,
+          "reservationType": "SC",
+          "totalElectors": 80977,
+          "totalVotes": 60501,
+          "enop": 2.63,
+          "winner": "JEET RAM KATWAL",
+          "winnerParty": "BJP",
+          "winnerVotes": 28268,
+          "winnerVoteShare": 46.72,
+          "marginVotes": 5799,
+          "marginPct": 9.58,
+          "turnoutPct": 74.71
+        },
+        {
+          "constituency": "Ghumarwin",
+          "constituencyNumber": 47,
+          "reservationType": "GEN",
+          "totalElectors": 90144,
+          "totalVotes": 68092,
+          "enop": 2.17,
+          "winner": "RAJESH DHARMANI",
+          "winnerParty": "INC",
+          "winnerVotes": 35378,
+          "winnerVoteShare": 51.96,
+          "marginVotes": 5611,
+          "marginPct": 8.24,
+          "turnoutPct": 75.54
+        },
+        {
+          "constituency": "Bilaspur",
+          "constituencyNumber": 48,
+          "reservationType": "GEN",
+          "totalElectors": 83903,
+          "totalVotes": 64877,
+          "enop": 2.22,
+          "winner": "TRILOK JAMWAL",
+          "winnerParty": "BJP",
+          "winnerVotes": 30988,
+          "winnerVoteShare": 47.76,
+          "marginVotes": 276,
+          "marginPct": 0.43,
+          "turnoutPct": 77.32
+        },
+        {
+          "constituency": "Sri Naina Deviji",
+          "constituencyNumber": 49,
+          "reservationType": "GEN",
+          "totalElectors": 75176,
+          "totalVotes": 62254,
+          "enop": 2.27,
+          "winner": "RANDHIR SHARMA",
+          "winnerParty": "BJP",
+          "winnerVotes": 29403,
+          "winnerVoteShare": 47.23,
+          "marginVotes": 171,
+          "marginPct": 0.27,
+          "turnoutPct": 82.81
+        }
+      ]
+    },
+    {
+      "district": "Chamba",
+      "districtSlug": "chamba",
+      "totalSeats": 5,
+      "turnoutPct": 74.6,
+      "totalElectors": 399747,
+      "totalVotes": 298034,
+      "winnerParty": "BJP",
+      "winnerSeats": 3,
+      "winnerSeatShare": 60,
+      "winnerVoteShare": 48.8,
+      "closeContests": 2,
+      "meanMarginPct": 9.1,
+      "medianMarginPct": 9.2,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.19,
+          "medianEnop": 2.04,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 4,
+          "majorityWinnerSeatShare": 80,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 72.8,
+          "turnoutIqr": 4.2,
+          "turnoutRange": 7.5,
+          "winnerVoteShareMedian": 53.3,
+          "marginMedian": 9.2,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 40,
+            "scSeats": 1,
+            "stSeats": 1
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "BJP",
+          "seats": 3,
+          "seatShare": 60,
+          "voteShare": 48.8
+        },
+        {
+          "party": "INC",
+          "seats": 2,
+          "seatShare": 40,
+          "voteShare": 46
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.5
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        },
+        {
+          "party": "Hindu Samaj Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.2
+        },
+        {
+          "party": "Himachal Jan Kranti Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        },
+        {
+          "party": "Himachal Janta Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Churah",
+          "constituencyNumber": 1,
+          "reservationType": "SC",
+          "totalElectors": 78823,
+          "totalVotes": 62327,
+          "enop": 2.04,
+          "winner": "Hans Raj",
+          "winnerParty": "BJP",
+          "winnerVotes": 32095,
+          "winnerVoteShare": 51.49,
+          "marginVotes": 2642,
+          "marginPct": 4.24,
+          "turnoutPct": 79.07
+        },
+        {
+          "constituency": "Bharmour",
+          "constituencyNumber": 2,
+          "reservationType": "ST",
+          "totalElectors": 79000,
+          "totalVotes": 56509,
+          "enop": 2.04,
+          "winner": "Dr. Janak Raj",
+          "winnerParty": "BJP",
+          "winnerVotes": 30336,
+          "winnerVoteShare": 53.68,
+          "marginVotes": 5172,
+          "marginPct": 9.15,
+          "turnoutPct": 71.53
+        },
+        {
+          "constituency": "Chamba",
+          "constituencyNumber": 3,
+          "reservationType": "GEN",
+          "totalElectors": 84616,
+          "totalVotes": 61528,
+          "enop": 2.22,
+          "winner": "Neeraj Nayar",
+          "winnerParty": "INC",
+          "winnerVotes": 32783,
+          "winnerVoteShare": 53.28,
+          "marginVotes": 7782,
+          "marginPct": 12.65,
+          "turnoutPct": 72.71
+        },
+        {
+          "constituency": "Dalhousie",
+          "constituencyNumber": 4,
+          "reservationType": "GEN",
+          "totalElectors": 75714,
+          "totalVotes": 58246,
+          "enop": 2.04,
+          "winner": "DHAVINDER SINGH",
+          "winnerParty": "BJP",
+          "winnerVotes": 33488,
+          "winnerVoteShare": 57.49,
+          "marginVotes": 9918,
+          "marginPct": 17.03,
+          "turnoutPct": 76.93
+        },
+        {
+          "constituency": "Bhattiyat",
+          "constituencyNumber": 5,
+          "reservationType": "GEN",
+          "totalElectors": 81594,
+          "totalVotes": 59424,
+          "enop": 2.63,
+          "winner": "KULDEEP SINGH PATHANIA",
+          "winnerParty": "INC",
+          "winnerVotes": 25989,
+          "winnerVoteShare": 43.73,
+          "marginVotes": 1567,
+          "marginPct": 2.64,
+          "turnoutPct": 72.83
+        }
+      ]
+    },
+    {
+      "district": "Hamirpur",
+      "districtSlug": "hamirpur",
+      "totalSeats": 5,
+      "turnoutPct": 72.4,
+      "totalElectors": 417216,
+      "totalVotes": 301999,
+      "winnerParty": "INC",
+      "winnerSeats": 4,
+      "winnerSeatShare": 80,
+      "winnerVoteShare": 43.7,
+      "closeContests": 3,
+      "meanMarginPct": 10.2,
+      "medianMarginPct": 4.7,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.51,
+          "medianEnop": 2.56,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 20,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 40,
+          "turnoutMedian": 71.9,
+          "turnoutIqr": 1.9,
+          "turnoutRange": 5.4,
+          "winnerVoteShareMedian": 48.2,
+          "marginMedian": 4.7,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 20,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 4,
+          "seatShare": 80,
+          "voteShare": 43.7
+        },
+        {
+          "party": "IND",
+          "seats": 1,
+          "seatShare": 20,
+          "voteShare": 16.6
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 37.8
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        },
+        {
+          "party": "BSP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.3
+        },
+        {
+          "party": "Communist Party of India(Marxist)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.2
+        },
+        {
+          "party": "Rashtriya Devbhumi Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Bhoranj",
+          "constituencyNumber": 36,
+          "reservationType": "SC",
+          "totalElectors": 82738,
+          "totalVotes": 57417,
+          "enop": 2.56,
+          "winner": "SURESH KUMAR",
+          "winnerParty": "INC",
+          "winnerVotes": 24779,
+          "winnerVoteShare": 43.16,
+          "marginVotes": 60,
+          "marginPct": 0.1,
+          "turnoutPct": 69.4
+        },
+        {
+          "constituency": "Sujanpur",
+          "constituencyNumber": 37,
+          "reservationType": "GEN",
+          "totalElectors": 75396,
+          "totalVotes": 55597,
+          "enop": 2.04,
+          "winner": "RAJINDER SINGH",
+          "winnerParty": "INC",
+          "winnerVotes": 27679,
+          "winnerVoteShare": 49.79,
+          "marginVotes": 399,
+          "marginPct": 0.72,
+          "turnoutPct": 73.74
+        },
+        {
+          "constituency": "Hamirpur",
+          "constituencyNumber": 38,
+          "reservationType": "GEN",
+          "totalElectors": 76646,
+          "totalVotes": 55039,
+          "enop": 3.03,
+          "winner": "ASHISH SHARMA",
+          "winnerParty": "IND",
+          "winnerVotes": 25916,
+          "winnerVoteShare": 47.09,
+          "marginVotes": 12899,
+          "marginPct": 23.44,
+          "turnoutPct": 71.81
+        },
+        {
+          "constituency": "Barsar",
+          "constituencyNumber": 39,
+          "reservationType": "GEN",
+          "totalElectors": 87505,
+          "totalVotes": 62907,
+          "enop": 2.78,
+          "winner": "INDER DUTT LAKHANPAL",
+          "winnerParty": "INC",
+          "winnerVotes": 30293,
+          "winnerVoteShare": 48.16,
+          "marginVotes": 13792,
+          "marginPct": 21.92,
+          "turnoutPct": 71.89
+        },
+        {
+          "constituency": "Nadaun",
+          "constituencyNumber": 40,
+          "reservationType": "GEN",
+          "totalElectors": 94931,
+          "totalVotes": 71039,
+          "enop": 2.13,
+          "winner": "SUKHVINDER SINGH",
+          "winnerParty": "INC",
+          "winnerVotes": 36142,
+          "winnerVoteShare": 50.88,
+          "marginVotes": 3363,
+          "marginPct": 4.73,
+          "turnoutPct": 74.83
+        }
+      ]
+    },
+    {
+      "district": "Kangra",
+      "districtSlug": "kangra",
+      "totalSeats": 15,
+      "turnoutPct": 72.2,
+      "totalElectors": 1334542,
+      "totalVotes": 963703,
+      "winnerParty": "INC",
+      "winnerSeats": 10,
+      "winnerSeatShare": 66.7,
+      "winnerVoteShare": 42.7,
+      "closeContests": 4,
+      "meanMarginPct": 11.5,
+      "medianMarginPct": 9.3,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.41,
+          "medianEnop": 2.33,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 2,
+          "lowPluralitySeatShare": 13.3,
+          "majorityWinnerSeats": 9,
+          "majorityWinnerSeatShare": 60,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 73.3,
+          "turnoutIqr": 3.3,
+          "turnoutRange": 13.4,
+          "winnerVoteShareMedian": 50.4,
+          "marginMedian": 9.3,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 20,
+            "scSeats": 3,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 10,
+          "seatShare": 66.7,
+          "voteShare": 42.7
+        },
+        {
+          "party": "BJP",
+          "seats": 4,
+          "seatShare": 26.7,
+          "voteShare": 43.4
+        },
+        {
+          "party": "IND",
+          "seats": 1,
+          "seatShare": 6.7,
+          "voteShare": 11.5
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.3
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "BSP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.3
+        },
+        {
+          "party": "Rashtriya Devbhumi Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        },
+        {
+          "party": "Hindu Samaj Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Nurpur",
+          "constituencyNumber": 6,
+          "reservationType": "GEN",
+          "totalElectors": 93717,
+          "totalVotes": 70664,
+          "enop": 1.92,
+          "winner": "RANBIR SINGH",
+          "winnerParty": "BJP",
+          "winnerVotes": 44132,
+          "winnerVoteShare": 62.45,
+          "marginVotes": 18752,
+          "marginPct": 26.54,
+          "turnoutPct": 75.4
+        },
+        {
+          "constituency": "Indora",
+          "constituencyNumber": 7,
+          "reservationType": "SC",
+          "totalElectors": 93244,
+          "totalVotes": 67618,
+          "enop": 2.56,
+          "winner": "MALENDER RAJAN",
+          "winnerParty": "INC",
+          "winnerVotes": 30797,
+          "winnerVoteShare": 45.55,
+          "marginVotes": 2250,
+          "marginPct": 3.33,
+          "turnoutPct": 72.52
+        },
+        {
+          "constituency": "Fatehpur",
+          "constituencyNumber": 8,
+          "reservationType": "GEN",
+          "totalElectors": 90203,
+          "totalVotes": 64133,
+          "enop": 2.33,
+          "winner": "BHAWANI SINGH PATHANIA",
+          "winnerParty": "INC",
+          "winnerVotes": 33238,
+          "winnerVoteShare": 51.83,
+          "marginVotes": 7354,
+          "marginPct": 11.47,
+          "turnoutPct": 71.1
+        },
+        {
+          "constituency": "Jawali",
+          "constituencyNumber": 9,
+          "reservationType": "GEN",
+          "totalElectors": 101845,
+          "totalVotes": 74669,
+          "enop": 2.08,
+          "winner": "CHANDER KUMAR",
+          "winnerParty": "INC",
+          "winnerVotes": 38243,
+          "winnerVoteShare": 51.22,
+          "marginVotes": 3031,
+          "marginPct": 4.06,
+          "turnoutPct": 73.32
+        },
+        {
+          "constituency": "Dehra",
+          "constituencyNumber": 10,
+          "reservationType": "GEN",
+          "totalElectors": 85263,
+          "totalVotes": 60575,
+          "enop": 3.12,
+          "winner": "HOSHYAR SINGH",
+          "winnerParty": "IND",
+          "winnerVotes": 22997,
+          "winnerVoteShare": 37.96,
+          "marginVotes": 3877,
+          "marginPct": 6.4,
+          "turnoutPct": 71.04
+        },
+        {
+          "constituency": "Jaswan-Pragpur",
+          "constituencyNumber": 11,
+          "reservationType": "GEN",
+          "totalElectors": 79856,
+          "totalVotes": 59201,
+          "enop": 3.12,
+          "winner": "BIKRAM SINGH",
+          "winnerParty": "BJP",
+          "winnerVotes": 22658,
+          "winnerVoteShare": 38.27,
+          "marginVotes": 1789,
+          "marginPct": 3.02,
+          "turnoutPct": 74.13
+        },
+        {
+          "constituency": "Jawalamukhi",
+          "constituencyNumber": 12,
+          "reservationType": "GEN",
+          "totalElectors": 80141,
+          "totalVotes": 59872,
+          "enop": 2.63,
+          "winner": "SANJAY RATTAN",
+          "winnerParty": "INC",
+          "winnerVotes": 27827,
+          "winnerVoteShare": 46.48,
+          "marginVotes": 6404,
+          "marginPct": 10.7,
+          "turnoutPct": 74.71
+        },
+        {
+          "constituency": "Jaisinghpur",
+          "constituencyNumber": 13,
+          "reservationType": "SC",
+          "totalElectors": 85180,
+          "totalVotes": 55637,
+          "enop": 2.17,
+          "winner": "Yadvinder Goma",
+          "winnerParty": "INC",
+          "winnerVotes": 28058,
+          "winnerVoteShare": 50.43,
+          "marginVotes": 2696,
+          "marginPct": 4.85,
+          "turnoutPct": 65.32
+        },
+        {
+          "constituency": "Sullah",
+          "constituencyNumber": 14,
+          "reservationType": "GEN",
+          "totalElectors": 106976,
+          "totalVotes": 75845,
+          "enop": 2.56,
+          "winner": "VIPIN SINGH PARMAR",
+          "winnerParty": "BJP",
+          "winnerVotes": 36670,
+          "winnerVoteShare": 48.35,
+          "marginVotes": 7112,
+          "marginPct": 9.38,
+          "turnoutPct": 70.9
+        },
+        {
+          "constituency": "Nagrota",
+          "constituencyNumber": 15,
+          "reservationType": "GEN",
+          "totalElectors": 90962,
+          "totalVotes": 70275,
+          "enop": 2,
+          "winner": "R.S. BALI",
+          "winnerParty": "INC",
+          "winnerVotes": 42079,
+          "winnerVoteShare": 59.88,
+          "marginVotes": 15892,
+          "marginPct": 22.61,
+          "turnoutPct": 77.26
+        },
+        {
+          "constituency": "Kangra",
+          "constituencyNumber": 16,
+          "reservationType": "GEN",
+          "totalElectors": 83547,
+          "totalVotes": 63339,
+          "enop": 2.56,
+          "winner": "Pawan Kumar Kajal",
+          "winnerParty": "BJP",
+          "winnerVotes": 35239,
+          "winnerVoteShare": 55.64,
+          "marginVotes": 19834,
+          "marginPct": 31.31,
+          "turnoutPct": 75.81
+        },
+        {
+          "constituency": "Shahpur",
+          "constituencyNumber": 17,
+          "reservationType": "GEN",
+          "totalElectors": 89978,
+          "totalVotes": 66088,
+          "enop": 2.22,
+          "winner": "KEWAL SINGH",
+          "winnerParty": "INC",
+          "winnerVotes": 36603,
+          "winnerVoteShare": 55.39,
+          "marginVotes": 12243,
+          "marginPct": 18.53,
+          "turnoutPct": 73.45
+        },
+        {
+          "constituency": "Dharamshala",
+          "constituencyNumber": 18,
+          "reservationType": "GEN",
+          "totalElectors": 83829,
+          "totalVotes": 60010,
+          "enop": 2.56,
+          "winner": "SUDHIR SHARMA",
+          "winnerParty": "INC",
+          "winnerVotes": 27323,
+          "winnerVoteShare": 45.53,
+          "marginVotes": 3285,
+          "marginPct": 5.47,
+          "turnoutPct": 71.59
+        },
+        {
+          "constituency": "Palampur",
+          "constituencyNumber": 19,
+          "reservationType": "GEN",
+          "totalElectors": 78449,
+          "totalVotes": 57476,
+          "enop": 2.04,
+          "winner": "Ashish Butail",
+          "winnerParty": "INC",
+          "winnerVotes": 30874,
+          "winnerVoteShare": 53.72,
+          "marginVotes": 5328,
+          "marginPct": 9.27,
+          "turnoutPct": 73.27
+        },
+        {
+          "constituency": "Baijnath",
+          "constituencyNumber": 20,
+          "reservationType": "SC",
+          "totalElectors": 91352,
+          "totalVotes": 58301,
+          "enop": 2.22,
+          "winner": "Kishori Lal",
+          "winnerParty": "INC",
+          "winnerVotes": 29338,
+          "winnerVoteShare": 50.32,
+          "marginVotes": 3446,
+          "marginPct": 5.91,
+          "turnoutPct": 63.82
+        }
+      ]
+    },
+    {
+      "district": "Kinnaur",
+      "districtSlug": "kinnaur",
+      "totalSeats": 1,
+      "turnoutPct": 73.1,
+      "totalElectors": 60289,
+      "totalVotes": 44085,
+      "winnerParty": "INC",
+      "winnerSeats": 1,
+      "winnerSeatShare": 100,
+      "winnerVoteShare": 46.9,
+      "closeContests": 0,
+      "meanMarginPct": 15.8,
+      "medianMarginPct": 15.8,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.78,
+          "medianEnop": 2.78,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 73.1,
+          "turnoutIqr": 0,
+          "turnoutRange": 0,
+          "winnerVoteShareMedian": 47,
+          "marginMedian": 15.8,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 1
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 100,
+          "voteShare": 46.9
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 31.1
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 19.4
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.3
+        },
+        {
+          "party": "BSP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Kinnaur",
+          "constituencyNumber": 68,
+          "reservationType": "ST",
+          "totalElectors": 60289,
+          "totalVotes": 44085,
+          "enop": 2.78,
+          "winner": "Jagat Singh Negi",
+          "winnerParty": "INC",
+          "winnerVotes": 20696,
+          "winnerVoteShare": 46.95,
+          "marginVotes": 6964,
+          "marginPct": 15.8,
+          "turnoutPct": 73.12
+        }
+      ]
+    },
+    {
+      "district": "Kullu",
+      "districtSlug": "kullu",
+      "totalSeats": 4,
+      "turnoutPct": 78.7,
+      "totalElectors": 331500,
+      "totalVotes": 260978,
+      "winnerParty": "BJP",
+      "winnerSeats": 2,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 39.2,
+      "closeContests": 1,
+      "meanMarginPct": 6.9,
+      "medianMarginPct": 6.4,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.04,
+          "medianEnop": 2.94,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 25,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 79,
+          "turnoutIqr": 4,
+          "turnoutRange": 6.1,
+          "winnerVoteShareMedian": 41.5,
+          "marginMedian": 6.4,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 25,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "BJP",
+          "seats": 2,
+          "seatShare": 50,
+          "voteShare": 39.2
+        },
+        {
+          "party": "INC",
+          "seats": 2,
+          "seatShare": 50,
+          "voteShare": 36.4
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 20.2
+        },
+        {
+          "party": "Communist Party of India(Marxist)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.8
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.1
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "Rashtriya Devbhumi Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        },
+        {
+          "party": "BSP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.2
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Manali",
+          "constituencyNumber": 22,
+          "reservationType": "GEN",
+          "totalElectors": 74903,
+          "totalVotes": 60437,
+          "enop": 2.27,
+          "winner": "Bhuvneshwar Gaur",
+          "winnerParty": "INC",
+          "winnerVotes": 29892,
+          "winnerVoteShare": 49.46,
+          "marginVotes": 2957,
+          "marginPct": 4.89,
+          "turnoutPct": 80.69
+        },
+        {
+          "constituency": "Kullu",
+          "constituencyNumber": 23,
+          "reservationType": "GEN",
+          "totalElectors": 92050,
+          "totalVotes": 71165,
+          "enop": 2.86,
+          "winner": "SUNDER SINGH THAKUR",
+          "winnerParty": "INC",
+          "winnerVotes": 30286,
+          "winnerVoteShare": 42.56,
+          "marginVotes": 4103,
+          "marginPct": 5.77,
+          "turnoutPct": 77.31
+        },
+        {
+          "constituency": "Banjar",
+          "constituencyNumber": 24,
+          "reservationType": "GEN",
+          "totalElectors": 75592,
+          "totalVotes": 61908,
+          "enop": 3.03,
+          "winner": "SURENDER SHOURIE",
+          "winnerParty": "BJP",
+          "winnerVotes": 25038,
+          "winnerVoteShare": 40.44,
+          "marginVotes": 4334,
+          "marginPct": 7,
+          "turnoutPct": 81.9
+        },
+        {
+          "constituency": "Anni",
+          "constituencyNumber": 25,
+          "reservationType": "SC",
+          "totalElectors": 88955,
+          "totalVotes": 67468,
+          "enop": 4,
+          "winner": "LOKENDER KUMAR",
+          "winnerParty": "BJP",
+          "winnerVotes": 24133,
+          "winnerVoteShare": 35.77,
+          "marginVotes": 6778,
+          "marginPct": 10.05,
+          "turnoutPct": 75.85
+        }
+      ]
+    },
+    {
+      "district": "Lahaul & Spiti",
+      "districtSlug": "lahaul-and-spiti",
+      "totalSeats": 1,
+      "turnoutPct": 73.7,
+      "totalElectors": 25496,
+      "totalVotes": 18801,
+      "winnerParty": "INC",
+      "winnerSeats": 1,
+      "winnerSeatShare": 100,
+      "winnerVoteShare": 52.9,
+      "closeContests": 0,
+      "meanMarginPct": 8.6,
+      "medianMarginPct": 8.6,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.08,
+          "medianEnop": 2.08,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 100,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 73.7,
+          "turnoutIqr": 0,
+          "turnoutRange": 0,
+          "winnerVoteShareMedian": 52.9,
+          "marginMedian": 8.6,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 1
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 100,
+          "voteShare": 52.9
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 44.3
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.4
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Lahaul & Spiti",
+          "constituencyNumber": 21,
+          "reservationType": "ST",
+          "totalElectors": 25496,
+          "totalVotes": 18801,
+          "enop": 2.08,
+          "winner": "RAVI THAKUR",
+          "winnerParty": "INC",
+          "winnerVotes": 9948,
+          "winnerVoteShare": 52.91,
+          "marginVotes": 1616,
+          "marginPct": 8.6,
+          "turnoutPct": 73.74
+        }
+      ]
+    },
+    {
+      "district": "Mandi",
+      "districtSlug": "mandi",
+      "totalSeats": 10,
+      "turnoutPct": 76.7,
+      "totalElectors": 860317,
+      "totalVotes": 660178,
+      "winnerParty": "BJP",
+      "winnerSeats": 9,
+      "winnerSeatShare": 90,
+      "winnerVoteShare": 51.4,
+      "closeContests": 3,
+      "meanMarginPct": 13,
+      "medianMarginPct": 9.2,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.33,
+          "medianEnop": 2.3,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 4,
+          "majorityWinnerSeatShare": 40,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 10,
+          "turnoutMedian": 78.9,
+          "turnoutIqr": 7.1,
+          "turnoutRange": 14.8,
+          "winnerVoteShareMedian": 49.4,
+          "marginMedian": 9.2,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 30,
+            "scSeats": 3,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "BJP",
+          "seats": 9,
+          "seatShare": 90,
+          "voteShare": 51.4
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 10,
+          "voteShare": 39.2
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.9
+        },
+        {
+          "party": "Communist Party of India(Marxist)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "BSP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        },
+        {
+          "party": "Rashtriya Devbhumi Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Karsog",
+          "constituencyNumber": 26,
+          "reservationType": "SC",
+          "totalElectors": 76609,
+          "totalVotes": 60169,
+          "enop": 2.04,
+          "winner": "DEEP RAJ",
+          "winnerParty": "BJP",
+          "winnerVotes": 34512,
+          "winnerVoteShare": 57.36,
+          "marginVotes": 10534,
+          "marginPct": 17.51,
+          "turnoutPct": 78.54
+        },
+        {
+          "constituency": "Sundernagar",
+          "constituencyNumber": 27,
+          "reservationType": "GEN",
+          "totalElectors": 83690,
+          "totalVotes": 66651,
+          "enop": 2.86,
+          "winner": "Rakesh Kumar",
+          "winnerParty": "BJP",
+          "winnerVotes": 29432,
+          "winnerVoteShare": 44.16,
+          "marginVotes": 8125,
+          "marginPct": 12.19,
+          "turnoutPct": 79.64
+        },
+        {
+          "constituency": "Nachan",
+          "constituencyNumber": 28,
+          "reservationType": "SC",
+          "totalElectors": 88483,
+          "totalVotes": 71559,
+          "enop": 2.86,
+          "winner": "VINOD KUMAR",
+          "winnerParty": "BJP",
+          "winnerVotes": 33200,
+          "winnerVoteShare": 46.4,
+          "marginVotes": 8956,
+          "marginPct": 12.52,
+          "turnoutPct": 80.87
+        },
+        {
+          "constituency": "Seraj",
+          "constituencyNumber": 29,
+          "reservationType": "GEN",
+          "totalElectors": 84315,
+          "totalVotes": 70752,
+          "enop": 1.61,
+          "winner": "JAI RAM THAKUR",
+          "winnerParty": "BJP",
+          "winnerVotes": 53562,
+          "winnerVoteShare": 75.7,
+          "marginVotes": 38183,
+          "marginPct": 53.97,
+          "turnoutPct": 83.91
+        },
+        {
+          "constituency": "Darang",
+          "constituencyNumber": 30,
+          "reservationType": "GEN",
+          "totalElectors": 91525,
+          "totalVotes": 73490,
+          "enop": 2.04,
+          "winner": "Puran Chand",
+          "winnerParty": "BJP",
+          "winnerVotes": 36572,
+          "winnerVoteShare": 49.76,
+          "marginVotes": 618,
+          "marginPct": 0.84,
+          "turnoutPct": 80.3
+        },
+        {
+          "constituency": "Jogindernagar",
+          "constituencyNumber": 31,
+          "reservationType": "GEN",
+          "totalElectors": 101046,
+          "totalVotes": 70563,
+          "enop": 2.5,
+          "winner": "Prakash Prem Kumar",
+          "winnerParty": "BJP",
+          "winnerVotes": 33782,
+          "winnerVoteShare": 47.87,
+          "marginVotes": 4339,
+          "marginPct": 6.15,
+          "turnoutPct": 69.83
+        },
+        {
+          "constituency": "Dharampur",
+          "constituencyNumber": 32,
+          "reservationType": "GEN",
+          "totalElectors": 82732,
+          "totalVotes": 59857,
+          "enop": 2.04,
+          "winner": "CHANDER SHEKHAR",
+          "winnerParty": "INC",
+          "winnerVotes": 31063,
+          "winnerVoteShare": 51.9,
+          "marginVotes": 3026,
+          "marginPct": 5.06,
+          "turnoutPct": 72.35
+        },
+        {
+          "constituency": "Mandi",
+          "constituencyNumber": 33,
+          "reservationType": "GEN",
+          "totalElectors": 78113,
+          "totalVotes": 58650,
+          "enop": 2.44,
+          "winner": "ANIL SHARMA",
+          "winnerParty": "BJP",
+          "winnerVotes": 31303,
+          "winnerVoteShare": 53.37,
+          "marginVotes": 10006,
+          "marginPct": 17.06,
+          "turnoutPct": 75.08
+        },
+        {
+          "constituency": "Balh",
+          "constituencyNumber": 34,
+          "reservationType": "SC",
+          "totalElectors": 81597,
+          "totalVotes": 64726,
+          "enop": 2.17,
+          "winner": "INDER SINGH",
+          "winnerParty": "BJP",
+          "winnerVotes": 31792,
+          "winnerVoteShare": 49.12,
+          "marginVotes": 1307,
+          "marginPct": 2.02,
+          "turnoutPct": 79.32
+        },
+        {
+          "constituency": "Sarkaghat",
+          "constituencyNumber": 35,
+          "reservationType": "GEN",
+          "totalElectors": 92207,
+          "totalVotes": 63761,
+          "enop": 2.78,
+          "winner": "DALIP THAKUR",
+          "winnerParty": "BJP",
+          "winnerVotes": 27346,
+          "winnerVoteShare": 42.89,
+          "marginVotes": 1807,
+          "marginPct": 2.83,
+          "turnoutPct": 69.15
+        }
+      ]
+    },
+    {
+      "district": "Shimla",
+      "districtSlug": "shimla",
+      "totalSeats": 8,
+      "turnoutPct": 74.3,
+      "totalElectors": 587767,
+      "totalVotes": 437004,
+      "winnerParty": "INC",
+      "winnerSeats": 7,
+      "winnerSeatShare": 87.5,
+      "winnerVoteShare": 48.3,
+      "closeContests": 1,
+      "meanMarginPct": 14.1,
+      "medianMarginPct": 9.2,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.61,
+          "medianEnop": 2.22,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 12.5,
+          "majorityWinnerSeats": 5,
+          "majorityWinnerSeatShare": 62.5,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 12.5,
+          "turnoutMedian": 74.9,
+          "turnoutIqr": 3.6,
+          "turnoutRange": 18,
+          "winnerVoteShareMedian": 52,
+          "marginMedian": 9.2,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 25,
+            "scSeats": 2,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 7,
+          "seatShare": 87.5,
+          "voteShare": 48.3
+        },
+        {
+          "party": "BJP",
+          "seats": 1,
+          "seatShare": 12.5,
+          "voteShare": 36.7
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 8.5
+        },
+        {
+          "party": "Communist Party of India(Marxist)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "BSP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        },
+        {
+          "party": "Rashtriya Devbhumi Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.3
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Chopal",
+          "constituencyNumber": 60,
+          "reservationType": "GEN",
+          "totalElectors": 81782,
+          "totalVotes": 62227,
+          "enop": 3.03,
+          "winner": "Sh. Balbir Singh Verma",
+          "winnerParty": "BJP",
+          "winnerVotes": 25873,
+          "winnerVoteShare": 41.58,
+          "marginVotes": 5033,
+          "marginPct": 8.09,
+          "turnoutPct": 76.09
+        },
+        {
+          "constituency": "Theog",
+          "constituencyNumber": 61,
+          "reservationType": "GEN",
+          "totalElectors": 86236,
+          "totalVotes": 65980,
+          "enop": 4.76,
+          "winner": "KULDEEP SINGH RATHORE",
+          "winnerParty": "INC",
+          "winnerVotes": 19447,
+          "winnerVoteShare": 29.47,
+          "marginVotes": 5269,
+          "marginPct": 7.99,
+          "turnoutPct": 76.51
+        },
+        {
+          "constituency": "Kasumpti",
+          "constituencyNumber": 62,
+          "reservationType": "GEN",
+          "totalElectors": 67017,
+          "totalVotes": 46470,
+          "enop": 2.22,
+          "winner": "Anirudh Singh",
+          "winnerParty": "INC",
+          "winnerVotes": 25759,
+          "winnerVoteShare": 55.43,
+          "marginVotes": 8655,
+          "marginPct": 18.62,
+          "turnoutPct": 69.34
+        },
+        {
+          "constituency": "Shimla",
+          "constituencyNumber": 63,
+          "reservationType": "GEN",
+          "totalElectors": 48608,
+          "totalVotes": 30778,
+          "enop": 2.33,
+          "winner": "HARISH JANARTHA",
+          "winnerParty": "INC",
+          "winnerVotes": 15803,
+          "winnerVoteShare": 51.35,
+          "marginVotes": 3037,
+          "marginPct": 9.87,
+          "turnoutPct": 63.32
+        },
+        {
+          "constituency": "Shimla Rural",
+          "constituencyNumber": 64,
+          "reservationType": "GEN",
+          "totalElectors": 78294,
+          "totalVotes": 58597,
+          "enop": 2.04,
+          "winner": "Vikramaditya Singh",
+          "winnerParty": "INC",
+          "winnerVotes": 35269,
+          "winnerVoteShare": 60.19,
+          "marginVotes": 13860,
+          "marginPct": 23.65,
+          "turnoutPct": 74.84
+        },
+        {
+          "constituency": "Jubbal-Kotkhai",
+          "constituencyNumber": 65,
+          "reservationType": "GEN",
+          "totalElectors": 73362,
+          "totalVotes": 59627,
+          "enop": 2.13,
+          "winner": "ROHIT THAKUR",
+          "winnerParty": "INC",
+          "winnerVotes": 31393,
+          "winnerVoteShare": 52.65,
+          "marginVotes": 5069,
+          "marginPct": 8.5,
+          "turnoutPct": 81.28
+        },
+        {
+          "constituency": "Rampur",
+          "constituencyNumber": 66,
+          "reservationType": "SC",
+          "totalElectors": 77215,
+          "totalVotes": 57871,
+          "enop": 2.13,
+          "winner": "NAND LAL",
+          "winnerParty": "INC",
+          "winnerVotes": 28397,
+          "winnerVoteShare": 49.07,
+          "marginVotes": 567,
+          "marginPct": 0.98,
+          "turnoutPct": 74.95
+        },
+        {
+          "constituency": "Rohru",
+          "constituencyNumber": 67,
+          "reservationType": "SC",
+          "totalElectors": 75253,
+          "totalVotes": 55454,
+          "enop": 2.22,
+          "winner": "Mohan Lal Brakta",
+          "winnerParty": "INC",
+          "winnerVotes": 34327,
+          "winnerVoteShare": 61.9,
+          "marginVotes": 19339,
+          "marginPct": 34.87,
+          "turnoutPct": 73.69
+        }
+      ]
+    },
+    {
+      "district": "Sirmour",
+      "districtSlug": "sirmour",
+      "totalSeats": 5,
+      "turnoutPct": 80.9,
+      "totalElectors": 399247,
+      "totalVotes": 322958,
+      "winnerParty": "INC",
+      "winnerSeats": 3,
+      "winnerSeatShare": 60,
+      "winnerVoteShare": 42,
+      "closeContests": 3,
+      "meanMarginPct": 4.7,
+      "medianMarginPct": 2.3,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.59,
+          "medianEnop": 2.22,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 20,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 20,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 40,
+          "turnoutMedian": 80.3,
+          "turnoutIqr": 2.5,
+          "turnoutRange": 8.3,
+          "winnerVoteShareMedian": 48,
+          "marginMedian": 2.3,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 40,
+            "scSeats": 2,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 3,
+          "seatShare": 60,
+          "voteShare": 42
+        },
+        {
+          "party": "BJP",
+          "seats": 2,
+          "seatShare": 40,
+          "voteShare": 45
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.1
+        },
+        {
+          "party": "Rashtriya Devbhumi Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.5
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.2
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        },
+        {
+          "party": "Communist Party of India(Marxist)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.2
+        },
+        {
+          "party": "BSP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Pachhad",
+          "constituencyNumber": 55,
+          "reservationType": "SC",
+          "totalElectors": 77181,
+          "totalVotes": 61450,
+          "enop": 3.7,
+          "winner": "Reena",
+          "winnerParty": "BJP",
+          "winnerVotes": 21215,
+          "winnerVoteShare": 34.52,
+          "marginVotes": 3857,
+          "marginPct": 6.28,
+          "turnoutPct": 79.62
+        },
+        {
+          "constituency": "Nahan",
+          "constituencyNumber": 56,
+          "reservationType": "GEN",
+          "totalElectors": 85818,
+          "totalVotes": 70475,
+          "enop": 2.08,
+          "winner": "Ajay Solanki",
+          "winnerParty": "INC",
+          "winnerVotes": 35291,
+          "winnerVoteShare": 50.08,
+          "marginVotes": 1639,
+          "marginPct": 2.33,
+          "turnoutPct": 82.12
+        },
+        {
+          "constituency": "Sri Renukaji",
+          "constituencyNumber": 57,
+          "reservationType": "SC",
+          "totalElectors": 74365,
+          "totalVotes": 59687,
+          "enop": 2.22,
+          "winner": "Vinay Kumar",
+          "winnerParty": "INC",
+          "winnerVotes": 28642,
+          "winnerVoteShare": 47.99,
+          "marginVotes": 860,
+          "marginPct": 1.44,
+          "turnoutPct": 80.26
+        },
+        {
+          "constituency": "Paonta Sahib",
+          "constituencyNumber": 58,
+          "reservationType": "GEN",
+          "totalElectors": 85540,
+          "totalVotes": 66075,
+          "enop": 2.86,
+          "winner": "Sukh Ram",
+          "winnerParty": "BJP",
+          "winnerVotes": 31008,
+          "winnerVoteShare": 46.93,
+          "marginVotes": 8596,
+          "marginPct": 13.01,
+          "turnoutPct": 77.24
+        },
+        {
+          "constituency": "Shillai",
+          "constituencyNumber": 59,
+          "reservationType": "GEN",
+          "totalElectors": 76343,
+          "totalVotes": 65271,
+          "enop": 2.08,
+          "winner": "Harshwardhan Chauhan",
+          "winnerParty": "INC",
+          "winnerVotes": 32093,
+          "winnerVoteShare": 49.17,
+          "marginVotes": 382,
+          "marginPct": 0.59,
+          "turnoutPct": 85.5
+        }
+      ]
+    },
+    {
+      "district": "Solan",
+      "districtSlug": "solan",
+      "totalSeats": 5,
+      "turnoutPct": 77.8,
+      "totalElectors": 414956,
+      "totalVotes": 322891,
+      "winnerParty": "INC",
+      "winnerSeats": 4,
+      "winnerSeatShare": 80,
+      "winnerVoteShare": 43.8,
+      "closeContests": 0,
+      "meanMarginPct": 10.9,
+      "medianMarginPct": 11,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.56,
+          "medianEnop": 2.33,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 3,
+          "majorityWinnerSeatShare": 60,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 78.5,
+          "turnoutIqr": 4.9,
+          "turnoutRange": 18.2,
+          "winnerVoteShareMedian": 51.5,
+          "marginMedian": 11,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 40,
+            "scSeats": 2,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 4,
+          "seatShare": 80,
+          "voteShare": 43.8
+        },
+        {
+          "party": "IND",
+          "seats": 1,
+          "seatShare": 20,
+          "voteShare": 19.4
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 32.1
+        },
+        {
+          "party": "Rashtriya Devbhumi Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.9
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.5
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "BSP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        },
+        {
+          "party": "Swabhiman Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Arki",
+          "constituencyNumber": 50,
+          "reservationType": "GEN",
+          "totalElectors": 95788,
+          "totalVotes": 73536,
+          "enop": 2.94,
+          "winner": "Sanjay",
+          "winnerParty": "INC",
+          "winnerVotes": 30897,
+          "winnerVoteShare": 42.02,
+          "marginVotes": 4822,
+          "marginPct": 6.56,
+          "turnoutPct": 76.77
+        },
+        {
+          "constituency": "Nalagarh",
+          "constituencyNumber": 51,
+          "reservationType": "GEN",
+          "totalElectors": 91955,
+          "totalVotes": 75101,
+          "enop": 3.12,
+          "winner": "K. L. THAKUR",
+          "winnerParty": "IND",
+          "winnerVotes": 33427,
+          "winnerVoteShare": 44.51,
+          "marginVotes": 13264,
+          "marginPct": 17.66,
+          "turnoutPct": 81.67
+        },
+        {
+          "constituency": "Doon",
+          "constituencyNumber": 52,
+          "reservationType": "GEN",
+          "totalElectors": 71948,
+          "totalVotes": 61744,
+          "enop": 2.27,
+          "winner": "RAM KUMAR",
+          "winnerParty": "INC",
+          "winnerVotes": 32038,
+          "winnerVoteShare": 51.89,
+          "marginVotes": 6811,
+          "marginPct": 11.03,
+          "turnoutPct": 85.82
+        },
+        {
+          "constituency": "Solan",
+          "constituencyNumber": 53,
+          "reservationType": "SC",
+          "totalElectors": 86333,
+          "totalVotes": 58385,
+          "enop": 2.13,
+          "winner": "DHANI RAM SHANDIL",
+          "winnerParty": "INC",
+          "winnerVotes": 30089,
+          "winnerVoteShare": 51.54,
+          "marginVotes": 3858,
+          "marginPct": 6.61,
+          "turnoutPct": 67.63
+        },
+        {
+          "constituency": "Kasauli",
+          "constituencyNumber": 54,
+          "reservationType": "SC",
+          "totalElectors": 68932,
+          "totalVotes": 54125,
+          "enop": 2.33,
+          "winner": "VINOD SULTANPURI",
+          "winnerParty": "INC",
+          "winnerVotes": 28200,
+          "winnerVoteShare": 52.1,
+          "marginVotes": 6768,
+          "marginPct": 12.5,
+          "turnoutPct": 78.52
+        }
+      ]
+    },
+    {
+      "district": "Una",
+      "districtSlug": "una",
+      "totalSeats": 5,
+      "turnoutPct": 77.2,
+      "totalElectors": 431551,
+      "totalVotes": 333280,
+      "winnerParty": "INC",
+      "winnerSeats": 4,
+      "winnerSeatShare": 80,
+      "winnerVoteShare": 54.3,
+      "closeContests": 1,
+      "meanMarginPct": 11.7,
+      "medianMarginPct": 11.3,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.04,
+          "medianEnop": 2.04,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 5,
+          "majorityWinnerSeatShare": 100,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 77.9,
+          "turnoutIqr": 1.7,
+          "turnoutRange": 5,
+          "winnerVoteShareMedian": 54.8,
+          "marginMedian": 11.3,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 20,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 4,
+          "seatShare": 80,
+          "voteShare": 54.3
+        },
+        {
+          "party": "BJP",
+          "seats": 1,
+          "seatShare": 20,
+          "voteShare": 43.6
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        },
+        {
+          "party": "BSP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.2
+        },
+        {
+          "party": "Rashtriya Devbhumi Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        },
+        {
+          "party": "Himachal Jan Kranti Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Chintpurni",
+          "constituencyNumber": 41,
+          "reservationType": "SC",
+          "totalElectors": 84013,
+          "totalVotes": 62072,
+          "enop": 2.08,
+          "winner": "SUDARSHAN SINGH BABLOO",
+          "winnerParty": "INC",
+          "winnerVotes": 32712,
+          "winnerVoteShare": 52.7,
+          "marginVotes": 4858,
+          "marginPct": 7.83,
+          "turnoutPct": 73.88
+        },
+        {
+          "constituency": "Gagret",
+          "constituencyNumber": 42,
+          "reservationType": "GEN",
+          "totalElectors": 84517,
+          "totalVotes": 66665,
+          "enop": 1.96,
+          "winner": "Chaitanya Sharma",
+          "winnerParty": "INC",
+          "winnerVotes": 40767,
+          "winnerVoteShare": 61.15,
+          "marginVotes": 15685,
+          "marginPct": 23.53,
+          "turnoutPct": 78.88
+        },
+        {
+          "constituency": "Haroli",
+          "constituencyNumber": 43,
+          "reservationType": "GEN",
+          "totalElectors": 88951,
+          "totalVotes": 69858,
+          "enop": 2.04,
+          "winner": "MUKESH AGNIHOTRI",
+          "winnerParty": "INC",
+          "winnerVotes": 38652,
+          "winnerVoteShare": 55.33,
+          "marginVotes": 9148,
+          "marginPct": 13.1,
+          "turnoutPct": 78.54
+        },
+        {
+          "constituency": "Una",
+          "constituencyNumber": 44,
+          "reservationType": "GEN",
+          "totalElectors": 87136,
+          "totalVotes": 67877,
+          "enop": 2.08,
+          "winner": "Satpal Singh Satti",
+          "winnerParty": "BJP",
+          "winnerVotes": 33974,
+          "winnerVoteShare": 50.05,
+          "marginVotes": 1736,
+          "marginPct": 2.56,
+          "turnoutPct": 77.9
+        },
+        {
+          "constituency": "Kutlehar",
+          "constituencyNumber": 45,
+          "reservationType": "GEN",
+          "totalElectors": 86934,
+          "totalVotes": 66808,
+          "enop": 2.04,
+          "winner": "Davinder Kumar",
+          "winnerParty": "INC",
+          "winnerVotes": 36636,
+          "winnerVoteShare": 54.84,
+          "marginVotes": 7579,
+          "marginPct": 11.34,
+          "turnoutPct": 76.85
+        }
+      ]
+    }
+  ]
+}

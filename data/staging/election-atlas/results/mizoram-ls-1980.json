@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-03-09T14:43:52.884Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "mizoram",
+    "stateLabel": "Mizoram",
+    "stateVersionSlug": "mizoram",
+    "geographyVersionId": "mizoram-default",
+    "house": "LS",
+    "year": 1980,
+    "electionId": 7,
+    "stateId": 45
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "mizoram",
+      "stateLabel": "Mizoram",
+      "stateVersionSlug": "mizoram",
+      "geographyVersionId": "mizoram-default",
+      "house": "LS",
+      "year": 1980,
+      "electionId": 7,
+      "stateId": 45,
+      "constituency": "Mizoram",
+      "constituencyNumber": 1,
+      "reservationType": "ST",
+      "district": "",
+      "winner": "R. Rothuama",
+      "winnerParty": "Independent",
+      "totalElectors": 230795,
+      "totalVotes": 129533,
+      "turnoutPct": 56.1,
+      "marginVotes": 20539,
+      "marginPct": 15.9,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/1980/mizoram/mizoram/3166/45/7",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/7/7/45",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/1980/mizoram/mizoram/3166/45/7",
+      "winnerVotes": 74430,
+      "winnerVoteShare": 57.5,
+      "runnerUp": "C. Venkunga",
+      "runnerUpParty": "Peoples Conference",
+      "runnerUpVotes": 53891,
+      "runnerUpVoteShare": 41.6,
+      "detailAvailable": true,
+      "detailFileName": "mizoram-ls-1980-1-mizoram-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Independent",
+      "votes": 74430,
+      "voteShare": 57.5
+    },
+    {
+      "party": "Peoples Conference",
+      "votes": 53891,
+      "voteShare": 41.6
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:12:44.136Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

@@ -1,0 +1,967 @@
+{
+  "generatedAt": "2026-03-09T13:37:32.315Z",
+  "source": "lokdhaba",
+  "coverage": "assembly-district-rollup",
+  "selection": {
+    "state": "sikkim",
+    "house": "VS",
+    "year": 2019
+  },
+  "metrics": {
+    "totalDistricts": 5,
+    "totalSeats": 32,
+    "totalElectors": 434128,
+    "totalVotes": 351953,
+    "turnoutPct": 81.1,
+    "advancedMetrics": {
+      "sourceNative": {
+        "enopAvailable": true,
+        "meanEnop": 2.18,
+        "medianEnop": 2.13,
+        "highFragmentationSeats": 0,
+        "highFragmentationSeatShare": 0
+      },
+      "custom": {
+        "lowPluralitySeats": 0,
+        "lowPluralitySeatShare": 0,
+        "majorityWinnerSeats": 22,
+        "majorityWinnerSeatShare": 68.8,
+        "ultraCloseSeats": 6,
+        "ultraCloseSeatShare": 18.8,
+        "turnoutMedian": 82,
+        "turnoutIqr": 3.8,
+        "turnoutRange": 24.6,
+        "winnerVoteShareMedian": 51.4,
+        "marginMedian": 8,
+        "reservationMix": {
+          "reservedSeats": 14,
+          "reservedSeatShare": 43.8,
+          "scSeats": 2,
+          "stSeats": 0
+        }
+      }
+    }
+  },
+  "rowCount": 5,
+  "rows": [
+    {
+      "district": "East",
+      "districtSlug": "east",
+      "totalSeats": 12,
+      "turnoutPct": 78,
+      "totalElectors": 171695,
+      "totalVotes": 133889,
+      "winnerParty": "SKM",
+      "winnerSeats": 6,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 46.6,
+      "closeContests": 1,
+      "meanMarginPct": 10.4,
+      "medianMarginPct": 8,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.31,
+          "medianEnop": 2.33,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 8,
+          "majorityWinnerSeatShare": 66.7,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 8.3,
+          "turnoutMedian": 79,
+          "turnoutIqr": 5.1,
+          "turnoutRange": 20.3,
+          "winnerVoteShareMedian": 51.1,
+          "marginMedian": 8,
+          "reservationMix": {
+            "reservedSeats": 5,
+            "reservedSeatShare": 41.7,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "SKM",
+          "seats": 6,
+          "seatShare": 50,
+          "voteShare": 46.6
+        },
+        {
+          "party": "SDF",
+          "seats": 6,
+          "seatShare": 50,
+          "voteShare": 44.9
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.3
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.3
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        },
+        {
+          "party": "HMSKP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "SKPP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Khamdong-Singtam",
+          "constituencyNumber": 17,
+          "reservationType": "GEN",
+          "totalElectors": 13067,
+          "totalVotes": 10611,
+          "enop": 2.33,
+          "winner": "MANI KUMAR SHARMA",
+          "winnerParty": "SKM",
+          "winnerVotes": 5347,
+          "winnerVoteShare": 50.39,
+          "marginVotes": 873,
+          "marginPct": 8.23,
+          "turnoutPct": 81.2
+        },
+        {
+          "constituency": "West Penda",
+          "constituencyNumber": 18,
+          "reservationType": "SC",
+          "totalElectors": 14984,
+          "totalVotes": 11683,
+          "enop": 2.33,
+          "winner": "L .B DAS",
+          "winnerParty": "SKM",
+          "winnerVotes": 5799,
+          "winnerVoteShare": 49.64,
+          "marginVotes": 898,
+          "marginPct": 7.69,
+          "turnoutPct": 77.97
+        },
+        {
+          "constituency": "Rhenock",
+          "constituencyNumber": 19,
+          "reservationType": "GEN",
+          "totalElectors": 17396,
+          "totalVotes": 14244,
+          "enop": 2.27,
+          "winner": "BISHNU KUMAR SHARMA",
+          "winnerParty": "SKM",
+          "winnerVotes": 8039,
+          "winnerVoteShare": 56.44,
+          "marginVotes": 3086,
+          "marginPct": 21.67,
+          "turnoutPct": 81.88
+        },
+        {
+          "constituency": "Chujachen",
+          "constituencyNumber": 20,
+          "reservationType": "GEN",
+          "totalElectors": 17776,
+          "totalVotes": 14213,
+          "enop": 2.33,
+          "winner": "KRISHNA BAHADUR RAI",
+          "winnerParty": "SDF",
+          "winnerVotes": 7266,
+          "winnerVoteShare": 51.12,
+          "marginVotes": 1327,
+          "marginPct": 9.34,
+          "turnoutPct": 79.96
+        },
+        {
+          "constituency": "Gnathang-Machong",
+          "constituencyNumber": 21,
+          "reservationType": "BL",
+          "totalElectors": 12048,
+          "totalVotes": 10132,
+          "enop": 1.92,
+          "winner": "DORJEE TSHERING LEPCHA",
+          "winnerParty": "SDF",
+          "winnerVotes": 6380,
+          "winnerVoteShare": 62.97,
+          "marginVotes": 2920,
+          "marginPct": 28.82,
+          "turnoutPct": 84.1
+        },
+        {
+          "constituency": "Namcheybung",
+          "constituencyNumber": 22,
+          "reservationType": "GEN",
+          "totalElectors": 15095,
+          "totalVotes": 12400,
+          "enop": 2.38,
+          "winner": "EM PRASAD SHARMA",
+          "winnerParty": "SDF",
+          "winnerVotes": 6141,
+          "winnerVoteShare": 49.52,
+          "marginVotes": 971,
+          "marginPct": 7.83,
+          "turnoutPct": 82.15
+        },
+        {
+          "constituency": "Shyari",
+          "constituencyNumber": 23,
+          "reservationType": "BL",
+          "totalElectors": 15732,
+          "totalVotes": 12222,
+          "enop": 2.08,
+          "winner": "KUNGA NIMA LEPCHA",
+          "winnerParty": "SKM",
+          "winnerVotes": 6638,
+          "winnerVoteShare": 54.31,
+          "marginVotes": 1356,
+          "marginPct": 11.09,
+          "turnoutPct": 77.69
+        },
+        {
+          "constituency": "Martam-Rumtek",
+          "constituencyNumber": 24,
+          "reservationType": "BL",
+          "totalElectors": 16975,
+          "totalVotes": 13753,
+          "enop": 2.44,
+          "winner": "DORJEE TSHERING LEPCHA",
+          "winnerParty": "SDF",
+          "winnerVotes": 6244,
+          "winnerVoteShare": 45.4,
+          "marginVotes": 73,
+          "marginPct": 0.53,
+          "turnoutPct": 81.02
+        },
+        {
+          "constituency": "Upper Tadong",
+          "constituencyNumber": 25,
+          "reservationType": "GEN",
+          "totalElectors": 10334,
+          "totalVotes": 7536,
+          "enop": 2.13,
+          "winner": "GAY TSHERING DHUNGEL",
+          "winnerParty": "SDF",
+          "winnerVotes": 3844,
+          "winnerVoteShare": 51.01,
+          "marginVotes": 416,
+          "marginPct": 5.52,
+          "turnoutPct": 72.92
+        },
+        {
+          "constituency": "Arithang",
+          "constituencyNumber": 26,
+          "reservationType": "GEN",
+          "totalElectors": 11408,
+          "totalVotes": 7872,
+          "enop": 3.12,
+          "winner": "ARUN KUMAR UPRETI",
+          "winnerParty": "SKM",
+          "winnerVotes": 3150,
+          "winnerVoteShare": 40.02,
+          "marginVotes": 474,
+          "marginPct": 6.02,
+          "turnoutPct": 69
+        },
+        {
+          "constituency": "Gangtok",
+          "constituencyNumber": 27,
+          "reservationType": "BL",
+          "totalElectors": 11649,
+          "totalVotes": 7427,
+          "enop": 2.33,
+          "winner": "KUNGA NIMA LEPCHA",
+          "winnerParty": "SKM",
+          "winnerVotes": 3838,
+          "winnerVoteShare": 51.68,
+          "marginVotes": 888,
+          "marginPct": 11.96,
+          "turnoutPct": 63.76
+        },
+        {
+          "constituency": "Upper Burtuk",
+          "constituencyNumber": 28,
+          "reservationType": "GEN",
+          "totalElectors": 15231,
+          "totalVotes": 11796,
+          "enop": 2.08,
+          "winner": "DILLI RAM THAPA",
+          "winnerParty": "SDF",
+          "winnerVotes": 6107,
+          "winnerVoteShare": 51.77,
+          "marginVotes": 757,
+          "marginPct": 6.42,
+          "turnoutPct": 77.45
+        }
+      ]
+    },
+    {
+      "district": "North",
+      "districtSlug": "north",
+      "totalSeats": 3,
+      "turnoutPct": 84.9,
+      "totalElectors": 30123,
+      "totalVotes": 25562,
+      "winnerParty": "SKM",
+      "winnerSeats": 2,
+      "winnerSeatShare": 66.7,
+      "winnerVoteShare": 46.7,
+      "closeContests": 0,
+      "meanMarginPct": 19.3,
+      "medianMarginPct": 13.9,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.02,
+          "medianEnop": 2.04,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 3,
+          "majorityWinnerSeatShare": 100,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 85.4,
+          "turnoutIqr": 3.3,
+          "turnoutRange": 6.6,
+          "winnerVoteShareMedian": 55.1,
+          "marginMedian": 13.9,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "SKM",
+          "seats": 2,
+          "seatShare": 66.7,
+          "voteShare": 46.7
+        },
+        {
+          "party": "SDF",
+          "seats": 1,
+          "seatShare": 33.3,
+          "voteShare": 50.5
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "HMSKP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.3
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Kabi Lungchuk",
+          "constituencyNumber": 29,
+          "reservationType": "BL",
+          "totalElectors": 12661,
+          "totalVotes": 10360,
+          "enop": 2.13,
+          "winner": "KARMA LODAY BHUTIA",
+          "winnerParty": "SKM",
+          "winnerVotes": 5705,
+          "winnerVoteShare": 55.07,
+          "marginVotes": 1437,
+          "marginPct": 13.87,
+          "turnoutPct": 81.83
+        },
+        {
+          "constituency": "Djongu",
+          "constituencyNumber": 30,
+          "reservationType": "BL",
+          "totalElectors": 9595,
+          "totalVotes": 8483,
+          "enop": 1.89,
+          "winner": "PINTSO NAMGYAL LEPCHA",
+          "winnerParty": "SDF",
+          "winnerVotes": 5613,
+          "winnerVoteShare": 66.17,
+          "marginVotes": 3001,
+          "marginPct": 35.38,
+          "turnoutPct": 88.41
+        },
+        {
+          "constituency": "Lachen Mangan",
+          "constituencyNumber": 31,
+          "reservationType": "BL",
+          "totalElectors": 7867,
+          "totalVotes": 6719,
+          "enop": 2.04,
+          "winner": "SAMDUP LEPCHA",
+          "winnerParty": "SKM",
+          "winnerVotes": 3615,
+          "winnerVoteShare": 53.8,
+          "marginVotes": 584,
+          "marginPct": 8.69,
+          "turnoutPct": 85.41
+        }
+      ]
+    },
+    {
+      "district": "Sangha",
+      "districtSlug": "sangha",
+      "totalSeats": 1,
+      "turnoutPct": 72.2,
+      "totalElectors": 3293,
+      "totalVotes": 2376,
+      "winnerParty": "SKM",
+      "winnerSeats": 1,
+      "winnerSeatShare": 100,
+      "winnerVoteShare": 62.6,
+      "closeContests": 0,
+      "meanMarginPct": 26.5,
+      "medianMarginPct": 26.5,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 1.92,
+          "medianEnop": 1.92,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 100,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 72.2,
+          "turnoutIqr": 0,
+          "turnoutRange": 0,
+          "winnerVoteShareMedian": 62.6,
+          "marginMedian": 26.5,
+          "reservationMix": {
+            "reservedSeats": 0,
+            "reservedSeatShare": 0,
+            "scSeats": 0,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "SKM",
+          "seats": 1,
+          "seatShare": 100,
+          "voteShare": 62.6
+        },
+        {
+          "party": "SDF",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 36.1
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Sangha",
+          "constituencyNumber": 32,
+          "reservationType": "GEN",
+          "totalElectors": 3293,
+          "totalVotes": 2376,
+          "enop": 1.92,
+          "winner": "SONAM LAMA",
+          "winnerParty": "SKM",
+          "winnerVotes": 1488,
+          "winnerVoteShare": 62.63,
+          "marginVotes": 630,
+          "marginPct": 26.52,
+          "turnoutPct": 72.15
+        }
+      ]
+    },
+    {
+      "district": "South",
+      "districtSlug": "south",
+      "totalSeats": 8,
+      "turnoutPct": 82.3,
+      "totalElectors": 118121,
+      "totalVotes": 97159,
+      "winnerParty": "SDF",
+      "winnerSeats": 6,
+      "winnerSeatShare": 75,
+      "winnerVoteShare": 50.1,
+      "closeContests": 3,
+      "meanMarginPct": 8.2,
+      "medianMarginPct": 6.7,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.14,
+          "medianEnop": 2.13,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 6,
+          "majorityWinnerSeatShare": 75,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 12.5,
+          "turnoutMedian": 82.6,
+          "turnoutIqr": 1.3,
+          "turnoutRange": 4.7,
+          "winnerVoteShareMedian": 51,
+          "marginMedian": 6.7,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 25,
+            "scSeats": 0,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "SDF",
+          "seats": 6,
+          "seatShare": 75,
+          "voteShare": 50.1
+        },
+        {
+          "party": "SKM",
+          "seats": 2,
+          "seatShare": 25,
+          "voteShare": 46
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "HMSKP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "SRMP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        },
+        {
+          "party": "SKPP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.3
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Barfung",
+          "constituencyNumber": 9,
+          "reservationType": "BL",
+          "totalElectors": 14875,
+          "totalVotes": 12083,
+          "enop": 2.13,
+          "winner": "TASHI THENDUP BHUTIA",
+          "winnerParty": "SDF",
+          "winnerVotes": 5936,
+          "winnerVoteShare": 49.13,
+          "marginVotes": 97,
+          "marginPct": 0.8,
+          "turnoutPct": 81.23
+        },
+        {
+          "constituency": "Poklok-Kamrang",
+          "constituencyNumber": 10,
+          "reservationType": "GEN",
+          "totalElectors": 15595,
+          "totalVotes": 13083,
+          "enop": 2.04,
+          "winner": "PAWAN CHAMLING",
+          "winnerParty": "SDF",
+          "winnerVotes": 7731,
+          "winnerVoteShare": 59.09,
+          "marginVotes": 2899,
+          "marginPct": 22.16,
+          "turnoutPct": 83.89
+        },
+        {
+          "constituency": "Namchi-Singhithang",
+          "constituencyNumber": 11,
+          "reservationType": "GEN",
+          "totalElectors": 12689,
+          "totalVotes": 10046,
+          "enop": 2.13,
+          "winner": "PAWAN CHAMLING",
+          "winnerParty": "SDF",
+          "winnerVotes": 5054,
+          "winnerVoteShare": 50.31,
+          "marginVotes": 377,
+          "marginPct": 3.75,
+          "turnoutPct": 79.17
+        },
+        {
+          "constituency": "Melli",
+          "constituencyNumber": 12,
+          "reservationType": "GEN",
+          "totalElectors": 15479,
+          "totalVotes": 12645,
+          "enop": 2.27,
+          "winner": "FARWANTI TAMANG",
+          "winnerParty": "SDF",
+          "winnerVotes": 6354,
+          "winnerVoteShare": 50.25,
+          "marginVotes": 865,
+          "marginPct": 6.84,
+          "turnoutPct": 81.69
+        },
+        {
+          "constituency": "Namthang-Rateypani",
+          "constituencyNumber": 13,
+          "reservationType": "GEN",
+          "totalElectors": 15451,
+          "totalVotes": 12779,
+          "enop": 2.08,
+          "winner": "SANJEET KHAREL",
+          "winnerParty": "SKM",
+          "winnerVotes": 6848,
+          "winnerVoteShare": 53.59,
+          "marginVotes": 1305,
+          "marginPct": 10.21,
+          "turnoutPct": 82.71
+        },
+        {
+          "constituency": "Temi-Namphing",
+          "constituencyNumber": 14,
+          "reservationType": "GEN",
+          "totalElectors": 14225,
+          "totalVotes": 11768,
+          "enop": 2.13,
+          "winner": "BEDU SINGH PANTH",
+          "winnerParty": "SKM",
+          "winnerVotes": 6084,
+          "winnerVoteShare": 51.7,
+          "marginVotes": 770,
+          "marginPct": 6.54,
+          "turnoutPct": 82.73
+        },
+        {
+          "constituency": "Rangang-Yangang",
+          "constituencyNumber": 15,
+          "reservationType": "GEN",
+          "totalElectors": 13919,
+          "totalVotes": 11495,
+          "enop": 2.22,
+          "winner": "RAJ KUMARI THAPA",
+          "winnerParty": "SDF",
+          "winnerVotes": 6146,
+          "winnerVoteShare": 53.47,
+          "marginVotes": 1525,
+          "marginPct": 13.27,
+          "turnoutPct": 82.58
+        },
+        {
+          "constituency": "Tumen-Lingi",
+          "constituencyNumber": 16,
+          "reservationType": "BL",
+          "totalElectors": 15888,
+          "totalVotes": 13260,
+          "enop": 2.08,
+          "winner": "UGEN T. GYATSO BHUTIA",
+          "winnerParty": "SDF",
+          "winnerVotes": 6615,
+          "winnerVoteShare": 49.89,
+          "marginVotes": 320,
+          "marginPct": 2.41,
+          "turnoutPct": 83.46
+        }
+      ]
+    },
+    {
+      "district": "West",
+      "districtSlug": "west",
+      "totalSeats": 8,
+      "turnoutPct": 83.8,
+      "totalElectors": 110896,
+      "totalVotes": 92967,
+      "winnerParty": "SKM",
+      "winnerSeats": 6,
+      "winnerSeatShare": 75,
+      "winnerVoteShare": 48.5,
+      "closeContests": 5,
+      "meanMarginPct": 5.5,
+      "medianMarginPct": 2.1,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.11,
+          "medianEnop": 2.13,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 4,
+          "majorityWinnerSeatShare": 50,
+          "ultraCloseSeats": 4,
+          "ultraCloseSeatShare": 50,
+          "turnoutMedian": 83.6,
+          "turnoutIqr": 2.2,
+          "turnoutRange": 3.8,
+          "winnerVoteShareMedian": 49.7,
+          "marginMedian": 2.1,
+          "reservationMix": {
+            "reservedSeats": 4,
+            "reservedSeatShare": 50,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "SKM",
+          "seats": 6,
+          "seatShare": 75,
+          "voteShare": 48.5
+        },
+        {
+          "party": "SDF",
+          "seats": 2,
+          "seatShare": 25,
+          "voteShare": 48.5
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "HMSKP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        },
+        {
+          "party": "SKPP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        },
+        {
+          "party": "SRMP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Yoksam-Tashiding",
+          "constituencyNumber": 1,
+          "reservationType": "BL",
+          "totalElectors": 13808,
+          "totalVotes": 11720,
+          "enop": 2.13,
+          "winner": "SANGAY LEPCHA",
+          "winnerParty": "SKM",
+          "winnerVotes": 5686,
+          "winnerVoteShare": 48.52,
+          "marginVotes": 79,
+          "marginPct": 0.67,
+          "turnoutPct": 84.88
+        },
+        {
+          "constituency": "Yangthang",
+          "constituencyNumber": 2,
+          "reservationType": "GEN",
+          "totalElectors": 12952,
+          "totalVotes": 10696,
+          "enop": 2.17,
+          "winner": "BHIM HANG LIMBOO",
+          "winnerParty": "SKM",
+          "winnerVotes": 5184,
+          "winnerVoteShare": 48.47,
+          "marginVotes": 47,
+          "marginPct": 0.44,
+          "turnoutPct": 82.58
+        },
+        {
+          "constituency": "Maneybung-Dentam",
+          "constituencyNumber": 3,
+          "reservationType": "GEN",
+          "totalElectors": 15174,
+          "totalVotes": 12936,
+          "enop": 2.04,
+          "winner": "NARENDRA KUMAR SUBBA",
+          "winnerParty": "SDF",
+          "winnerVotes": 7134,
+          "winnerVoteShare": 55.15,
+          "marginVotes": 1504,
+          "marginPct": 11.63,
+          "turnoutPct": 85.25
+        },
+        {
+          "constituency": "Gyalshing-Barnyak",
+          "constituencyNumber": 4,
+          "reservationType": "GEN",
+          "totalElectors": 12406,
+          "totalVotes": 10273,
+          "enop": 2.04,
+          "winner": "LOK NATH SHARMA",
+          "winnerParty": "SKM",
+          "winnerVotes": 5862,
+          "winnerVoteShare": 57.06,
+          "marginVotes": 1814,
+          "marginPct": 17.66,
+          "turnoutPct": 82.81
+        },
+        {
+          "constituency": "Rinchenpong",
+          "constituencyNumber": 5,
+          "reservationType": "BL",
+          "totalElectors": 14756,
+          "totalVotes": 12599,
+          "enop": 2.17,
+          "winner": "KARMA SONAM LEPCHA",
+          "winnerParty": "SDF",
+          "winnerVotes": 6582,
+          "winnerVoteShare": 52.24,
+          "marginVotes": 1069,
+          "marginPct": 8.48,
+          "turnoutPct": 85.38
+        },
+        {
+          "constituency": "Daramdin",
+          "constituencyNumber": 6,
+          "reservationType": "BL",
+          "totalElectors": 15269,
+          "totalVotes": 12672,
+          "enop": 2.17,
+          "winner": "MINGMA NORBU SHERPA",
+          "winnerParty": "SKM",
+          "winnerVotes": 6219,
+          "winnerVoteShare": 49.08,
+          "marginVotes": 336,
+          "marginPct": 2.65,
+          "turnoutPct": 82.99
+        },
+        {
+          "constituency": "Soreong-Chakung",
+          "constituencyNumber": 7,
+          "reservationType": "GEN",
+          "totalElectors": 15589,
+          "totalVotes": 13140,
+          "enop": 2.04,
+          "winner": "ADITYA GOLAY (TAMANG)",
+          "winnerParty": "SKM",
+          "winnerVotes": 6580,
+          "winnerVoteShare": 50.08,
+          "marginVotes": 208,
+          "marginPct": 1.58,
+          "turnoutPct": 84.29
+        },
+        {
+          "constituency": "Salghari-Zoo",
+          "constituencyNumber": 8,
+          "reservationType": "SC",
+          "totalElectors": 10942,
+          "totalVotes": 8931,
+          "enop": 2.13,
+          "winner": "SUNITA GAJMER",
+          "winnerParty": "SKM",
+          "winnerVotes": 4400,
+          "winnerVoteShare": 49.27,
+          "marginVotes": 93,
+          "marginPct": 1.04,
+          "turnoutPct": 81.62
+        }
+      ]
+    }
+  ]
+}

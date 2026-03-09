@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-09T12:15:00.000Z",
+  "thresholds": {
+    "turnoutInfo": 2,
+    "turnoutActionable": 5,
+    "turnoutElectorateBaseVotesPctMax": 6,
+    "turnoutElectorateBaseElectorsPctMin": 3,
+    "turnoutSourceVarianceVotesPctMax": 10,
+    "voteShareInfo": 1,
+    "voteShareActionable": 2,
+    "voteShareWinnerVotesPctMax": 1,
+    "voteShareTotalVotesPctMin": 2,
+    "voteShareFormulaVarianceVotesPctMax": 0.1,
+    "voteShareFormulaVarianceTotalVotesPctMax": 0.1
+  },
+  "notes": {
+    "sourceCoverageGap": "Rows missing from one source while present in the other are tracked as coverage gaps, not winner conflicts. The atlas keeps the primary-source row and marks the secondary gap separately.",
+    "turnout": "Seat-level turnout differences under the actionable threshold are tracked as source variance, not launch blockers.",
+    "turnoutElectorateBase": "Large turnout deltas with near-matching votes polled but materially different elector totals are tracked as electorate-base variance between sources, not ballot-count conflicts.",
+    "turnoutSourceVariance": "Turnout deltas above the headline threshold but with the same electorate base and only moderate total-vote drift are tracked as source variance, not manual-review blockers.",
+    "voteShare": "Winner vote-share differences under the actionable threshold are tracked as source variance, not launch blockers.",
+    "voteShareDenominator": "Large winner vote-share deltas with near-matching winner votes but materially different total-vote denominators are tracked as denominator variance, not winner-vote conflicts.",
+    "voteShareFormula": "Winner vote-share deltas with matching winner-vote and total-vote counts are treated as source percentage-calculation variance, not manual-review blockers."
+  }
+}

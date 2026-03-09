@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2026-03-09T14:44:29.165Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "sikkim",
+    "stateLabel": "Sikkim",
+    "stateVersionSlug": "sikkim",
+    "geographyVersionId": "sikkim-default",
+    "house": "LS",
+    "year": 2004,
+    "electionId": 14,
+    "stateId": 46
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %",
+    "ACs"
+  ],
+  "rows": [
+    {
+      "state": "sikkim",
+      "stateLabel": "Sikkim",
+      "stateVersionSlug": "sikkim",
+      "geographyVersionId": "sikkim-default",
+      "house": "LS",
+      "year": 2004,
+      "electionId": 14,
+      "stateId": 46,
+      "constituency": "Sikkim",
+      "constituencyNumber": 1,
+      "reservationType": "GEN",
+      "district": "",
+      "winner": "Nakul Das Rai",
+      "winnerParty": "Sikkim Democratic Front",
+      "totalElectors": 281937,
+      "totalVotes": 215294,
+      "turnoutPct": 76.4,
+      "marginVotes": 93151,
+      "marginPct": 43.3,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/2004/sikkim/sikkim/7086/46/14",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/395/14/46",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/2004/sikkim/sikkim/7086/46/14",
+      "winnerVotes": 153409,
+      "winnerVoteShare": 71.3,
+      "runnerUp": "Biraj Adhikari",
+      "runnerUpParty": "Indian National Congress",
+      "runnerUpVotes": 60258,
+      "runnerUpVoteShare": 28,
+      "detailAvailable": true,
+      "detailFileName": "sikkim-ls-2004-1-sikkim-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Sikkim Democratic Front",
+      "votes": 153409,
+      "voteShare": 71.3
+    },
+    {
+      "party": "Indian National Congress",
+      "votes": 60258,
+      "voteShare": 28
+    },
+    {
+      "party": "Sikkim Sangram Parishad",
+      "votes": 3216,
+      "voteShare": 1.5
+    },
+    {
+      "party": "Sikkim Himali Rajya Parishad",
+      "votes": 2765,
+      "voteShare": 1.3
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:23:18.404Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

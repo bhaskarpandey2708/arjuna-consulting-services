@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "lastReviewed": "2026-03-09",
+  "states": [
+    {
+      "canonical": "bihar",
+      "displayName": "Bihar",
+      "houses": {
+        "LS": {
+          "indiavotesRoute": "/lok-sabha",
+          "lokdhabaElectionType": "GE"
+        },
+        "VS": {
+          "indiavotesRoute": "/vidhan-sabha",
+          "lokdhabaElectionType": "AE"
+        }
+      },
+      "geographyVersions": [
+        {
+          "id": "bihar_pre_2000",
+          "label": "Bihar [1947 - 1999]",
+          "sourceLabels": {
+            "indiavotes": "Bihar [1947 - 1999]"
+          },
+          "sourceIds": {
+            "indiavotesStateId": 2
+          }
+        },
+        {
+          "id": "bihar_post_2000",
+          "label": "Bihar [2000 Onwards]",
+          "sourceLabels": {
+            "indiavotes": "Bihar [2000 Onwards]",
+            "lokdhaba": "Bihar"
+          },
+          "sourceIds": {
+            "indiavotesStateId": 58
+          }
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "lokdhaba": {
+      "siteUrl": "https://lokdhaba.ashoka.edu.in/",
+      "apiBaseUrl": "https://lokdhaba.ashoka.edu.in/api",
+      "downloadBaseUrl": "https://lokdhaba.ashoka.edu.in/downloads",
+      "repoUrl": "https://github.com/tcpd/LokDhaba_JS",
+      "codebookUrl": "https://github.com/tcpd/LokDhaba_JS/blob/master/codebook/TCPD%20Indian%20Elections%20Data%20Codebook.pdf",
+      "discoveredEndpoints": {
+        "searchResults": "/data/api/v1.0/getSearchResults",
+        "vizData": "/data/api/v1.0/getVizData",
+        "vizLegend": "/data/api/v1.0/getVizLegend",
+        "mapYear": "/data/api/v1.0/getMapYear",
+        "mapYearParty": "/data/api/v1.0/getMapYearParty",
+        "derivedData": "/data/api/v2.0/getDerivedData"
+      }
+    },
+    "indiavotes": {
+      "siteUrl": "https://www.indiavotes.com/",
+      "advancedSearchUrl": "https://www.indiavotes.com/home/advanced_search",
+      "helperEndpoints": {
+        "acYears": "https://www.indiavotes.com/home/GetyearacAjaxhome_dist/{stateId}",
+        "acDistricts": "https://www.indiavotes.com/home/Get_dist_ac/{stateId}/{electionId}"
+      },
+      "stableRoutes": {
+        "lokSabha": "https://www.indiavotes.com/lok-sabha",
+        "vidhanSabha": "https://www.indiavotes.com/vidhan-sabha",
+        "pcSearch": "https://www.indiavotes.com/pc/search",
+        "summary": "https://www.indiavotes.com/summary",
+        "explore": "https://www.indiavotes.com/explore"
+      }
+    }
+  }
+}

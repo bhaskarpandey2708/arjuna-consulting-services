@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-03-09T14:44:11.156Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "puducherry",
+    "stateLabel": "Pondicherry",
+    "stateVersionSlug": "pondicherry",
+    "geographyVersionId": "puducherry-default",
+    "house": "LS",
+    "year": 1980,
+    "electionId": 7,
+    "stateId": 39
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "puducherry",
+      "stateLabel": "Pondicherry",
+      "stateVersionSlug": "pondicherry",
+      "geographyVersionId": "puducherry-default",
+      "house": "LS",
+      "year": 1980,
+      "electionId": 7,
+      "stateId": 39,
+      "constituency": "Pondicherry",
+      "constituencyNumber": 1,
+      "reservationType": "GEN",
+      "district": "",
+      "winner": "P. Shanmugam",
+      "winnerParty": "Indian National Congress (I)",
+      "totalElectors": 319237,
+      "totalVotes": 256539,
+      "turnoutPct": 80.4,
+      "marginVotes": 98564,
+      "marginPct": 38.4,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/1980/pondicherry/pondicherry/3407/39/7",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/130/7/39",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/1980/pondicherry/pondicherry/3407/39/7",
+      "winnerVotes": 164589,
+      "winnerVoteShare": 64.2,
+      "runnerUp": "M.R. Lakshminarayanan",
+      "runnerUpParty": "Janta Party",
+      "runnerUpVotes": 66025,
+      "runnerUpVoteShare": 25.7,
+      "detailAvailable": true,
+      "detailFileName": "pondicherry-ls-1980-1-pondicherry-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Indian National Congress (I)",
+      "votes": 164589,
+      "voteShare": 64.2
+    },
+    {
+      "party": "Janta Party",
+      "votes": 66025,
+      "voteShare": 25.7
+    },
+    {
+      "party": "Janta Party (SECULAR)",
+      "votes": 17067,
+      "voteShare": 6.7
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:16:29.955Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

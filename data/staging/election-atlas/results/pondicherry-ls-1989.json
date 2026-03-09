@@ -1,0 +1,108 @@
+{
+  "generatedAt": "2026-03-09T14:44:10.652Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "puducherry",
+    "stateLabel": "Pondicherry",
+    "stateVersionSlug": "pondicherry",
+    "geographyVersionId": "puducherry-default",
+    "house": "LS",
+    "year": 1989,
+    "electionId": 9,
+    "stateId": 39
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "puducherry",
+      "stateLabel": "Pondicherry",
+      "stateVersionSlug": "pondicherry",
+      "geographyVersionId": "puducherry-default",
+      "house": "LS",
+      "year": 1989,
+      "electionId": 9,
+      "stateId": 39,
+      "constituency": "Pondicherry",
+      "constituencyNumber": 1,
+      "reservationType": "GEN",
+      "district": "",
+      "winner": "P. Shanmugam",
+      "winnerParty": "Indian National Congress",
+      "totalElectors": 574557,
+      "totalVotes": 383306,
+      "turnoutPct": 66.7,
+      "marginVotes": 33312,
+      "marginPct": 8.7,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/1989/pondicherry/pondicherry/4478/39/9",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/1/9/39",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/1989/pondicherry/pondicherry/4478/39/9",
+      "winnerVotes": 190562,
+      "winnerVoteShare": 49.7,
+      "runnerUp": "N. Manimaran",
+      "runnerUpParty": "Dravida Munetra Kazhagam",
+      "runnerUpVotes": 157250,
+      "runnerUpVoteShare": 41,
+      "detailAvailable": true,
+      "detailFileName": "pondicherry-ls-1989-1-pondicherry-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Indian National Congress",
+      "votes": 190562,
+      "voteShare": 49.7
+    },
+    {
+      "party": "Dravida Munetra Kazhagam",
+      "votes": 157250,
+      "voteShare": 41
+    },
+    {
+      "party": "Pattali Makkal Katchi",
+      "votes": 25021,
+      "voteShare": 6.5
+    },
+    {
+      "party": "Independent",
+      "votes": 2847,
+      "voteShare": 0.7
+    },
+    {
+      "party": "Lok Dal (BAHUGUNA)",
+      "votes": 965,
+      "voteShare": 0.3
+    },
+    {
+      "party": "Tharasu Makkal Mandaram",
+      "votes": 943,
+      "voteShare": 0.2
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:16:29.574Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-03-09T14:44:11.408Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "puducherry",
+    "stateLabel": "Pondicherry",
+    "stateVersionSlug": "pondicherry",
+    "geographyVersionId": "puducherry-default",
+    "house": "LS",
+    "year": 1977,
+    "electionId": 6,
+    "stateId": 39
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "puducherry",
+      "stateLabel": "Pondicherry",
+      "stateVersionSlug": "pondicherry",
+      "geographyVersionId": "puducherry-default",
+      "house": "LS",
+      "year": 1977,
+      "electionId": 6,
+      "stateId": 39,
+      "constituency": "Pondicherry",
+      "constituencyNumber": 1,
+      "reservationType": "GEN",
+      "district": "",
+      "winner": "Aravinda Bala Pajanor",
+      "winnerParty": "All India Anna Dravida Munnetra Kazhagam",
+      "totalElectors": 298192,
+      "totalVotes": 219560,
+      "turnoutPct": 73.6,
+      "marginVotes": 19201,
+      "marginPct": 8.7,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/1977/pondicherry/pondicherry/2878/39/6",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/128/6/39",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/1977/pondicherry/pondicherry/2878/39/6",
+      "winnerVotes": 115302,
+      "winnerVoteShare": 52.5,
+      "runnerUp": "Ansari Duraisamy",
+      "runnerUpParty": "Indian National Congress (ORGANISATION)",
+      "runnerUpVotes": 96101,
+      "runnerUpVoteShare": 43.8,
+      "detailAvailable": true,
+      "detailFileName": "pondicherry-ls-1977-1-pondicherry-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "All India Anna Dravida Munnetra Kazhagam",
+      "votes": 115302,
+      "voteShare": 52.5
+    },
+    {
+      "party": "Indian National Congress (ORGANISATION)",
+      "votes": 96101,
+      "voteShare": 43.8
+    },
+    {
+      "party": "Independent",
+      "votes": 4841,
+      "voteShare": 2.2
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:16:30.145Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

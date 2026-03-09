@@ -1,0 +1,1966 @@
+{
+  "generatedAt": "2026-03-09T13:37:32.287Z",
+  "source": "lokdhaba",
+  "coverage": "assembly-district-rollup",
+  "selection": {
+    "state": "meghalaya",
+    "house": "VS",
+    "year": 2023
+  },
+  "metrics": {
+    "totalDistricts": 11,
+    "totalSeats": 59,
+    "totalElectors": 2170984,
+    "totalVotes": 1855531,
+    "turnoutPct": 85.5,
+    "advancedMetrics": {
+      "sourceNative": {
+        "enopAvailable": true,
+        "meanEnop": 3.38,
+        "medianEnop": 3.33,
+        "highFragmentationSeats": 1,
+        "highFragmentationSeatShare": 1.7
+      },
+      "custom": {
+        "lowPluralitySeats": 30,
+        "lowPluralitySeatShare": 50.8,
+        "majorityWinnerSeats": 7,
+        "majorityWinnerSeatShare": 11.9,
+        "ultraCloseSeats": 12,
+        "ultraCloseSeatShare": 20.3,
+        "turnoutMedian": 87.7,
+        "turnoutIqr": 4.8,
+        "turnoutRange": 36.9,
+        "winnerVoteShareMedian": 39.6,
+        "marginMedian": 7.6,
+        "reservationMix": {
+          "reservedSeats": 54,
+          "reservedSeatShare": 91.5,
+          "scSeats": 0,
+          "stSeats": 54
+        }
+      }
+    }
+  },
+  "rowCount": 11,
+  "rows": [
+    {
+      "district": "East Garo Hills",
+      "districtSlug": "east-garo-hills",
+      "totalSeats": 4,
+      "turnoutPct": 83.8,
+      "totalElectors": 149704,
+      "totalVotes": 125445,
+      "winnerParty": "NPP",
+      "winnerSeats": 3,
+      "winnerSeatShare": 75,
+      "winnerVoteShare": 39.5,
+      "closeContests": 3,
+      "meanMarginPct": 4.7,
+      "medianMarginPct": 2.7,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.4,
+          "medianEnop": 3.17,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 2,
+          "lowPluralitySeatShare": 50,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 50,
+          "turnoutMedian": 84.8,
+          "turnoutIqr": 3.1,
+          "turnoutRange": 11.8,
+          "winnerVoteShareMedian": 40.7,
+          "marginMedian": 2.7,
+          "reservationMix": {
+            "reservedSeats": 4,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 4
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPP",
+          "seats": 3,
+          "seatShare": 75,
+          "voteShare": 39.5
+        },
+        {
+          "party": "AITC",
+          "seats": 1,
+          "seatShare": 25,
+          "voteShare": 30.1
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 11.4
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 11
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.4
+        },
+        {
+          "party": "United Democratic Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.5
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.2
+        },
+        {
+          "party": "Janata Dal(United)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Kharkutta",
+          "constituencyNumber": 37,
+          "reservationType": "ST",
+          "totalElectors": 43626,
+          "totalVotes": 37051,
+          "enop": 2.5,
+          "winner": "RUPERT MOMIN",
+          "winnerParty": "NPP",
+          "winnerVotes": 17426,
+          "winnerVoteShare": 47.03,
+          "marginVotes": 1530,
+          "marginPct": 4.13,
+          "turnoutPct": 84.93
+        },
+        {
+          "constituency": "Songsak",
+          "constituencyNumber": 41,
+          "reservationType": "ST",
+          "totalElectors": 31997,
+          "totalVotes": 28506,
+          "enop": 2.5,
+          "winner": "DR. MUKUL SANGMA",
+          "winnerParty": "AITC",
+          "winnerVotes": 12689,
+          "winnerVoteShare": 44.51,
+          "marginVotes": 372,
+          "marginPct": 1.3,
+          "turnoutPct": 89.09
+        },
+        {
+          "constituency": "Rongjeng",
+          "constituencyNumber": 42,
+          "reservationType": "ST",
+          "totalElectors": 35575,
+          "totalVotes": 30139,
+          "enop": 4.76,
+          "winner": "JIM M SANGMA",
+          "winnerParty": "NPP",
+          "winnerVotes": 8836,
+          "winnerVoteShare": 29.32,
+          "marginVotes": 128,
+          "marginPct": 0.42,
+          "turnoutPct": 84.72
+        },
+        {
+          "constituency": "William Nagar",
+          "constituencyNumber": 43,
+          "reservationType": "ST",
+          "totalElectors": 38506,
+          "totalVotes": 29749,
+          "enop": 3.85,
+          "winner": "MARCUISE N MARAK",
+          "winnerParty": "NPP",
+          "winnerVotes": 10976,
+          "winnerVoteShare": 36.9,
+          "marginVotes": 3843,
+          "marginPct": 12.92,
+          "turnoutPct": 77.26
+        }
+      ]
+    },
+    {
+      "district": "East Jaintia Hills",
+      "districtSlug": "east-jaintia-hills",
+      "totalSeats": 2,
+      "turnoutPct": 90.8,
+      "totalElectors": 94970,
+      "totalVotes": 86208,
+      "winnerParty": "NPP",
+      "winnerSeats": 1,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 40.5,
+      "closeContests": 1,
+      "meanMarginPct": 8.7,
+      "medianMarginPct": 8.7,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.55,
+          "medianEnop": 2.55,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 50,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 50,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 90.8,
+          "turnoutIqr": 0,
+          "turnoutRange": 0,
+          "winnerVoteShareMedian": 47,
+          "marginMedian": 8.7,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 2
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPP",
+          "seats": 1,
+          "seatShare": 50,
+          "voteShare": 40.5
+        },
+        {
+          "party": "United Democratic Party",
+          "seats": 1,
+          "seatShare": 50,
+          "voteShare": 39.4
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 17.7
+        },
+        {
+          "party": "Voice of the People Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "AITC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Sutnga Saipung",
+          "constituencyNumber": 5,
+          "reservationType": "ST",
+          "totalElectors": 47812,
+          "totalVotes": 43413,
+          "enop": 3.03,
+          "winner": "SANTA MARY SHYLLA",
+          "winnerParty": "NPP",
+          "winnerVotes": 16974,
+          "winnerVoteShare": 39.1,
+          "marginVotes": 1828,
+          "marginPct": 4.21,
+          "turnoutPct": 90.8
+        },
+        {
+          "constituency": "Khliehriat",
+          "constituencyNumber": 6,
+          "reservationType": "ST",
+          "totalElectors": 47158,
+          "totalVotes": 42795,
+          "enop": 2.08,
+          "winner": "KYRMEN SHYLLA",
+          "winnerParty": "United Democratic Party",
+          "winnerVotes": 23514,
+          "winnerVoteShare": 54.95,
+          "marginVotes": 5606,
+          "marginPct": 13.1,
+          "turnoutPct": 90.75
+        }
+      ]
+    },
+    {
+      "district": "East Khasi Hills",
+      "districtSlug": "east-khasi-hills",
+      "totalSeats": 16,
+      "turnoutPct": 79.3,
+      "totalElectors": 575686,
+      "totalVotes": 456432,
+      "winnerParty": "United Democratic Party",
+      "winnerSeats": 4,
+      "winnerSeatShare": 25,
+      "winnerVoteShare": 21.5,
+      "closeContests": 7,
+      "meanMarginPct": 12.4,
+      "medianMarginPct": 7.6,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.71,
+          "medianEnop": 3.63,
+          "highFragmentationSeats": 1,
+          "highFragmentationSeatShare": 6.3
+        },
+        "custom": {
+          "lowPluralitySeats": 10,
+          "lowPluralitySeatShare": 62.5,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 12.5,
+          "ultraCloseSeats": 4,
+          "ultraCloseSeatShare": 25,
+          "turnoutMedian": 82.5,
+          "turnoutIqr": 19.3,
+          "turnoutRange": 27.4,
+          "winnerVoteShareMedian": 37.3,
+          "marginMedian": 7.6,
+          "reservationMix": {
+            "reservedSeats": 13,
+            "reservedSeatShare": 81.3,
+            "scSeats": 0,
+            "stSeats": 13
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "United Democratic Party",
+          "seats": 4,
+          "seatShare": 25,
+          "voteShare": 21.5
+        },
+        {
+          "party": "Voice of the People Party",
+          "seats": 4,
+          "seatShare": 25,
+          "voteShare": 19.6
+        },
+        {
+          "party": "NPP",
+          "seats": 2,
+          "seatShare": 12.5,
+          "voteShare": 22.6
+        },
+        {
+          "party": "BJP",
+          "seats": 2,
+          "seatShare": 12.5,
+          "voteShare": 12
+        },
+        {
+          "party": "People's Democratic Front",
+          "seats": 2,
+          "seatShare": 12.5,
+          "voteShare": 6.8
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 6.3,
+          "voteShare": 8.9
+        },
+        {
+          "party": "AITC",
+          "seats": 1,
+          "seatShare": 6.3,
+          "voteShare": 4.2
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.9
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Mawryngkneng",
+          "constituencyNumber": 13,
+          "reservationType": "ST",
+          "totalElectors": 40528,
+          "totalVotes": 34525,
+          "enop": 3.57,
+          "winner": "HEAVING STONE KHARPRAN",
+          "winnerParty": "Voice of the People Party",
+          "winnerVotes": 11424,
+          "winnerVoteShare": 33.09,
+          "marginVotes": 1242,
+          "marginPct": 3.6,
+          "turnoutPct": 85.19
+        },
+        {
+          "constituency": "Pynthorumkhrah",
+          "constituencyNumber": 14,
+          "reservationType": "GEN",
+          "totalElectors": 35614,
+          "totalVotes": 26108,
+          "enop": 3.7,
+          "winner": "ALEXANDER LALOO HEK",
+          "winnerParty": "BJP",
+          "winnerVotes": 9321,
+          "winnerVoteShare": 35.7,
+          "marginVotes": 2538,
+          "marginPct": 9.72,
+          "turnoutPct": 73.31
+        },
+        {
+          "constituency": "Mawlai",
+          "constituencyNumber": 15,
+          "reservationType": "ST",
+          "totalElectors": 51579,
+          "totalVotes": 40747,
+          "enop": 2.44,
+          "winner": "BRIGHTSTARWELL MARBANIANG",
+          "winnerParty": "Voice of the People Party",
+          "winnerVotes": 24262,
+          "winnerVoteShare": 59.54,
+          "marginVotes": 15648,
+          "marginPct": 38.4,
+          "turnoutPct": 79
+        },
+        {
+          "constituency": "East Shillong",
+          "constituencyNumber": 16,
+          "reservationType": "ST",
+          "totalElectors": 26335,
+          "totalVotes": 17036,
+          "enop": 3.85,
+          "winner": "DR. MAZEL AMPAREEN LYNGDOH",
+          "winnerParty": "NPP",
+          "winnerVotes": 6637,
+          "winnerVoteShare": 38.96,
+          "marginVotes": 1711,
+          "marginPct": 10.04,
+          "turnoutPct": 64.69
+        },
+        {
+          "constituency": "North Shillong",
+          "constituencyNumber": 17,
+          "reservationType": "ST",
+          "totalElectors": 29170,
+          "totalVotes": 18957,
+          "enop": 4.76,
+          "winner": "ADELBERT NONGRUM",
+          "winnerParty": "Voice of the People Party",
+          "winnerVotes": 5583,
+          "winnerVoteShare": 29.45,
+          "marginVotes": 1033,
+          "marginPct": 5.45,
+          "turnoutPct": 64.99
+        },
+        {
+          "constituency": "West Shillong",
+          "constituencyNumber": 18,
+          "reservationType": "GEN",
+          "totalElectors": 27371,
+          "totalVotes": 18787,
+          "enop": 3.45,
+          "winner": "PAUL LYNGDOH",
+          "winnerParty": "United Democratic Party",
+          "winnerVotes": 7917,
+          "winnerVoteShare": 42.14,
+          "marginVotes": 3485,
+          "marginPct": 18.55,
+          "turnoutPct": 68.64
+        },
+        {
+          "constituency": "South Shillong",
+          "constituencyNumber": 19,
+          "reservationType": "GEN",
+          "totalElectors": 34817,
+          "totalVotes": 21621,
+          "enop": 2.17,
+          "winner": "SANBOR SHULLAI",
+          "winnerParty": "BJP",
+          "winnerVotes": 14213,
+          "winnerVoteShare": 65.74,
+          "marginVotes": 11609,
+          "marginPct": 53.69,
+          "turnoutPct": 62.1
+        },
+        {
+          "constituency": "Mylliem",
+          "constituencyNumber": 20,
+          "reservationType": "ST",
+          "totalElectors": 38226,
+          "totalVotes": 31039,
+          "enop": 4,
+          "winner": "RONNIE V. LYNGDOH",
+          "winnerParty": "INC",
+          "winnerVotes": 8904,
+          "winnerVoteShare": 28.69,
+          "marginVotes": 38,
+          "marginPct": 0.12,
+          "turnoutPct": 81.2
+        },
+        {
+          "constituency": "Nongthymmai",
+          "constituencyNumber": 21,
+          "reservationType": "ST",
+          "totalElectors": 37505,
+          "totalVotes": 25023,
+          "enop": 4.76,
+          "winner": "CHARLES PYNGROPE",
+          "winnerParty": "AITC",
+          "winnerVotes": 7452,
+          "winnerVoteShare": 29.78,
+          "marginVotes": 1199,
+          "marginPct": 4.79,
+          "turnoutPct": 66.72
+        },
+        {
+          "constituency": "Nongkrem",
+          "constituencyNumber": 22,
+          "reservationType": "ST",
+          "totalElectors": 38931,
+          "totalVotes": 32585,
+          "enop": 3.33,
+          "winner": "ARDENT MILLER BASAIAWMOIT",
+          "winnerParty": "Voice of the People Party",
+          "winnerVotes": 13286,
+          "winnerVoteShare": 40.77,
+          "marginVotes": 4187,
+          "marginPct": 12.85,
+          "turnoutPct": 83.7
+        },
+        {
+          "constituency": "Mawphlang",
+          "constituencyNumber": 24,
+          "reservationType": "ST",
+          "totalElectors": 35951,
+          "totalVotes": 31259,
+          "enop": 6.25,
+          "winner": "MATTHEW BEYONDSTAR KURBAH",
+          "winnerParty": "United Democratic Party",
+          "winnerVotes": 6690,
+          "winnerVoteShare": 21.4,
+          "marginVotes": 104,
+          "marginPct": 0.33,
+          "turnoutPct": 86.95
+        },
+        {
+          "constituency": "Mawsynram",
+          "constituencyNumber": 25,
+          "reservationType": "ST",
+          "totalElectors": 37635,
+          "totalVotes": 33062,
+          "enop": 3.45,
+          "winner": "OLLAN SINGH SUIN",
+          "winnerParty": "United Democratic Party",
+          "winnerVotes": 10987,
+          "winnerVoteShare": 33.23,
+          "marginVotes": 955,
+          "marginPct": 2.89,
+          "turnoutPct": 87.85
+        },
+        {
+          "constituency": "Shella",
+          "constituencyNumber": 26,
+          "reservationType": "ST",
+          "totalElectors": 35082,
+          "totalVotes": 30616,
+          "enop": 2.63,
+          "winner": "BALAJIED KUPAR SYNREM",
+          "winnerParty": "United Democratic Party",
+          "winnerVotes": 13274,
+          "winnerVoteShare": 43.36,
+          "marginVotes": 434,
+          "marginPct": 1.42,
+          "turnoutPct": 87.27
+        },
+        {
+          "constituency": "Pynursla",
+          "constituencyNumber": 27,
+          "reservationType": "ST",
+          "totalElectors": 39244,
+          "totalVotes": 34766,
+          "enop": 4.17,
+          "winner": "PRESTONE TYNSONG",
+          "winnerParty": "NPP",
+          "winnerVotes": 13745,
+          "winnerVoteShare": 39.54,
+          "marginVotes": 8140,
+          "marginPct": 23.41,
+          "turnoutPct": 88.59
+        },
+        {
+          "constituency": "Sohra",
+          "constituencyNumber": 28,
+          "reservationType": "ST",
+          "totalElectors": 30340,
+          "totalVotes": 26847,
+          "enop": 2.78,
+          "winner": "GAVIN MIGUEL MYLLIEM",
+          "winnerParty": "People's Democratic Front",
+          "winnerVotes": 11358,
+          "winnerVoteShare": 42.31,
+          "marginVotes": 15,
+          "marginPct": 0.06,
+          "turnoutPct": 88.49
+        },
+        {
+          "constituency": "Mawkynrew",
+          "constituencyNumber": 29,
+          "reservationType": "ST",
+          "totalElectors": 37358,
+          "totalVotes": 33454,
+          "enop": 4,
+          "winner": "BANTEIDOR LYNGDOH",
+          "winnerParty": "People's Democratic Front",
+          "winnerVotes": 11789,
+          "winnerVoteShare": 35.24,
+          "marginVotes": 4137,
+          "marginPct": 12.37,
+          "turnoutPct": 89.55
+        }
+      ]
+    },
+    {
+      "district": "North Garo Hills",
+      "districtSlug": "north-garo-hills",
+      "totalSeats": 3,
+      "turnoutPct": 85,
+      "totalElectors": 94494,
+      "totalVotes": 80365,
+      "winnerParty": "NPP",
+      "winnerSeats": 3,
+      "winnerSeatShare": 100,
+      "winnerVoteShare": 37.6,
+      "closeContests": 0,
+      "meanMarginPct": 12.1,
+      "medianMarginPct": 13.1,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.78,
+          "medianEnop": 3.85,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 2,
+          "lowPluralitySeatShare": 66.7,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 85.2,
+          "turnoutIqr": 1.5,
+          "turnoutRange": 3,
+          "winnerVoteShareMedian": 37.6,
+          "marginMedian": 13.1,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 3
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPP",
+          "seats": 3,
+          "seatShare": 100,
+          "voteShare": 37.6
+        },
+        {
+          "party": "AITC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 22.7
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 22.6
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 8.2
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.2
+        },
+        {
+          "party": "United Democratic Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.2
+        },
+        {
+          "party": "Gana Suraksha Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.7
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Mendipathar",
+          "constituencyNumber": 38,
+          "reservationType": "ST",
+          "totalElectors": 29887,
+          "totalVotes": 24931,
+          "enop": 4.17,
+          "winner": "MARTHON J SANGMA",
+          "winnerParty": "NPP",
+          "winnerVotes": 9363,
+          "winnerVoteShare": 37.56,
+          "marginVotes": 3825,
+          "marginPct": 15.34,
+          "turnoutPct": 83.42
+        },
+        {
+          "constituency": "Resubelpara",
+          "constituencyNumber": 39,
+          "reservationType": "ST",
+          "totalElectors": 31126,
+          "totalVotes": 26510,
+          "enop": 3.33,
+          "winner": "TIMOTHY D. SHIRA",
+          "winnerParty": "NPP",
+          "winnerVotes": 10948,
+          "winnerVoteShare": 41.3,
+          "marginVotes": 3465,
+          "marginPct": 13.07,
+          "turnoutPct": 85.17
+        },
+        {
+          "constituency": "Bajengdoba",
+          "constituencyNumber": 40,
+          "reservationType": "ST",
+          "totalElectors": 33481,
+          "totalVotes": 28924,
+          "enop": 3.85,
+          "winner": "PONGSENG MARAK",
+          "winnerParty": "NPP",
+          "winnerVotes": 9900,
+          "winnerVoteShare": 34.23,
+          "marginVotes": 2316,
+          "marginPct": 8.01,
+          "turnoutPct": 86.39
+        }
+      ]
+    },
+    {
+      "district": "Ri Bhoi",
+      "districtSlug": "ri-bhoi",
+      "totalSeats": 5,
+      "turnoutPct": 87,
+      "totalElectors": 190363,
+      "totalVotes": 165582,
+      "winnerParty": "NPP",
+      "winnerSeats": 2,
+      "winnerSeatShare": 40,
+      "winnerVoteShare": 30.4,
+      "closeContests": 2,
+      "meanMarginPct": 9.8,
+      "medianMarginPct": 5.9,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.51,
+          "medianEnop": 4,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 3,
+          "lowPluralitySeatShare": 60,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 86.8,
+          "turnoutIqr": 2.3,
+          "turnoutRange": 4.3,
+          "winnerVoteShareMedian": 37.4,
+          "marginMedian": 5.9,
+          "reservationMix": {
+            "reservedSeats": 5,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 5
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPP",
+          "seats": 2,
+          "seatShare": 40,
+          "voteShare": 30.4
+        },
+        {
+          "party": "INC",
+          "seats": 2,
+          "seatShare": 40,
+          "voteShare": 26.3
+        },
+        {
+          "party": "United Democratic Party",
+          "seats": 1,
+          "seatShare": 20,
+          "voteShare": 20.7
+        },
+        {
+          "party": "AITC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 11
+        },
+        {
+          "party": "Voice of the People Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.3
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.2
+        },
+        {
+          "party": "Hill State People's Democratic Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3
+        },
+        {
+          "party": "People's Democratic Front",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Mawhati",
+          "constituencyNumber": 8,
+          "reservationType": "ST",
+          "totalElectors": 39634,
+          "totalVotes": 35512,
+          "enop": 4.17,
+          "winner": "CHARLES MARNGAR",
+          "winnerParty": "INC",
+          "winnerVotes": 13273,
+          "winnerVoteShare": 37.38,
+          "marginVotes": 5244,
+          "marginPct": 14.77,
+          "turnoutPct": 89.6
+        },
+        {
+          "constituency": "Nongpoh",
+          "constituencyNumber": 9,
+          "reservationType": "ST",
+          "totalElectors": 38473,
+          "totalVotes": 32875,
+          "enop": 3.12,
+          "winner": "MAYRALBORN SYIEM",
+          "winnerParty": "United Democratic Party",
+          "winnerVotes": 14940,
+          "winnerVoteShare": 45.44,
+          "marginVotes": 6686,
+          "marginPct": 20.34,
+          "turnoutPct": 85.45
+        },
+        {
+          "constituency": "Jirang",
+          "constituencyNumber": 10,
+          "reservationType": "ST",
+          "totalElectors": 39739,
+          "totalVotes": 34851,
+          "enop": 4,
+          "winner": "SOSTHENES SOHTUN",
+          "winnerParty": "NPP",
+          "winnerVotes": 12690,
+          "winnerVoteShare": 36.41,
+          "marginVotes": 1623,
+          "marginPct": 4.66,
+          "turnoutPct": 87.7
+        },
+        {
+          "constituency": "Umsning",
+          "constituencyNumber": 11,
+          "reservationType": "ST",
+          "totalElectors": 39621,
+          "totalVotes": 33804,
+          "enop": 4,
+          "winner": "DR. CELESTINE LYNGDOH",
+          "winnerParty": "INC",
+          "winnerVotes": 9907,
+          "winnerVoteShare": 29.31,
+          "marginVotes": 1164,
+          "marginPct": 3.44,
+          "turnoutPct": 85.32
+        },
+        {
+          "constituency": "Umroi",
+          "constituencyNumber": 12,
+          "reservationType": "ST",
+          "totalElectors": 32896,
+          "totalVotes": 28540,
+          "enop": 2.27,
+          "winner": "DAMANBAIT LAMARE",
+          "winnerParty": "NPP",
+          "winnerVotes": 14213,
+          "winnerVoteShare": 49.8,
+          "marginVotes": 1686,
+          "marginPct": 5.91,
+          "turnoutPct": 86.76
+        }
+      ]
+    },
+    {
+      "district": "South Garo Hills",
+      "districtSlug": "south-garo-hills",
+      "totalSeats": 3,
+      "turnoutPct": 86.2,
+      "totalElectors": 101073,
+      "totalVotes": 87114,
+      "winnerParty": "NPP",
+      "winnerSeats": 2,
+      "winnerSeatShare": 66.7,
+      "winnerVoteShare": 30.5,
+      "closeContests": 1,
+      "meanMarginPct": 6.6,
+      "medianMarginPct": 7.6,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.84,
+          "medianEnop": 3.85,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 3,
+          "lowPluralitySeatShare": 100,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 33.3,
+          "turnoutMedian": 86.3,
+          "turnoutIqr": 1.8,
+          "turnoutRange": 3.5,
+          "winnerVoteShareMedian": 33.3,
+          "marginMedian": 7.6,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 3
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPP",
+          "seats": 2,
+          "seatShare": 66.7,
+          "voteShare": 30.5
+        },
+        {
+          "party": "IND",
+          "seats": 1,
+          "seatShare": 33.3,
+          "voteShare": 15.7
+        },
+        {
+          "party": "AITC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 18.7
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 13.6
+        },
+        {
+          "party": "Garo National Council",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 10.5
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 10
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        },
+        {
+          "party": "United Democratic Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.2
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Rongara Siju",
+          "constituencyNumber": 58,
+          "reservationType": "ST",
+          "totalElectors": 34855,
+          "totalVotes": 29431,
+          "enop": 3.33,
+          "winner": "RAKKAM A. SANGMA",
+          "winnerParty": "NPP",
+          "winnerVotes": 11569,
+          "winnerVoteShare": 39.31,
+          "marginVotes": 3258,
+          "marginPct": 11.07,
+          "turnoutPct": 84.44
+        },
+        {
+          "constituency": "Chokpot",
+          "constituencyNumber": 59,
+          "reservationType": "ST",
+          "totalElectors": 32413,
+          "totalVotes": 28510,
+          "enop": 3.85,
+          "winner": "SENGCHIM N. SANGMA",
+          "winnerParty": "NPP",
+          "winnerVotes": 9503,
+          "winnerVoteShare": 33.33,
+          "marginVotes": 353,
+          "marginPct": 1.24,
+          "turnoutPct": 87.96
+        },
+        {
+          "constituency": "Baghmara",
+          "constituencyNumber": 60,
+          "reservationType": "ST",
+          "totalElectors": 33805,
+          "totalVotes": 29173,
+          "enop": 4.35,
+          "winner": "KARTUSH R. MARAK",
+          "winnerParty": "IND",
+          "winnerVotes": 9013,
+          "winnerVoteShare": 30.9,
+          "marginVotes": 2225,
+          "marginPct": 7.63,
+          "turnoutPct": 86.3
+        }
+      ]
+    },
+    {
+      "district": "South West Garo Hills",
+      "districtSlug": "south-west-garo-hills",
+      "totalSeats": 3,
+      "turnoutPct": 89.6,
+      "totalElectors": 100539,
+      "totalVotes": 90087,
+      "winnerParty": "NPP",
+      "winnerSeats": 2,
+      "winnerSeatShare": 66.7,
+      "winnerVoteShare": 40.1,
+      "closeContests": 0,
+      "meanMarginPct": 10.7,
+      "medianMarginPct": 7.6,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.07,
+          "medianEnop": 2.94,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 89.9,
+          "turnoutIqr": 0.5,
+          "turnoutRange": 1,
+          "winnerVoteShareMedian": 41.8,
+          "marginMedian": 7.6,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 3
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPP",
+          "seats": 2,
+          "seatShare": 66.7,
+          "voteShare": 40.1
+        },
+        {
+          "party": "AITC",
+          "seats": 1,
+          "seatShare": 33.3,
+          "voteShare": 34.9
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 18.9
+        },
+        {
+          "party": "United Democratic Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.1
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.3
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Ampati",
+          "constituencyNumber": 53,
+          "reservationType": "ST",
+          "totalElectors": 33429,
+          "totalVotes": 30086,
+          "enop": 2.7,
+          "winner": "MIANI D. SHIRA",
+          "winnerParty": "AITC",
+          "winnerVotes": 13446,
+          "winnerVoteShare": 44.69,
+          "marginVotes": 2277,
+          "marginPct": 7.57,
+          "turnoutPct": 90
+        },
+        {
+          "constituency": "Mahendraganj",
+          "constituencyNumber": 54,
+          "reservationType": "ST",
+          "totalElectors": 36937,
+          "totalVotes": 32870,
+          "enop": 2.94,
+          "winner": "SANJAY A. SANGMA",
+          "winnerParty": "NPP",
+          "winnerVotes": 13560,
+          "winnerVoteShare": 41.25,
+          "marginVotes": 1718,
+          "marginPct": 5.23,
+          "turnoutPct": 88.99
+        },
+        {
+          "constituency": "Salmanpara",
+          "constituencyNumber": 55,
+          "reservationType": "ST",
+          "totalElectors": 30173,
+          "totalVotes": 27131,
+          "enop": 3.57,
+          "winner": "IAN BOTHAM K. SANGMA",
+          "winnerParty": "NPP",
+          "winnerVotes": 11352,
+          "winnerVoteShare": 41.84,
+          "marginVotes": 5238,
+          "marginPct": 19.31,
+          "turnoutPct": 89.92
+        }
+      ]
+    },
+    {
+      "district": "South West Khasi Hills",
+      "districtSlug": "south-west-khasi-hills",
+      "totalSeats": 2,
+      "turnoutPct": 89,
+      "totalElectors": 75092,
+      "totalVotes": 66823,
+      "winnerParty": "United Democratic Party",
+      "winnerSeats": 2,
+      "winnerSeatShare": 100,
+      "winnerVoteShare": 40.7,
+      "closeContests": 1,
+      "meanMarginPct": 10.5,
+      "medianMarginPct": 10.5,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.4,
+          "medianEnop": 3.4,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 50,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 50,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 89,
+          "turnoutIqr": 0.6,
+          "turnoutRange": 1.2,
+          "winnerVoteShareMedian": 40.9,
+          "marginMedian": 10.5,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 2
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "United Democratic Party",
+          "seats": 2,
+          "seatShare": 100,
+          "voteShare": 40.7
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 16.5
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 14.8
+        },
+        {
+          "party": "Hill State People's Democratic Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 9.1
+        },
+        {
+          "party": "AITC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.1
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.2
+        },
+        {
+          "party": "NPP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.8
+        },
+        {
+          "party": "Voice of the People Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.5
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Ranikor",
+          "constituencyNumber": 35,
+          "reservationType": "ST",
+          "totalElectors": 36286,
+          "totalVotes": 32523,
+          "enop": 2.63,
+          "winner": "PIUS MARWEIN",
+          "winnerParty": "United Democratic Party",
+          "winnerVotes": 16502,
+          "winnerVoteShare": 50.74,
+          "marginVotes": 5649,
+          "marginPct": 17.37,
+          "turnoutPct": 89.63
+        },
+        {
+          "constituency": "Mawkyrwat",
+          "constituencyNumber": 36,
+          "reservationType": "ST",
+          "totalElectors": 38806,
+          "totalVotes": 34300,
+          "enop": 4.17,
+          "winner": "RENIKTON LYNGDOH TONGKHAR",
+          "winnerParty": "United Democratic Party",
+          "winnerVotes": 10678,
+          "winnerVoteShare": 31.13,
+          "marginVotes": 1272,
+          "marginPct": 3.71,
+          "turnoutPct": 88.39
+        }
+      ]
+    },
+    {
+      "district": "West Garo Hills",
+      "districtSlug": "west-garo-hills",
+      "totalSeats": 11,
+      "turnoutPct": 86.6,
+      "totalElectors": 370892,
+      "totalVotes": 321172,
+      "winnerParty": "NPP",
+      "winnerSeats": 8,
+      "winnerSeatShare": 72.7,
+      "winnerVoteShare": 42.7,
+      "closeContests": 4,
+      "meanMarginPct": 10.3,
+      "medianMarginPct": 10.2,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.07,
+          "medianEnop": 3.12,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 3,
+          "lowPluralitySeatShare": 27.3,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 18.2,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 18.2,
+          "turnoutMedian": 88.6,
+          "turnoutIqr": 4.9,
+          "turnoutRange": 19,
+          "winnerVoteShareMedian": 42.3,
+          "marginMedian": 10.2,
+          "reservationMix": {
+            "reservedSeats": 9,
+            "reservedSeatShare": 81.8,
+            "scSeats": 0,
+            "stSeats": 9
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPP",
+          "seats": 8,
+          "seatShare": 72.7,
+          "voteShare": 42.7
+        },
+        {
+          "party": "AITC",
+          "seats": 2,
+          "seatShare": 18.2,
+          "voteShare": 28.4
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 9.1,
+          "voteShare": 6.2
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 16.5
+        },
+        {
+          "party": "United Democratic Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.2
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.6
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        },
+        {
+          "party": "Republican Party of India (A)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Raksamgre",
+          "constituencyNumber": 44,
+          "reservationType": "ST",
+          "totalElectors": 31226,
+          "totalVotes": 27653,
+          "enop": 3.12,
+          "winner": "LIMISON D. SANGMA",
+          "winnerParty": "NPP",
+          "winnerVotes": 12184,
+          "winnerVoteShare": 44.06,
+          "marginVotes": 2818,
+          "marginPct": 10.19,
+          "turnoutPct": 88.56
+        },
+        {
+          "constituency": "Tikrikila",
+          "constituencyNumber": 45,
+          "reservationType": "ST",
+          "totalElectors": 36168,
+          "totalVotes": 31914,
+          "enop": 3.45,
+          "winner": "JIMMY D. SANGMA",
+          "winnerParty": "NPP",
+          "winnerVotes": 13218,
+          "winnerVoteShare": 41.42,
+          "marginVotes": 5313,
+          "marginPct": 16.65,
+          "turnoutPct": 88.24
+        },
+        {
+          "constituency": "Phulbari",
+          "constituencyNumber": 46,
+          "reservationType": "GEN",
+          "totalElectors": 32702,
+          "totalVotes": 29559,
+          "enop": 2.38,
+          "winner": "ABU TAHER MONDAL",
+          "winnerParty": "NPP",
+          "winnerVotes": 14969,
+          "winnerVoteShare": 50.64,
+          "marginVotes": 3240,
+          "marginPct": 10.96,
+          "turnoutPct": 90.39
+        },
+        {
+          "constituency": "Rajabala",
+          "constituencyNumber": 47,
+          "reservationType": "GEN",
+          "totalElectors": 35965,
+          "totalVotes": 33325,
+          "enop": 3.12,
+          "winner": "DR. MIZANUR RAHMAN KAZI",
+          "winnerParty": "AITC",
+          "winnerVotes": 12628,
+          "winnerVoteShare": 37.89,
+          "marginVotes": 10,
+          "marginPct": 0.03,
+          "turnoutPct": 92.66
+        },
+        {
+          "constituency": "Selsella",
+          "constituencyNumber": 48,
+          "reservationType": "ST",
+          "totalElectors": 36294,
+          "totalVotes": 33285,
+          "enop": 2.86,
+          "winner": "ARBINSTONE B MARAK",
+          "winnerParty": "NPP",
+          "winnerVotes": 16595,
+          "winnerVoteShare": 49.86,
+          "marginVotes": 8741,
+          "marginPct": 26.26,
+          "turnoutPct": 91.71
+        },
+        {
+          "constituency": "Dadenggre",
+          "constituencyNumber": 49,
+          "reservationType": "ST",
+          "totalElectors": 36484,
+          "totalVotes": 32919,
+          "enop": 2.17,
+          "winner": "RUPA M. MARAK",
+          "winnerParty": "AITC",
+          "winnerVotes": 15702,
+          "winnerVoteShare": 47.7,
+          "marginVotes": 18,
+          "marginPct": 0.05,
+          "turnoutPct": 90.23
+        },
+        {
+          "constituency": "North Tura",
+          "constituencyNumber": 50,
+          "reservationType": "ST",
+          "totalElectors": 35391,
+          "totalVotes": 26890,
+          "enop": 3.33,
+          "winner": "THOMAS A. SANGMA",
+          "winnerParty": "NPP",
+          "winnerVotes": 11385,
+          "winnerVoteShare": 42.34,
+          "marginVotes": 3885,
+          "marginPct": 14.45,
+          "turnoutPct": 75.98
+        },
+        {
+          "constituency": "South Tura",
+          "constituencyNumber": 51,
+          "reservationType": "ST",
+          "totalElectors": 34811,
+          "totalVotes": 25638,
+          "enop": 2.56,
+          "winner": "CONRAD KONGKAL SANGMA",
+          "winnerParty": "NPP",
+          "winnerVotes": 13342,
+          "winnerVoteShare": 52.04,
+          "marginVotes": 5016,
+          "marginPct": 19.56,
+          "turnoutPct": 73.65
+        },
+        {
+          "constituency": "Rangsakona",
+          "constituencyNumber": 52,
+          "reservationType": "ST",
+          "totalElectors": 37948,
+          "totalVotes": 32616,
+          "enop": 2.94,
+          "winner": "SUBIR MARAK",
+          "winnerParty": "NPP",
+          "winnerVotes": 13605,
+          "winnerVoteShare": 41.71,
+          "marginVotes": 788,
+          "marginPct": 2.42,
+          "turnoutPct": 85.95
+        },
+        {
+          "constituency": "Gambegre",
+          "constituencyNumber": 56,
+          "reservationType": "ST",
+          "totalElectors": 31607,
+          "totalVotes": 28433,
+          "enop": 3.12,
+          "winner": "SALENG A. SANGMA",
+          "winnerParty": "INC",
+          "winnerVotes": 11252,
+          "winnerVoteShare": 39.57,
+          "marginVotes": 2871,
+          "marginPct": 10.1,
+          "turnoutPct": 89.96
+        },
+        {
+          "constituency": "Dalu",
+          "constituencyNumber": 57,
+          "reservationType": "ST",
+          "totalElectors": 22296,
+          "totalVotes": 18940,
+          "enop": 4.76,
+          "winner": "BRENING A. SANGMA",
+          "winnerParty": "NPP",
+          "winnerVotes": 5834,
+          "winnerVoteShare": 30.8,
+          "marginVotes": 527,
+          "marginPct": 2.78,
+          "turnoutPct": 84.95
+        }
+      ]
+    },
+    {
+      "district": "West Jaintia Hills",
+      "districtSlug": "west-jaintia-hills",
+      "totalSeats": 5,
+      "turnoutPct": 91.1,
+      "totalElectors": 204094,
+      "totalVotes": 185974,
+      "winnerParty": "NPP",
+      "winnerSeats": 3,
+      "winnerSeatShare": 60,
+      "winnerVoteShare": 39.3,
+      "closeContests": 1,
+      "meanMarginPct": 7.7,
+      "medianMarginPct": 7.3,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.09,
+          "medianEnop": 3.03,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 3,
+          "lowPluralitySeatShare": 60,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 20,
+          "turnoutMedian": 90.5,
+          "turnoutIqr": 4.2,
+          "turnoutRange": 13,
+          "winnerVoteShareMedian": 39.5,
+          "marginMedian": 7.3,
+          "reservationMix": {
+            "reservedSeats": 5,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 5
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPP",
+          "seats": 3,
+          "seatShare": 60,
+          "voteShare": 39.3
+        },
+        {
+          "party": "United Democratic Party",
+          "seats": 2,
+          "seatShare": 40,
+          "voteShare": 26.2
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 15.9
+        },
+        {
+          "party": "AITC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.3
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.9
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4
+        },
+        {
+          "party": "People's Democratic Front",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.4
+        },
+        {
+          "party": "None of the Above",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Nartiang",
+          "constituencyNumber": 1,
+          "reservationType": "ST",
+          "totalElectors": 45118,
+          "totalVotes": 40827,
+          "enop": 3.03,
+          "winner": "SNIAWBHALANG DHAR",
+          "winnerParty": "NPP",
+          "winnerVotes": 16969,
+          "winnerVoteShare": 41.56,
+          "marginVotes": 2123,
+          "marginPct": 5.2,
+          "turnoutPct": 90.49
+        },
+        {
+          "constituency": "Jowai",
+          "constituencyNumber": 2,
+          "reservationType": "ST",
+          "totalElectors": 42718,
+          "totalVotes": 36716,
+          "enop": 3.03,
+          "winner": "WAILADMIKI SHYLLA",
+          "winnerParty": "NPP",
+          "winnerVotes": 14079,
+          "winnerVoteShare": 38.35,
+          "marginVotes": 2667,
+          "marginPct": 7.26,
+          "turnoutPct": 85.95
+        },
+        {
+          "constituency": "Raliang",
+          "constituencyNumber": 3,
+          "reservationType": "ST",
+          "totalElectors": 40033,
+          "totalVotes": 35461,
+          "enop": 4.17,
+          "winner": "COMING ONE YMBON",
+          "winnerParty": "NPP",
+          "winnerVotes": 13626,
+          "winnerVoteShare": 38.43,
+          "marginVotes": 5337,
+          "marginPct": 15.05,
+          "turnoutPct": 88.58
+        },
+        {
+          "constituency": "Mowkaiaw",
+          "constituencyNumber": 4,
+          "reservationType": "ST",
+          "totalElectors": 39628,
+          "totalVotes": 36747,
+          "enop": 3.12,
+          "winner": "NUJORKI SUNGOH",
+          "winnerParty": "United Democratic Party",
+          "winnerVotes": 14508,
+          "winnerVoteShare": 39.48,
+          "marginVotes": 3901,
+          "marginPct": 10.62,
+          "turnoutPct": 92.73
+        },
+        {
+          "constituency": "Amlarem",
+          "constituencyNumber": 7,
+          "reservationType": "ST",
+          "totalElectors": 36597,
+          "totalVotes": 36223,
+          "enop": 2.08,
+          "winner": "LAHKMEN RYMBUI",
+          "winnerParty": "United Democratic Party",
+          "winnerVotes": 17803,
+          "winnerVoteShare": 49.15,
+          "marginVotes": 57,
+          "marginPct": 0.16,
+          "turnoutPct": 98.98
+        }
+      ]
+    },
+    {
+      "district": "West Khasi Hills",
+      "districtSlug": "west-khasi-hills",
+      "totalSeats": 5,
+      "turnoutPct": 88.9,
+      "totalElectors": 214077,
+      "totalVotes": 190329,
+      "winnerParty": "Hill State People's Democratic Party",
+      "winnerSeats": 2,
+      "winnerSeatShare": 40,
+      "winnerVoteShare": 24.7,
+      "closeContests": 2,
+      "meanMarginPct": 5.4,
+      "medianMarginPct": 5.8,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.16,
+          "medianEnop": 2.78,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 2,
+          "lowPluralitySeatShare": 40,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 20,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 40,
+          "turnoutMedian": 88.6,
+          "turnoutIqr": 2.9,
+          "turnoutRange": 5.9,
+          "winnerVoteShareMedian": 42.6,
+          "marginMedian": 5.8,
+          "reservationMix": {
+            "reservedSeats": 5,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 5
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "Hill State People's Democratic Party",
+          "seats": 2,
+          "seatShare": 40,
+          "voteShare": 24.7
+        },
+        {
+          "party": "United Democratic Party",
+          "seats": 1,
+          "seatShare": 20,
+          "voteShare": 21.8
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 20,
+          "voteShare": 20.5
+        },
+        {
+          "party": "IND",
+          "seats": 1,
+          "seatShare": 20,
+          "voteShare": 5.1
+        },
+        {
+          "party": "NPP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 21.2
+        },
+        {
+          "party": "AITC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.7
+        },
+        {
+          "party": "Voice of the People Party",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.5
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Mairang",
+          "constituencyNumber": 30,
+          "reservationType": "ST",
+          "totalElectors": 43201,
+          "totalVotes": 39282,
+          "enop": 2.13,
+          "winner": "METBAH LYNGDOH",
+          "winnerParty": "United Democratic Party",
+          "winnerVotes": 19066,
+          "winnerVoteShare": 48.54,
+          "marginVotes": 155,
+          "marginPct": 0.39,
+          "turnoutPct": 90.93
+        },
+        {
+          "constituency": "Mawthadraishan",
+          "constituencyNumber": 31,
+          "reservationType": "ST",
+          "totalElectors": 44618,
+          "totalVotes": 40736,
+          "enop": 2.78,
+          "winner": "SHAKLIAR WARJRI",
+          "winnerParty": "Hill State People's Democratic Party",
+          "winnerVotes": 17366,
+          "winnerVoteShare": 42.63,
+          "marginVotes": 2353,
+          "marginPct": 5.78,
+          "turnoutPct": 91.3
+        },
+        {
+          "constituency": "Nongstoin",
+          "constituencyNumber": 32,
+          "reservationType": "ST",
+          "totalElectors": 44727,
+          "totalVotes": 39368,
+          "enop": 4,
+          "winner": "GABRIEL WAHLANG",
+          "winnerParty": "INC",
+          "winnerVotes": 13847,
+          "winnerVoteShare": 35.17,
+          "marginVotes": 2624,
+          "marginPct": 6.67,
+          "turnoutPct": 88.02
+        },
+        {
+          "constituency": "Rambrai Jyrngam",
+          "constituencyNumber": 33,
+          "reservationType": "ST",
+          "totalElectors": 39879,
+          "totalVotes": 34052,
+          "enop": 4.55,
+          "winner": "REMINGTON GABIL MOMIN",
+          "winnerParty": "IND",
+          "winnerVotes": 9057,
+          "winnerVoteShare": 26.6,
+          "marginVotes": 110,
+          "marginPct": 0.32,
+          "turnoutPct": 85.39
+        },
+        {
+          "constituency": "Mawshynrut",
+          "constituencyNumber": 34,
+          "reservationType": "ST",
+          "totalElectors": 41652,
+          "totalVotes": 36891,
+          "enop": 2.33,
+          "winner": "METHODIUS DKHAR",
+          "winnerParty": "Hill State People's Democratic Party",
+          "winnerVotes": 19368,
+          "winnerVoteShare": 52.5,
+          "marginVotes": 5187,
+          "marginPct": 14.06,
+          "turnoutPct": 88.57
+        }
+      ]
+    }
+  ]
+}

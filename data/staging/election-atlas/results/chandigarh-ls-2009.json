@@ -1,0 +1,114 @@
+{
+  "generatedAt": "2026-03-09T14:42:04.569Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "chandigarh",
+    "stateLabel": "Chandigarh",
+    "stateVersionSlug": "chandigarh",
+    "geographyVersionId": "chandigarh-default",
+    "house": "LS",
+    "year": 2009,
+    "electionId": 15,
+    "stateId": 35
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %",
+    "ACs"
+  ],
+  "rows": [
+    {
+      "state": "chandigarh",
+      "stateLabel": "Chandigarh",
+      "stateVersionSlug": "chandigarh",
+      "geographyVersionId": "chandigarh-default",
+      "house": "LS",
+      "year": 2009,
+      "electionId": 15,
+      "stateId": 35,
+      "constituency": "Chandigarh",
+      "constituencyNumber": 1,
+      "reservationType": "GEN",
+      "district": "",
+      "winner": "Pawan Kumar Bansal",
+      "winnerParty": "Indian National Congress",
+      "totalElectors": 524444,
+      "totalVotes": 343579,
+      "turnoutPct": 65.5,
+      "marginVotes": 58967,
+      "marginPct": 17.2,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/2009/chandigarh/chandigarh/7712/35/15",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/1/15/35",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/2009/chandigarh/chandigarh/7712/35/15",
+      "winnerVotes": 161042,
+      "winnerVoteShare": 46.9,
+      "runnerUp": "Satya Pal Jain",
+      "runnerUpParty": "Bharatiya Janta Party",
+      "runnerUpVotes": 102075,
+      "runnerUpVoteShare": 29.7,
+      "detailAvailable": true,
+      "detailFileName": "chandigarh-ls-2009-1-chandigarh-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Indian National Congress",
+      "votes": 161042,
+      "voteShare": 46.9
+    },
+    {
+      "party": "Bharatiya Janta Party",
+      "votes": 102075,
+      "voteShare": 29.7
+    },
+    {
+      "party": "Bahujan Samaj Party",
+      "votes": 61434,
+      "voteShare": 17.9
+    },
+    {
+      "party": "Rashtriya Janata Dal",
+      "votes": 11549,
+      "voteShare": 3.4
+    },
+    {
+      "party": "Independent",
+      "votes": 6433,
+      "voteShare": 1.9
+    },
+    {
+      "party": "Janata Dal (United)",
+      "votes": 658,
+      "voteShare": 0.2
+    },
+    {
+      "party": "Apna Dal",
+      "votes": 366,
+      "voteShare": 0.1
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T14:51:14.385Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

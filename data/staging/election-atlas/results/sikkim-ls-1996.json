@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-03-09T14:44:29.931Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "sikkim",
+    "stateLabel": "Sikkim",
+    "stateVersionSlug": "sikkim",
+    "geographyVersionId": "sikkim-default",
+    "house": "LS",
+    "year": 1996,
+    "electionId": 11,
+    "stateId": 46
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "sikkim",
+      "stateLabel": "Sikkim",
+      "stateVersionSlug": "sikkim",
+      "geographyVersionId": "sikkim-default",
+      "house": "LS",
+      "year": 1996,
+      "electionId": 11,
+      "stateId": 46,
+      "constituency": "Sikkim",
+      "constituencyNumber": 1,
+      "reservationType": "GEN",
+      "district": "",
+      "winner": "Bhim Prasad Dahal",
+      "winnerParty": "Sikkim Democratic Front",
+      "totalElectors": 229160,
+      "totalVotes": 177440,
+      "turnoutPct": 77.4,
+      "marginVotes": 82043,
+      "marginPct": 46.2,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/1996/sikkim/sikkim/5374/46/11",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/395/11/46",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/1996/sikkim/sikkim/5374/46/11",
+      "winnerVotes": 124218,
+      "winnerVoteShare": 70,
+      "runnerUp": "Nar Bahadur Bhandari",
+      "runnerUpParty": "Sikkim Sangram Parishad",
+      "runnerUpVotes": 42175,
+      "runnerUpVoteShare": 23.8,
+      "detailAvailable": true,
+      "detailFileName": "sikkim-ls-1996-1-sikkim-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Sikkim Democratic Front",
+      "votes": 124218,
+      "voteShare": 70
+    },
+    {
+      "party": "Sikkim Sangram Parishad",
+      "votes": 42175,
+      "voteShare": 23.8
+    },
+    {
+      "party": "Independent",
+      "votes": 5781,
+      "voteShare": 3.3
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:23:19.225Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

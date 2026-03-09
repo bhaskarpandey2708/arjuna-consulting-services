@@ -1,7 +1,9 @@
 import { siteContent } from "./site-content.js";
+import { buildElectionAtlasPage } from "./election-atlas.js";
 
 const navItems = [
   { href: "/", label: "Home" },
+  { href: "/election-atlas", label: "Atlas" },
   { href: "/election-management-campaign-consulting", label: "Services" },
   { href: "/capabilities", label: "Work" },
   { href: "/surveys", label: "Surveys" },
@@ -32,7 +34,10 @@ function normalizePath(pathname) {
 function renderNav(currentPath) {
   return navItems
     .map((item) => {
-      const activeClass = currentPath === item.href ? "is-active" : "";
+      const isActive = item.href === "/"
+        ? currentPath === "/"
+        : currentPath === item.href || currentPath.startsWith(`${item.href}/`);
+      const activeClass = isActive ? "is-active" : "";
 
       return `<a class="${activeClass}" href="${item.href}">${escapeHtml(item.label)}</a>`;
     })
@@ -1868,6 +1873,7 @@ function buildLeadershipPage() {
 
 const pageBuilders = {
   "/": buildHomePage,
+  "/election-atlas": buildElectionAtlasPage,
   "/election-management-campaign-consulting": buildServicesPage,
   "/capabilities": buildCapabilitiesPage,
   "/surveys": buildSurveysPage,
@@ -1888,8 +1894,12 @@ export function getCanonicalPageMetadata() {
 
 export function renderPage(pathname = "/", context = {}) {
   const currentPath = normalizePath(pathname);
-  const builder = pageBuilders[currentPath] ?? pageBuilders["/"];
-  const page = builder();
+  const resolvedPath = currentPath.startsWith("/election-atlas/") ? "/election-atlas" : currentPath;
+  const builder = pageBuilders[resolvedPath] ?? pageBuilders["/"];
+  const page = builder({
+    ...context,
+    currentPath
+  });
   const resolvedContext = {
     baseUrl: context.baseUrl ?? "http://127.0.0.1:3000",
     allowIndexing: context.allowIndexing ?? false,

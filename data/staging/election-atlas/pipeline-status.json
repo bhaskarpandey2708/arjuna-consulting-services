@@ -1,0 +1,36 @@
+{
+  "stage": "normalized-bootstrap",
+  "stageLabel": "Discovery captured and normalized",
+  "generatedAt": "2026-03-08T19:28:28.913Z",
+  "lastCaptureAt": "2026-03-08T19:27:54.013Z",
+  "sourceLabel": "Seed-backed atlas with live Bihar discovery and normalization wired underneath",
+  "coverageNote": "The UI still runs on seeded election facts, but the source layer now has real Bihar bootstrap captures, 4 discovered Assembly cycles, and 38 normalized district rows.",
+  "summary": "Measured step 1 is complete: Bihar discovery is captured from IndiaVotes and normalized into staging while LokDhaba endpoint behavior is logged for the next adapter pass.",
+  "nextStep": "Capture Bihar constituency-result surfaces next, then map party and constituency aliases before materializing canonical staging tables.",
+  "sources": [
+    {
+      "key": "indiavotes",
+      "name": "IndiaVotes",
+      "statusLabel": "Bootstrap captured",
+      "tone": "ready",
+      "detail": "Bihar post-2000 mapping is live with 4 discovered Assembly cycles and 38 district rows for 2020."
+    },
+    {
+      "key": "lokdhaba",
+      "name": "LokDhaba",
+      "statusLabel": "Probe needs follow-through",
+      "tone": "warning",
+      "detail": "Search probe reached the public endpoint but returned HTTP 502. This source needs fallback handling before constituency ingestion."
+    }
+  ],
+  "stats": {
+    "discoveredAssemblyYears": [
+      2025,
+      2020,
+      2015,
+      2010
+    ],
+    "normalizedDistrictCount": 38,
+    "lokdhabaProbeStatus": 502
+  }
+}

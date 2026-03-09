@@ -1,0 +1,204 @@
+{
+  "generatedAt": "2026-03-08T20:15:18.318Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "nagaland",
+    "stateLabel": "Nagaland",
+    "stateVersionSlug": "nagaland",
+    "geographyVersionId": "nagaland-default",
+    "house": "LS",
+    "year": 2024,
+    "electionId": 18,
+    "stateId": 33
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "nagaland",
+      "stateLabel": "Nagaland",
+      "stateVersionSlug": "nagaland",
+      "geographyVersionId": "nagaland-default",
+      "house": "LS",
+      "year": 2024,
+      "electionId": 18,
+      "stateId": 33,
+      "constituency": "Nagaland",
+      "constituencyNumber": 1,
+      "reservationType": "ST",
+      "district": "",
+      "winner": "S Supongmeren Jamir",
+      "winnerParty": "Indian National Congress",
+      "totalElectors": 1317536,
+      "totalVotes": 760796,
+      "turnoutPct": 57.7,
+      "marginVotes": 50984,
+      "marginPct": 6.7,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/2024/nagaland/nagaland/10806/33/18",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/1/18/33",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/2024/nagaland/nagaland/10806/33/18",
+      "winnerVotes": 401951,
+      "winnerVoteShare": 52.8,
+      "runnerUp": "Dr Chumben Murry",
+      "runnerUpParty": "Nationalist Democratic Progressive Party",
+      "runnerUpVotes": 350967,
+      "runnerUpVoteShare": 46.1,
+      "detailAvailable": true,
+      "detailFileName": "nagaland-ls-2024-1-nagaland-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "sourceAllianceSummary": {
+    "available": true,
+    "source": "indiavotes",
+    "detailsUrl": "https://www.indiavotes.com/alliance/partyWise/18/33",
+    "leader": {
+      "id": "india",
+      "label": "INDIA",
+      "seats": 1,
+      "seatShare": 100,
+      "voteShare": 52.9,
+      "contestedVoteShare": 52.9,
+      "parties": [
+        {
+          "party": "Indian National Congress",
+          "partyUrl": "https://www.indiavotes.com/party/info/1/18/33",
+          "contested": 1,
+          "won": 1,
+          "voteShare": 52.9,
+          "contestedVoteShare": 52.9
+        }
+      ],
+      "standalone": false,
+      "color": "#aa4d9a"
+    },
+    "challenger": {
+      "id": "nda",
+      "label": "NDA",
+      "seats": 0,
+      "seatShare": 0,
+      "voteShare": 46.2,
+      "contestedVoteShare": 46.2,
+      "parties": [
+        {
+          "party": "Nationalist Democratic Progressive Party",
+          "partyUrl": "https://www.indiavotes.com/party/info/2129/18/33",
+          "contested": 1,
+          "won": 0,
+          "voteShare": 46.2,
+          "contestedVoteShare": 46.2
+        }
+      ],
+      "standalone": false,
+      "color": "#C47451"
+    },
+    "leadGap": 1,
+    "note": "Alliance read and party makeup are sourced from IndiaVotes for this slice.",
+    "rows": [
+      {
+        "id": "india",
+        "label": "INDIA",
+        "seats": 1,
+        "seatShare": 100,
+        "voteShare": 52.9,
+        "contestedVoteShare": 52.9,
+        "parties": [
+          {
+            "party": "Indian National Congress",
+            "partyUrl": "https://www.indiavotes.com/party/info/1/18/33",
+            "contested": 1,
+            "won": 1,
+            "voteShare": 52.9,
+            "contestedVoteShare": 52.9
+          }
+        ],
+        "standalone": false,
+        "color": "#aa4d9a"
+      },
+      {
+        "id": "nda",
+        "label": "NDA",
+        "seats": 0,
+        "seatShare": 0,
+        "voteShare": 46.2,
+        "contestedVoteShare": 46.2,
+        "parties": [
+          {
+            "party": "Nationalist Democratic Progressive Party",
+            "partyUrl": "https://www.indiavotes.com/party/info/2129/18/33",
+            "contested": 1,
+            "won": 0,
+            "voteShare": 46.2,
+            "contestedVoteShare": 46.2
+          }
+        ],
+        "standalone": false,
+        "color": "#C47451"
+      },
+      {
+        "id": "others",
+        "label": "Others",
+        "seats": 0,
+        "seatShare": 0,
+        "voteShare": 0.9,
+        "contestedVoteShare": null,
+        "parties": [],
+        "standalone": true
+      }
+    ]
+  },
+  "allianceEnrichment": {
+    "generatedAt": "2026-03-09T10:36:45.922Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_103621127Z",
+    "status": "ok",
+    "available": true,
+    "rowCount": 3,
+    "partyRowCount": 2,
+    "mappedSeatTotal": 1,
+    "omittedSeats": 0,
+    "detailsUrl": "https://www.indiavotes.com/alliance/partyWise/18/33"
+  },
+  "partyVoteShares": [
+    {
+      "party": "Indian National Congress",
+      "votes": 401951,
+      "voteShare": 52.8
+    },
+    {
+      "party": "Nationalist Democratic Progressive Party",
+      "votes": 350967,
+      "voteShare": 46.1
+    },
+    {
+      "party": "Independent",
+      "votes": 6232,
+      "voteShare": 0.8
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T11:02:57.108Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_105652953Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

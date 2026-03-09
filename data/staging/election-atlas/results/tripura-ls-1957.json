@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-03-09T14:44:52.261Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "tripura",
+    "stateLabel": "Tripura",
+    "stateVersionSlug": "tripura",
+    "geographyVersionId": "tripura-default",
+    "house": "LS",
+    "year": 1957,
+    "electionId": 2,
+    "stateId": 25
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout"
+  ],
+  "rows": [
+    {
+      "state": "tripura",
+      "stateLabel": "Tripura",
+      "stateVersionSlug": "tripura",
+      "geographyVersionId": "tripura-default",
+      "house": "LS",
+      "year": 1957,
+      "electionId": 2,
+      "stateId": 25,
+      "constituency": "Tripura",
+      "constituencyNumber": 403,
+      "reservationType": "GEN",
+      "district": "",
+      "winner": "Deb Barma Bangshi",
+      "winnerParty": "Indian National Congress",
+      "totalElectors": 432902,
+      "totalVotes": 550338,
+      "turnoutPct": null,
+      "marginVotes": null,
+      "marginPct": null,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/1957/tripura/tripura/804/25/2",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/1/2/25",
+      "marginUrl": null,
+      "dataQualityFlags": [
+        "vote_total_exceeds_electors"
+      ],
+      "winnerVotes": 133078,
+      "winnerVoteShare": 24.2,
+      "runnerUp": "Deb Dasaratha",
+      "runnerUpParty": "Communist Party Of India",
+      "runnerUpVotes": 128624,
+      "runnerUpVoteShare": 23.4,
+      "detailAvailable": true,
+      "detailFileName": "tripura-ls-1957-403-tripura-detail.json"
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Indian National Congress",
+      "votes": 253241,
+      "voteShare": 46
+    },
+    {
+      "party": "Communist Party Of India",
+      "votes": 248422,
+      "voteShare": 45.1
+    },
+    {
+      "party": "Independent",
+      "votes": 48675,
+      "voteShare": 8.8
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:29:45.075Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

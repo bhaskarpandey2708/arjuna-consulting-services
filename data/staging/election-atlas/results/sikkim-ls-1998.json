@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-03-09T14:44:29.671Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "sikkim",
+    "stateLabel": "Sikkim",
+    "stateVersionSlug": "sikkim",
+    "geographyVersionId": "sikkim-default",
+    "house": "LS",
+    "year": 1998,
+    "electionId": 12,
+    "stateId": 46
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "sikkim",
+      "stateLabel": "Sikkim",
+      "stateVersionSlug": "sikkim",
+      "geographyVersionId": "sikkim-default",
+      "house": "LS",
+      "year": 1998,
+      "electionId": 12,
+      "stateId": 46,
+      "constituency": "Sikkim",
+      "constituencyNumber": 1,
+      "reservationType": "GEN",
+      "district": "",
+      "winner": "Bhim Pd. Dahal",
+      "winnerParty": "Sikkim Democratic Front",
+      "totalElectors": 236494,
+      "totalVotes": 158787,
+      "turnoutPct": 67.1,
+      "marginVotes": 50829,
+      "marginPct": 32,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/1998/sikkim/sikkim/5917/46/12",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/395/12/46",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/1998/sikkim/sikkim/5917/46/12",
+      "winnerVotes": 102440,
+      "winnerVoteShare": 64.5,
+      "runnerUp": "Sanchaman Subba",
+      "runnerUpParty": "Indian National Congress",
+      "runnerUpVotes": 51611,
+      "runnerUpVoteShare": 32.5,
+      "detailAvailable": true,
+      "detailFileName": "sikkim-ls-1998-1-sikkim-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Sikkim Democratic Front",
+      "votes": 102440,
+      "voteShare": 64.5
+    },
+    {
+      "party": "Indian National Congress",
+      "votes": 51611,
+      "voteShare": 32.5
+    },
+    {
+      "party": "Independent",
+      "votes": 1820,
+      "voteShare": 1.1
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:23:18.792Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

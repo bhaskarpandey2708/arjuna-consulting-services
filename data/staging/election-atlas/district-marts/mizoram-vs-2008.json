@@ -1,0 +1,1360 @@
+{
+  "generatedAt": "2026-03-09T13:37:32.290Z",
+  "source": "lokdhaba",
+  "coverage": "assembly-district-rollup",
+  "selection": {
+    "state": "mizoram",
+    "house": "VS",
+    "year": 2008
+  },
+  "metrics": {
+    "totalDistricts": 8,
+    "totalSeats": 40,
+    "totalElectors": 611618,
+    "totalVotes": 502956,
+    "turnoutPct": 82.2,
+    "advancedMetrics": {
+      "sourceNative": {
+        "enopAvailable": true,
+        "meanEnop": 3.08,
+        "medianEnop": 3.03,
+        "highFragmentationSeats": 1,
+        "highFragmentationSeatShare": 2.5
+      },
+      "custom": {
+        "lowPluralitySeats": 25,
+        "lowPluralitySeatShare": 62.5,
+        "majorityWinnerSeats": 3,
+        "majorityWinnerSeatShare": 7.5,
+        "ultraCloseSeats": 5,
+        "ultraCloseSeatShare": 12.5,
+        "turnoutMedian": 82.3,
+        "turnoutIqr": 4.5,
+        "turnoutRange": 10.5,
+        "winnerVoteShareMedian": 39,
+        "marginMedian": 6.2,
+        "reservationMix": {
+          "reservedSeats": 39,
+          "reservedSeatShare": 97.5,
+          "scSeats": 0,
+          "stSeats": 39
+        }
+      }
+    }
+  },
+  "rowCount": 8,
+  "rows": [
+    {
+      "district": "Champhai",
+      "districtSlug": "champhai",
+      "totalSeats": 5,
+      "turnoutPct": 81.9,
+      "totalElectors": 71872,
+      "totalVotes": 58886,
+      "winnerParty": "INC",
+      "winnerSeats": 4,
+      "winnerSeatShare": 80,
+      "winnerVoteShare": 40,
+      "closeContests": 1,
+      "meanMarginPct": 7.5,
+      "medianMarginPct": 7.8,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.95,
+          "medianEnop": 2.94,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 3,
+          "lowPluralitySeatShare": 60,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 82.2,
+          "turnoutIqr": 0.5,
+          "turnoutRange": 3.1,
+          "winnerVoteShareMedian": 39,
+          "marginMedian": 7.8,
+          "reservationMix": {
+            "reservedSeats": 5,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 5
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 4,
+          "seatShare": 80,
+          "voteShare": 40
+        },
+        {
+          "party": "MNF",
+          "seats": 1,
+          "seatShare": 20,
+          "voteShare": 33.6
+        },
+        {
+          "party": "ZNP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 15.1
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.3
+        },
+        {
+          "party": "MPC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.4
+        },
+        {
+          "party": "LJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Lengteng",
+          "constituencyNumber": 21,
+          "reservationType": "ST",
+          "totalElectors": 14727,
+          "totalVotes": 12272,
+          "enop": 2.94,
+          "winner": "H.ROHLUNA",
+          "winnerParty": "INC",
+          "winnerVotes": 4776,
+          "winnerVoteShare": 38.92,
+          "marginVotes": 786,
+          "marginPct": 6.4,
+          "turnoutPct": 83.33
+        },
+        {
+          "constituency": "Tuichang",
+          "constituencyNumber": 22,
+          "reservationType": "ST",
+          "totalElectors": 13888,
+          "totalVotes": 11349,
+          "enop": 3.03,
+          "winner": "LALRINLIANA SAILO",
+          "winnerParty": "INC",
+          "winnerVotes": 4428,
+          "winnerVoteShare": 39.02,
+          "marginVotes": 881,
+          "marginPct": 7.76,
+          "turnoutPct": 81.72
+        },
+        {
+          "constituency": "Champhai North",
+          "constituencyNumber": 23,
+          "reservationType": "ST",
+          "totalElectors": 15488,
+          "totalVotes": 12734,
+          "enop": 2.86,
+          "winner": "T.T.ZOTHANSANGA",
+          "winnerParty": "INC",
+          "winnerVotes": 5699,
+          "winnerVoteShare": 44.75,
+          "marginVotes": 1256,
+          "marginPct": 9.86,
+          "turnoutPct": 82.22
+        },
+        {
+          "constituency": "Champhai South",
+          "constituencyNumber": 24,
+          "reservationType": "ST",
+          "totalElectors": 14822,
+          "totalVotes": 11888,
+          "enop": 2.78,
+          "winner": "J.H.ROTHUAMA",
+          "winnerParty": "INC",
+          "winnerVotes": 5345,
+          "winnerVoteShare": 44.96,
+          "marginVotes": 1058,
+          "marginPct": 8.9,
+          "turnoutPct": 80.21
+        },
+        {
+          "constituency": "East Tuipui",
+          "constituencyNumber": 25,
+          "reservationType": "ST",
+          "totalElectors": 12947,
+          "totalVotes": 10643,
+          "enop": 3.12,
+          "winner": "B.LALTHLENGLIANA",
+          "winnerParty": "MNF",
+          "winnerVotes": 3787,
+          "winnerVoteShare": 35.58,
+          "marginVotes": 467,
+          "marginPct": 4.39,
+          "turnoutPct": 82.2
+        }
+      ]
+    },
+    {
+      "district": "Kolasib",
+      "districtSlug": "kolasib",
+      "totalSeats": 3,
+      "turnoutPct": 83,
+      "totalElectors": 45186,
+      "totalVotes": 37526,
+      "winnerParty": "INC",
+      "winnerSeats": 3,
+      "winnerSeatShare": 100,
+      "winnerVoteShare": 39.3,
+      "closeContests": 0,
+      "meanMarginPct": 8,
+      "medianMarginPct": 7.8,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.24,
+          "medianEnop": 3.12,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 2,
+          "lowPluralitySeatShare": 66.7,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 83,
+          "turnoutIqr": 1.1,
+          "turnoutRange": 2.1,
+          "winnerVoteShareMedian": 39.6,
+          "marginMedian": 7.8,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 3
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 3,
+          "seatShare": 100,
+          "voteShare": 39.3
+        },
+        {
+          "party": "MNF",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 30.1
+        },
+        {
+          "party": "MPC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 17.3
+        },
+        {
+          "party": "ZNP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.3
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.6
+        },
+        {
+          "party": "LJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        },
+        {
+          "party": "LB",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.3
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Tuirial",
+          "constituencyNumber": 4,
+          "reservationType": "ST",
+          "totalElectors": 14538,
+          "totalVotes": 11917,
+          "enop": 3.03,
+          "winner": "HMINGDAILOVA KHIANGTE",
+          "winnerParty": "INC",
+          "winnerVotes": 4717,
+          "winnerVoteShare": 39.58,
+          "marginVotes": 1022,
+          "marginPct": 8.58,
+          "turnoutPct": 81.97
+        },
+        {
+          "constituency": "Kolasib",
+          "constituencyNumber": 5,
+          "reservationType": "ST",
+          "totalElectors": 16011,
+          "totalVotes": 13465,
+          "enop": 3.12,
+          "winner": "P.C. ZORAM SANGLIANA",
+          "winnerParty": "INC",
+          "winnerVotes": 5510,
+          "winnerVoteShare": 40.92,
+          "marginVotes": 1048,
+          "marginPct": 7.78,
+          "turnoutPct": 84.1
+        },
+        {
+          "constituency": "Serlui",
+          "constituencyNumber": 6,
+          "reservationType": "ST",
+          "totalElectors": 14637,
+          "totalVotes": 12144,
+          "enop": 3.57,
+          "winner": "K. LALRINTHANGA",
+          "winnerParty": "INC",
+          "winnerVotes": 4536,
+          "winnerVoteShare": 37.35,
+          "marginVotes": 924,
+          "marginPct": 7.61,
+          "turnoutPct": 82.97
+        }
+      ]
+    },
+    {
+      "district": "Lawngtlai",
+      "districtSlug": "lawngtlai",
+      "totalSeats": 3,
+      "turnoutPct": 82.3,
+      "totalElectors": 61453,
+      "totalVotes": 50570,
+      "winnerParty": "INC",
+      "winnerSeats": 2,
+      "winnerSeatShare": 66.7,
+      "winnerVoteShare": 43.5,
+      "closeContests": 1,
+      "meanMarginPct": 9.2,
+      "medianMarginPct": 6,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.88,
+          "medianEnop": 2.86,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 33.3,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 33.3,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 83.6,
+          "turnoutIqr": 3.3,
+          "turnoutRange": 6.5,
+          "winnerVoteShareMedian": 41.4,
+          "marginMedian": 6,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 3
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 2,
+          "seatShare": 66.7,
+          "voteShare": 43.5
+        },
+        {
+          "party": "MNF",
+          "seats": 1,
+          "seatShare": 33.3,
+          "voteShare": 37.1
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 16.7
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.4
+        },
+        {
+          "party": "LJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.2
+        },
+        {
+          "party": "LB",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Tuichawng",
+          "constituencyNumber": 36,
+          "reservationType": "ST",
+          "totalElectors": 22089,
+          "totalVotes": 18463,
+          "enop": 2.08,
+          "winner": "NIRUPAM CHAKMA",
+          "winnerParty": "INC",
+          "winnerVotes": 10421,
+          "winnerVoteShare": 56.44,
+          "marginVotes": 3112,
+          "marginPct": 16.86,
+          "turnoutPct": 83.58
+        },
+        {
+          "constituency": "Lawngtlai West",
+          "constituencyNumber": 37,
+          "reservationType": "ST",
+          "totalElectors": 19952,
+          "totalVotes": 16918,
+          "enop": 3.7,
+          "winner": "C. RAMHLUNA",
+          "winnerParty": "MNF",
+          "winnerVotes": 6086,
+          "winnerVoteShare": 35.97,
+          "marginVotes": 800,
+          "marginPct": 4.73,
+          "turnoutPct": 84.79
+        },
+        {
+          "constituency": "Lawngtlai East",
+          "constituencyNumber": 38,
+          "reservationType": "ST",
+          "totalElectors": 19412,
+          "totalVotes": 15189,
+          "enop": 2.86,
+          "winner": "H. ZOTHANGLIANA",
+          "winnerParty": "INC",
+          "winnerVotes": 6294,
+          "winnerVoteShare": 41.44,
+          "marginVotes": 911,
+          "marginPct": 6,
+          "turnoutPct": 78.25
+        }
+      ]
+    },
+    {
+      "district": "Lunglei",
+      "districtSlug": "lunglei",
+      "totalSeats": 7,
+      "turnoutPct": 83.7,
+      "totalElectors": 87293,
+      "totalVotes": 73072,
+      "winnerParty": "INC",
+      "winnerSeats": 6,
+      "winnerSeatShare": 85.7,
+      "winnerVoteShare": 42.1,
+      "closeContests": 2,
+      "meanMarginPct": 9,
+      "medianMarginPct": 7.1,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.87,
+          "medianEnop": 2.94,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 2,
+          "lowPluralitySeatShare": 28.6,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 14.3,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 14.3,
+          "turnoutMedian": 83.2,
+          "turnoutIqr": 3.7,
+          "turnoutRange": 7.8,
+          "winnerVoteShareMedian": 40.8,
+          "marginMedian": 7.1,
+          "reservationMix": {
+            "reservedSeats": 7,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 7
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 6,
+          "seatShare": 85.7,
+          "voteShare": 42.1
+        },
+        {
+          "party": "MNF",
+          "seats": 1,
+          "seatShare": 14.3,
+          "voteShare": 34.2
+        },
+        {
+          "party": "ZNP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 8.9
+        },
+        {
+          "party": "MPC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.6
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.5
+        },
+        {
+          "party": "LJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.3
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "South Tuipui",
+          "constituencyNumber": 29,
+          "reservationType": "ST",
+          "totalElectors": 12789,
+          "totalVotes": 10639,
+          "enop": 3.12,
+          "winner": "LALTHANHAWLA",
+          "winnerParty": "INC",
+          "winnerVotes": 3772,
+          "winnerVoteShare": 35.45,
+          "marginVotes": 96,
+          "marginPct": 0.9,
+          "turnoutPct": 83.19
+        },
+        {
+          "constituency": "Lunglei North",
+          "constituencyNumber": 30,
+          "reservationType": "ST",
+          "totalElectors": 13981,
+          "totalVotes": 12117,
+          "enop": 2.94,
+          "winner": "PC LALTHANLIANA",
+          "winnerParty": "INC",
+          "winnerVotes": 4914,
+          "winnerVoteShare": 40.55,
+          "marginVotes": 705,
+          "marginPct": 5.82,
+          "turnoutPct": 86.67
+        },
+        {
+          "constituency": "Lunglei East",
+          "constituencyNumber": 31,
+          "reservationType": "ST",
+          "totalElectors": 12358,
+          "totalVotes": 9795,
+          "enop": 3.12,
+          "winner": "JOSEPH LALHIMPUIA",
+          "winnerParty": "INC",
+          "winnerVotes": 3898,
+          "winnerVoteShare": 39.8,
+          "marginVotes": 423,
+          "marginPct": 4.32,
+          "turnoutPct": 79.26
+        },
+        {
+          "constituency": "Lunglei West",
+          "constituencyNumber": 32,
+          "reservationType": "ST",
+          "totalElectors": 12334,
+          "totalVotes": 10177,
+          "enop": 2.94,
+          "winner": "DR. R. LALTHANGLIANA",
+          "winnerParty": "MNF",
+          "winnerVotes": 4156,
+          "winnerVoteShare": 40.84,
+          "marginVotes": 723,
+          "marginPct": 7.1,
+          "turnoutPct": 82.51
+        },
+        {
+          "constituency": "Lunglei South",
+          "constituencyNumber": 33,
+          "reservationType": "ST",
+          "totalElectors": 14392,
+          "totalVotes": 11846,
+          "enop": 2.78,
+          "winner": "S. LALDINGLIANA",
+          "winnerParty": "INC",
+          "winnerVotes": 5276,
+          "winnerVoteShare": 44.54,
+          "marginVotes": 1041,
+          "marginPct": 8.79,
+          "turnoutPct": 82.31
+        },
+        {
+          "constituency": "Thorang",
+          "constituencyNumber": 34,
+          "reservationType": "ST",
+          "totalElectors": 11021,
+          "totalVotes": 9592,
+          "enop": 3.12,
+          "winner": "ZODINTLUANGA",
+          "winnerParty": "INC",
+          "winnerVotes": 4442,
+          "winnerVoteShare": 46.31,
+          "marginVotes": 1829,
+          "marginPct": 19.07,
+          "turnoutPct": 87.03
+        },
+        {
+          "constituency": "West Tuipui",
+          "constituencyNumber": 35,
+          "reservationType": "ST",
+          "totalElectors": 10418,
+          "totalVotes": 8906,
+          "enop": 2.08,
+          "winner": "NIHAR KANTI",
+          "winnerParty": "INC",
+          "winnerVotes": 5052,
+          "winnerVoteShare": 56.73,
+          "marginVotes": 1540,
+          "marginPct": 17.29,
+          "turnoutPct": 85.49
+        }
+      ]
+    },
+    {
+      "district": "Mamit",
+      "districtSlug": "mamit",
+      "totalSeats": 3,
+      "turnoutPct": 85.2,
+      "totalElectors": 46276,
+      "totalVotes": 39446,
+      "winnerParty": "INC",
+      "winnerSeats": 3,
+      "winnerSeatShare": 100,
+      "winnerVoteShare": 41.6,
+      "closeContests": 0,
+      "meanMarginPct": 13.5,
+      "medianMarginPct": 15.5,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.48,
+          "medianEnop": 2.94,
+          "highFragmentationSeats": 1,
+          "highFragmentationSeatShare": 33.3
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 33.3,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 33.3,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 85,
+          "turnoutIqr": 1.6,
+          "turnoutRange": 3.1,
+          "winnerVoteShareMedian": 41.1,
+          "marginMedian": 15.5,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 3
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 3,
+          "seatShare": 100,
+          "voteShare": 41.6
+        },
+        {
+          "party": "MNF",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 27.8
+        },
+        {
+          "party": "ZNP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 11.4
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 11.3
+        },
+        {
+          "party": "MPC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.7
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.3
+        },
+        {
+          "party": "LJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "JD(U)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Hachhek",
+          "constituencyNumber": 1,
+          "reservationType": "ST",
+          "totalElectors": 16029,
+          "totalVotes": 13453,
+          "enop": 2.5,
+          "winner": "LALRINMAWIA RALTE",
+          "winnerParty": "INC",
+          "winnerVotes": 6990,
+          "winnerVoteShare": 51.96,
+          "marginVotes": 2617,
+          "marginPct": 19.45,
+          "turnoutPct": 83.93
+        },
+        {
+          "constituency": "Dampa",
+          "constituencyNumber": 2,
+          "reservationType": "ST",
+          "totalElectors": 13981,
+          "totalVotes": 12169,
+          "enop": 2.94,
+          "winner": "LALROBIAKA",
+          "winnerParty": "INC",
+          "winnerVotes": 5004,
+          "winnerVoteShare": 41.12,
+          "marginVotes": 680,
+          "marginPct": 5.59,
+          "turnoutPct": 87.04
+        },
+        {
+          "constituency": "Mamit",
+          "constituencyNumber": 3,
+          "reservationType": "ST",
+          "totalElectors": 16266,
+          "totalVotes": 13824,
+          "enop": 5,
+          "winner": "JOHN ROTLUANGLIANA",
+          "winnerParty": "INC",
+          "winnerVotes": 4421,
+          "winnerVoteShare": 31.98,
+          "marginVotes": 2147,
+          "marginPct": 15.53,
+          "turnoutPct": 84.99
+        }
+      ]
+    },
+    {
+      "district": "Saiha",
+      "districtSlug": "saiha",
+      "totalSeats": 2,
+      "turnoutPct": 80.6,
+      "totalElectors": 31665,
+      "totalVotes": 25520,
+      "winnerParty": "INC",
+      "winnerSeats": 1,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 34.9,
+      "closeContests": 2,
+      "meanMarginPct": 0.7,
+      "medianMarginPct": 0.7,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.41,
+          "medianEnop": 3.41,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 2,
+          "lowPluralitySeatShare": 100,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 100,
+          "turnoutMedian": 80.7,
+          "turnoutIqr": 1.9,
+          "turnoutRange": 3.7,
+          "winnerVoteShareMedian": 35.2,
+          "marginMedian": 0.7,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 2
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 50,
+          "voteShare": 34.9
+        },
+        {
+          "party": "MDF",
+          "seats": 1,
+          "seatShare": 50,
+          "voteShare": 16.5
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 27.6
+        },
+        {
+          "party": "MNF",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 18.3
+        },
+        {
+          "party": "ZNP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.6
+        },
+        {
+          "party": "MPC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "LJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Saiha",
+          "constituencyNumber": 39,
+          "reservationType": "ST",
+          "totalElectors": 16394,
+          "totalVotes": 12917,
+          "enop": 3.12,
+          "winner": "S. HIATO",
+          "winnerParty": "INC",
+          "winnerVotes": 4772,
+          "winnerVoteShare": 36.94,
+          "marginVotes": 103,
+          "marginPct": 0.8,
+          "turnoutPct": 78.79
+        },
+        {
+          "constituency": "Palak",
+          "constituencyNumber": 40,
+          "reservationType": "ST",
+          "totalElectors": 15271,
+          "totalVotes": 12603,
+          "enop": 3.7,
+          "winner": "P.P. THAWLA",
+          "winnerParty": "MDF",
+          "winnerVotes": 4206,
+          "winnerVoteShare": 33.37,
+          "marginVotes": 84,
+          "marginPct": 0.67,
+          "turnoutPct": 82.53
+        }
+      ]
+    },
+    {
+      "district": "Serchhip",
+      "districtSlug": "serchhip",
+      "totalSeats": 3,
+      "turnoutPct": 86.4,
+      "totalElectors": 40800,
+      "totalVotes": 35264,
+      "winnerParty": "INC",
+      "winnerSeats": 2,
+      "winnerSeatShare": 66.7,
+      "winnerVoteShare": 36.8,
+      "closeContests": 2,
+      "meanMarginPct": 5.1,
+      "medianMarginPct": 3.9,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.11,
+          "medianEnop": 2.94,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 3,
+          "lowPluralitySeatShare": 100,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 87.3,
+          "turnoutIqr": 1.5,
+          "turnoutRange": 3,
+          "winnerVoteShareMedian": 37.8,
+          "marginMedian": 3.9,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 3
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 2,
+          "seatShare": 66.7,
+          "voteShare": 36.8
+        },
+        {
+          "party": "MPC",
+          "seats": 1,
+          "seatShare": 33.3,
+          "voteShare": 23.5
+        },
+        {
+          "party": "MNF",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 25.2
+        },
+        {
+          "party": "ZNP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 10.8
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3
+        },
+        {
+          "party": "LJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Serchhip",
+          "constituencyNumber": 26,
+          "reservationType": "ST",
+          "totalElectors": 13663,
+          "totalVotes": 11956,
+          "enop": 2.94,
+          "winner": "LAL THANHAWLA",
+          "winnerParty": "INC",
+          "winnerVotes": 4744,
+          "winnerVoteShare": 39.68,
+          "marginVotes": 952,
+          "marginPct": 7.96,
+          "turnoutPct": 87.51
+        },
+        {
+          "constituency": "Tuikum",
+          "constituencyNumber": 27,
+          "reservationType": "ST",
+          "totalElectors": 13265,
+          "totalVotes": 11587,
+          "enop": 3.45,
+          "winner": "K. LIANZUALA",
+          "winnerParty": "INC",
+          "winnerVotes": 4265,
+          "winnerVoteShare": 36.81,
+          "marginVotes": 402,
+          "marginPct": 3.47,
+          "turnoutPct": 87.35
+        },
+        {
+          "constituency": "Hrangturzo",
+          "constituencyNumber": 28,
+          "reservationType": "ST",
+          "totalElectors": 13872,
+          "totalVotes": 11721,
+          "enop": 2.94,
+          "winner": "LALTHANSANGA",
+          "winnerParty": "MPC",
+          "winnerVotes": 4431,
+          "winnerVoteShare": 37.8,
+          "marginVotes": 452,
+          "marginPct": 3.86,
+          "turnoutPct": 84.49
+        }
+      ]
+    },
+    {
+      "district": "Tuivawl",
+      "districtSlug": "tuivawl",
+      "totalSeats": 14,
+      "turnoutPct": 80.4,
+      "totalElectors": 227073,
+      "totalVotes": 182672,
+      "winnerParty": "INC",
+      "winnerSeats": 11,
+      "winnerSeatShare": 78.6,
+      "winnerVoteShare": 36.2,
+      "closeContests": 8,
+      "meanMarginPct": 5.5,
+      "medianMarginPct": 4.3,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.1,
+          "medianEnop": 3.03,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 11,
+          "lowPluralitySeatShare": 78.6,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 14.3,
+          "turnoutMedian": 80,
+          "turnoutIqr": 3.7,
+          "turnoutRange": 10.1,
+          "winnerVoteShareMedian": 37.1,
+          "marginMedian": 4.3,
+          "reservationMix": {
+            "reservedSeats": 13,
+            "reservedSeatShare": 92.9,
+            "scSeats": 0,
+            "stSeats": 13
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 11,
+          "seatShare": 78.6,
+          "voteShare": 36.2
+        },
+        {
+          "party": "ZNP",
+          "seats": 2,
+          "seatShare": 14.3,
+          "voteShare": 13.6
+        },
+        {
+          "party": "MPC",
+          "seats": 1,
+          "seatShare": 7.1,
+          "voteShare": 15.2
+        },
+        {
+          "party": "MNF",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 30
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.6
+        },
+        {
+          "party": "LJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        },
+        {
+          "party": "NCP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.2
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Tuivawl",
+          "constituencyNumber": 7,
+          "reservationType": "ST",
+          "totalElectors": 14281,
+          "totalVotes": 11653,
+          "enop": 3.12,
+          "winner": "R.L.PIANMAWIA",
+          "winnerParty": "INC",
+          "winnerVotes": 4276,
+          "winnerVoteShare": 36.69,
+          "marginVotes": 473,
+          "marginPct": 4.06,
+          "turnoutPct": 81.6
+        },
+        {
+          "constituency": "Chalfilh",
+          "constituencyNumber": 8,
+          "reservationType": "ST",
+          "totalElectors": 16091,
+          "totalVotes": 13198,
+          "enop": 3.12,
+          "winner": "CHAWNGTINTHANGA",
+          "winnerParty": "INC",
+          "winnerVotes": 4924,
+          "winnerVoteShare": 37.31,
+          "marginVotes": 543,
+          "marginPct": 4.11,
+          "turnoutPct": 82.02
+        },
+        {
+          "constituency": "Tawi",
+          "constituencyNumber": 9,
+          "reservationType": "ST",
+          "totalElectors": 13174,
+          "totalVotes": 11407,
+          "enop": 2.94,
+          "winner": "R.LALZIRLIANA",
+          "winnerParty": "INC",
+          "winnerVotes": 4710,
+          "winnerVoteShare": 41.29,
+          "marginVotes": 1211,
+          "marginPct": 10.62,
+          "turnoutPct": 86.59
+        },
+        {
+          "constituency": "Aizawl North - I",
+          "constituencyNumber": 10,
+          "reservationType": "ST",
+          "totalElectors": 17370,
+          "totalVotes": 13414,
+          "enop": 3.33,
+          "winner": "R.ROMAWIA",
+          "winnerParty": "INC",
+          "winnerVotes": 4948,
+          "winnerVoteShare": 36.89,
+          "marginVotes": 1037,
+          "marginPct": 7.73,
+          "turnoutPct": 77.23
+        },
+        {
+          "constituency": "Aizawl North - Ii",
+          "constituencyNumber": 11,
+          "reservationType": "ST",
+          "totalElectors": 17769,
+          "totalVotes": 14259,
+          "enop": 3.03,
+          "winner": "H.LIANSAILOVA",
+          "winnerParty": "INC",
+          "winnerVotes": 5207,
+          "winnerVoteShare": 36.52,
+          "marginVotes": 266,
+          "marginPct": 1.87,
+          "turnoutPct": 80.25
+        },
+        {
+          "constituency": "Aizawl North-Iii",
+          "constituencyNumber": 12,
+          "reservationType": "ST",
+          "totalElectors": 14732,
+          "totalVotes": 11351,
+          "enop": 3.12,
+          "winner": "LAL THANZARA",
+          "winnerParty": "INC",
+          "winnerVotes": 4109,
+          "winnerVoteShare": 36.2,
+          "marginVotes": 506,
+          "marginPct": 4.46,
+          "turnoutPct": 77.05
+        },
+        {
+          "constituency": "Aizawl East - I",
+          "constituencyNumber": 13,
+          "reservationType": "GEN",
+          "totalElectors": 16962,
+          "totalVotes": 13519,
+          "enop": 3.33,
+          "winner": "R.LALRINAWMA",
+          "winnerParty": "INC",
+          "winnerVotes": 5084,
+          "winnerVoteShare": 37.61,
+          "marginVotes": 1089,
+          "marginPct": 8.06,
+          "turnoutPct": 79.7
+        },
+        {
+          "constituency": "Aizawl East Ii",
+          "constituencyNumber": 14,
+          "reservationType": "ST",
+          "totalElectors": 14845,
+          "totalVotes": 11476,
+          "enop": 2.94,
+          "winner": "LALSAWTA",
+          "winnerParty": "INC",
+          "winnerVotes": 4794,
+          "winnerVoteShare": 41.77,
+          "marginVotes": 1349,
+          "marginPct": 11.75,
+          "turnoutPct": 77.31
+        },
+        {
+          "constituency": "Aizawl West I",
+          "constituencyNumber": 15,
+          "reservationType": "ST",
+          "totalElectors": 17844,
+          "totalVotes": 14637,
+          "enop": 3.03,
+          "winner": "LALDUHAWMA",
+          "winnerParty": "ZNP",
+          "winnerVotes": 5705,
+          "winnerVoteShare": 38.98,
+          "marginVotes": 742,
+          "marginPct": 5.07,
+          "turnoutPct": 82.03
+        },
+        {
+          "constituency": "Aizawl West Ii",
+          "constituencyNumber": 16,
+          "reservationType": "ST",
+          "totalElectors": 15932,
+          "totalVotes": 12605,
+          "enop": 2.94,
+          "winner": "BRIG. T. SAILO",
+          "winnerParty": "MPC",
+          "winnerVotes": 4654,
+          "winnerVoteShare": 36.92,
+          "marginVotes": 498,
+          "marginPct": 3.95,
+          "turnoutPct": 79.12
+        },
+        {
+          "constituency": "Aizawl West Iii",
+          "constituencyNumber": 17,
+          "reservationType": "ST",
+          "totalElectors": 16418,
+          "totalVotes": 12821,
+          "enop": 2.94,
+          "winner": "R.SELTHUAMA",
+          "winnerParty": "INC",
+          "winnerVotes": 5233,
+          "winnerVoteShare": 40.82,
+          "marginVotes": 1113,
+          "marginPct": 8.68,
+          "turnoutPct": 78.09
+        },
+        {
+          "constituency": "Aizawl South I",
+          "constituencyNumber": 18,
+          "reservationType": "ST",
+          "totalElectors": 17536,
+          "totalVotes": 14136,
+          "enop": 3.45,
+          "winner": "K.LIANTLINGA",
+          "winnerParty": "ZNP",
+          "winnerVotes": 4498,
+          "winnerVoteShare": 31.82,
+          "marginVotes": 28,
+          "marginPct": 0.2,
+          "turnoutPct": 80.61
+        },
+        {
+          "constituency": "Aizawl South Ii",
+          "constituencyNumber": 19,
+          "reservationType": "ST",
+          "totalElectors": 18055,
+          "totalVotes": 14195,
+          "enop": 3.03,
+          "winner": "LT.COL. ZOSANGZUALA",
+          "winnerParty": "INC",
+          "winnerVotes": 5159,
+          "winnerVoteShare": 36.34,
+          "marginVotes": 489,
+          "marginPct": 3.44,
+          "turnoutPct": 78.62
+        },
+        {
+          "constituency": "Aizawl South-Iii",
+          "constituencyNumber": 20,
+          "reservationType": "ST",
+          "totalElectors": 16064,
+          "totalVotes": 14001,
+          "enop": 3.03,
+          "winner": "K.S.THANGA",
+          "winnerParty": "INC",
+          "winnerVotes": 5284,
+          "winnerVoteShare": 37.74,
+          "marginVotes": 350,
+          "marginPct": 2.5,
+          "turnoutPct": 87.16
+        }
+      ]
+    }
+  ]
+}

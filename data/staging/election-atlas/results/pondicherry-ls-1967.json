@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-03-09T14:44:12.154Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "puducherry",
+    "stateLabel": "Pondicherry",
+    "stateVersionSlug": "pondicherry",
+    "geographyVersionId": "puducherry-default",
+    "house": "LS",
+    "year": 1967,
+    "electionId": 4,
+    "stateId": 39
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "puducherry",
+      "stateLabel": "Pondicherry",
+      "stateVersionSlug": "pondicherry",
+      "geographyVersionId": "puducherry-default",
+      "house": "LS",
+      "year": 1967,
+      "electionId": 4,
+      "stateId": 39,
+      "constituency": "Pondicherry",
+      "constituencyNumber": 518,
+      "reservationType": "GEN",
+      "district": "",
+      "winner": "N. Sethuraman",
+      "winnerParty": "Indian National Congress",
+      "totalElectors": 216689,
+      "totalVotes": 162193,
+      "turnoutPct": 74.9,
+      "marginVotes": 10425,
+      "marginPct": 6.4,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/1967/pondicherry/pondicherry/1816/39/4",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/1/4/39",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/1967/pondicherry/pondicherry/1816/39/4",
+      "winnerVotes": 63286,
+      "winnerVoteShare": 39,
+      "runnerUp": "S. Sadagopan",
+      "runnerUpParty": "Independent",
+      "runnerUpVotes": 52861,
+      "runnerUpVoteShare": 32.6,
+      "detailAvailable": true,
+      "detailFileName": "pondicherry-ls-1967-518-pondicherry-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Indian National Congress",
+      "votes": 63286,
+      "voteShare": 39
+    },
+    {
+      "party": "Independent",
+      "votes": 52861,
+      "voteShare": 32.6
+    },
+    {
+      "party": "Peoples Front",
+      "votes": 42725,
+      "voteShare": 26.3
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:16:30.529Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

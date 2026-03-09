@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-03-09T14:43:57.615Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "nagaland",
+    "stateLabel": "Nagaland",
+    "stateVersionSlug": "nagaland",
+    "geographyVersionId": "nagaland-default",
+    "house": "LS",
+    "year": 1989,
+    "electionId": 9,
+    "stateId": 33
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "nagaland",
+      "stateLabel": "Nagaland",
+      "stateVersionSlug": "nagaland",
+      "geographyVersionId": "nagaland-default",
+      "house": "LS",
+      "year": 1989,
+      "electionId": 9,
+      "stateId": 33,
+      "constituency": "Nagaland",
+      "constituencyNumber": 1,
+      "reservationType": "ST",
+      "district": "",
+      "winner": "Shikino Sam",
+      "winnerParty": "Indian National Congress",
+      "totalElectors": 813011,
+      "totalVotes": 607429,
+      "turnoutPct": 74.7,
+      "marginVotes": 123947,
+      "marginPct": 20.4,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/1989/nagaland/nagaland/4237/33/9",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/1/9/33",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/1989/nagaland/nagaland/4237/33/9",
+      "winnerVotes": 363071,
+      "winnerVoteShare": 59.8,
+      "runnerUp": "Vizol",
+      "runnerUpParty": "Nagaland Peoples Council",
+      "runnerUpVotes": 239124,
+      "runnerUpVoteShare": 39.4,
+      "detailAvailable": true,
+      "detailFileName": "nagaland-ls-1989-1-nagaland-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Indian National Congress",
+      "votes": 363071,
+      "voteShare": 59.8
+    },
+    {
+      "party": "Nagaland Peoples Council",
+      "votes": 239124,
+      "voteShare": 39.4
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:13:11.468Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

@@ -1,0 +1,3976 @@
+{
+  "generatedAt": "2026-03-08T19:46:51.826Z",
+  "source": "indiavotes",
+  "sourceCaptureDirectory": "/Users/bhaskar_pandey/Documents/Website/arjuna-consulting-services/data/raw/indiavotes/2026-03-08_194607958Z",
+  "sourceCapturedAt": "2026-03-08T19:46:23.393Z",
+  "normalizationVersion": 1,
+  "stats": {
+    "lokSabhaStateVersions": 58,
+    "assemblyStateVersions": 36,
+    "stateSummaryVersions": 35,
+    "canonicalStates": 51,
+    "currentCanonicalStates": 36,
+    "historicCanonicalEntities": 15,
+    "assemblyVersionsWithYearInventory": 32,
+    "versionsWithDistrictInventory": 32
+  },
+  "globalElectionYears": {
+    "lokSabha": [
+      {
+        "electionId": 18,
+        "year": 2024
+      },
+      {
+        "electionId": 17,
+        "year": 2019
+      },
+      {
+        "electionId": 16,
+        "year": 2014
+      },
+      {
+        "electionId": 15,
+        "year": 2009
+      },
+      {
+        "electionId": 14,
+        "year": 2004
+      },
+      {
+        "electionId": 13,
+        "year": 1999
+      },
+      {
+        "electionId": 12,
+        "year": 1998
+      },
+      {
+        "electionId": 11,
+        "year": 1996
+      },
+      {
+        "electionId": 10,
+        "year": 1991
+      },
+      {
+        "electionId": 9,
+        "year": 1989
+      },
+      {
+        "electionId": 8,
+        "year": 1984
+      },
+      {
+        "electionId": 7,
+        "year": 1980
+      },
+      {
+        "electionId": 6,
+        "year": 1977
+      },
+      {
+        "electionId": 5,
+        "year": 1971
+      },
+      {
+        "electionId": 4,
+        "year": 1967
+      },
+      {
+        "electionId": 3,
+        "year": 1962
+      },
+      {
+        "electionId": 2,
+        "year": 1957
+      },
+      {
+        "electionId": 1,
+        "year": 1952
+      }
+    ],
+    "assembly": [
+      {
+        "electionId": 302,
+        "year": 2025
+      },
+      {
+        "electionId": 298,
+        "year": 2024
+      },
+      {
+        "electionId": 292,
+        "year": 2023
+      },
+      {
+        "electionId": 285,
+        "year": 2022
+      },
+      {
+        "electionId": 280,
+        "year": 2021
+      },
+      {
+        "electionId": 277,
+        "year": 2020
+      },
+      {
+        "electionId": 270,
+        "year": 2019
+      },
+      {
+        "electionId": 258,
+        "year": 2018
+      },
+      {
+        "electionId": 251,
+        "year": 2017
+      },
+      {
+        "electionId": 246,
+        "year": 2016
+      },
+      {
+        "electionId": 244,
+        "year": 2015
+      },
+      {
+        "electionId": 235,
+        "year": 2014
+      },
+      {
+        "electionId": 225,
+        "year": 2013
+      },
+      {
+        "electionId": 218,
+        "year": 2012
+      },
+      {
+        "electionId": 213,
+        "year": 2011
+      },
+      {
+        "electionId": 212,
+        "year": 2010
+      },
+      {
+        "electionId": 205,
+        "year": 2009
+      },
+      {
+        "electionId": 195,
+        "year": 2008
+      },
+      {
+        "electionId": 188,
+        "year": 2007
+      },
+      {
+        "electionId": 183,
+        "year": 2006
+      },
+      {
+        "electionId": 180,
+        "year": 2005
+      },
+      {
+        "electionId": 174,
+        "year": 2004
+      },
+      {
+        "electionId": 165,
+        "year": 2003
+      },
+      {
+        "electionId": 158,
+        "year": 2002
+      },
+      {
+        "electionId": 153,
+        "year": 2001
+      },
+      {
+        "electionId": 149,
+        "year": 2000
+      },
+      {
+        "electionId": 143,
+        "year": 1999
+      },
+      {
+        "electionId": 134,
+        "year": 1998
+      },
+      {
+        "electionId": 133,
+        "year": 1997
+      },
+      {
+        "electionId": 125,
+        "year": 1996
+      },
+      {
+        "electionId": 119,
+        "year": 1995
+      },
+      {
+        "electionId": 115,
+        "year": 1994
+      },
+      {
+        "electionId": 106,
+        "year": 1993
+      },
+      {
+        "electionId": 105,
+        "year": 1992
+      },
+      {
+        "electionId": 98,
+        "year": 1991
+      },
+      {
+        "electionId": 88,
+        "year": 1990
+      },
+      {
+        "electionId": 80,
+        "year": 1989
+      },
+      {
+        "electionId": 78,
+        "year": 1988
+      },
+      {
+        "electionId": 72,
+        "year": 1987
+      },
+      {
+        "electionId": 58,
+        "year": 1985
+      },
+      {
+        "electionId": 53,
+        "year": 1984
+      },
+      {
+        "electionId": 46,
+        "year": 1983
+      },
+      {
+        "electionId": 41,
+        "year": 1982
+      },
+      {
+        "electionId": 27,
+        "year": 1980
+      },
+      {
+        "electionId": 25,
+        "year": 1979
+      },
+      {
+        "electionId": 18,
+        "year": 1978
+      },
+      {
+        "electionId": 1,
+        "year": 1977
+      }
+    ]
+  },
+  "canonicalStates": [
+    {
+      "slug": "ajmer",
+      "name": "Ajmer",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Ajmer",
+          "geographyVersionId": "ajmer-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 17
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "andaman-and-nicobar-islands",
+      "name": "Andaman and Nicobar Islands",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Andaman & Nicobar Islands",
+          "geographyVersionId": "andaman-and-nicobar-islands-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 34
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "andhra-pradesh",
+      "name": "Andhra Pradesh",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Andhra Pradesh",
+          "geographyVersionId": "andhra-pradesh-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 27
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 205,
+            "year": 2009
+          },
+          "latestDistrictInventory": {
+            "year": 2009,
+            "electionId": 205,
+            "districtCount": 23
+          }
+        },
+        {
+          "sourceLabel": "Andhra Pradesh [2014 Onwards]",
+          "geographyVersionId": "andhra-pradesh-2014-onwards",
+          "versionLabel": "2014 Onwards",
+          "sourceIds": {
+            "indiavotesStateId": 62
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": {
+            "electionId": 272,
+            "year": 2019
+          },
+          "latestDistrictInventory": {
+            "year": 2019,
+            "electionId": 272,
+            "districtCount": 13
+          }
+        }
+      ]
+    },
+    {
+      "slug": "arunachal-pradesh",
+      "name": "Arunachal Pradesh",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Arunachal Pradesh",
+          "geographyVersionId": "arunachal-pradesh-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 41
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 273,
+            "year": 2019
+          },
+          "latestDistrictInventory": {
+            "year": 2019,
+            "electionId": 273,
+            "districtCount": 16
+          }
+        }
+      ]
+    },
+    {
+      "slug": "assam",
+      "name": "Assam",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Assam",
+          "geographyVersionId": "assam-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 1
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 280,
+            "year": 2021
+          },
+          "latestDistrictInventory": {
+            "year": 2021,
+            "electionId": 280,
+            "districtCount": 25
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bhopal",
+      "name": "Bhopal",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Bhopal",
+          "geographyVersionId": "bhopal-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 18
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "bihar",
+      "name": "Bihar",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Bihar [1947 - 1999]",
+          "geographyVersionId": "bihar-1947-1999",
+          "versionLabel": "1947 - 1999",
+          "sourceIds": {
+            "indiavotesStateId": 2
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": false,
+            "stateInfo": true,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        },
+        {
+          "sourceLabel": "Bihar [2000 Onwards]",
+          "geographyVersionId": "bihar-2000-onwards",
+          "versionLabel": "2000 Onwards",
+          "sourceIds": {
+            "indiavotesStateId": 58
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 303,
+            "year": 2025
+          },
+          "latestDistrictInventory": {
+            "year": 2025,
+            "electionId": 303,
+            "districtCount": 38
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bilaspur",
+      "name": "Bilaspur",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Bilaspur",
+          "geographyVersionId": "bilaspur-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 19
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "bombay",
+      "name": "Bombay",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Bombay",
+          "geographyVersionId": "bombay-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 3
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "chandigarh",
+      "name": "Chandigarh",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Chandigarh",
+          "geographyVersionId": "chandigarh-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 35
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "chhattisgarh",
+      "name": "Chhattisgarh",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Chhattisgarh",
+          "geographyVersionId": "chhattisgarh-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 54
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 293,
+            "year": 2023
+          },
+          "latestDistrictInventory": {
+            "year": 2023,
+            "electionId": 293,
+            "districtCount": 16
+          }
+        }
+      ]
+    },
+    {
+      "slug": "coorg",
+      "name": "Coorg",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Coorg",
+          "geographyVersionId": "coorg-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 20
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "dadra-and-nagar-haveli-and-daman-and-diu",
+      "name": "Dadra and Nagar Haveli and Daman and Diu",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Dadra & Nagar Haveli",
+          "geographyVersionId": "dadra-and-nagar-haveli-and-daman-and-diu-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 36
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        },
+        {
+          "sourceLabel": "Daman & Diu",
+          "geographyVersionId": "dadra-and-nagar-haveli-and-daman-and-diu-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 52
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "delhi",
+      "name": "Delhi",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Delhi",
+          "geographyVersionId": "delhi-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 21
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        },
+        {
+          "sourceLabel": "Delhi [1977 Onwards]",
+          "geographyVersionId": "delhi-1977-onwards",
+          "versionLabel": "1977 Onwards",
+          "sourceIds": {
+            "indiavotesStateId": 57
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 302,
+            "year": 2025
+          },
+          "latestDistrictInventory": {
+            "year": 2025,
+            "electionId": 302,
+            "districtCount": 9
+          }
+        }
+      ]
+    },
+    {
+      "slug": "goa",
+      "name": "Goa",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Goa",
+          "geographyVersionId": "goa-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 51
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 285,
+            "year": 2022
+          },
+          "latestDistrictInventory": {
+            "year": 2022,
+            "electionId": 285,
+            "districtCount": 2
+          }
+        }
+      ]
+    },
+    {
+      "slug": "goa-daman-and-diu",
+      "name": "Goa, Daman And Diu",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Goa, Daman And Diu",
+          "geographyVersionId": "goa-daman-and-diu-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 37
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": false,
+            "stateInfo": true,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "gujarat",
+      "name": "Gujarat",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Gujarat",
+          "geographyVersionId": "gujarat-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 29
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 290,
+            "year": 2022
+          },
+          "latestDistrictInventory": {
+            "year": 2022,
+            "electionId": 290,
+            "districtCount": 25
+          }
+        }
+      ]
+    },
+    {
+      "slug": "haryana",
+      "name": "Haryana",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Haryana",
+          "geographyVersionId": "haryana-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 31
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 298,
+            "year": 2024
+          },
+          "latestDistrictInventory": {
+            "year": 2024,
+            "electionId": 298,
+            "districtCount": 22
+          }
+        }
+      ]
+    },
+    {
+      "slug": "himachal-pradesh",
+      "name": "Himachal Pradesh",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Himachal Pradesh",
+          "geographyVersionId": "himachal-pradesh-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 22
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 291,
+            "year": 2022
+          },
+          "latestDistrictInventory": {
+            "year": 2022,
+            "electionId": 291,
+            "districtCount": 12
+          }
+        }
+      ]
+    },
+    {
+      "slug": "hyderabad",
+      "name": "Hyderabad",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Hyderabad",
+          "geographyVersionId": "hyderabad-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 10
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "jammu-and-kashmir",
+      "name": "Jammu and Kashmir",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Jammu & Kashmir",
+          "geographyVersionId": "jammu-and-kashmir-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 32
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 299,
+            "year": 2024
+          },
+          "latestDistrictInventory": {
+            "year": 2024,
+            "electionId": 299,
+            "districtCount": 20
+          }
+        }
+      ]
+    },
+    {
+      "slug": "jharkhand",
+      "name": "Jharkhand",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Jharkhand",
+          "geographyVersionId": "jharkhand-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 53
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 301,
+            "year": 2024
+          },
+          "latestDistrictInventory": {
+            "year": 2024,
+            "electionId": 301,
+            "districtCount": 22
+          }
+        }
+      ]
+    },
+    {
+      "slug": "karnataka",
+      "name": "Karnataka",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Karnataka",
+          "geographyVersionId": "karnataka-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 43
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 292,
+            "year": 2023
+          },
+          "latestDistrictInventory": {
+            "year": 2023,
+            "electionId": 292,
+            "districtCount": 27
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kerala",
+      "name": "Kerala",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Kerala",
+          "geographyVersionId": "kerala-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 28
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 281,
+            "year": 2021
+          },
+          "latestDistrictInventory": {
+            "year": 2021,
+            "electionId": 281,
+            "districtCount": 14
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kutch",
+      "name": "Kutch",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Kutch",
+          "geographyVersionId": "kutch-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 23
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "ladakh",
+      "name": "Ladakh",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Ladakh",
+          "geographyVersionId": "ladakh-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 63
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "lakshadweep",
+      "name": "Lakshadweep",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Laccadive, Minicoy And Amindivi Islands",
+          "geographyVersionId": "lakshadweep-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 38
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        },
+        {
+          "sourceLabel": "Lakshadweep",
+          "geographyVersionId": "lakshadweep-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 48
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "madhya-bharat",
+      "name": "Madhya Bharat",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Madhya Bharat",
+          "geographyVersionId": "madhya-bharat-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 11
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "madhya-pradesh",
+      "name": "Madhya Pradesh",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Madhya Pradesh [1947 - 1999]",
+          "geographyVersionId": "madhya-pradesh-1947-1999",
+          "versionLabel": "1947 - 1999",
+          "sourceIds": {
+            "indiavotesStateId": 4
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": false,
+            "stateInfo": true,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        },
+        {
+          "sourceLabel": "Madhya Pradesh [2000 Onwards]",
+          "geographyVersionId": "madhya-pradesh-2000-onwards",
+          "versionLabel": "2000 Onwards",
+          "sourceIds": {
+            "indiavotesStateId": 59
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 295,
+            "year": 2023
+          },
+          "latestDistrictInventory": {
+            "year": 2023,
+            "electionId": 295,
+            "districtCount": 48
+          }
+        }
+      ]
+    },
+    {
+      "slug": "madras",
+      "name": "Madras",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Madras",
+          "geographyVersionId": "madras-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 5
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "maharashtra",
+      "name": "Maharashtra",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Maharashtra",
+          "geographyVersionId": "maharashtra-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 30
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 300,
+            "year": 2024
+          },
+          "latestDistrictInventory": {
+            "year": 2024,
+            "electionId": 300,
+            "districtCount": 35
+          }
+        }
+      ]
+    },
+    {
+      "slug": "manipur",
+      "name": "Manipur",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Manipur",
+          "geographyVersionId": "manipur-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 24
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 288,
+            "year": 2022
+          },
+          "latestDistrictInventory": {
+            "year": 2022,
+            "electionId": 288,
+            "districtCount": 9
+          }
+        }
+      ]
+    },
+    {
+      "slug": "meghalaya",
+      "name": "Meghalaya",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Meghalaya",
+          "geographyVersionId": "meghalaya-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 44
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 269,
+            "year": 2018
+          },
+          "latestDistrictInventory": {
+            "year": 2018,
+            "electionId": 269,
+            "districtCount": 7
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mizoram",
+      "name": "Mizoram",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Mizoram",
+          "geographyVersionId": "mizoram-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 45
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 294,
+            "year": 2023
+          },
+          "latestDistrictInventory": {
+            "year": 2023,
+            "electionId": 294,
+            "districtCount": 8
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mysore",
+      "name": "Mysore",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Mysore",
+          "geographyVersionId": "mysore-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 12
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "nagaland",
+      "name": "Nagaland",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Nagaland",
+          "geographyVersionId": "nagaland-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 33
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 262,
+            "year": 2018
+          },
+          "latestDistrictInventory": {
+            "year": 2013,
+            "electionId": 226,
+            "districtCount": 11
+          }
+        }
+      ]
+    },
+    {
+      "slug": "odisha",
+      "name": "Odisha",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Orissa",
+          "geographyVersionId": "odisha-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 6
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 271,
+            "year": 2019
+          },
+          "latestDistrictInventory": {
+            "year": 2019,
+            "electionId": 271,
+            "districtCount": 30
+          }
+        }
+      ]
+    },
+    {
+      "slug": "patiala-and-east-punj",
+      "name": "Patiala And East Punj",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Patiala And East Punj",
+          "geographyVersionId": "patiala-and-east-punj-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 13
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "puducherry",
+      "name": "Puducherry",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Pondicherry",
+          "geographyVersionId": "puducherry-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 39
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 282,
+            "year": 2021
+          },
+          "latestDistrictInventory": {
+            "year": 2021,
+            "electionId": 282,
+            "districtCount": 4
+          }
+        }
+      ]
+    },
+    {
+      "slug": "punjab",
+      "name": "Punjab",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Punjab",
+          "geographyVersionId": "punjab-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 7
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 286,
+            "year": 2022
+          },
+          "latestDistrictInventory": {
+            "year": 2022,
+            "electionId": 286,
+            "districtCount": 17
+          }
+        }
+      ]
+    },
+    {
+      "slug": "rajasthan",
+      "name": "Rajasthan",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Rajasthan",
+          "geographyVersionId": "rajasthan-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 14
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 297,
+            "year": 2023
+          },
+          "latestDistrictInventory": {
+            "year": 2023,
+            "electionId": 297,
+            "districtCount": 32
+          }
+        }
+      ]
+    },
+    {
+      "slug": "saurashtra",
+      "name": "Saurashtra",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Saurashtra",
+          "geographyVersionId": "saurashtra-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 15
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "sikkim",
+      "name": "Sikkim",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Sikkim",
+          "geographyVersionId": "sikkim-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 46
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 274,
+            "year": 2019
+          },
+          "latestDistrictInventory": {
+            "year": 2019,
+            "electionId": 274,
+            "districtCount": 4
+          }
+        }
+      ]
+    },
+    {
+      "slug": "tamil-nadu",
+      "name": "Tamil Nadu",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Tamil Nadu",
+          "geographyVersionId": "tamil-nadu-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 40
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 283,
+            "year": 2021
+          },
+          "latestDistrictInventory": {
+            "year": 2021,
+            "electionId": 283,
+            "districtCount": 30
+          }
+        }
+      ]
+    },
+    {
+      "slug": "telangana",
+      "name": "Telangana",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Telangana",
+          "geographyVersionId": "telangana-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 61
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": {
+            "electionId": 296,
+            "year": 2023
+          },
+          "latestDistrictInventory": {
+            "year": 2023,
+            "electionId": 296,
+            "districtCount": 10
+          }
+        }
+      ]
+    },
+    {
+      "slug": "travancore-cochin",
+      "name": "Travancore Cochin",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Travancore Cochin",
+          "geographyVersionId": "travancore-cochin-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 16
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "tripura",
+      "name": "Tripura",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Tripura",
+          "geographyVersionId": "tripura-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 25
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 264,
+            "year": 2018
+          },
+          "latestDistrictInventory": {
+            "year": 2018,
+            "electionId": 264,
+            "districtCount": 4
+          }
+        }
+      ]
+    },
+    {
+      "slug": "uttar-pradesh",
+      "name": "Uttar Pradesh",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Uttar Pradesh [1947 - 1999]",
+          "geographyVersionId": "uttar-pradesh-1947-1999",
+          "versionLabel": "1947 - 1999",
+          "sourceIds": {
+            "indiavotesStateId": 8
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": false,
+            "stateInfo": true,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        },
+        {
+          "sourceLabel": "Uttar Pradesh [2000 Onwards]",
+          "geographyVersionId": "uttar-pradesh-2000-onwards",
+          "versionLabel": "2000 Onwards",
+          "sourceIds": {
+            "indiavotesStateId": 60
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 289,
+            "year": 2022
+          },
+          "latestDistrictInventory": {
+            "year": 2022,
+            "electionId": 289,
+            "districtCount": 70
+          }
+        }
+      ]
+    },
+    {
+      "slug": "uttarakhand",
+      "name": "Uttarakhand",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "Uttarakhand",
+          "geographyVersionId": "uttarakhand-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 56
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 287,
+            "year": 2022
+          },
+          "latestDistrictInventory": {
+            "year": 2022,
+            "electionId": 287,
+            "districtCount": 13
+          }
+        }
+      ]
+    },
+    {
+      "slug": "vindhya-pradesh",
+      "name": "Vindhya Pradesh",
+      "entityType": "historic",
+      "versions": [
+        {
+          "sourceLabel": "Vindhya Pradesh",
+          "geographyVersionId": "vindhya-pradesh-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 26
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": false,
+            "assemblyDistrict": false,
+            "stateInfo": false,
+            "stateSummary": false
+          },
+          "latestAssemblyElection": null,
+          "latestDistrictInventory": null
+        }
+      ]
+    },
+    {
+      "slug": "west-bengal",
+      "name": "West Bengal",
+      "entityType": "current",
+      "versions": [
+        {
+          "sourceLabel": "West Bengal",
+          "geographyVersionId": "west-bengal-default",
+          "versionLabel": null,
+          "sourceIds": {
+            "indiavotesStateId": 9
+          },
+          "availability": {
+            "lokSabha": true,
+            "assembly": true,
+            "assemblyDistrict": true,
+            "stateInfo": true,
+            "stateSummary": true
+          },
+          "latestAssemblyElection": {
+            "electionId": 284,
+            "year": 2021
+          },
+          "latestDistrictInventory": {
+            "year": 2021,
+            "electionId": 284,
+            "districtCount": 19
+          }
+        }
+      ]
+    }
+  ],
+  "stateVersions": [
+    {
+      "sourceLabel": "Ajmer",
+      "baseLabel": "Ajmer",
+      "canonicalStateName": "Ajmer",
+      "canonicalStateSlug": "ajmer",
+      "versionLabel": null,
+      "geographyVersionId": "ajmer-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 17
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Andaman & Nicobar Islands",
+      "baseLabel": "Andaman & Nicobar Islands",
+      "canonicalStateName": "Andaman and Nicobar Islands",
+      "canonicalStateSlug": "andaman-and-nicobar-islands",
+      "versionLabel": null,
+      "geographyVersionId": "andaman-and-nicobar-islands-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 34
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": true
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Andhra Pradesh",
+      "baseLabel": "Andhra Pradesh",
+      "canonicalStateName": "Andhra Pradesh",
+      "canonicalStateSlug": "andhra-pradesh",
+      "versionLabel": null,
+      "geographyVersionId": "andhra-pradesh-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 27
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 205,
+          "year": 2009
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 205,
+        "year": 2009
+      },
+      "latestDistrictInventory": {
+        "year": 2009,
+        "electionId": 205,
+        "districtCount": 23
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Andhra Pradesh [2014 Onwards]",
+      "baseLabel": "Andhra Pradesh",
+      "canonicalStateName": "Andhra Pradesh",
+      "canonicalStateSlug": "andhra-pradesh",
+      "versionLabel": "2014 Onwards",
+      "geographyVersionId": "andhra-pradesh-2014-onwards",
+      "entityType": "current",
+      "validFromYear": 2014,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 62
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": false
+      },
+      "assemblyYears": [
+        {
+          "electionId": 272,
+          "year": 2019
+        },
+        {
+          "electionId": 235,
+          "year": 2014
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 272,
+        "year": 2019
+      },
+      "latestDistrictInventory": {
+        "year": 2019,
+        "electionId": 272,
+        "districtCount": 13
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Arunachal Pradesh",
+      "baseLabel": "Arunachal Pradesh",
+      "canonicalStateName": "Arunachal Pradesh",
+      "canonicalStateSlug": "arunachal-pradesh",
+      "versionLabel": null,
+      "geographyVersionId": "arunachal-pradesh-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 41
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 273,
+          "year": 2019
+        },
+        {
+          "electionId": 236,
+          "year": 2014
+        },
+        {
+          "electionId": 207,
+          "year": 2009
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 273,
+        "year": 2019
+      },
+      "latestDistrictInventory": {
+        "year": 2019,
+        "electionId": 273,
+        "districtCount": 16
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Assam",
+      "baseLabel": "Assam",
+      "canonicalStateName": "Assam",
+      "canonicalStateSlug": "assam",
+      "versionLabel": null,
+      "geographyVersionId": "assam-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 1
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 280,
+          "year": 2021
+        },
+        {
+          "electionId": 247,
+          "year": 2016
+        },
+        {
+          "electionId": 216,
+          "year": 2011
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 280,
+        "year": 2021
+      },
+      "latestDistrictInventory": {
+        "year": 2021,
+        "electionId": 280,
+        "districtCount": 25
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Bhopal",
+      "baseLabel": "Bhopal",
+      "canonicalStateName": "Bhopal",
+      "canonicalStateSlug": "bhopal",
+      "versionLabel": null,
+      "geographyVersionId": "bhopal-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 18
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Bihar [1947 - 1999]",
+      "baseLabel": "Bihar",
+      "canonicalStateName": "Bihar",
+      "canonicalStateSlug": "bihar",
+      "versionLabel": "1947 - 1999",
+      "geographyVersionId": "bihar-1947-1999",
+      "entityType": "current",
+      "validFromYear": 1947,
+      "validToYear": 1999,
+      "sourceIds": {
+        "indiavotesStateId": 2
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": false,
+        "stateInfo": true,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Bihar [2000 Onwards]",
+      "baseLabel": "Bihar",
+      "canonicalStateName": "Bihar",
+      "canonicalStateSlug": "bihar",
+      "versionLabel": "2000 Onwards",
+      "geographyVersionId": "bihar-2000-onwards",
+      "entityType": "current",
+      "validFromYear": 2000,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 58
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 303,
+          "year": 2025
+        },
+        {
+          "electionId": 279,
+          "year": 2020
+        },
+        {
+          "electionId": 245,
+          "year": 2015
+        },
+        {
+          "electionId": 212,
+          "year": 2010
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 303,
+        "year": 2025
+      },
+      "latestDistrictInventory": {
+        "year": 2025,
+        "electionId": 303,
+        "districtCount": 38
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Bilaspur",
+      "baseLabel": "Bilaspur",
+      "canonicalStateName": "Bilaspur",
+      "canonicalStateSlug": "bilaspur",
+      "versionLabel": null,
+      "geographyVersionId": "bilaspur-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 19
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Bombay",
+      "baseLabel": "Bombay",
+      "canonicalStateName": "Bombay",
+      "canonicalStateSlug": "bombay",
+      "versionLabel": null,
+      "geographyVersionId": "bombay-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 3
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Chandigarh",
+      "baseLabel": "Chandigarh",
+      "canonicalStateName": "Chandigarh",
+      "canonicalStateSlug": "chandigarh",
+      "versionLabel": null,
+      "geographyVersionId": "chandigarh-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 35
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": true
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Chhattisgarh",
+      "baseLabel": "Chhattisgarh",
+      "canonicalStateName": "Chhattisgarh",
+      "canonicalStateSlug": "chhattisgarh",
+      "versionLabel": null,
+      "geographyVersionId": "chhattisgarh-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 54
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 293,
+          "year": 2023
+        },
+        {
+          "electionId": 260,
+          "year": 2018
+        },
+        {
+          "electionId": 233,
+          "year": 2013
+        },
+        {
+          "electionId": 198,
+          "year": 2008
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 293,
+        "year": 2023
+      },
+      "latestDistrictInventory": {
+        "year": 2023,
+        "electionId": 293,
+        "districtCount": 16
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Coorg",
+      "baseLabel": "Coorg",
+      "canonicalStateName": "Coorg",
+      "canonicalStateSlug": "coorg",
+      "versionLabel": null,
+      "geographyVersionId": "coorg-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 20
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Dadra & Nagar Haveli",
+      "baseLabel": "Dadra & Nagar Haveli",
+      "canonicalStateName": "Dadra and Nagar Haveli and Daman and Diu",
+      "canonicalStateSlug": "dadra-and-nagar-haveli-and-daman-and-diu",
+      "versionLabel": null,
+      "geographyVersionId": "dadra-and-nagar-haveli-and-daman-and-diu-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 36
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": true
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Daman & Diu",
+      "baseLabel": "Daman & Diu",
+      "canonicalStateName": "Dadra and Nagar Haveli and Daman and Diu",
+      "canonicalStateSlug": "dadra-and-nagar-haveli-and-daman-and-diu",
+      "versionLabel": null,
+      "geographyVersionId": "dadra-and-nagar-haveli-and-daman-and-diu-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 52
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": true
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Delhi",
+      "baseLabel": "Delhi",
+      "canonicalStateName": "Delhi",
+      "canonicalStateSlug": "delhi",
+      "versionLabel": null,
+      "geographyVersionId": "delhi-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 21
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Delhi [1977 Onwards]",
+      "baseLabel": "Delhi",
+      "canonicalStateName": "Delhi",
+      "canonicalStateSlug": "delhi",
+      "versionLabel": "1977 Onwards",
+      "geographyVersionId": "delhi-1977-onwards",
+      "entityType": "current",
+      "validFromYear": 1977,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 57
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 302,
+          "year": 2025
+        },
+        {
+          "electionId": 277,
+          "year": 2020
+        },
+        {
+          "electionId": 244,
+          "year": 2015
+        },
+        {
+          "electionId": 230,
+          "year": 2013
+        },
+        {
+          "electionId": 201,
+          "year": 2008
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 302,
+        "year": 2025
+      },
+      "latestDistrictInventory": {
+        "year": 2025,
+        "electionId": 302,
+        "districtCount": 9
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Goa",
+      "baseLabel": "Goa",
+      "canonicalStateName": "Goa",
+      "canonicalStateSlug": "goa",
+      "versionLabel": null,
+      "geographyVersionId": "goa-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 51
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 285,
+          "year": 2022
+        },
+        {
+          "electionId": 253,
+          "year": 2017
+        },
+        {
+          "electionId": 218,
+          "year": 2012
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 285,
+        "year": 2022
+      },
+      "latestDistrictInventory": {
+        "year": 2022,
+        "electionId": 285,
+        "districtCount": 2
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Goa, Daman And Diu",
+      "baseLabel": "Goa, Daman And Diu",
+      "canonicalStateName": "Goa, Daman And Diu",
+      "canonicalStateSlug": "goa-daman-and-diu",
+      "versionLabel": null,
+      "geographyVersionId": "goa-daman-and-diu-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 37
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": false,
+        "stateInfo": true,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Gujarat",
+      "baseLabel": "Gujarat",
+      "canonicalStateName": "Gujarat",
+      "canonicalStateSlug": "gujarat",
+      "versionLabel": null,
+      "geographyVersionId": "gujarat-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 29
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 290,
+          "year": 2022
+        },
+        {
+          "electionId": 257,
+          "year": 2017
+        },
+        {
+          "electionId": 223,
+          "year": 2012
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 290,
+        "year": 2022
+      },
+      "latestDistrictInventory": {
+        "year": 2022,
+        "electionId": 290,
+        "districtCount": 25
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Haryana",
+      "baseLabel": "Haryana",
+      "canonicalStateName": "Haryana",
+      "canonicalStateSlug": "haryana",
+      "versionLabel": null,
+      "geographyVersionId": "haryana-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 31
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 298,
+          "year": 2024
+        },
+        {
+          "electionId": 275,
+          "year": 2019
+        },
+        {
+          "electionId": 240,
+          "year": 2014
+        },
+        {
+          "electionId": 210,
+          "year": 2009
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 298,
+        "year": 2024
+      },
+      "latestDistrictInventory": {
+        "year": 2024,
+        "electionId": 298,
+        "districtCount": 22
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Himachal Pradesh",
+      "baseLabel": "Himachal Pradesh",
+      "canonicalStateName": "Himachal Pradesh",
+      "canonicalStateSlug": "himachal-pradesh",
+      "versionLabel": null,
+      "geographyVersionId": "himachal-pradesh-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 22
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 291,
+          "year": 2022
+        },
+        {
+          "electionId": 256,
+          "year": 2017
+        },
+        {
+          "electionId": 224,
+          "year": 2012
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 291,
+        "year": 2022
+      },
+      "latestDistrictInventory": {
+        "year": 2022,
+        "electionId": 291,
+        "districtCount": 12
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Hyderabad",
+      "baseLabel": "Hyderabad",
+      "canonicalStateName": "Hyderabad",
+      "canonicalStateSlug": "hyderabad",
+      "versionLabel": null,
+      "geographyVersionId": "hyderabad-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 10
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Jammu & Kashmir",
+      "baseLabel": "Jammu & Kashmir",
+      "canonicalStateName": "Jammu and Kashmir",
+      "canonicalStateSlug": "jammu-and-kashmir",
+      "versionLabel": null,
+      "geographyVersionId": "jammu-and-kashmir-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 32
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 299,
+          "year": 2024
+        },
+        {
+          "electionId": 242,
+          "year": 2014
+        },
+        {
+          "electionId": 197,
+          "year": 2008
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 299,
+        "year": 2024
+      },
+      "latestDistrictInventory": {
+        "year": 2024,
+        "electionId": 299,
+        "districtCount": 20
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Jharkhand",
+      "baseLabel": "Jharkhand",
+      "canonicalStateName": "Jharkhand",
+      "canonicalStateSlug": "jharkhand",
+      "versionLabel": null,
+      "geographyVersionId": "jharkhand-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 53
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 301,
+          "year": 2024
+        },
+        {
+          "electionId": 278,
+          "year": 2020
+        },
+        {
+          "electionId": 243,
+          "year": 2014
+        },
+        {
+          "electionId": 209,
+          "year": 2009
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 301,
+        "year": 2024
+      },
+      "latestDistrictInventory": {
+        "year": 2024,
+        "electionId": 301,
+        "districtCount": 22
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Karnataka",
+      "baseLabel": "Karnataka",
+      "canonicalStateName": "Karnataka",
+      "canonicalStateSlug": "karnataka",
+      "versionLabel": null,
+      "geographyVersionId": "karnataka-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 43
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 292,
+          "year": 2023
+        },
+        {
+          "electionId": 258,
+          "year": 2018
+        },
+        {
+          "electionId": 229,
+          "year": 2013
+        },
+        {
+          "electionId": 200,
+          "year": 2008
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 292,
+        "year": 2023
+      },
+      "latestDistrictInventory": {
+        "year": 2023,
+        "electionId": 292,
+        "districtCount": 27
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Kerala",
+      "baseLabel": "Kerala",
+      "canonicalStateName": "Kerala",
+      "canonicalStateSlug": "kerala",
+      "versionLabel": null,
+      "geographyVersionId": "kerala-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 28
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 281,
+          "year": 2021
+        },
+        {
+          "electionId": 248,
+          "year": 2016
+        },
+        {
+          "electionId": 213,
+          "year": 2011
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 281,
+        "year": 2021
+      },
+      "latestDistrictInventory": {
+        "year": 2021,
+        "electionId": 281,
+        "districtCount": 14
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Kutch",
+      "baseLabel": "Kutch",
+      "canonicalStateName": "Kutch",
+      "canonicalStateSlug": "kutch",
+      "versionLabel": null,
+      "geographyVersionId": "kutch-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 23
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Laccadive, Minicoy And Amindivi Islands",
+      "baseLabel": "Laccadive, Minicoy And Amindivi Islands",
+      "canonicalStateName": "Lakshadweep",
+      "canonicalStateSlug": "lakshadweep",
+      "versionLabel": null,
+      "geographyVersionId": "lakshadweep-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 38
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Ladakh",
+      "baseLabel": "Ladakh",
+      "canonicalStateName": "Ladakh",
+      "canonicalStateSlug": "ladakh",
+      "versionLabel": null,
+      "geographyVersionId": "ladakh-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 63
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Lakshadweep",
+      "baseLabel": "Lakshadweep",
+      "canonicalStateName": "Lakshadweep",
+      "canonicalStateSlug": "lakshadweep",
+      "versionLabel": null,
+      "geographyVersionId": "lakshadweep-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 48
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": true
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Madhya Bharat",
+      "baseLabel": "Madhya Bharat",
+      "canonicalStateName": "Madhya Bharat",
+      "canonicalStateSlug": "madhya-bharat",
+      "versionLabel": null,
+      "geographyVersionId": "madhya-bharat-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 11
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Madhya Pradesh [1947 - 1999]",
+      "baseLabel": "Madhya Pradesh",
+      "canonicalStateName": "Madhya Pradesh",
+      "canonicalStateSlug": "madhya-pradesh",
+      "versionLabel": "1947 - 1999",
+      "geographyVersionId": "madhya-pradesh-1947-1999",
+      "entityType": "current",
+      "validFromYear": 1947,
+      "validToYear": 1999,
+      "sourceIds": {
+        "indiavotesStateId": 4
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": false,
+        "stateInfo": true,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Madhya Pradesh [2000 Onwards]",
+      "baseLabel": "Madhya Pradesh",
+      "canonicalStateName": "Madhya Pradesh",
+      "canonicalStateSlug": "madhya-pradesh",
+      "versionLabel": "2000 Onwards",
+      "geographyVersionId": "madhya-pradesh-2000-onwards",
+      "entityType": "current",
+      "validFromYear": 2000,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 59
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 295,
+          "year": 2023
+        },
+        {
+          "electionId": 267,
+          "year": 2018
+        },
+        {
+          "electionId": 232,
+          "year": 2013
+        },
+        {
+          "electionId": 204,
+          "year": 2008
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 295,
+        "year": 2023
+      },
+      "latestDistrictInventory": {
+        "year": 2023,
+        "electionId": 295,
+        "districtCount": 48
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Madras",
+      "baseLabel": "Madras",
+      "canonicalStateName": "Madras",
+      "canonicalStateSlug": "madras",
+      "versionLabel": null,
+      "geographyVersionId": "madras-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 5
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Maharashtra",
+      "baseLabel": "Maharashtra",
+      "canonicalStateName": "Maharashtra",
+      "canonicalStateSlug": "maharashtra",
+      "versionLabel": null,
+      "geographyVersionId": "maharashtra-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 30
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 300,
+          "year": 2024
+        },
+        {
+          "electionId": 276,
+          "year": 2019
+        },
+        {
+          "electionId": 241,
+          "year": 2014
+        },
+        {
+          "electionId": 206,
+          "year": 2009
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 300,
+        "year": 2024
+      },
+      "latestDistrictInventory": {
+        "year": 2024,
+        "electionId": 300,
+        "districtCount": 35
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Manipur",
+      "baseLabel": "Manipur",
+      "canonicalStateName": "Manipur",
+      "canonicalStateSlug": "manipur",
+      "versionLabel": null,
+      "geographyVersionId": "manipur-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 24
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 288,
+          "year": 2022
+        },
+        {
+          "electionId": 254,
+          "year": 2017
+        },
+        {
+          "electionId": 219,
+          "year": 2012
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 288,
+        "year": 2022
+      },
+      "latestDistrictInventory": {
+        "year": 2022,
+        "electionId": 288,
+        "districtCount": 9
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Meghalaya",
+      "baseLabel": "Meghalaya",
+      "canonicalStateName": "Meghalaya",
+      "canonicalStateSlug": "meghalaya",
+      "versionLabel": null,
+      "geographyVersionId": "meghalaya-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 44
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 269,
+          "year": 2018
+        },
+        {
+          "electionId": 225,
+          "year": 2013
+        },
+        {
+          "electionId": 203,
+          "year": 2008
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 269,
+        "year": 2018
+      },
+      "latestDistrictInventory": {
+        "year": 2018,
+        "electionId": 269,
+        "districtCount": 7
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Mizoram",
+      "baseLabel": "Mizoram",
+      "canonicalStateName": "Mizoram",
+      "canonicalStateSlug": "mizoram",
+      "versionLabel": null,
+      "geographyVersionId": "mizoram-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 45
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 294,
+          "year": 2023
+        },
+        {
+          "electionId": 259,
+          "year": 2018
+        },
+        {
+          "electionId": 234,
+          "year": 2013
+        },
+        {
+          "electionId": 199,
+          "year": 2008
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 294,
+        "year": 2023
+      },
+      "latestDistrictInventory": {
+        "year": 2023,
+        "electionId": 294,
+        "districtCount": 8
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Mysore",
+      "baseLabel": "Mysore",
+      "canonicalStateName": "Mysore",
+      "canonicalStateSlug": "mysore",
+      "versionLabel": null,
+      "geographyVersionId": "mysore-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 12
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Nagaland",
+      "baseLabel": "Nagaland",
+      "canonicalStateName": "Nagaland",
+      "canonicalStateSlug": "nagaland",
+      "versionLabel": null,
+      "geographyVersionId": "nagaland-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 33
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 262,
+          "year": 2018
+        },
+        {
+          "electionId": 226,
+          "year": 2013
+        },
+        {
+          "electionId": 195,
+          "year": 2008
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 262,
+        "year": 2018
+      },
+      "latestDistrictInventory": {
+        "year": 2013,
+        "electionId": 226,
+        "districtCount": 11
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Orissa",
+      "baseLabel": "Orissa",
+      "canonicalStateName": "Odisha",
+      "canonicalStateSlug": "odisha",
+      "versionLabel": null,
+      "geographyVersionId": "odisha-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 6
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 271,
+          "year": 2019
+        },
+        {
+          "electionId": 237,
+          "year": 2014
+        },
+        {
+          "electionId": 208,
+          "year": 2009
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 271,
+        "year": 2019
+      },
+      "latestDistrictInventory": {
+        "year": 2019,
+        "electionId": 271,
+        "districtCount": 30
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Patiala And East Punj",
+      "baseLabel": "Patiala And East Punj",
+      "canonicalStateName": "Patiala And East Punj",
+      "canonicalStateSlug": "patiala-and-east-punj",
+      "versionLabel": null,
+      "geographyVersionId": "patiala-and-east-punj-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 13
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Pondicherry",
+      "baseLabel": "Pondicherry",
+      "canonicalStateName": "Puducherry",
+      "canonicalStateSlug": "puducherry",
+      "versionLabel": null,
+      "geographyVersionId": "puducherry-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 39
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 282,
+          "year": 2021
+        },
+        {
+          "electionId": 246,
+          "year": 2016
+        },
+        {
+          "electionId": 214,
+          "year": 2011
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 282,
+        "year": 2021
+      },
+      "latestDistrictInventory": {
+        "year": 2021,
+        "electionId": 282,
+        "districtCount": 4
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Punjab",
+      "baseLabel": "Punjab",
+      "canonicalStateName": "Punjab",
+      "canonicalStateSlug": "punjab",
+      "versionLabel": null,
+      "geographyVersionId": "punjab-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 7
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 286,
+          "year": 2022
+        },
+        {
+          "electionId": 251,
+          "year": 2017
+        },
+        {
+          "electionId": 221,
+          "year": 2012
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 286,
+        "year": 2022
+      },
+      "latestDistrictInventory": {
+        "year": 2022,
+        "electionId": 286,
+        "districtCount": 17
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Rajasthan",
+      "baseLabel": "Rajasthan",
+      "canonicalStateName": "Rajasthan",
+      "canonicalStateSlug": "rajasthan",
+      "versionLabel": null,
+      "geographyVersionId": "rajasthan-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 14
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 297,
+          "year": 2023
+        },
+        {
+          "electionId": 268,
+          "year": 2018
+        },
+        {
+          "electionId": 231,
+          "year": 2013
+        },
+        {
+          "electionId": 202,
+          "year": 2008
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 297,
+        "year": 2023
+      },
+      "latestDistrictInventory": {
+        "year": 2023,
+        "electionId": 297,
+        "districtCount": 32
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Saurashtra",
+      "baseLabel": "Saurashtra",
+      "canonicalStateName": "Saurashtra",
+      "canonicalStateSlug": "saurashtra",
+      "versionLabel": null,
+      "geographyVersionId": "saurashtra-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 15
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Sikkim",
+      "baseLabel": "Sikkim",
+      "canonicalStateName": "Sikkim",
+      "canonicalStateSlug": "sikkim",
+      "versionLabel": null,
+      "geographyVersionId": "sikkim-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 46
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 274,
+          "year": 2019
+        },
+        {
+          "electionId": 238,
+          "year": 2014
+        },
+        {
+          "electionId": 211,
+          "year": 2009
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 274,
+        "year": 2019
+      },
+      "latestDistrictInventory": {
+        "year": 2019,
+        "electionId": 274,
+        "districtCount": 4
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Tamil Nadu",
+      "baseLabel": "Tamil Nadu",
+      "canonicalStateName": "Tamil Nadu",
+      "canonicalStateSlug": "tamil-nadu",
+      "versionLabel": null,
+      "geographyVersionId": "tamil-nadu-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 40
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 283,
+          "year": 2021
+        },
+        {
+          "electionId": 250,
+          "year": 2016
+        },
+        {
+          "electionId": 215,
+          "year": 2011
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 283,
+        "year": 2021
+      },
+      "latestDistrictInventory": {
+        "year": 2021,
+        "electionId": 283,
+        "districtCount": 30
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Telangana",
+      "baseLabel": "Telangana",
+      "canonicalStateName": "Telangana",
+      "canonicalStateSlug": "telangana",
+      "versionLabel": null,
+      "geographyVersionId": "telangana-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 61
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": false
+      },
+      "assemblyYears": [
+        {
+          "electionId": 296,
+          "year": 2023
+        },
+        {
+          "electionId": 266,
+          "year": 2018
+        },
+        {
+          "electionId": 239,
+          "year": 2014
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 296,
+        "year": 2023
+      },
+      "latestDistrictInventory": {
+        "year": 2023,
+        "electionId": 296,
+        "districtCount": 10
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Travancore Cochin",
+      "baseLabel": "Travancore Cochin",
+      "canonicalStateName": "Travancore Cochin",
+      "canonicalStateSlug": "travancore-cochin",
+      "versionLabel": null,
+      "geographyVersionId": "travancore-cochin-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 16
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "Tripura",
+      "baseLabel": "Tripura",
+      "canonicalStateName": "Tripura",
+      "canonicalStateSlug": "tripura",
+      "versionLabel": null,
+      "geographyVersionId": "tripura-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 25
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 264,
+          "year": 2018
+        },
+        {
+          "electionId": 227,
+          "year": 2013
+        },
+        {
+          "electionId": 196,
+          "year": 2008
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 264,
+        "year": 2018
+      },
+      "latestDistrictInventory": {
+        "year": 2018,
+        "electionId": 264,
+        "districtCount": 4
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Uttar Pradesh [1947 - 1999]",
+      "baseLabel": "Uttar Pradesh",
+      "canonicalStateName": "Uttar Pradesh",
+      "canonicalStateSlug": "uttar-pradesh",
+      "versionLabel": "1947 - 1999",
+      "geographyVersionId": "uttar-pradesh-1947-1999",
+      "entityType": "current",
+      "validFromYear": 1947,
+      "validToYear": 1999,
+      "sourceIds": {
+        "indiavotesStateId": 8
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": false,
+        "stateInfo": true,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Uttar Pradesh [2000 Onwards]",
+      "baseLabel": "Uttar Pradesh",
+      "canonicalStateName": "Uttar Pradesh",
+      "canonicalStateSlug": "uttar-pradesh",
+      "versionLabel": "2000 Onwards",
+      "geographyVersionId": "uttar-pradesh-2000-onwards",
+      "entityType": "current",
+      "validFromYear": 2000,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 60
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 289,
+          "year": 2022
+        },
+        {
+          "electionId": 255,
+          "year": 2017
+        },
+        {
+          "electionId": 220,
+          "year": 2012
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 289,
+        "year": 2022
+      },
+      "latestDistrictInventory": {
+        "year": 2022,
+        "electionId": 289,
+        "districtCount": 70
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Uttarakhand",
+      "baseLabel": "Uttarakhand",
+      "canonicalStateName": "Uttarakhand",
+      "canonicalStateSlug": "uttarakhand",
+      "versionLabel": null,
+      "geographyVersionId": "uttarakhand-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 56
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 287,
+          "year": 2022
+        },
+        {
+          "electionId": 252,
+          "year": 2017
+        },
+        {
+          "electionId": 222,
+          "year": 2012
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 287,
+        "year": 2022
+      },
+      "latestDistrictInventory": {
+        "year": 2022,
+        "electionId": 287,
+        "districtCount": 13
+      },
+      "discoveryStatus": "captured"
+    },
+    {
+      "sourceLabel": "Vindhya Pradesh",
+      "baseLabel": "Vindhya Pradesh",
+      "canonicalStateName": "Vindhya Pradesh",
+      "canonicalStateSlug": "vindhya-pradesh",
+      "versionLabel": null,
+      "geographyVersionId": "vindhya-pradesh-default",
+      "entityType": "historic",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 26
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": false,
+        "assemblyDistrict": false,
+        "stateInfo": false,
+        "stateSummary": false
+      },
+      "assemblyYears": [],
+      "latestAssemblyElection": null,
+      "latestDistrictInventory": null,
+      "discoveryStatus": "not-captured"
+    },
+    {
+      "sourceLabel": "West Bengal",
+      "baseLabel": "West Bengal",
+      "canonicalStateName": "West Bengal",
+      "canonicalStateSlug": "west-bengal",
+      "versionLabel": null,
+      "geographyVersionId": "west-bengal-default",
+      "entityType": "current",
+      "validFromYear": null,
+      "validToYear": null,
+      "sourceIds": {
+        "indiavotesStateId": 9
+      },
+      "availability": {
+        "lokSabha": true,
+        "assembly": true,
+        "assemblyDistrict": true,
+        "stateInfo": true,
+        "stateSummary": true
+      },
+      "assemblyYears": [
+        {
+          "electionId": 284,
+          "year": 2021
+        },
+        {
+          "electionId": 249,
+          "year": 2016
+        },
+        {
+          "electionId": 217,
+          "year": 2011
+        }
+      ],
+      "latestAssemblyElection": {
+        "electionId": 284,
+        "year": 2021
+      },
+      "latestDistrictInventory": {
+        "year": 2021,
+        "electionId": 284,
+        "districtCount": 19
+      },
+      "discoveryStatus": "captured"
+    }
+  ]
+}

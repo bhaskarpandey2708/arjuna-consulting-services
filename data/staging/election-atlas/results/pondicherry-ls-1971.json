@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-03-09T14:44:11.897Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "puducherry",
+    "stateLabel": "Pondicherry",
+    "stateVersionSlug": "pondicherry",
+    "geographyVersionId": "puducherry-default",
+    "house": "LS",
+    "year": 1971,
+    "electionId": 5,
+    "stateId": 39
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "puducherry",
+      "stateLabel": "Pondicherry",
+      "stateVersionSlug": "pondicherry",
+      "geographyVersionId": "puducherry-default",
+      "house": "LS",
+      "year": 1971,
+      "electionId": 5,
+      "stateId": 39,
+      "constituency": "Pondicherry",
+      "constituencyNumber": 516,
+      "reservationType": "GEN",
+      "district": "",
+      "winner": "S. Mohan Kumaramangalam",
+      "winnerParty": "Indian National Congress",
+      "totalElectors": 246789,
+      "totalVotes": 172992,
+      "turnoutPct": 70.1,
+      "marginVotes": 65164,
+      "marginPct": 37.7,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/1971/pondicherry/pondicherry/2334/39/5",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/1/5/39",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/1971/pondicherry/pondicherry/2334/39/5",
+      "winnerVotes": 112714,
+      "winnerVoteShare": 65.2,
+      "runnerUp": "N. Sethuramane",
+      "runnerUpParty": "Indian National Congress (ORGANISATION)",
+      "runnerUpVotes": 47550,
+      "runnerUpVoteShare": 27.5,
+      "detailAvailable": true,
+      "detailFileName": "pondicherry-ls-1971-516-pondicherry-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Indian National Congress",
+      "votes": 112714,
+      "voteShare": 65.2
+    },
+    {
+      "party": "Indian National Congress (ORGANISATION)",
+      "votes": 47550,
+      "voteShare": 27.5
+    },
+    {
+      "party": "Independent",
+      "votes": 9824,
+      "voteShare": 5.7
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:16:30.336Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

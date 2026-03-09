@@ -1,0 +1,1986 @@
+{
+  "generatedAt": "2026-03-09T13:37:32.293Z",
+  "source": "lokdhaba",
+  "coverage": "assembly-district-rollup",
+  "selection": {
+    "state": "nagaland",
+    "house": "VS",
+    "year": 2018
+  },
+  "metrics": {
+    "totalDistricts": 12,
+    "totalSeats": 60,
+    "totalElectors": 1197438,
+    "totalVotes": 1004761,
+    "turnoutPct": 83.9,
+    "advancedMetrics": {
+      "sourceNative": {
+        "enopAvailable": true,
+        "meanEnop": 2.51,
+        "medianEnop": 2.38,
+        "highFragmentationSeats": 1,
+        "highFragmentationSeatShare": 1.7
+      },
+      "custom": {
+        "lowPluralitySeats": 10,
+        "lowPluralitySeatShare": 16.7,
+        "majorityWinnerSeats": 29,
+        "majorityWinnerSeatShare": 48.3,
+        "ultraCloseSeats": 11,
+        "ultraCloseSeatShare": 18.3,
+        "turnoutMedian": 87,
+        "turnoutIqr": 10.5,
+        "turnoutRange": 95.3,
+        "winnerVoteShareMedian": 50,
+        "marginMedian": 7.6,
+        "reservationMix": {
+          "reservedSeats": 59,
+          "reservedSeatShare": 98.3,
+          "scSeats": 0,
+          "stSeats": 59
+        }
+      }
+    }
+  },
+  "rowCount": 12,
+  "rows": [
+    {
+      "district": "Dimapur",
+      "districtSlug": "dimapur",
+      "totalSeats": 5,
+      "turnoutPct": 79.3,
+      "totalElectors": 200924,
+      "totalVotes": 159290,
+      "winnerParty": "NPF",
+      "winnerSeats": 2,
+      "winnerSeatShare": 40,
+      "winnerVoteShare": 29,
+      "closeContests": 1,
+      "meanMarginPct": 17.6,
+      "medianMarginPct": 17.9,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.41,
+          "medianEnop": 2.38,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 40,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 80.9,
+          "turnoutIqr": 2.2,
+          "turnoutRange": 12.4,
+          "winnerVoteShareMedian": 48.8,
+          "marginMedian": 17.9,
+          "reservationMix": {
+            "reservedSeats": 4,
+            "reservedSeatShare": 80,
+            "scSeats": 0,
+            "stSeats": 4
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPF",
+          "seats": 2,
+          "seatShare": 40,
+          "voteShare": 29
+        },
+        {
+          "party": "BJP",
+          "seats": 2,
+          "seatShare": 40,
+          "voteShare": 22
+        },
+        {
+          "party": "NDPP",
+          "seats": 1,
+          "seatShare": 20,
+          "voteShare": 23.2
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 13.1
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.7
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.7
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1
+        },
+        {
+          "party": "NPEP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.3
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Dimapur-I",
+          "constituencyNumber": 1,
+          "reservationType": "GEN",
+          "totalElectors": 22808,
+          "totalVotes": 18451,
+          "enop": 2.04,
+          "winner": "H. TOVIHOTO AYEMI",
+          "winnerParty": "BJP",
+          "winnerVotes": 11721,
+          "winnerVoteShare": 63.53,
+          "marginVotes": 6600,
+          "marginPct": 35.77,
+          "turnoutPct": 80.9
+        },
+        {
+          "constituency": "Dimapur-Ii",
+          "constituencyNumber": 2,
+          "reservationType": "ST",
+          "totalElectors": 52179,
+          "totalVotes": 38687,
+          "enop": 2.13,
+          "winner": "MOATOSHI LONGKUMER",
+          "winnerParty": "NPF",
+          "winnerVotes": 21942,
+          "winnerVoteShare": 56.72,
+          "marginVotes": 6939,
+          "marginPct": 17.94,
+          "turnoutPct": 74.14
+        },
+        {
+          "constituency": "Dimapur-Iii",
+          "constituencyNumber": 3,
+          "reservationType": "ST",
+          "totalElectors": 33223,
+          "totalVotes": 26958,
+          "enop": 2.38,
+          "winner": "AZHETO ZHIMOMI",
+          "winnerParty": "NPF",
+          "winnerVotes": 13162,
+          "winnerVoteShare": 48.82,
+          "marginVotes": 2138,
+          "marginPct": 7.93,
+          "turnoutPct": 81.14
+        },
+        {
+          "constituency": "Ghaspani-I",
+          "constituencyNumber": 4,
+          "reservationType": "ST",
+          "totalElectors": 66259,
+          "totalVotes": 52304,
+          "enop": 2.7,
+          "winner": "N. JACOB ZHIMOMI",
+          "winnerParty": "BJP",
+          "winnerVotes": 23391,
+          "winnerVoteShare": 44.72,
+          "marginVotes": 2595,
+          "marginPct": 4.96,
+          "turnoutPct": 78.94
+        },
+        {
+          "constituency": "Ghaspani-Ii",
+          "constituencyNumber": 5,
+          "reservationType": "ST",
+          "totalElectors": 26455,
+          "totalVotes": 22890,
+          "enop": 2.78,
+          "winner": "ZHALEO RIO",
+          "winnerParty": "NDPP",
+          "winnerVotes": 10939,
+          "winnerVoteShare": 47.79,
+          "marginVotes": 4916,
+          "marginPct": 21.48,
+          "turnoutPct": 86.52
+        }
+      ]
+    },
+    {
+      "district": "Kiphire",
+      "districtSlug": "kiphire",
+      "totalSeats": 2,
+      "turnoutPct": 81.3,
+      "totalElectors": 50501,
+      "totalVotes": 41071,
+      "winnerParty": "NPF",
+      "winnerSeats": 1,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 40.7,
+      "closeContests": 1,
+      "meanMarginPct": 4.2,
+      "medianMarginPct": 4.2,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.79,
+          "medianEnop": 2.79,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 50,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 50,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 81.8,
+          "turnoutIqr": 3.5,
+          "turnoutRange": 7,
+          "winnerVoteShareMedian": 44.4,
+          "marginMedian": 4.2,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 2
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPF",
+          "seats": 1,
+          "seatShare": 50,
+          "voteShare": 40.7
+        },
+        {
+          "party": "BJP",
+          "seats": 1,
+          "seatShare": 50,
+          "voteShare": 26.3
+        },
+        {
+          "party": "JD(U)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 18.5
+        },
+        {
+          "party": "NPEP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 9.1
+        },
+        {
+          "party": "NCP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.8
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Seyochung Sitimi",
+          "constituencyNumber": 59,
+          "reservationType": "ST",
+          "totalElectors": 21744,
+          "totalVotes": 18548,
+          "enop": 2,
+          "winner": "V. KASHIHO SANGTAM",
+          "winnerParty": "BJP",
+          "winnerVotes": 9830,
+          "winnerVoteShare": 53,
+          "marginVotes": 1162,
+          "marginPct": 6.26,
+          "turnoutPct": 85.3
+        },
+        {
+          "constituency": "Pungro Kiphire",
+          "constituencyNumber": 60,
+          "reservationType": "ST",
+          "totalElectors": 28757,
+          "totalVotes": 22523,
+          "enop": 3.57,
+          "winner": "T. TORECHU",
+          "winnerParty": "NPF",
+          "winnerVotes": 8056,
+          "winnerVoteShare": 35.77,
+          "marginVotes": 473,
+          "marginPct": 2.1,
+          "turnoutPct": 78.32
+        }
+      ]
+    },
+    {
+      "district": "Kohima",
+      "districtSlug": "kohima",
+      "totalSeats": 7,
+      "turnoutPct": 68.9,
+      "totalElectors": 141912,
+      "totalVotes": 97784,
+      "winnerParty": "NDPP",
+      "winnerSeats": 5,
+      "winnerSeatShare": 71.4,
+      "winnerVoteShare": 46,
+      "closeContests": 2,
+      "meanMarginPct": 10.3,
+      "medianMarginPct": 7.8,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.35,
+          "medianEnop": 2.25,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 14.3,
+          "majorityWinnerSeats": 4,
+          "majorityWinnerSeatShare": 57.1,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 82.2,
+          "turnoutIqr": 8.9,
+          "turnoutRange": 90,
+          "winnerVoteShareMedian": 51.9,
+          "marginMedian": 7.8,
+          "reservationMix": {
+            "reservedSeats": 7,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 7
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NDPP",
+          "seats": 5,
+          "seatShare": 71.4,
+          "voteShare": 46
+        },
+        {
+          "party": "NPF",
+          "seats": 2,
+          "seatShare": 28.6,
+          "voteShare": 40.5
+        },
+        {
+          "party": "NPEP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 12.6
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.3
+        },
+        {
+          "party": "JD(U)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Western Angami",
+          "constituencyNumber": 8,
+          "reservationType": "ST",
+          "totalElectors": 16909,
+          "totalVotes": 13937,
+          "enop": 2.5,
+          "winner": "KENEIZHAKHO NAKHRO",
+          "winnerParty": "NPF",
+          "winnerVotes": 6516,
+          "winnerVoteShare": 46.75,
+          "marginVotes": 694,
+          "marginPct": 4.98,
+          "turnoutPct": 82.42
+        },
+        {
+          "constituency": "Kohima Town",
+          "constituencyNumber": 9,
+          "reservationType": "ST",
+          "totalElectors": 31641,
+          "totalVotes": 22984,
+          "enop": 2,
+          "winner": "DR.NEIKIESALIE NICKY KIRE",
+          "winnerParty": "NDPP",
+          "winnerVotes": 12605,
+          "winnerVoteShare": 54.84,
+          "marginVotes": 2372,
+          "marginPct": 10.32,
+          "turnoutPct": 72.64
+        },
+        {
+          "constituency": "Northern Angami-I",
+          "constituencyNumber": 10,
+          "reservationType": "ST",
+          "totalElectors": 17047,
+          "totalVotes": 13118,
+          "enop": 1.96,
+          "winner": "KHRIEHU LIEZIETSU",
+          "winnerParty": "NPF",
+          "winnerVotes": 7782,
+          "winnerVoteShare": 59.32,
+          "marginVotes": 2516,
+          "marginPct": 19.18,
+          "turnoutPct": 76.95
+        },
+        {
+          "constituency": "Northern Angami-Ii",
+          "constituencyNumber": 11,
+          "reservationType": "ST",
+          "totalElectors": 21006,
+          "totalVotes": 1,
+          "enop": null,
+          "winner": "NEIPHIU RIO",
+          "winnerParty": "NDPP",
+          "winnerVotes": 1,
+          "winnerVoteShare": null,
+          "marginVotes": 1,
+          "marginPct": null,
+          "turnoutPct": 0
+        },
+        {
+          "constituency": "Tseminyu",
+          "constituencyNumber": 12,
+          "reservationType": "ST",
+          "totalElectors": 24411,
+          "totalVotes": 21983,
+          "enop": 3.03,
+          "winner": "R. KHING",
+          "winnerParty": "NDPP",
+          "winnerVotes": 7925,
+          "winnerVoteShare": 36.05,
+          "marginVotes": 863,
+          "marginPct": 3.93,
+          "turnoutPct": 90.05
+        },
+        {
+          "constituency": "Southern Angami-I",
+          "constituencyNumber": 14,
+          "reservationType": "ST",
+          "totalElectors": 13394,
+          "totalVotes": 11368,
+          "enop": 2.63,
+          "winner": "VIKHO-O YHOSHÜ",
+          "winnerParty": "NDPP",
+          "winnerVotes": 5821,
+          "winnerVoteShare": 51.21,
+          "marginVotes": 2082,
+          "marginPct": 18.31,
+          "turnoutPct": 84.87
+        },
+        {
+          "constituency": "Southern Angami-Ii",
+          "constituencyNumber": 15,
+          "reservationType": "ST",
+          "totalElectors": 17504,
+          "totalVotes": 14393,
+          "enop": 2,
+          "winner": "ZALE NEIKHA",
+          "winnerParty": "NDPP",
+          "winnerVotes": 7563,
+          "winnerVoteShare": 52.55,
+          "marginVotes": 771,
+          "marginPct": 5.36,
+          "turnoutPct": 82.23
+        }
+      ]
+    },
+    {
+      "district": "Longleng",
+      "districtSlug": "longleng",
+      "totalSeats": 2,
+      "turnoutPct": 94.4,
+      "totalElectors": 41655,
+      "totalVotes": 39324,
+      "winnerParty": "NPF",
+      "winnerSeats": 1,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 28.5,
+      "closeContests": 1,
+      "meanMarginPct": 5.2,
+      "medianMarginPct": 5.2,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.82,
+          "medianEnop": 2.82,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 94.4,
+          "turnoutIqr": 0.2,
+          "turnoutRange": 0.3,
+          "winnerVoteShareMedian": 42.2,
+          "marginMedian": 5.2,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 2
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPF",
+          "seats": 1,
+          "seatShare": 50,
+          "voteShare": 28.5
+        },
+        {
+          "party": "BJP",
+          "seats": 1,
+          "seatShare": 50,
+          "voteShare": 25.4
+        },
+        {
+          "party": "NPEP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 22.9
+        },
+        {
+          "party": "NDPP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 14.3
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 8
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "AAAP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Tamlu",
+          "constituencyNumber": 49,
+          "reservationType": "ST",
+          "totalElectors": 16444,
+          "totalVotes": 15491,
+          "enop": 2.86,
+          "winner": "B. S. NGANLANG PHOM",
+          "winnerParty": "NPF",
+          "winnerVotes": 6582,
+          "winnerVoteShare": 42.49,
+          "marginVotes": 958,
+          "marginPct": 6.18,
+          "turnoutPct": 94.2
+        },
+        {
+          "constituency": "Longleng",
+          "constituencyNumber": 50,
+          "reservationType": "ST",
+          "totalElectors": 25211,
+          "totalVotes": 23833,
+          "enop": 2.78,
+          "winner": "S PANGNYU PHOM",
+          "winnerParty": "BJP",
+          "winnerVotes": 9987,
+          "winnerVoteShare": 41.9,
+          "marginVotes": 1006,
+          "marginPct": 4.22,
+          "turnoutPct": 94.53
+        }
+      ]
+    },
+    {
+      "district": "Mokokchung",
+      "districtSlug": "mokokchung",
+      "totalSeats": 10,
+      "turnoutPct": 85.9,
+      "totalElectors": 137873,
+      "totalVotes": 118411,
+      "winnerParty": "NPF",
+      "winnerSeats": 4,
+      "winnerSeatShare": 40,
+      "winnerVoteShare": 40.8,
+      "closeContests": 6,
+      "meanMarginPct": 4.5,
+      "medianMarginPct": 2.6,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.72,
+          "medianEnop": 2.33,
+          "highFragmentationSeats": 1,
+          "highFragmentationSeatShare": 10
+        },
+        "custom": {
+          "lowPluralitySeats": 3,
+          "lowPluralitySeatShare": 30,
+          "majorityWinnerSeats": 5,
+          "majorityWinnerSeatShare": 50,
+          "ultraCloseSeats": 4,
+          "ultraCloseSeatShare": 40,
+          "turnoutMedian": 85.1,
+          "turnoutIqr": 6.8,
+          "turnoutRange": 16.9,
+          "winnerVoteShareMedian": 49,
+          "marginMedian": 2.6,
+          "reservationMix": {
+            "reservedSeats": 10,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 10
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPF",
+          "seats": 4,
+          "seatShare": 40,
+          "voteShare": 40.8
+        },
+        {
+          "party": "NDPP",
+          "seats": 2,
+          "seatShare": 20,
+          "voteShare": 23.3
+        },
+        {
+          "party": "BJP",
+          "seats": 2,
+          "seatShare": 20,
+          "voteShare": 8.1
+        },
+        {
+          "party": "NPEP",
+          "seats": 1,
+          "seatShare": 10,
+          "voteShare": 14.4
+        },
+        {
+          "party": "IND",
+          "seats": 1,
+          "seatShare": 10,
+          "voteShare": 6.3
+        },
+        {
+          "party": "JD(U)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3
+        },
+        {
+          "party": "LJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2
+        },
+        {
+          "party": "NCP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.3
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Tuli",
+          "constituencyNumber": 21,
+          "reservationType": "ST",
+          "totalElectors": 17384,
+          "totalVotes": 14506,
+          "enop": 5.26,
+          "winner": "AMENBA YADEN",
+          "winnerParty": "NPF",
+          "winnerVotes": 3865,
+          "winnerVoteShare": 26.64,
+          "marginVotes": 886,
+          "marginPct": 6.11,
+          "turnoutPct": 83.44
+        },
+        {
+          "constituency": "Arkakong",
+          "constituencyNumber": 22,
+          "reservationType": "ST",
+          "totalElectors": 16379,
+          "totalVotes": 14364,
+          "enop": 2.86,
+          "winner": "SHRI IMNATIBA",
+          "winnerParty": "NPEP",
+          "winnerVotes": 6307,
+          "winnerVoteShare": 43.91,
+          "marginVotes": 793,
+          "marginPct": 5.52,
+          "turnoutPct": 87.7
+        },
+        {
+          "constituency": "Impur",
+          "constituencyNumber": 23,
+          "reservationType": "ST",
+          "totalElectors": 10178,
+          "totalVotes": 9669,
+          "enop": 2,
+          "winner": "DR IMTIWAPANG AIER",
+          "winnerParty": "NPF",
+          "winnerVotes": 4852,
+          "winnerVoteShare": 50.18,
+          "marginVotes": 62,
+          "marginPct": 0.64,
+          "turnoutPct": 95
+        },
+        {
+          "constituency": "Angetyongpang",
+          "constituencyNumber": 24,
+          "reservationType": "ST",
+          "totalElectors": 15566,
+          "totalVotes": 12506,
+          "enop": 3.33,
+          "winner": "TONGPANG OZUKUM",
+          "winnerParty": "IND",
+          "winnerVotes": 4607,
+          "winnerVoteShare": 36.84,
+          "marginVotes": 950,
+          "marginPct": 7.6,
+          "turnoutPct": 80.34
+        },
+        {
+          "constituency": "Mongoya",
+          "constituencyNumber": 25,
+          "reservationType": "ST",
+          "totalElectors": 16014,
+          "totalVotes": 13585,
+          "enop": 2.04,
+          "winner": "NGANGSHI K AO",
+          "winnerParty": "NPF",
+          "winnerVotes": 6883,
+          "winnerVoteShare": 50.67,
+          "marginVotes": 348,
+          "marginPct": 2.56,
+          "turnoutPct": 84.83
+        },
+        {
+          "constituency": "Aonglenden",
+          "constituencyNumber": 26,
+          "reservationType": "ST",
+          "totalElectors": 12132,
+          "totalVotes": 10363,
+          "enop": 2.04,
+          "winner": "IMTIKUMZUK",
+          "winnerParty": "NDPP",
+          "winnerVotes": 5206,
+          "winnerVoteShare": 50.24,
+          "marginVotes": 88,
+          "marginPct": 0.85,
+          "turnoutPct": 85.42
+        },
+        {
+          "constituency": "Mokokchung Town",
+          "constituencyNumber": 27,
+          "reservationType": "ST",
+          "totalElectors": 7179,
+          "totalVotes": 5606,
+          "enop": 2.44,
+          "winner": "METSUBO JAMIR",
+          "winnerParty": "NDPP",
+          "winnerVotes": 2964,
+          "winnerVoteShare": 52.87,
+          "marginVotes": 1004,
+          "marginPct": 17.91,
+          "turnoutPct": 78.09
+        },
+        {
+          "constituency": "Koridang",
+          "constituencyNumber": 28,
+          "reservationType": "ST",
+          "totalElectors": 17357,
+          "totalVotes": 15709,
+          "enop": 2.22,
+          "winner": "IMKONG L IMCHEN",
+          "winnerParty": "NPF",
+          "winnerVotes": 7525,
+          "winnerVoteShare": 47.9,
+          "marginVotes": 128,
+          "marginPct": 0.81,
+          "turnoutPct": 90.51
+        },
+        {
+          "constituency": "Jangpetkong",
+          "constituencyNumber": 29,
+          "reservationType": "ST",
+          "totalElectors": 11277,
+          "totalVotes": 10184,
+          "enop": 2.94,
+          "winner": "LONGRINEKEN",
+          "winnerParty": "BJP",
+          "winnerVotes": 3615,
+          "winnerVoteShare": 35.5,
+          "marginVotes": 276,
+          "marginPct": 2.71,
+          "turnoutPct": 90.31
+        },
+        {
+          "constituency": "Alongtaki",
+          "constituencyNumber": 30,
+          "reservationType": "ST",
+          "totalElectors": 14407,
+          "totalVotes": 11919,
+          "enop": 2.04,
+          "winner": "TEMJEN IMNA ALONG",
+          "winnerParty": "BJP",
+          "winnerVotes": 5981,
+          "winnerVoteShare": 50.18,
+          "marginVotes": 86,
+          "marginPct": 0.72,
+          "turnoutPct": 82.73
+        }
+      ]
+    },
+    {
+      "district": "Mon",
+      "districtSlug": "mon",
+      "totalSeats": 9,
+      "turnoutPct": 92.7,
+      "totalElectors": 138352,
+      "totalVotes": 128214,
+      "winnerParty": "NPF",
+      "winnerSeats": 5,
+      "winnerSeatShare": 55.6,
+      "winnerVoteShare": 39.3,
+      "closeContests": 3,
+      "meanMarginPct": 11.5,
+      "medianMarginPct": 9.8,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.52,
+          "medianEnop": 2.04,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 2,
+          "lowPluralitySeatShare": 22.2,
+          "majorityWinnerSeats": 5,
+          "majorityWinnerSeatShare": 55.6,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 22.2,
+          "turnoutMedian": 93.6,
+          "turnoutIqr": 2.8,
+          "turnoutRange": 5.9,
+          "winnerVoteShareMedian": 50.4,
+          "marginMedian": 9.8,
+          "reservationMix": {
+            "reservedSeats": 9,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 9
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPF",
+          "seats": 5,
+          "seatShare": 55.6,
+          "voteShare": 39.3
+        },
+        {
+          "party": "NDPP",
+          "seats": 3,
+          "seatShare": 33.3,
+          "voteShare": 34.9
+        },
+        {
+          "party": "BJP",
+          "seats": 1,
+          "seatShare": 11.1,
+          "voteShare": 7.7
+        },
+        {
+          "party": "NPEP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.9
+        },
+        {
+          "party": "JD(U)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.6
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.6
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.5
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Tizit",
+          "constituencyNumber": 41,
+          "reservationType": "ST",
+          "totalElectors": 18127,
+          "totalVotes": 16973,
+          "enop": 3.33,
+          "winner": "P. PAIWANG KONYAK",
+          "winnerParty": "BJP",
+          "winnerVotes": 6981,
+          "winnerVoteShare": 41.13,
+          "marginVotes": 2386,
+          "marginPct": 14.06,
+          "turnoutPct": 93.63
+        },
+        {
+          "constituency": "Wakching",
+          "constituencyNumber": 42,
+          "reservationType": "ST",
+          "totalElectors": 14892,
+          "totalVotes": 13938,
+          "enop": 2,
+          "winner": "SHRI. Y.M.YOLLOW KONYAK",
+          "winnerParty": "NPF",
+          "winnerVotes": 7808,
+          "winnerVoteShare": 56.02,
+          "marginVotes": 1764,
+          "marginPct": 12.66,
+          "turnoutPct": 93.59
+        },
+        {
+          "constituency": "Tapi",
+          "constituencyNumber": 43,
+          "reservationType": "ST",
+          "totalElectors": 12322,
+          "totalVotes": 11249,
+          "enop": 3.57,
+          "winner": "NOKE",
+          "winnerParty": "NDPP",
+          "winnerVotes": 4284,
+          "winnerVoteShare": 38.08,
+          "marginVotes": 1237,
+          "marginPct": 11,
+          "turnoutPct": 91.29
+        },
+        {
+          "constituency": "Phomching",
+          "constituencyNumber": 44,
+          "reservationType": "ST",
+          "totalElectors": 16513,
+          "totalVotes": 14772,
+          "enop": 2.7,
+          "winner": "POHWANG KONYAK",
+          "winnerParty": "NDPP",
+          "winnerVotes": 6611,
+          "winnerVoteShare": 44.75,
+          "marginVotes": 632,
+          "marginPct": 4.28,
+          "turnoutPct": 89.46
+        },
+        {
+          "constituency": "Tehok",
+          "constituencyNumber": 45,
+          "reservationType": "ST",
+          "totalElectors": 11640,
+          "totalVotes": 10730,
+          "enop": 1.82,
+          "winner": "C.L JOHN",
+          "winnerParty": "NPF",
+          "winnerVotes": 7463,
+          "winnerVoteShare": 69.55,
+          "marginVotes": 4556,
+          "marginPct": 42.46,
+          "turnoutPct": 92.18
+        },
+        {
+          "constituency": "Mon Town",
+          "constituencyNumber": 46,
+          "reservationType": "ST",
+          "totalElectors": 18159,
+          "totalVotes": 16324,
+          "enop": 3.23,
+          "winner": "N. THONGWANG KONYAK",
+          "winnerParty": "NPF",
+          "winnerVotes": 5429,
+          "winnerVoteShare": 33.26,
+          "marginVotes": 28,
+          "marginPct": 0.17,
+          "turnoutPct": 89.89
+        },
+        {
+          "constituency": "Aboi",
+          "constituencyNumber": 47,
+          "reservationType": "ST",
+          "totalElectors": 11921,
+          "totalVotes": 11210,
+          "enop": 2,
+          "winner": "ESHAK KONYAK",
+          "winnerParty": "NPF",
+          "winnerVotes": 6036,
+          "winnerVoteShare": 53.84,
+          "marginVotes": 905,
+          "marginPct": 8.07,
+          "turnoutPct": 94.04
+        },
+        {
+          "constituency": "Moka",
+          "constituencyNumber": 48,
+          "reservationType": "ST",
+          "totalElectors": 16141,
+          "totalVotes": 15247,
+          "enop": 2.04,
+          "winner": "E. E. PANGTEANG",
+          "winnerParty": "NPF",
+          "winnerVotes": 7684,
+          "winnerVoteShare": 50.4,
+          "marginVotes": 148,
+          "marginPct": 0.97,
+          "turnoutPct": 94.46
+        },
+        {
+          "constituency": "Tobu",
+          "constituencyNumber": 55,
+          "reservationType": "ST",
+          "totalElectors": 18637,
+          "totalVotes": 17771,
+          "enop": 2,
+          "winner": "N. BONGKHAO KONYAK",
+          "winnerParty": "NDPP",
+          "winnerVotes": 9732,
+          "winnerVoteShare": 54.76,
+          "marginVotes": 1741,
+          "marginPct": 9.8,
+          "turnoutPct": 95.35
+        }
+      ]
+    },
+    {
+      "district": "Peren",
+      "districtSlug": "peren",
+      "totalSeats": 2,
+      "turnoutPct": 77.6,
+      "totalElectors": 55787,
+      "totalVotes": 43303,
+      "winnerParty": "NPF",
+      "winnerSeats": 1,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 48.3,
+      "closeContests": 1,
+      "meanMarginPct": 12.3,
+      "medianMarginPct": 12.3,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.47,
+          "medianEnop": 2.47,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 50,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 50,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 50,
+          "turnoutMedian": 77.6,
+          "turnoutIqr": 0.6,
+          "turnoutRange": 1.2,
+          "winnerVoteShareMedian": 48,
+          "marginMedian": 12.3,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 2
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPF",
+          "seats": 1,
+          "seatShare": 50,
+          "voteShare": 48.3
+        },
+        {
+          "party": "NDPP",
+          "seats": 1,
+          "seatShare": 50,
+          "voteShare": 36.1
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 15
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Tenning",
+          "constituencyNumber": 6,
+          "reservationType": "ST",
+          "totalElectors": 26619,
+          "totalVotes": 20494,
+          "enop": 3.03,
+          "winner": "NAMRI NCHANG",
+          "winnerParty": "NDPP",
+          "winnerVotes": 7018,
+          "winnerVoteShare": 34.24,
+          "marginVotes": 168,
+          "marginPct": 0.82,
+          "turnoutPct": 76.99
+        },
+        {
+          "constituency": "Peren",
+          "constituencyNumber": 7,
+          "reservationType": "ST",
+          "totalElectors": 29168,
+          "totalVotes": 22809,
+          "enop": 1.92,
+          "winner": "TADITUI RANGKAU ZELIANG",
+          "winnerParty": "NPF",
+          "winnerVotes": 14064,
+          "winnerVoteShare": 61.66,
+          "marginVotes": 5432,
+          "marginPct": 23.82,
+          "turnoutPct": 78.2
+        }
+      ]
+    },
+    {
+      "district": "Phek",
+      "districtSlug": "phek",
+      "totalSeats": 5,
+      "turnoutPct": 87.2,
+      "totalElectors": 101566,
+      "totalVotes": 88565,
+      "winnerParty": "NPF",
+      "winnerSeats": 4,
+      "winnerSeatShare": 80,
+      "winnerVoteShare": 47.4,
+      "closeContests": 3,
+      "meanMarginPct": 8.6,
+      "medianMarginPct": 4.3,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.51,
+          "medianEnop": 2.22,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 20,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 40,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 20,
+          "turnoutMedian": 88.8,
+          "turnoutIqr": 4.5,
+          "turnoutRange": 10.3,
+          "winnerVoteShareMedian": 47.8,
+          "marginMedian": 4.3,
+          "reservationMix": {
+            "reservedSeats": 5,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 5
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPF",
+          "seats": 4,
+          "seatShare": 80,
+          "voteShare": 47.4
+        },
+        {
+          "party": "NDPP",
+          "seats": 1,
+          "seatShare": 20,
+          "voteShare": 34.7
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.2
+        },
+        {
+          "party": "NPEP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.7
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Pfutsero",
+          "constituencyNumber": 16,
+          "reservationType": "ST",
+          "totalElectors": 20622,
+          "totalVotes": 16893,
+          "enop": 3.57,
+          "winner": "NEIBA KRONU",
+          "winnerParty": "NDPP",
+          "winnerVotes": 6228,
+          "winnerVoteShare": 36.87,
+          "marginVotes": 1314,
+          "marginPct": 7.78,
+          "turnoutPct": 81.92
+        },
+        {
+          "constituency": "Chizami",
+          "constituencyNumber": 17,
+          "reservationType": "ST",
+          "totalElectors": 17084,
+          "totalVotes": 15231,
+          "enop": 2.78,
+          "winner": "KEZHIENYI KHALO",
+          "winnerParty": "NPF",
+          "winnerVotes": 6563,
+          "winnerVoteShare": 43.09,
+          "marginVotes": 403,
+          "marginPct": 2.65,
+          "turnoutPct": 89.15
+        },
+        {
+          "constituency": "Chazouba",
+          "constituencyNumber": 18,
+          "reservationType": "ST",
+          "totalElectors": 24803,
+          "totalVotes": 22015,
+          "enop": 2,
+          "winner": "CHOTISUH SAZO",
+          "winnerParty": "NPF",
+          "winnerVotes": 11432,
+          "winnerVoteShare": 51.93,
+          "marginVotes": 942,
+          "marginPct": 4.28,
+          "turnoutPct": 88.76
+        },
+        {
+          "constituency": "Phek",
+          "constituencyNumber": 19,
+          "reservationType": "ST",
+          "totalElectors": 21068,
+          "totalVotes": 17830,
+          "enop": 1.96,
+          "winner": "KUZHOLUZO NIENU",
+          "winnerParty": "NPF",
+          "winnerVotes": 11127,
+          "winnerVoteShare": 62.41,
+          "marginVotes": 4931,
+          "marginPct": 27.66,
+          "turnoutPct": 84.63
+        },
+        {
+          "constituency": "Meluri",
+          "constituencyNumber": 20,
+          "reservationType": "ST",
+          "totalElectors": 17989,
+          "totalVotes": 16596,
+          "enop": 2.22,
+          "winner": "YITACHU",
+          "winnerParty": "NPF",
+          "winnerVotes": 7928,
+          "winnerVoteShare": 47.77,
+          "marginVotes": 74,
+          "marginPct": 0.45,
+          "turnoutPct": 92.26
+        }
+      ]
+    },
+    {
+      "district": "Pughoboto",
+      "districtSlug": "pughoboto",
+      "totalSeats": 1,
+      "turnoutPct": 93.3,
+      "totalElectors": 13416,
+      "totalVotes": 12519,
+      "winnerParty": "NPF",
+      "winnerSeats": 1,
+      "winnerSeatShare": 100,
+      "winnerVoteShare": 50,
+      "closeContests": 1,
+      "meanMarginPct": 0.6,
+      "medianMarginPct": 0.6,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.04,
+          "medianEnop": 2.04,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 100,
+          "turnoutMedian": 93.3,
+          "turnoutIqr": 0,
+          "turnoutRange": 0,
+          "winnerVoteShareMedian": 50,
+          "marginMedian": 0.6,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 1
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPF",
+          "seats": 1,
+          "seatShare": 100,
+          "voteShare": 50
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 49.4
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Pughoboto",
+          "constituencyNumber": 13,
+          "reservationType": "ST",
+          "totalElectors": 13416,
+          "totalVotes": 12519,
+          "enop": 2.04,
+          "winner": "Y. VIKHEHO SWU",
+          "winnerParty": "NPF",
+          "winnerVotes": 6258,
+          "winnerVoteShare": 49.99,
+          "marginVotes": 70,
+          "marginPct": 0.56,
+          "turnoutPct": 93.31
+        }
+      ]
+    },
+    {
+      "district": "Tuensang",
+      "districtSlug": "tuensang",
+      "totalSeats": 7,
+      "turnoutPct": 87.1,
+      "totalElectors": 120887,
+      "totalVotes": 105338,
+      "winnerParty": "NPF",
+      "winnerSeats": 3,
+      "winnerSeatShare": 42.9,
+      "winnerVoteShare": 41.3,
+      "closeContests": 2,
+      "meanMarginPct": 10.7,
+      "medianMarginPct": 9.3,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.83,
+          "medianEnop": 2.78,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 14.3,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 28.6,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 14.3,
+          "turnoutMedian": 87.5,
+          "turnoutIqr": 2.8,
+          "turnoutRange": 15.2,
+          "winnerVoteShareMedian": 46.1,
+          "marginMedian": 9.3,
+          "reservationMix": {
+            "reservedSeats": 7,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 7
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "NPF",
+          "seats": 3,
+          "seatShare": 42.9,
+          "voteShare": 41.3
+        },
+        {
+          "party": "NDPP",
+          "seats": 2,
+          "seatShare": 28.6,
+          "voteShare": 17.6
+        },
+        {
+          "party": "BJP",
+          "seats": 1,
+          "seatShare": 14.3,
+          "voteShare": 15.1
+        },
+        {
+          "party": "NPEP",
+          "seats": 1,
+          "seatShare": 14.3,
+          "voteShare": 14.3
+        },
+        {
+          "party": "NCP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.2
+        },
+        {
+          "party": "JD(U)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.9
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.3
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Noksen",
+          "constituencyNumber": 51,
+          "reservationType": "ST",
+          "totalElectors": 11643,
+          "totalVotes": 10056,
+          "enop": 2.78,
+          "winner": "C.M. CHANG",
+          "winnerParty": "NDPP",
+          "winnerVotes": 4436,
+          "winnerVoteShare": 44.11,
+          "marginVotes": 576,
+          "marginPct": 5.73,
+          "turnoutPct": 86.37
+        },
+        {
+          "constituency": "Longkhim Chare",
+          "constituencyNumber": 52,
+          "reservationType": "ST",
+          "totalElectors": 21129,
+          "totalVotes": 19819,
+          "enop": 2.63,
+          "winner": "MUTHINGNYUBA SANGTAM",
+          "winnerParty": "NPF",
+          "winnerVotes": 9316,
+          "winnerVoteShare": 47.01,
+          "marginVotes": 1848,
+          "marginPct": 9.32,
+          "turnoutPct": 93.8
+        },
+        {
+          "constituency": "Tuensang Sadar-I",
+          "constituencyNumber": 53,
+          "reservationType": "ST",
+          "totalElectors": 21605,
+          "totalVotes": 16985,
+          "enop": 1.96,
+          "winner": "TOYANG CHANG",
+          "winnerParty": "NPF",
+          "winnerVotes": 10087,
+          "winnerVoteShare": 59.39,
+          "marginVotes": 3259,
+          "marginPct": 19.19,
+          "turnoutPct": 78.62
+        },
+        {
+          "constituency": "Tuensang Sadar-Ii",
+          "constituencyNumber": 54,
+          "reservationType": "ST",
+          "totalElectors": 15102,
+          "totalVotes": 13444,
+          "enop": 2.78,
+          "winner": "KEJONG CHANG",
+          "winnerParty": "NPF",
+          "winnerVotes": 6204,
+          "winnerVoteShare": 46.15,
+          "marginVotes": 1799,
+          "marginPct": 13.38,
+          "turnoutPct": 89.02
+        },
+        {
+          "constituency": "Noklak",
+          "constituencyNumber": 56,
+          "reservationType": "ST",
+          "totalElectors": 15561,
+          "totalVotes": 13891,
+          "enop": 2.94,
+          "winner": "H. HAIYING",
+          "winnerParty": "BJP",
+          "winnerVotes": 5643,
+          "winnerVoteShare": 40.62,
+          "marginVotes": 5,
+          "marginPct": 0.04,
+          "turnoutPct": 89.27
+        },
+        {
+          "constituency": "Thonoknyu",
+          "constituencyNumber": 57,
+          "reservationType": "ST",
+          "totalElectors": 18484,
+          "totalVotes": 16168,
+          "enop": 2.7,
+          "winner": "L.KHUMO KHIAMNIUNGAN",
+          "winnerParty": "NPEP",
+          "winnerVotes": 8389,
+          "winnerVoteShare": 51.89,
+          "marginVotes": 4044,
+          "marginPct": 25.01,
+          "turnoutPct": 87.47
+        },
+        {
+          "constituency": "Shamator Chessore",
+          "constituencyNumber": 58,
+          "reservationType": "ST",
+          "totalElectors": 17363,
+          "totalVotes": 14975,
+          "enop": 4,
+          "winner": "TOSHI WUNGTUNG",
+          "winnerParty": "NDPP",
+          "winnerVotes": 4311,
+          "winnerVoteShare": 28.79,
+          "marginVotes": 307,
+          "marginPct": 2.05,
+          "turnoutPct": 86.25
+        }
+      ]
+    },
+    {
+      "district": "Wokha",
+      "districtSlug": "wokha",
+      "totalSeats": 4,
+      "turnoutPct": 91,
+      "totalElectors": 102289,
+      "totalVotes": 93074,
+      "winnerParty": "BJP",
+      "winnerSeats": 2,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 29.8,
+      "closeContests": 1,
+      "meanMarginPct": 15.6,
+      "medianMarginPct": 14.4,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.37,
+          "medianEnop": 2.41,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 50,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 25,
+          "turnoutMedian": 93.8,
+          "turnoutIqr": 3.6,
+          "turnoutRange": 10.5,
+          "winnerVoteShareMedian": 52.7,
+          "marginMedian": 14.4,
+          "reservationMix": {
+            "reservedSeats": 4,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 4
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "BJP",
+          "seats": 2,
+          "seatShare": 50,
+          "voteShare": 29.8
+        },
+        {
+          "party": "NPF",
+          "seats": 1,
+          "seatShare": 25,
+          "voteShare": 37.4
+        },
+        {
+          "party": "NDPP",
+          "seats": 1,
+          "seatShare": 25,
+          "voteShare": 11.3
+        },
+        {
+          "party": "JD(U)",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 17.2
+        },
+        {
+          "party": "NPEP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.3
+        },
+        {
+          "party": "NCP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        },
+        {
+          "party": "LJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Tyui",
+          "constituencyNumber": 37,
+          "reservationType": "ST",
+          "totalElectors": 22695,
+          "totalVotes": 21130,
+          "enop": 2.08,
+          "winner": "YANTHUNGO PATTON",
+          "winnerParty": "BJP",
+          "winnerVotes": 11709,
+          "winnerVoteShare": 55.41,
+          "marginVotes": 3092,
+          "marginPct": 14.63,
+          "turnoutPct": 93.1
+        },
+        {
+          "constituency": "Wokha",
+          "constituencyNumber": 38,
+          "reservationType": "ST",
+          "totalElectors": 31361,
+          "totalVotes": 26361,
+          "enop": 2.44,
+          "winner": "DR. CHUMBEN MURRY",
+          "winnerParty": "NPF",
+          "winnerVotes": 14870,
+          "winnerVoteShare": 56.41,
+          "marginVotes": 8555,
+          "marginPct": 32.45,
+          "turnoutPct": 84.06
+        },
+        {
+          "constituency": "Sanis",
+          "constituencyNumber": 39,
+          "reservationType": "ST",
+          "totalElectors": 22357,
+          "totalVotes": 21110,
+          "enop": 2.56,
+          "winner": "MHATHUNG YANTHAN",
+          "winnerParty": "NDPP",
+          "winnerVotes": 10548,
+          "winnerVoteShare": 49.97,
+          "marginVotes": 2992,
+          "marginPct": 14.17,
+          "turnoutPct": 94.42
+        },
+        {
+          "constituency": "Bhandari",
+          "constituencyNumber": 40,
+          "reservationType": "ST",
+          "totalElectors": 25876,
+          "totalVotes": 24473,
+          "enop": 2.38,
+          "winner": "MMHONLUMO KIKON",
+          "winnerParty": "BJP",
+          "winnerVotes": 11205,
+          "winnerVoteShare": 45.79,
+          "marginVotes": 312,
+          "marginPct": 1.27,
+          "turnoutPct": 94.58
+        }
+      ]
+    },
+    {
+      "district": "Zunheboto",
+      "districtSlug": "zunheboto",
+      "totalSeats": 6,
+      "turnoutPct": 84.4,
+      "totalElectors": 92276,
+      "totalVotes": 77868,
+      "winnerParty": "BJP",
+      "winnerSeats": 2,
+      "winnerSeatShare": 33.3,
+      "winnerVoteShare": 28.9,
+      "closeContests": 0,
+      "meanMarginPct": 21,
+      "medianMarginPct": 14,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.02,
+          "medianEnop": 2,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 5,
+          "majorityWinnerSeatShare": 83.3,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 85.5,
+          "turnoutIqr": 8.9,
+          "turnoutRange": 16,
+          "winnerVoteShareMedian": 55,
+          "marginMedian": 14,
+          "reservationMix": {
+            "reservedSeats": 6,
+            "reservedSeatShare": 100,
+            "scSeats": 0,
+            "stSeats": 6
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "BJP",
+          "seats": 2,
+          "seatShare": 33.3,
+          "voteShare": 28.9
+        },
+        {
+          "party": "NDPP",
+          "seats": 2,
+          "seatShare": 33.3,
+          "voteShare": 24.1
+        },
+        {
+          "party": "NPF",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 38.3
+        },
+        {
+          "party": "JD(U)",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 8.3
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Akuluto",
+          "constituencyNumber": 31,
+          "reservationType": "ST",
+          "totalElectors": 10014,
+          "totalVotes": 8968,
+          "enop": 2,
+          "winner": "KAZHETO KINIMI",
+          "winnerParty": "BJP",
+          "winnerVotes": 4844,
+          "winnerVoteShare": 54.01,
+          "marginVotes": 735,
+          "marginPct": 8.2,
+          "turnoutPct": 89.55
+        },
+        {
+          "constituency": "Atoizu",
+          "constituencyNumber": 32,
+          "reservationType": "ST",
+          "totalElectors": 15594,
+          "totalVotes": 14469,
+          "enop": 2,
+          "winner": "PICTO",
+          "winnerParty": "NPF",
+          "winnerVotes": 7643,
+          "winnerVoteShare": 52.82,
+          "marginVotes": 838,
+          "marginPct": 5.79,
+          "turnoutPct": 92.79
+        },
+        {
+          "constituency": "Suruhoto",
+          "constituencyNumber": 33,
+          "reservationType": "ST",
+          "totalElectors": 14977,
+          "totalVotes": 13212,
+          "enop": 1.41,
+          "winner": "H KHEHOVI",
+          "winnerParty": "BJP",
+          "winnerVotes": 10860,
+          "winnerVoteShare": 82.2,
+          "marginVotes": 8559,
+          "marginPct": 64.78,
+          "turnoutPct": 88.22
+        },
+        {
+          "constituency": "Aghunato",
+          "constituencyNumber": 34,
+          "reservationType": "ST",
+          "totalElectors": 14881,
+          "totalVotes": 11432,
+          "enop": 2,
+          "winner": "PUKHAYI",
+          "winnerParty": "NDPP",
+          "winnerVotes": 6399,
+          "winnerVoteShare": 55.97,
+          "marginVotes": 1421,
+          "marginPct": 12.43,
+          "turnoutPct": 76.82
+        },
+        {
+          "constituency": "Zunheboto",
+          "constituencyNumber": 35,
+          "reservationType": "ST",
+          "totalElectors": 20621,
+          "totalVotes": 16383,
+          "enop": 1.96,
+          "winner": "K. TOKUGHA SUKHALU",
+          "winnerParty": "NDPP",
+          "winnerVotes": 9430,
+          "winnerVoteShare": 57.56,
+          "marginVotes": 2548,
+          "marginPct": 15.55,
+          "turnoutPct": 79.45
+        },
+        {
+          "constituency": "Satakha",
+          "constituencyNumber": 36,
+          "reservationType": "ST",
+          "totalElectors": 16189,
+          "totalVotes": 13404,
+          "enop": 2.78,
+          "winner": "G. KAITO AYE",
+          "winnerParty": "JD(U)",
+          "winnerVotes": 6431,
+          "winnerVoteShare": 47.98,
+          "marginVotes": 2543,
+          "marginPct": 18.97,
+          "turnoutPct": 82.8
+        }
+      ]
+    }
+  ]
+}

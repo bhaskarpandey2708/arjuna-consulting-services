@@ -1,0 +1,130 @@
+{
+  "generatedAt": "2026-03-09T14:43:47.801Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "meghalaya",
+    "stateLabel": "Meghalaya",
+    "stateVersionSlug": "meghalaya",
+    "geographyVersionId": "meghalaya-default",
+    "house": "LS",
+    "year": 1980,
+    "electionId": 7,
+    "stateId": 44
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %"
+  ],
+  "rows": [
+    {
+      "state": "meghalaya",
+      "stateLabel": "Meghalaya",
+      "stateVersionSlug": "meghalaya",
+      "geographyVersionId": "meghalaya-default",
+      "house": "LS",
+      "year": 1980,
+      "electionId": 7,
+      "stateId": 44,
+      "constituency": "Shillong",
+      "constituencyNumber": 1,
+      "reservationType": "ST",
+      "district": "",
+      "winner": "Data Not Available",
+      "winnerParty": "-",
+      "totalElectors": null,
+      "totalVotes": null,
+      "turnoutPct": null,
+      "marginVotes": null,
+      "marginPct": null,
+      "constituencyUrl": null,
+      "districtUrl": null,
+      "partyUrl": null,
+      "marginUrl": null,
+      "detailAvailable": false,
+      "detailFileName": null
+    },
+    {
+      "state": "meghalaya",
+      "stateLabel": "Meghalaya",
+      "stateVersionSlug": "meghalaya",
+      "geographyVersionId": "meghalaya-default",
+      "house": "LS",
+      "year": 1980,
+      "electionId": 7,
+      "stateId": 44,
+      "constituency": "Tura",
+      "constituencyNumber": 2,
+      "reservationType": "ST",
+      "district": "",
+      "winner": "Puron A. Sangma",
+      "winnerParty": "Indian National Congress (I)",
+      "totalElectors": 225582,
+      "totalVotes": 115575,
+      "turnoutPct": 51.2,
+      "marginVotes": 69249,
+      "marginPct": 59.9,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/1980/meghalaya/tura/3165/44/7",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/130/7/44",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/1980/meghalaya/tura/3165/44/7",
+      "winnerVotes": 82307,
+      "winnerVoteShare": 71.2,
+      "runnerUp": "Grohonsing Marak",
+      "runnerUpParty": "All Party Hill Leaders Conference",
+      "runnerUpVotes": 13058,
+      "runnerUpVoteShare": 11.3,
+      "detailAvailable": true,
+      "detailFileName": "meghalaya-ls-1980-2-tura-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Indian National Congress (I)",
+      "votes": 82307,
+      "voteShare": 71.2
+    },
+    {
+      "party": "All Party Hill Leaders Conference",
+      "votes": 13058,
+      "voteShare": 11.3
+    },
+    {
+      "party": "Independent",
+      "votes": 8440,
+      "voteShare": 7.3
+    },
+    {
+      "party": "Communist Party Of India",
+      "votes": 6955,
+      "voteShare": 6
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:12:13.658Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 2,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 1,
+      "failedRows": 1
+    },
+    "failures": [
+      {
+        "constituency": "Shillong",
+        "reason": "missing-constituency-url"
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "generatedAt": "2026-03-09T14:43:50.868Z",
+  "source": "indiavotes",
+  "selection": {
+    "state": "mizoram",
+    "stateLabel": "Mizoram",
+    "stateVersionSlug": "mizoram",
+    "geographyVersionId": "mizoram-default",
+    "house": "LS",
+    "year": 2009,
+    "electionId": 15,
+    "stateId": 45
+  },
+  "headers": [
+    "PC Name",
+    "No",
+    "Type",
+    "State",
+    "Winning Candidate",
+    "Party",
+    "Electors",
+    "Votes",
+    "Turnout",
+    "Margin",
+    "Margin %",
+    "ACs"
+  ],
+  "rows": [
+    {
+      "state": "mizoram",
+      "stateLabel": "Mizoram",
+      "stateVersionSlug": "mizoram",
+      "geographyVersionId": "mizoram-default",
+      "house": "LS",
+      "year": 2009,
+      "electionId": 15,
+      "stateId": 45,
+      "constituency": "Mizoram",
+      "constituencyNumber": 1,
+      "reservationType": "ST",
+      "district": "",
+      "winner": "C.L.Ruala",
+      "winnerParty": "Indian National Congress",
+      "totalElectors": 629374,
+      "totalVotes": 332553,
+      "turnoutPct": 52.8,
+      "marginVotes": 108955,
+      "marginPct": 32.8,
+      "constituencyUrl": "https://www.indiavotes.com/lok-sabha-details/2009/mizoram/mizoram/7726/45/15",
+      "districtUrl": null,
+      "partyUrl": "https://www.indiavotes.com/party/info/1/15/45",
+      "marginUrl": "https://www.indiavotes.com/lok-sabha-details/2009/mizoram/mizoram/7726/45/15",
+      "winnerVotes": 213779,
+      "winnerVoteShare": 64.3,
+      "runnerUp": "Dr. H. Lallungmuana",
+      "runnerUpParty": "Independent",
+      "runnerUpVotes": 104824,
+      "runnerUpVoteShare": 31.5,
+      "detailAvailable": true,
+      "detailFileName": "mizoram-ls-2009-1-mizoram-detail.json",
+      "dataQualityFlags": []
+    }
+  ],
+  "partyVoteShares": [
+    {
+      "party": "Indian National Congress",
+      "votes": 213779,
+      "voteShare": 64.3
+    },
+    {
+      "party": "Independent",
+      "votes": 108913,
+      "voteShare": 32.8
+    },
+    {
+      "party": "Nationalist Congress Party",
+      "votes": 3299,
+      "voteShare": 1
+    }
+  ],
+  "detailEnrichment": {
+    "generatedAt": "2026-03-09T15:12:41.725Z",
+    "source": "indiavotes",
+    "captureTimestamp": "2026-03-09_144520350Z",
+    "coverage": {
+      "rowCount": 1,
+      "rowsWithRunnerUp": 1,
+      "rowsWithVoteShare": 1,
+      "rowsPending": 0,
+      "failedRows": 0
+    },
+    "failures": []
+  }
+}

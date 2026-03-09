@@ -1,0 +1,6598 @@
+{
+  "generatedAt": "2026-03-09T13:37:32.316Z",
+  "source": "lokdhaba",
+  "coverage": "assembly-district-rollup",
+  "selection": {
+    "state": "tamil-nadu",
+    "house": "VS",
+    "year": 2021
+  },
+  "metrics": {
+    "totalDistricts": 32,
+    "totalSeats": 234,
+    "totalElectors": 63491427,
+    "totalVotes": 46236492,
+    "turnoutPct": 72.8,
+    "advancedMetrics": {
+      "sourceNative": {
+        "enopAvailable": true,
+        "meanEnop": 2.64,
+        "medianEnop": 2.56,
+        "highFragmentationSeats": 0,
+        "highFragmentationSeatShare": 0
+      },
+      "custom": {
+        "lowPluralitySeats": 13,
+        "lowPluralitySeatShare": 5.6,
+        "majorityWinnerSeats": 70,
+        "majorityWinnerSeatShare": 29.9,
+        "ultraCloseSeats": 32,
+        "ultraCloseSeatShare": 13.7,
+        "turnoutMedian": 74.9,
+        "turnoutIqr": 9,
+        "turnoutRange": 31.9,
+        "winnerVoteShareMedian": 48.2,
+        "marginMedian": 9.5,
+        "reservationMix": {
+          "reservedSeats": 46,
+          "reservedSeatShare": 19.7,
+          "scSeats": 44,
+          "stSeats": 2
+        }
+      }
+    }
+  },
+  "rowCount": 32,
+  "rows": [
+    {
+      "district": "Ariyalur",
+      "districtSlug": "ariyalur",
+      "totalSeats": 2,
+      "turnoutPct": 82.4,
+      "totalElectors": 535593,
+      "totalVotes": 441593,
+      "winnerParty": "DMK",
+      "winnerSeats": 2,
+      "winnerSeatShare": 100,
+      "winnerVoteShare": 46.1,
+      "closeContests": 2,
+      "meanMarginPct": 2,
+      "medianMarginPct": 2,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.47,
+          "medianEnop": 2.47,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 50,
+          "turnoutMedian": 82.5,
+          "turnoutIqr": 2.1,
+          "turnoutRange": 4.2,
+          "winnerVoteShareMedian": 46.1,
+          "marginMedian": 2,
+          "reservationMix": {
+            "reservedSeats": 0,
+            "reservedSeatShare": 0,
+            "scSeats": 0,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 2,
+          "seatShare": 100,
+          "voteShare": 46.1
+        },
+        {
+          "party": "ADMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 22.8
+        },
+        {
+          "party": "PMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 21.3
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.1
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.4
+        },
+        {
+          "party": "IJK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.3
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Ariyalur",
+          "constituencyNumber": 149,
+          "reservationType": "GEN",
+          "totalElectors": 266412,
+          "totalVotes": 225225,
+          "enop": 2.44,
+          "winner": "CHINNAPPA K",
+          "winnerParty": "DMK",
+          "winnerVotes": 103975,
+          "winnerVoteShare": 46.16,
+          "marginVotes": 3234,
+          "marginPct": 1.44,
+          "turnoutPct": 84.54
+        },
+        {
+          "constituency": "Jayankondam",
+          "constituencyNumber": 150,
+          "reservationType": "GEN",
+          "totalElectors": 269181,
+          "totalVotes": 216368,
+          "enop": 2.5,
+          "winner": "KANNAN KA SO KA",
+          "winnerParty": "DMK",
+          "winnerVotes": 99529,
+          "winnerVoteShare": 46,
+          "marginVotes": 5452,
+          "marginPct": 2.52,
+          "turnoutPct": 80.38
+        }
+      ]
+    },
+    {
+      "district": "Chennai",
+      "districtSlug": "chennai",
+      "totalSeats": 16,
+      "turnoutPct": 59.2,
+      "totalElectors": 4079527,
+      "totalVotes": 2416815,
+      "winnerParty": "DMK",
+      "winnerSeats": 15,
+      "winnerSeatShare": 93.8,
+      "winnerVoteShare": 48.9,
+      "closeContests": 2,
+      "meanMarginPct": 23.2,
+      "medianMarginPct": 23.4,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.71,
+          "medianEnop": 2.74,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 6.3,
+          "majorityWinnerSeats": 11,
+          "majorityWinnerSeatShare": 68.8,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 6.3,
+          "turnoutMedian": 57.6,
+          "turnoutIqr": 4.5,
+          "turnoutRange": 15.1,
+          "winnerVoteShareMedian": 52.7,
+          "marginMedian": 23.4,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 12.5,
+            "scSeats": 2,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 15,
+          "seatShare": 93.8,
+          "voteShare": 48.9
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 6.3,
+          "voteShare": 2.8
+        },
+        {
+          "party": "ADMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 25.1
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 8.3
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.2
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.1
+        },
+        {
+          "party": "PMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Dr. Radhakrishnan Nagar",
+          "constituencyNumber": 11,
+          "reservationType": "GEN",
+          "totalElectors": 263492,
+          "totalVotes": 187027,
+          "enop": 2.86,
+          "winner": "EBENEZER. J.J. (@)  JOHN EBENEZER.J",
+          "winnerParty": "DMK",
+          "winnerVotes": 95763,
+          "winnerVoteShare": 51.2,
+          "marginVotes": 42479,
+          "marginPct": 22.71,
+          "turnoutPct": 70.98
+        },
+        {
+          "constituency": "Perambur",
+          "constituencyNumber": 12,
+          "reservationType": "GEN",
+          "totalElectors": 318074,
+          "totalVotes": 200387,
+          "enop": 2.78,
+          "winner": "SHEKAR. R.D",
+          "winnerParty": "DMK",
+          "winnerVotes": 105267,
+          "winnerVoteShare": 52.53,
+          "marginVotes": 54976,
+          "marginPct": 27.43,
+          "turnoutPct": 63
+        },
+        {
+          "constituency": "Kolathur",
+          "constituencyNumber": 13,
+          "reservationType": "GEN",
+          "totalElectors": 284056,
+          "totalVotes": 173388,
+          "enop": 2.38,
+          "winner": "M.K. STALIN",
+          "winnerParty": "DMK",
+          "winnerVotes": 105522,
+          "winnerVoteShare": 60.86,
+          "marginVotes": 70384,
+          "marginPct": 40.59,
+          "turnoutPct": 61.04
+        },
+        {
+          "constituency": "Villivakkam",
+          "constituencyNumber": 14,
+          "reservationType": "GEN",
+          "totalElectors": 257675,
+          "totalVotes": 144092,
+          "enop": 2.7,
+          "winner": "A . Vetriazhagan",
+          "winnerParty": "DMK",
+          "winnerVotes": 76127,
+          "winnerVoteShare": 52.83,
+          "marginVotes": 37237,
+          "marginPct": 25.84,
+          "turnoutPct": 55.92
+        },
+        {
+          "constituency": "Thiru-Vi-Ka-Nagar",
+          "constituencyNumber": 15,
+          "reservationType": "SC",
+          "totalElectors": 220547,
+          "totalVotes": 133696,
+          "enop": 2.33,
+          "winner": "SIVAKUMAR.P",
+          "winnerParty": "DMK",
+          "winnerVotes": 81727,
+          "winnerVoteShare": 61.13,
+          "marginVotes": 55013,
+          "marginPct": 41.15,
+          "turnoutPct": 60.62
+        },
+        {
+          "constituency": "Egmore",
+          "constituencyNumber": 16,
+          "reservationType": "SC",
+          "totalElectors": 195110,
+          "totalVotes": 119271,
+          "enop": 2.5,
+          "winner": "I.PARANTHAMEN",
+          "winnerParty": "DMK",
+          "winnerVotes": 68832,
+          "winnerVoteShare": 57.71,
+          "marginVotes": 38768,
+          "marginPct": 32.5,
+          "turnoutPct": 61.13
+        },
+        {
+          "constituency": "Royapuram",
+          "constituencyNumber": 17,
+          "reservationType": "GEN",
+          "totalElectors": 193595,
+          "totalVotes": 121191,
+          "enop": 2.7,
+          "winner": "MURTHY.R.IDREAM",
+          "winnerParty": "DMK",
+          "winnerVotes": 64424,
+          "winnerVoteShare": 53.16,
+          "marginVotes": 27779,
+          "marginPct": 22.92,
+          "turnoutPct": 62.6
+        },
+        {
+          "constituency": "Harbour",
+          "constituencyNumber": 18,
+          "reservationType": "GEN",
+          "totalElectors": 176353,
+          "totalVotes": 101650,
+          "enop": 2.27,
+          "winner": "SEKARBABU. P.K",
+          "winnerParty": "DMK",
+          "winnerVotes": 59317,
+          "winnerVoteShare": 58.35,
+          "marginVotes": 27274,
+          "marginPct": 26.83,
+          "turnoutPct": 57.64
+        },
+        {
+          "constituency": "Chepauk-Thiruvallikeni",
+          "constituencyNumber": 19,
+          "reservationType": "GEN",
+          "totalElectors": 235564,
+          "totalVotes": 137405,
+          "enop": 2.04,
+          "winner": "UDHAYANIDHI STALIN",
+          "winnerParty": "DMK",
+          "winnerVotes": 93285,
+          "winnerVoteShare": 67.89,
+          "marginVotes": 69355,
+          "marginPct": 50.47,
+          "turnoutPct": 58.33
+        },
+        {
+          "constituency": "Thousand Lights",
+          "constituencyNumber": 20,
+          "reservationType": "GEN",
+          "totalElectors": 241671,
+          "totalVotes": 135940,
+          "enop": 2.7,
+          "winner": "EZHILAN N",
+          "winnerParty": "DMK",
+          "winnerVotes": 71867,
+          "winnerVoteShare": 52.87,
+          "marginVotes": 32462,
+          "marginPct": 23.88,
+          "turnoutPct": 56.25
+        },
+        {
+          "constituency": "Anna Nagar",
+          "constituencyNumber": 21,
+          "reservationType": "GEN",
+          "totalElectors": 287974,
+          "totalVotes": 165096,
+          "enop": 2.86,
+          "winner": "M.K. Mohan",
+          "winnerParty": "DMK",
+          "winnerVotes": 80054,
+          "winnerVoteShare": 48.49,
+          "marginVotes": 27445,
+          "marginPct": 16.62,
+          "turnoutPct": 57.33
+        },
+        {
+          "constituency": "Virugampakkam",
+          "constituencyNumber": 22,
+          "reservationType": "GEN",
+          "totalElectors": 293604,
+          "totalVotes": 169087,
+          "enop": 3.23,
+          "winner": "AMV.PRABHAKARA RAJA",
+          "winnerParty": "DMK",
+          "winnerVotes": 74351,
+          "winnerVoteShare": 43.97,
+          "marginVotes": 18367,
+          "marginPct": 10.86,
+          "turnoutPct": 57.59
+        },
+        {
+          "constituency": "Saidapet",
+          "constituencyNumber": 23,
+          "reservationType": "GEN",
+          "totalElectors": 279510,
+          "totalVotes": 160327,
+          "enop": 2.78,
+          "winner": "SUBRAMANIAN. MA",
+          "winnerParty": "DMK",
+          "winnerVotes": 80194,
+          "winnerVoteShare": 50.02,
+          "marginVotes": 29408,
+          "marginPct": 18.34,
+          "turnoutPct": 57.36
+        },
+        {
+          "constituency": "Theayagaraya Nagar",
+          "constituencyNumber": 24,
+          "reservationType": "GEN",
+          "totalElectors": 246676,
+          "totalVotes": 138114,
+          "enop": 3.03,
+          "winner": "KARUNANITHI J",
+          "winnerParty": "DMK",
+          "winnerVotes": 56035,
+          "winnerVoteShare": 40.57,
+          "marginVotes": 137,
+          "marginPct": 0.1,
+          "turnoutPct": 55.99
+        },
+        {
+          "constituency": "Mylapore",
+          "constituencyNumber": 25,
+          "reservationType": "GEN",
+          "totalElectors": 271077,
+          "totalVotes": 153430,
+          "enop": 2.94,
+          "winner": "VELU.DHA",
+          "winnerParty": "DMK",
+          "winnerVotes": 68392,
+          "winnerVoteShare": 44.58,
+          "marginVotes": 12633,
+          "marginPct": 8.23,
+          "turnoutPct": 56.6
+        },
+        {
+          "constituency": "Velachery",
+          "constituencyNumber": 26,
+          "reservationType": "GEN",
+          "totalElectors": 314549,
+          "totalVotes": 176714,
+          "enop": 3.23,
+          "winner": "JMH.AASSAN MAULAANA",
+          "winnerParty": "INC",
+          "winnerVotes": 68493,
+          "winnerVoteShare": 38.76,
+          "marginVotes": 4352,
+          "marginPct": 2.46,
+          "turnoutPct": 56.18
+        }
+      ]
+    },
+    {
+      "district": "Coimbatore",
+      "districtSlug": "coimbatore",
+      "totalSeats": 10,
+      "turnoutPct": 67.5,
+      "totalElectors": 3010922,
+      "totalVotes": 2031209,
+      "winnerParty": "ADMK",
+      "winnerSeats": 9,
+      "winnerSeatShare": 90,
+      "winnerVoteShare": 42.2,
+      "closeContests": 6,
+      "meanMarginPct": 5.4,
+      "medianMarginPct": 3.3,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.72,
+          "medianEnop": 2.59,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 10,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 10,
+          "ultraCloseSeats": 4,
+          "ultraCloseSeatShare": 40,
+          "turnoutMedian": 70.1,
+          "turnoutIqr": 8.3,
+          "turnoutRange": 18.1,
+          "winnerVoteShareMedian": 44.6,
+          "marginMedian": 3.3,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 10,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "ADMK",
+          "seats": 9,
+          "seatShare": 90,
+          "voteShare": 42.2
+        },
+        {
+          "party": "BJP",
+          "seats": 1,
+          "seatShare": 10,
+          "voteShare": 2.6
+        },
+        {
+          "party": "DMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 30.2
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 9.2
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.8
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.4
+        },
+        {
+          "party": "CPI",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.9
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Kavundampalayam",
+          "constituencyNumber": 117,
+          "reservationType": "GEN",
+          "totalElectors": 468649,
+          "totalVotes": 309918,
+          "enop": 2.78,
+          "winner": "G.Arunkumar",
+          "winnerParty": "ADMK",
+          "winnerVotes": 135669,
+          "winnerVoteShare": 43.78,
+          "marginVotes": 9776,
+          "marginPct": 3.15,
+          "turnoutPct": 66.13
+        },
+        {
+          "constituency": "Coimbatore North",
+          "constituencyNumber": 118,
+          "reservationType": "GEN",
+          "totalElectors": 342508,
+          "totalVotes": 202799,
+          "enop": 3.03,
+          "winner": "AMMAN K.ARJUNAN",
+          "winnerParty": "ADMK",
+          "winnerVotes": 81454,
+          "winnerVoteShare": 40.16,
+          "marginVotes": 4001,
+          "marginPct": 1.97,
+          "turnoutPct": 59.21
+        },
+        {
+          "constituency": "Thondamuthur",
+          "constituencyNumber": 119,
+          "reservationType": "GEN",
+          "totalElectors": 328298,
+          "totalVotes": 230531,
+          "enop": 2.38,
+          "winner": "S.P. VELUMANI",
+          "winnerParty": "ADMK",
+          "winnerVotes": 124225,
+          "winnerVoteShare": 53.89,
+          "marginVotes": 41630,
+          "marginPct": 18.06,
+          "turnoutPct": 70.22
+        },
+        {
+          "constituency": "Coimbatore South",
+          "constituencyNumber": 120,
+          "reservationType": "GEN",
+          "totalElectors": 255009,
+          "totalVotes": 154765,
+          "enop": 3.23,
+          "winner": "VANATHI SRINIVASAN",
+          "winnerParty": "BJP",
+          "winnerVotes": 53209,
+          "winnerVoteShare": 34.38,
+          "marginVotes": 1728,
+          "marginPct": 1.12,
+          "turnoutPct": 60.69
+        },
+        {
+          "constituency": "Singanallur",
+          "constituencyNumber": 121,
+          "reservationType": "GEN",
+          "totalElectors": 327265,
+          "totalVotes": 202021,
+          "enop": 3.23,
+          "winner": "Jayaram, K.R",
+          "winnerParty": "ADMK",
+          "winnerVotes": 81244,
+          "winnerVoteShare": 40.22,
+          "marginVotes": 10854,
+          "marginPct": 5.37,
+          "turnoutPct": 61.73
+        },
+        {
+          "constituency": "Kinathukadavu",
+          "constituencyNumber": 122,
+          "reservationType": "GEN",
+          "totalElectors": 329041,
+          "totalVotes": 232435,
+          "enop": 2.63,
+          "winner": "Damodaran.S",
+          "winnerParty": "ADMK",
+          "winnerVotes": 101537,
+          "winnerVoteShare": 43.68,
+          "marginVotes": 1095,
+          "marginPct": 0.47,
+          "turnoutPct": 70.64
+        },
+        {
+          "constituency": "Pollachi",
+          "constituencyNumber": 123,
+          "reservationType": "GEN",
+          "totalElectors": 229257,
+          "totalVotes": 177308,
+          "enop": 2.44,
+          "winner": "Pollachi V. Jayaraman",
+          "winnerParty": "ADMK",
+          "winnerVotes": 80567,
+          "winnerVoteShare": 45.44,
+          "marginVotes": 1725,
+          "marginPct": 0.97,
+          "turnoutPct": 77.34
+        },
+        {
+          "constituency": "Valparai",
+          "constituencyNumber": 124,
+          "reservationType": "SC",
+          "totalElectors": 207270,
+          "totalVotes": 145172,
+          "enop": 2.44,
+          "winner": "AMULKANDASAMI T K",
+          "winnerParty": "ADMK",
+          "winnerVotes": 71672,
+          "winnerVoteShare": 49.37,
+          "marginVotes": 12223,
+          "marginPct": 8.42,
+          "turnoutPct": 70.04
+        },
+        {
+          "constituency": "Udumalpet",
+          "constituencyNumber": 125,
+          "reservationType": "GEN",
+          "totalElectors": 272553,
+          "totalVotes": 194358,
+          "enop": 2.5,
+          "winner": "Radhakrishnan,K.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 96893,
+          "winnerVoteShare": 49.85,
+          "marginVotes": 21895,
+          "marginPct": 11.27,
+          "turnoutPct": 71.31
+        },
+        {
+          "constituency": "Madathukulam",
+          "constituencyNumber": 126,
+          "reservationType": "GEN",
+          "totalElectors": 251072,
+          "totalVotes": 181902,
+          "enop": 2.56,
+          "winner": "C MAHENDRAN",
+          "winnerParty": "ADMK",
+          "winnerVotes": 84313,
+          "winnerVoteShare": 46.35,
+          "marginVotes": 6438,
+          "marginPct": 3.54,
+          "turnoutPct": 72.45
+        }
+      ]
+    },
+    {
+      "district": "Cuddalore",
+      "districtSlug": "cuddalore",
+      "totalSeats": 9,
+      "turnoutPct": 76.7,
+      "totalElectors": 2167347,
+      "totalVotes": 1662957,
+      "winnerParty": "DMK",
+      "winnerSeats": 5,
+      "winnerSeatShare": 55.6,
+      "winnerVoteShare": 31.7,
+      "closeContests": 5,
+      "meanMarginPct": 5.3,
+      "medianMarginPct": 4.2,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.47,
+          "medianEnop": 2.38,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 11.1,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 22.2,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 22.2,
+          "turnoutMedian": 76.3,
+          "turnoutIqr": 3.8,
+          "turnoutRange": 10.1,
+          "winnerVoteShareMedian": 48.9,
+          "marginMedian": 4.2,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 22.2,
+            "scSeats": 2,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 5,
+          "seatShare": 55.6,
+          "voteShare": 31.7
+        },
+        {
+          "party": "ADMK",
+          "seats": 2,
+          "seatShare": 22.2,
+          "voteShare": 31.1
+        },
+        {
+          "party": "VCK",
+          "seats": 1,
+          "seatShare": 11.1,
+          "voteShare": 5.2
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 11.1,
+          "voteShare": 4.6
+        },
+        {
+          "party": "PMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 9
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.5
+        },
+        {
+          "party": "IUML",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.5
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.7
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Tittakudi",
+          "constituencyNumber": 151,
+          "reservationType": "SC",
+          "totalElectors": 220424,
+          "totalVotes": 168184,
+          "enop": 2.56,
+          "winner": "GANESAN,  C.V.",
+          "winnerParty": "DMK",
+          "winnerVotes": 83726,
+          "winnerVoteShare": 49.78,
+          "marginVotes": 21563,
+          "marginPct": 12.82,
+          "turnoutPct": 76.3
+        },
+        {
+          "constituency": "Vriddhachalam",
+          "constituencyNumber": 152,
+          "reservationType": "GEN",
+          "totalElectors": 255432,
+          "totalVotes": 196734,
+          "enop": 3.12,
+          "winner": "Radhakrishnan",
+          "winnerParty": "INC",
+          "winnerVotes": 77064,
+          "winnerVoteShare": 39.17,
+          "marginVotes": 862,
+          "marginPct": 0.44,
+          "turnoutPct": 77.02
+        },
+        {
+          "constituency": "Neyveli",
+          "constituencyNumber": 153,
+          "reservationType": "GEN",
+          "totalElectors": 221050,
+          "totalVotes": 164130,
+          "enop": 2.44,
+          "winner": "SABA.RAJENDRAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 75177,
+          "winnerVoteShare": 45.8,
+          "marginVotes": 977,
+          "marginPct": 0.6,
+          "turnoutPct": 74.25
+        },
+        {
+          "constituency": "Panruti",
+          "constituencyNumber": 154,
+          "reservationType": "GEN",
+          "totalElectors": 247548,
+          "totalVotes": 197049,
+          "enop": 2.33,
+          "winner": "VELMURUGAN.T",
+          "winnerParty": "DMK",
+          "winnerVotes": 93801,
+          "winnerVoteShare": 47.6,
+          "marginVotes": 4697,
+          "marginPct": 2.38,
+          "turnoutPct": 79.6
+        },
+        {
+          "constituency": "Cuddalore",
+          "constituencyNumber": 155,
+          "reservationType": "GEN",
+          "totalElectors": 243414,
+          "totalVotes": 182001,
+          "enop": 2.44,
+          "winner": "G.IYAPPAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 84563,
+          "winnerVoteShare": 46.46,
+          "marginVotes": 5151,
+          "marginPct": 2.83,
+          "turnoutPct": 74.77
+        },
+        {
+          "constituency": "Kurinjipadi",
+          "constituencyNumber": 156,
+          "reservationType": "GEN",
+          "totalElectors": 242238,
+          "totalVotes": 198781,
+          "enop": 2.27,
+          "winner": "M.R.K.PANNEERSELVAM",
+          "winnerParty": "DMK",
+          "winnerVotes": 101456,
+          "winnerVoteShare": 51.04,
+          "marginVotes": 17527,
+          "marginPct": 8.82,
+          "turnoutPct": 82.06
+        },
+        {
+          "constituency": "Bhuvanagiri",
+          "constituencyNumber": 157,
+          "reservationType": "GEN",
+          "totalElectors": 250941,
+          "totalVotes": 197165,
+          "enop": 2.27,
+          "winner": "Arunmozhithevan. A",
+          "winnerParty": "ADMK",
+          "winnerVotes": 96453,
+          "winnerVoteShare": 48.92,
+          "marginVotes": 8259,
+          "marginPct": 4.19,
+          "turnoutPct": 78.57
+        },
+        {
+          "constituency": "Chidambaram",
+          "constituencyNumber": 158,
+          "reservationType": "GEN",
+          "totalElectors": 254903,
+          "totalVotes": 183352,
+          "enop": 2.38,
+          "winner": "K.A. PANDIAN",
+          "winnerParty": "ADMK",
+          "winnerVotes": 91961,
+          "winnerVoteShare": 50.16,
+          "marginVotes": 16937,
+          "marginPct": 9.24,
+          "turnoutPct": 71.93
+        },
+        {
+          "constituency": "Kattumannarkoil",
+          "constituencyNumber": 159,
+          "reservationType": "SC",
+          "totalElectors": 231397,
+          "totalVotes": 175561,
+          "enop": 2.38,
+          "winner": "SINTHANAI SELVAN",
+          "winnerParty": "VCK",
+          "winnerVotes": 86056,
+          "winnerVoteShare": 49.02,
+          "marginVotes": 10565,
+          "marginPct": 6.02,
+          "turnoutPct": 75.87
+        }
+      ]
+    },
+    {
+      "district": "Dharmapuri",
+      "districtSlug": "dharmapuri",
+      "totalSeats": 5,
+      "turnoutPct": 82.4,
+      "totalElectors": 1278689,
+      "totalVotes": 1053792,
+      "winnerParty": "ADMK",
+      "winnerSeats": 3,
+      "winnerSeatShare": 60,
+      "winnerVoteShare": 30.7,
+      "closeContests": 0,
+      "meanMarginPct": 13.6,
+      "medianMarginPct": 13.6,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.51,
+          "medianEnop": 2.5,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 3,
+          "majorityWinnerSeatShare": 60,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 82.2,
+          "turnoutIqr": 5.3,
+          "turnoutRange": 8.9,
+          "winnerVoteShareMedian": 50.5,
+          "marginMedian": 13.6,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 20,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "ADMK",
+          "seats": 3,
+          "seatShare": 60,
+          "voteShare": 30.7
+        },
+        {
+          "party": "PMK",
+          "seats": 2,
+          "seatShare": 40,
+          "voteShare": 20.1
+        },
+        {
+          "party": "DMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 30.7
+        },
+        {
+          "party": "CPM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.5
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.2
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.9
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.1
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Palacode",
+          "constituencyNumber": 57,
+          "reservationType": "GEN",
+          "totalElectors": 236459,
+          "totalVotes": 206595,
+          "enop": 2.27,
+          "winner": "ANBALAGAN.K.P.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 110070,
+          "winnerVoteShare": 53.28,
+          "marginVotes": 28100,
+          "marginPct": 13.6,
+          "turnoutPct": 87.37
+        },
+        {
+          "constituency": "Pennagaram",
+          "constituencyNumber": 58,
+          "reservationType": "GEN",
+          "totalElectors": 247417,
+          "totalVotes": 210305,
+          "enop": 2.44,
+          "winner": "MANI. G.K",
+          "winnerParty": "PMK",
+          "winnerVotes": 106123,
+          "winnerVoteShare": 50.46,
+          "marginVotes": 21186,
+          "marginPct": 10.07,
+          "turnoutPct": 85
+        },
+        {
+          "constituency": "Dharmapuri",
+          "constituencyNumber": 59,
+          "reservationType": "GEN",
+          "totalElectors": 272723,
+          "totalVotes": 217333,
+          "enop": 2.7,
+          "winner": "VENKATESHWARAN.S.P.",
+          "winnerParty": "PMK",
+          "winnerVotes": 105630,
+          "winnerVoteShare": 48.6,
+          "marginVotes": 26860,
+          "marginPct": 12.36,
+          "turnoutPct": 79.69
+        },
+        {
+          "constituency": "Pappireddippatti",
+          "constituencyNumber": 60,
+          "reservationType": "GEN",
+          "totalElectors": 269012,
+          "totalVotes": 220994,
+          "enop": 2.5,
+          "winner": "GOVINDASAMY.A",
+          "winnerParty": "ADMK",
+          "winnerVotes": 114507,
+          "winnerVoteShare": 51.81,
+          "marginVotes": 36943,
+          "marginPct": 16.72,
+          "turnoutPct": 82.15
+        },
+        {
+          "constituency": "Harur",
+          "constituencyNumber": 61,
+          "reservationType": "SC",
+          "totalElectors": 253078,
+          "totalVotes": 198565,
+          "enop": 2.63,
+          "winner": "SAMPATHKUMAR.V",
+          "winnerParty": "ADMK",
+          "winnerVotes": 99061,
+          "winnerVoteShare": 49.89,
+          "marginVotes": 30362,
+          "marginPct": 15.29,
+          "turnoutPct": 78.46
+        }
+      ]
+    },
+    {
+      "district": "Dindigul",
+      "districtSlug": "dindigul",
+      "totalSeats": 7,
+      "turnoutPct": 76.7,
+      "totalElectors": 1896842,
+      "totalVotes": 1455327,
+      "winnerParty": "DMK",
+      "winnerSeats": 4,
+      "winnerSeatShare": 57.1,
+      "winnerVoteShare": 44.7,
+      "closeContests": 0,
+      "meanMarginPct": 17.9,
+      "medianMarginPct": 14.3,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.36,
+          "medianEnop": 2.38,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 3,
+          "majorityWinnerSeatShare": 42.9,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 78,
+          "turnoutIqr": 5.4,
+          "turnoutRange": 13.8,
+          "winnerVoteShareMedian": 50,
+          "marginMedian": 14.3,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 14.3,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 4,
+          "seatShare": 57.1,
+          "voteShare": 44.7
+        },
+        {
+          "party": "ADMK",
+          "seats": 3,
+          "seatShare": 42.9,
+          "voteShare": 37
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.9
+        },
+        {
+          "party": "CPM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5
+        },
+        {
+          "party": "PMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.1
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.5
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.4
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Palani",
+          "constituencyNumber": 127,
+          "reservationType": "GEN",
+          "totalElectors": 280081,
+          "totalVotes": 205384,
+          "enop": 2.33,
+          "winner": "SENTHIL KUMAR I.P",
+          "winnerParty": "DMK",
+          "winnerVotes": 108566,
+          "winnerVoteShare": 52.86,
+          "marginVotes": 30056,
+          "marginPct": 14.63,
+          "turnoutPct": 73.33
+        },
+        {
+          "constituency": "Oddanchatram",
+          "constituencyNumber": 128,
+          "reservationType": "GEN",
+          "totalElectors": 242845,
+          "totalVotes": 201756,
+          "enop": 2.17,
+          "winner": "SAKKARAPANI R",
+          "winnerParty": "DMK",
+          "winnerVotes": 109970,
+          "winnerVoteShare": 54.51,
+          "marginVotes": 28742,
+          "marginPct": 14.25,
+          "turnoutPct": 83.08
+        },
+        {
+          "constituency": "Athoor",
+          "constituencyNumber": 129,
+          "reservationType": "GEN",
+          "totalElectors": 294946,
+          "totalVotes": 229940,
+          "enop": 1.82,
+          "winner": "PERIYASAMY I",
+          "winnerParty": "DMK",
+          "winnerVotes": 165809,
+          "winnerVoteShare": 72.11,
+          "marginVotes": 135571,
+          "marginPct": 58.96,
+          "turnoutPct": 77.96
+        },
+        {
+          "constituency": "Nilakottai",
+          "constituencyNumber": 130,
+          "reservationType": "SC",
+          "totalElectors": 246176,
+          "totalVotes": 184805,
+          "enop": 2.7,
+          "winner": "S.Thenmozhi",
+          "winnerParty": "ADMK",
+          "winnerVotes": 91461,
+          "winnerVoteShare": 49.49,
+          "marginVotes": 27618,
+          "marginPct": 14.94,
+          "turnoutPct": 75.07
+        },
+        {
+          "constituency": "Natham",
+          "constituencyNumber": 131,
+          "reservationType": "GEN",
+          "totalElectors": 285299,
+          "totalVotes": 225244,
+          "enop": 2.44,
+          "winner": "NATHAM.R.VISWANATHAN",
+          "winnerParty": "ADMK",
+          "winnerVotes": 107762,
+          "winnerVoteShare": 47.84,
+          "marginVotes": 11932,
+          "marginPct": 5.3,
+          "turnoutPct": 78.95
+        },
+        {
+          "constituency": "Dindigul",
+          "constituencyNumber": 132,
+          "reservationType": "GEN",
+          "totalElectors": 281677,
+          "totalVotes": 195118,
+          "enop": 2.7,
+          "winner": "SREENIVASAN.C",
+          "winnerParty": "ADMK",
+          "winnerVotes": 90595,
+          "winnerVoteShare": 46.43,
+          "marginVotes": 17747,
+          "marginPct": 9.1,
+          "turnoutPct": 69.27
+        },
+        {
+          "constituency": "Vedasandur",
+          "constituencyNumber": 133,
+          "reservationType": "GEN",
+          "totalElectors": 265818,
+          "totalVotes": 213080,
+          "enop": 2.38,
+          "winner": "GANDHIRAJAN S",
+          "winnerParty": "DMK",
+          "winnerVotes": 106481,
+          "winnerVoteShare": 49.97,
+          "marginVotes": 17553,
+          "marginPct": 8.24,
+          "turnoutPct": 80.16
+        }
+      ]
+    },
+    {
+      "district": "Erode",
+      "districtSlug": "erode",
+      "totalSeats": 8,
+      "turnoutPct": 75.8,
+      "totalElectors": 1980391,
+      "totalVotes": 1500895,
+      "winnerParty": "DMK",
+      "winnerSeats": 4,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 39.4,
+      "closeContests": 4,
+      "meanMarginPct": 5.1,
+      "medianMarginPct": 4.8,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.6,
+          "medianEnop": 2.56,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 12.5,
+          "ultraCloseSeats": 3,
+          "ultraCloseSeatShare": 37.5,
+          "turnoutMedian": 76.2,
+          "turnoutIqr": 7.5,
+          "turnoutRange": 17.3,
+          "winnerVoteShareMedian": 45.6,
+          "marginMedian": 4.8,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 12.5,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 4,
+          "seatShare": 50,
+          "voteShare": 39.4
+        },
+        {
+          "party": "ADMK",
+          "seats": 2,
+          "seatShare": 25,
+          "voteShare": 32.5
+        },
+        {
+          "party": "BJP",
+          "seats": 1,
+          "seatShare": 12.5,
+          "voteShare": 11.1
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 12.5,
+          "voteShare": 4.5
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.7
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.3
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.2
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "ERODE (East)",
+          "constituencyNumber": 98,
+          "reservationType": "GEN",
+          "totalElectors": 229524,
+          "totalVotes": 152037,
+          "enop": 2.78,
+          "winner": "THIRUMAHAN EVERAA,E.",
+          "winnerParty": "INC",
+          "winnerVotes": 67300,
+          "winnerVoteShare": 44.27,
+          "marginVotes": 8904,
+          "marginPct": 5.86,
+          "turnoutPct": 66.24
+        },
+        {
+          "constituency": "ERODE (West)",
+          "constituencyNumber": 99,
+          "reservationType": "GEN",
+          "totalElectors": 296394,
+          "totalVotes": 205579,
+          "enop": 2.56,
+          "winner": "Muthusamy S",
+          "winnerParty": "DMK",
+          "winnerVotes": 100757,
+          "winnerVoteShare": 49.01,
+          "marginVotes": 22089,
+          "marginPct": 10.74,
+          "turnoutPct": 69.36
+        },
+        {
+          "constituency": "Modakurichi",
+          "constituencyNumber": 100,
+          "reservationType": "GEN",
+          "totalElectors": 241638,
+          "totalVotes": 181857,
+          "enop": 2.7,
+          "winner": "SARASWATHI.C",
+          "winnerParty": "BJP",
+          "winnerVotes": 78125,
+          "winnerVoteShare": 42.96,
+          "marginVotes": 281,
+          "marginPct": 0.15,
+          "turnoutPct": 75.26
+        },
+        {
+          "constituency": "Dharapuram",
+          "constituencyNumber": 101,
+          "reservationType": "SC",
+          "totalElectors": 261619,
+          "totalVotes": 193991,
+          "enop": 2.33,
+          "winner": "KAYALVIZHI N",
+          "winnerParty": "DMK",
+          "winnerVotes": 89986,
+          "winnerVoteShare": 46.39,
+          "marginVotes": 1393,
+          "marginPct": 0.72,
+          "turnoutPct": 74.15
+        },
+        {
+          "constituency": "Kangayam",
+          "constituencyNumber": 102,
+          "reservationType": "GEN",
+          "totalElectors": 258865,
+          "totalVotes": 199818,
+          "enop": 2.44,
+          "winner": "SAMINATHAN.M.P",
+          "winnerParty": "DMK",
+          "winnerVotes": 94197,
+          "winnerVoteShare": 47.14,
+          "marginVotes": 7331,
+          "marginPct": 3.67,
+          "turnoutPct": 77.19
+        },
+        {
+          "constituency": "Perundurai",
+          "constituencyNumber": 103,
+          "reservationType": "GEN",
+          "totalElectors": 229834,
+          "totalVotes": 189843,
+          "enop": 2.94,
+          "winner": "JAYAKUMAR, S.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 85125,
+          "winnerVoteShare": 44.84,
+          "marginVotes": 14507,
+          "marginPct": 7.64,
+          "turnoutPct": 82.6
+        },
+        {
+          "constituency": "Bhavani",
+          "constituencyNumber": 104,
+          "reservationType": "GEN",
+          "totalElectors": 241179,
+          "totalVotes": 201385,
+          "enop": 2.5,
+          "winner": "KARUPPANAN.K.C",
+          "winnerParty": "ADMK",
+          "winnerVotes": 100915,
+          "winnerVoteShare": 50.11,
+          "marginVotes": 22523,
+          "marginPct": 11.18,
+          "turnoutPct": 83.5
+        },
+        {
+          "constituency": "Anthiyur",
+          "constituencyNumber": 105,
+          "reservationType": "GEN",
+          "totalElectors": 221338,
+          "totalVotes": 176385,
+          "enop": 2.56,
+          "winner": "VENKATACHALAM.A.G",
+          "winnerParty": "DMK",
+          "winnerVotes": 79096,
+          "winnerVoteShare": 44.84,
+          "marginVotes": 1275,
+          "marginPct": 0.72,
+          "turnoutPct": 79.69
+        }
+      ]
+    },
+    {
+      "district": "Kanchipuram",
+      "districtSlug": "kanchipuram",
+      "totalSeats": 11,
+      "turnoutPct": 66.6,
+      "totalElectors": 4068017,
+      "totalVotes": 2711269,
+      "winnerParty": "DMK",
+      "winnerSeats": 7,
+      "winnerSeatShare": 63.6,
+      "winnerVoteShare": 34.7,
+      "closeContests": 5,
+      "meanMarginPct": 7.3,
+      "medianMarginPct": 5,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.74,
+          "medianEnop": 2.78,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 3,
+          "ultraCloseSeatShare": 27.3,
+          "turnoutMedian": 73.3,
+          "turnoutIqr": 16.3,
+          "turnoutRange": 25.1,
+          "winnerVoteShareMedian": 46.2,
+          "marginMedian": 5,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 27.3,
+            "scSeats": 3,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 7,
+          "seatShare": 63.6,
+          "voteShare": 34.7
+        },
+        {
+          "party": "VCK",
+          "seats": 2,
+          "seatShare": 18.2,
+          "voteShare": 6.5
+        },
+        {
+          "party": "ADMK",
+          "seats": 1,
+          "seatShare": 9.1,
+          "voteShare": 31.2
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 9.1,
+          "voteShare": 4.3
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.7
+        },
+        {
+          "party": "PMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.8
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.8
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Shozhinganallur",
+          "constituencyNumber": 27,
+          "reservationType": "GEN",
+          "totalElectors": 699612,
+          "totalVotes": 388355,
+          "enop": 2.94,
+          "winner": "S.ARAVINDRAMESH",
+          "winnerParty": "DMK",
+          "winnerVotes": 171558,
+          "winnerVoteShare": 44.18,
+          "marginVotes": 35405,
+          "marginPct": 9.12,
+          "turnoutPct": 55.51
+        },
+        {
+          "constituency": "Alandur",
+          "constituencyNumber": 28,
+          "reservationType": "GEN",
+          "totalElectors": 390909,
+          "totalVotes": 237751,
+          "enop": 2.86,
+          "winner": "T.M.Anbarasan",
+          "winnerParty": "DMK",
+          "winnerVotes": 116785,
+          "winnerVoteShare": 49.12,
+          "marginVotes": 40571,
+          "marginPct": 17.06,
+          "turnoutPct": 60.82
+        },
+        {
+          "constituency": "Sriperumbudur",
+          "constituencyNumber": 29,
+          "reservationType": "SC",
+          "totalElectors": 357400,
+          "totalVotes": 264262,
+          "enop": 2.78,
+          "winner": "SELVAPERUNTHAGAI",
+          "winnerParty": "INC",
+          "winnerVotes": 115353,
+          "winnerVoteShare": 43.65,
+          "marginVotes": 10879,
+          "marginPct": 4.12,
+          "turnoutPct": 73.94
+        },
+        {
+          "constituency": "Pallavaram",
+          "constituencyNumber": 30,
+          "reservationType": "GEN",
+          "totalElectors": 437387,
+          "totalVotes": 266194,
+          "enop": 2.78,
+          "winner": "KARUNANITHI",
+          "winnerParty": "DMK",
+          "winnerVotes": 126427,
+          "winnerVoteShare": 47.49,
+          "marginVotes": 37781,
+          "marginPct": 14.19,
+          "turnoutPct": 60.86
+        },
+        {
+          "constituency": "Tambaram",
+          "constituencyNumber": 31,
+          "reservationType": "GEN",
+          "totalElectors": 418082,
+          "totalVotes": 248968,
+          "enop": 2.94,
+          "winner": "Raja.S.R",
+          "winnerParty": "DMK",
+          "winnerVotes": 116840,
+          "winnerVoteShare": 46.93,
+          "marginVotes": 36824,
+          "marginPct": 14.79,
+          "turnoutPct": 59.55
+        },
+        {
+          "constituency": "Chengalpattu",
+          "constituencyNumber": 32,
+          "reservationType": "GEN",
+          "totalElectors": 431361,
+          "totalVotes": 274087,
+          "enop": 2.63,
+          "winner": "VARALAKSHMI.M",
+          "winnerParty": "DMK",
+          "winnerVotes": 130573,
+          "winnerVoteShare": 47.64,
+          "marginVotes": 26665,
+          "marginPct": 9.73,
+          "turnoutPct": 63.54
+        },
+        {
+          "constituency": "Thiruporur",
+          "constituencyNumber": 33,
+          "reservationType": "GEN",
+          "totalElectors": 296921,
+          "totalVotes": 226729,
+          "enop": 2.94,
+          "winner": "S.S.Balaji",
+          "winnerParty": "VCK",
+          "winnerVotes": 93954,
+          "winnerVoteShare": 41.44,
+          "marginVotes": 1947,
+          "marginPct": 0.86,
+          "turnoutPct": 76.36
+        },
+        {
+          "constituency": "Cheyyur",
+          "constituencyNumber": 34,
+          "reservationType": "SC",
+          "totalElectors": 229994,
+          "totalVotes": 179120,
+          "enop": 2.5,
+          "winner": "Babu M",
+          "winnerParty": "VCK",
+          "winnerVotes": 82750,
+          "winnerVoteShare": 46.2,
+          "marginVotes": 4042,
+          "marginPct": 2.26,
+          "turnoutPct": 77.88
+        },
+        {
+          "constituency": "Maduranthakam",
+          "constituencyNumber": 35,
+          "reservationType": "SC",
+          "totalElectors": 230430,
+          "totalVotes": 185842,
+          "enop": 2.38,
+          "winner": "Maragatham. K",
+          "winnerParty": "ADMK",
+          "winnerVotes": 86646,
+          "winnerVoteShare": 46.62,
+          "marginVotes": 3570,
+          "marginPct": 1.92,
+          "turnoutPct": 80.65
+        },
+        {
+          "constituency": "Uthiramerur",
+          "constituencyNumber": 36,
+          "reservationType": "GEN",
+          "totalElectors": 262832,
+          "totalVotes": 210529,
+          "enop": 2.56,
+          "winner": "SUNDAR K",
+          "winnerParty": "DMK",
+          "winnerVotes": 93427,
+          "winnerVoteShare": 44.38,
+          "marginVotes": 1622,
+          "marginPct": 0.77,
+          "turnoutPct": 80.1
+        },
+        {
+          "constituency": "Kancheepuram",
+          "constituencyNumber": 37,
+          "reservationType": "GEN",
+          "totalElectors": 313089,
+          "totalVotes": 229432,
+          "enop": 2.78,
+          "winner": "C.V.M.P. Ezhailzrasan",
+          "winnerParty": "DMK",
+          "winnerVotes": 102712,
+          "winnerVoteShare": 44.77,
+          "marginVotes": 11595,
+          "marginPct": 5.05,
+          "turnoutPct": 73.28
+        }
+      ]
+    },
+    {
+      "district": "Kanniyakumari",
+      "districtSlug": "kanniyakumari",
+      "totalSeats": 6,
+      "turnoutPct": 68.8,
+      "totalElectors": 1597621,
+      "totalVotes": 1099938,
+      "winnerParty": "INC",
+      "winnerSeats": 3,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 25.4,
+      "closeContests": 0,
+      "meanMarginPct": 15.4,
+      "medianMarginPct": 14.7,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.44,
+          "medianEnop": 2.44,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 3,
+          "majorityWinnerSeatShare": 50,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 67.2,
+          "turnoutIqr": 2.5,
+          "turnoutRange": 9.3,
+          "winnerVoteShareMedian": 50.6,
+          "marginMedian": 14.7,
+          "reservationMix": {
+            "reservedSeats": 0,
+            "reservedSeatShare": 0,
+            "scSeats": 0,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "INC",
+          "seats": 3,
+          "seatShare": 50,
+          "voteShare": 25.4
+        },
+        {
+          "party": "DMK",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 23.5
+        },
+        {
+          "party": "ADMK",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 19.7
+        },
+        {
+          "party": "BJP",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 19.4
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.6
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Kanniyakumari",
+          "constituencyNumber": 229,
+          "reservationType": "GEN",
+          "totalElectors": 299074,
+          "totalVotes": 224874,
+          "enop": 2.44,
+          "winner": "THALAVAI SUNDARAM N.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 109745,
+          "winnerVoteShare": 48.8,
+          "marginVotes": 16213,
+          "marginPct": 7.21,
+          "turnoutPct": 75.19
+        },
+        {
+          "constituency": "Nagercoil",
+          "constituencyNumber": 230,
+          "reservationType": "GEN",
+          "totalElectors": 274657,
+          "totalVotes": 184185,
+          "enop": 2.44,
+          "winner": "Gandhi M.R.",
+          "winnerParty": "BJP",
+          "winnerVotes": 88804,
+          "winnerVoteShare": 48.21,
+          "marginVotes": 11669,
+          "marginPct": 6.34,
+          "turnoutPct": 67.06
+        },
+        {
+          "constituency": "Colachel",
+          "constituencyNumber": 231,
+          "reservationType": "GEN",
+          "totalElectors": 271991,
+          "totalVotes": 182969,
+          "enop": 2.56,
+          "winner": "Prince J.G.",
+          "winnerParty": "INC",
+          "winnerVotes": 90681,
+          "winnerVoteShare": 49.56,
+          "marginVotes": 24832,
+          "marginPct": 13.57,
+          "turnoutPct": 67.27
+        },
+        {
+          "constituency": "Padmanabhapuram",
+          "constituencyNumber": 232,
+          "reservationType": "GEN",
+          "totalElectors": 242802,
+          "totalVotes": 170156,
+          "enop": 2.44,
+          "winner": "Mano Thangaraj, T.",
+          "winnerParty": "DMK",
+          "winnerVotes": 87744,
+          "winnerVoteShare": 51.57,
+          "marginVotes": 26885,
+          "marginPct": 15.8,
+          "turnoutPct": 70.08
+        },
+        {
+          "constituency": "Vilavancode",
+          "constituencyNumber": 233,
+          "reservationType": "GEN",
+          "totalElectors": 251138,
+          "totalVotes": 167836,
+          "enop": 2.5,
+          "winner": "VIJAYADHARANI S",
+          "winnerParty": "INC",
+          "winnerVotes": 87473,
+          "winnerVoteShare": 52.12,
+          "marginVotes": 28669,
+          "marginPct": 17.08,
+          "turnoutPct": 66.83
+        },
+        {
+          "constituency": "Killiyoor",
+          "constituencyNumber": 234,
+          "reservationType": "GEN",
+          "totalElectors": 257959,
+          "totalVotes": 169918,
+          "enop": 2.27,
+          "winner": "RAJESH KUMAR  S",
+          "winnerParty": "INC",
+          "winnerVotes": 101541,
+          "winnerVoteShare": 59.76,
+          "marginVotes": 55400,
+          "marginPct": 32.6,
+          "turnoutPct": 65.87
+        }
+      ]
+    },
+    {
+      "district": "Karur",
+      "districtSlug": "karur",
+      "totalSeats": 4,
+      "turnoutPct": 84,
+      "totalElectors": 908367,
+      "totalVotes": 762782,
+      "winnerParty": "DMK",
+      "winnerSeats": 4,
+      "winnerSeatShare": 100,
+      "winnerVoteShare": 51.5,
+      "closeContests": 0,
+      "meanMarginPct": 12.4,
+      "medianMarginPct": 13,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.38,
+          "medianEnop": 2.38,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 3,
+          "majorityWinnerSeatShare": 75,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 83.9,
+          "turnoutIqr": 1.5,
+          "turnoutRange": 4.2,
+          "winnerVoteShareMedian": 51.9,
+          "marginMedian": 13,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 25,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 4,
+          "seatShare": 100,
+          "voteShare": 51.5
+        },
+        {
+          "party": "ADMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 30.4
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 9
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.7
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.8
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "DMDK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.4
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Aravakurichi",
+          "constituencyNumber": 134,
+          "reservationType": "GEN",
+          "totalElectors": 216203,
+          "totalVotes": 177114,
+          "enop": 2.33,
+          "winner": "ELANGO. R",
+          "winnerParty": "DMK",
+          "winnerVotes": 93369,
+          "winnerVoteShare": 52.72,
+          "marginVotes": 24816,
+          "marginPct": 14.01,
+          "turnoutPct": 81.92
+        },
+        {
+          "constituency": "Karur",
+          "constituencyNumber": 135,
+          "reservationType": "GEN",
+          "totalElectors": 248067,
+          "totalVotes": 207310,
+          "enop": 2.33,
+          "winner": "SENTHILBALAJI V",
+          "winnerParty": "DMK",
+          "winnerVotes": 101757,
+          "winnerVoteShare": 49.08,
+          "marginVotes": 12448,
+          "marginPct": 6,
+          "turnoutPct": 83.57
+        },
+        {
+          "constituency": "Krishnarayapuram",
+          "constituencyNumber": 136,
+          "reservationType": "SC",
+          "totalElectors": 214924,
+          "totalVotes": 180902,
+          "enop": 2.44,
+          "winner": "SIVAGAMA SUNDARI.K",
+          "winnerParty": "DMK",
+          "winnerVotes": 96540,
+          "winnerVoteShare": 53.37,
+          "marginVotes": 31625,
+          "marginPct": 17.48,
+          "turnoutPct": 84.17
+        },
+        {
+          "constituency": "Kulithalai",
+          "constituencyNumber": 137,
+          "reservationType": "GEN",
+          "totalElectors": 229173,
+          "totalVotes": 197456,
+          "enop": 2.44,
+          "winner": "R.Manickam",
+          "winnerParty": "DMK",
+          "winnerVotes": 100829,
+          "winnerVoteShare": 51.06,
+          "marginVotes": 23540,
+          "marginPct": 11.92,
+          "turnoutPct": 86.16
+        }
+      ]
+    },
+    {
+      "district": "Krishnagiri",
+      "districtSlug": "krishnagiri",
+      "totalSeats": 6,
+      "turnoutPct": 76.9,
+      "totalElectors": 1617937,
+      "totalVotes": 1244916,
+      "winnerParty": "ADMK",
+      "winnerSeats": 3,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 38.6,
+      "closeContests": 3,
+      "meanMarginPct": 9.5,
+      "medianMarginPct": 5.7,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.35,
+          "medianEnop": 2.41,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 33.3,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 33.3,
+          "turnoutMedian": 78.4,
+          "turnoutIqr": 1.5,
+          "turnoutRange": 11.2,
+          "winnerVoteShareMedian": 48.4,
+          "marginMedian": 5.7,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 16.7,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "ADMK",
+          "seats": 3,
+          "seatShare": 50,
+          "voteShare": 38.6
+        },
+        {
+          "party": "DMK",
+          "seats": 2,
+          "seatShare": 33.3,
+          "voteShare": 32.3
+        },
+        {
+          "party": "CPI",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 9.7
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.7
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.2
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.4
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Uthangarai",
+          "constituencyNumber": 51,
+          "reservationType": "SC",
+          "totalElectors": 240172,
+          "totalVotes": 188223,
+          "enop": 2.38,
+          "winner": "T.M.TAMILSELVAM",
+          "winnerParty": "ADMK",
+          "winnerVotes": 99675,
+          "winnerVoteShare": 52.96,
+          "marginVotes": 28387,
+          "marginPct": 15.08,
+          "turnoutPct": 78.37
+        },
+        {
+          "constituency": "Bargur",
+          "constituencyNumber": 52,
+          "reservationType": "GEN",
+          "totalElectors": 250106,
+          "totalVotes": 197784,
+          "enop": 2.38,
+          "winner": "MATHIAZHAGAN D",
+          "winnerParty": "DMK",
+          "winnerVotes": 97256,
+          "winnerVoteShare": 49.17,
+          "marginVotes": 12614,
+          "marginPct": 6.38,
+          "turnoutPct": 79.08
+        },
+        {
+          "constituency": "Krishnagiri",
+          "constituencyNumber": 53,
+          "reservationType": "GEN",
+          "totalElectors": 269615,
+          "totalVotes": 211648,
+          "enop": 2.44,
+          "winner": "Ashokkumar.K",
+          "winnerParty": "ADMK",
+          "winnerVotes": 96050,
+          "winnerVoteShare": 45.38,
+          "marginVotes": 794,
+          "marginPct": 0.38,
+          "turnoutPct": 78.5
+        },
+        {
+          "constituency": "Veppanahalli",
+          "constituencyNumber": 54,
+          "reservationType": "GEN",
+          "totalElectors": 252294,
+          "totalVotes": 205141,
+          "enop": 2.44,
+          "winner": "K.P.Munusamy",
+          "winnerParty": "ADMK",
+          "winnerVotes": 94104,
+          "winnerVoteShare": 45.87,
+          "marginVotes": 3054,
+          "marginPct": 1.49,
+          "turnoutPct": 81.31
+        },
+        {
+          "constituency": "Hosur",
+          "constituencyNumber": 55,
+          "reservationType": "GEN",
+          "totalElectors": 353970,
+          "totalVotes": 248098,
+          "enop": 2.44,
+          "winner": "PRAKAASH Y",
+          "winnerParty": "DMK",
+          "winnerVotes": 118231,
+          "winnerVoteShare": 47.65,
+          "marginVotes": 12367,
+          "marginPct": 4.98,
+          "turnoutPct": 70.09
+        },
+        {
+          "constituency": "Thalli",
+          "constituencyNumber": 56,
+          "reservationType": "GEN",
+          "totalElectors": 251780,
+          "totalVotes": 194022,
+          "enop": 2,
+          "winner": "RAMACHANDRAN.T",
+          "winnerParty": "CPI",
+          "winnerVotes": 120641,
+          "winnerVoteShare": 62.18,
+          "marginVotes": 56226,
+          "marginPct": 28.98,
+          "turnoutPct": 77.06
+        }
+      ]
+    },
+    {
+      "district": "Madurai",
+      "districtSlug": "madurai",
+      "totalSeats": 10,
+      "turnoutPct": 70.4,
+      "totalElectors": 2727122,
+      "totalVotes": 1920405,
+      "winnerParty": "ADMK",
+      "winnerSeats": 5,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 35.3,
+      "closeContests": 3,
+      "meanMarginPct": 11.9,
+      "medianMarginPct": 11.1,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.98,
+          "medianEnop": 2.98,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 10,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 10,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 72,
+          "turnoutIqr": 10,
+          "turnoutRange": 18.5,
+          "winnerVoteShareMedian": 45.6,
+          "marginMedian": 11.1,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 10,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "ADMK",
+          "seats": 5,
+          "seatShare": 50,
+          "voteShare": 35.3
+        },
+        {
+          "party": "DMK",
+          "seats": 5,
+          "seatShare": 50,
+          "voteShare": 33.4
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.7
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.6
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.8
+        },
+        {
+          "party": "CPM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.9
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.6
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.5
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Melur",
+          "constituencyNumber": 188,
+          "reservationType": "GEN",
+          "totalElectors": 246237,
+          "totalVotes": 182782,
+          "enop": 3.12,
+          "winner": "PERIYAPULLAN @ SELVAM  P.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 83344,
+          "winnerVoteShare": 45.6,
+          "marginVotes": 35162,
+          "marginPct": 19.24,
+          "turnoutPct": 74.23
+        },
+        {
+          "constituency": "Madurai East",
+          "constituencyNumber": 189,
+          "reservationType": "GEN",
+          "totalElectors": 333462,
+          "totalVotes": 237892,
+          "enop": 2.7,
+          "winner": "MOORTHY P",
+          "winnerParty": "DMK",
+          "winnerVotes": 122729,
+          "winnerVoteShare": 51.59,
+          "marginVotes": 49604,
+          "marginPct": 20.85,
+          "turnoutPct": 71.34
+        },
+        {
+          "constituency": "Sholavandan",
+          "constituencyNumber": 190,
+          "reservationType": "SC",
+          "totalElectors": 220607,
+          "totalVotes": 175361,
+          "enop": 2.56,
+          "winner": "VENKATESAN A",
+          "winnerParty": "DMK",
+          "winnerVotes": 84240,
+          "winnerVoteShare": 48.04,
+          "marginVotes": 17045,
+          "marginPct": 9.72,
+          "turnoutPct": 79.49
+        },
+        {
+          "constituency": "Madurai North",
+          "constituencyNumber": 191,
+          "reservationType": "GEN",
+          "totalElectors": 246157,
+          "totalVotes": 156556,
+          "enop": 2.94,
+          "winner": "THALAPATHI G",
+          "winnerParty": "DMK",
+          "winnerVotes": 73010,
+          "winnerVoteShare": 46.64,
+          "marginVotes": 22916,
+          "marginPct": 14.64,
+          "turnoutPct": 63.6
+        },
+        {
+          "constituency": "Madurai South",
+          "constituencyNumber": 192,
+          "reservationType": "GEN",
+          "totalElectors": 231713,
+          "totalVotes": 147833,
+          "enop": 2.86,
+          "winner": "BOOMINATHAN.M",
+          "winnerParty": "DMK",
+          "winnerVotes": 62812,
+          "winnerVoteShare": 42.49,
+          "marginVotes": 6515,
+          "marginPct": 4.41,
+          "turnoutPct": 63.8
+        },
+        {
+          "constituency": "Madurai Central",
+          "constituencyNumber": 193,
+          "reservationType": "GEN",
+          "totalElectors": 244846,
+          "totalVotes": 149430,
+          "enop": 3.03,
+          "winner": "PALANIVEL THIAGA RAJAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 73205,
+          "winnerVoteShare": 48.99,
+          "marginVotes": 34176,
+          "marginPct": 22.87,
+          "turnoutPct": 61.03
+        },
+        {
+          "constituency": "Madurai West",
+          "constituencyNumber": 194,
+          "reservationType": "GEN",
+          "totalElectors": 309726,
+          "totalVotes": 201694,
+          "enop": 3.03,
+          "winner": "RAJU. K",
+          "winnerParty": "ADMK",
+          "winnerVotes": 83883,
+          "winnerVoteShare": 41.59,
+          "marginVotes": 9121,
+          "marginPct": 4.52,
+          "turnoutPct": 65.12
+        },
+        {
+          "constituency": "Thiruparankundram",
+          "constituencyNumber": 195,
+          "reservationType": "GEN",
+          "totalElectors": 324280,
+          "totalVotes": 235849,
+          "enop": 3.23,
+          "winner": "RAJANCHELLAPPA, V.V.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 103683,
+          "winnerVoteShare": 43.96,
+          "marginVotes": 29489,
+          "marginPct": 12.5,
+          "turnoutPct": 72.73
+        },
+        {
+          "constituency": "Thirumangalam",
+          "constituencyNumber": 196,
+          "reservationType": "GEN",
+          "totalElectors": 282215,
+          "totalVotes": 220495,
+          "enop": 2.78,
+          "winner": "UDHAYAKUMAR R B",
+          "winnerParty": "ADMK",
+          "winnerVotes": 100338,
+          "winnerVoteShare": 45.51,
+          "marginVotes": 14087,
+          "marginPct": 6.39,
+          "turnoutPct": 78.13
+        },
+        {
+          "constituency": "Usilampatti",
+          "constituencyNumber": 197,
+          "reservationType": "GEN",
+          "totalElectors": 287879,
+          "totalVotes": 212513,
+          "enop": 3.57,
+          "winner": "AYYAPPAN P",
+          "winnerParty": "ADMK",
+          "winnerVotes": 71255,
+          "winnerVoteShare": 33.53,
+          "marginVotes": 7477,
+          "marginPct": 3.52,
+          "turnoutPct": 73.82
+        }
+      ]
+    },
+    {
+      "district": "Nagapattinam",
+      "districtSlug": "nagapattinam",
+      "totalSeats": 6,
+      "turnoutPct": 75.1,
+      "totalElectors": 1356412,
+      "totalVotes": 1018418,
+      "winnerParty": "DMK",
+      "winnerSeats": 2,
+      "winnerSeatShare": 33.3,
+      "winnerVoteShare": 25.2,
+      "closeContests": 2,
+      "meanMarginPct": 5.7,
+      "medianMarginPct": 5.7,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.55,
+          "medianEnop": 2.5,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 33.3,
+          "turnoutMedian": 75,
+          "turnoutIqr": 5.7,
+          "turnoutRange": 10.5,
+          "winnerVoteShareMedian": 46.9,
+          "marginMedian": 5.7,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 33.3,
+            "scSeats": 2,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 2,
+          "seatShare": 33.3,
+          "voteShare": 25.2
+        },
+        {
+          "party": "ADMK",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 30.7
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 7.2
+        },
+        {
+          "party": "CPM",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 6.7
+        },
+        {
+          "party": "VCK",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 6.5
+        },
+        {
+          "party": "PMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 12
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.2
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.7
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Sirkali",
+          "constituencyNumber": 160,
+          "reservationType": "SC",
+          "totalElectors": 255406,
+          "totalVotes": 191325,
+          "enop": 2.38,
+          "winner": "PANNEERSELVAM",
+          "winnerParty": "DMK",
+          "winnerVotes": 94057,
+          "winnerVoteShare": 49.16,
+          "marginVotes": 12148,
+          "marginPct": 6.35,
+          "turnoutPct": 74.91
+        },
+        {
+          "constituency": "Mayiladuthurai",
+          "constituencyNumber": 161,
+          "reservationType": "GEN",
+          "totalElectors": 248987,
+          "totalVotes": 174640,
+          "enop": 2.86,
+          "winner": "Rajakumar.S",
+          "winnerParty": "INC",
+          "winnerVotes": 73642,
+          "winnerVoteShare": 42.17,
+          "marginVotes": 2742,
+          "marginPct": 1.57,
+          "turnoutPct": 70.14
+        },
+        {
+          "constituency": "Poompuhar",
+          "constituencyNumber": 162,
+          "reservationType": "GEN",
+          "totalElectors": 276417,
+          "totalVotes": 207838,
+          "enop": 2.38,
+          "winner": "Nivedha M. Murugan",
+          "winnerParty": "DMK",
+          "winnerVotes": 96102,
+          "winnerVoteShare": 46.24,
+          "marginVotes": 3299,
+          "marginPct": 1.59,
+          "turnoutPct": 75.19
+        },
+        {
+          "constituency": "Nagapattinam",
+          "constituencyNumber": 163,
+          "reservationType": "GEN",
+          "totalElectors": 199472,
+          "totalVotes": 143560,
+          "enop": 2.63,
+          "winner": "J. Mohamed Shanavas",
+          "winnerParty": "VCK",
+          "winnerVotes": 66281,
+          "winnerVoteShare": 46.17,
+          "marginVotes": 7238,
+          "marginPct": 5.04,
+          "turnoutPct": 71.97
+        },
+        {
+          "constituency": "Kilvelur",
+          "constituencyNumber": 164,
+          "reservationType": "SC",
+          "totalElectors": 180026,
+          "totalVotes": 142995,
+          "enop": 2.7,
+          "winner": "NAGAIMAALI V P",
+          "winnerParty": "CPM",
+          "winnerVotes": 67988,
+          "winnerVoteShare": 47.55,
+          "marginVotes": 16985,
+          "marginPct": 11.88,
+          "turnoutPct": 79.43
+        },
+        {
+          "constituency": "Vedaranyam",
+          "constituencyNumber": 165,
+          "reservationType": "GEN",
+          "totalElectors": 196104,
+          "totalVotes": 158060,
+          "enop": 2.33,
+          "winner": "O.S.MANIAN",
+          "winnerParty": "ADMK",
+          "winnerVotes": 78719,
+          "winnerVoteShare": 49.8,
+          "marginVotes": 12329,
+          "marginPct": 7.8,
+          "turnoutPct": 80.6
+        }
+      ]
+    },
+    {
+      "district": "Namakkal",
+      "districtSlug": "namakkal",
+      "totalSeats": 6,
+      "turnoutPct": 80,
+      "totalElectors": 1466414,
+      "totalVotes": 1173189,
+      "winnerParty": "DMK",
+      "winnerSeats": 4,
+      "winnerSeatShare": 66.7,
+      "winnerVoteShare": 44.1,
+      "closeContests": 3,
+      "meanMarginPct": 6.9,
+      "medianMarginPct": 4.7,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.56,
+          "medianEnop": 2.53,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 16.7,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 33.3,
+          "turnoutMedian": 79.9,
+          "turnoutIqr": 2.3,
+          "turnoutRange": 3.5,
+          "winnerVoteShareMedian": 46.5,
+          "marginMedian": 4.7,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 33.3,
+            "scSeats": 1,
+            "stSeats": 1
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 4,
+          "seatShare": 66.7,
+          "voteShare": 44.1
+        },
+        {
+          "party": "ADMK",
+          "seats": 2,
+          "seatShare": 33.3,
+          "voteShare": 43.7
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.1
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.7
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.5
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.3
+        },
+        {
+          "party": "DMDK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.2
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Rasipuram",
+          "constituencyNumber": 92,
+          "reservationType": "SC",
+          "totalElectors": 239980,
+          "totalVotes": 196904,
+          "enop": 2.44,
+          "winner": "MATHIVENTHAN M",
+          "winnerParty": "DMK",
+          "winnerVotes": 90727,
+          "winnerVoteShare": 46.08,
+          "marginVotes": 1952,
+          "marginPct": 0.99,
+          "turnoutPct": 82.05
+        },
+        {
+          "constituency": "Sendamangalam",
+          "constituencyNumber": 93,
+          "reservationType": "ST",
+          "totalElectors": 246181,
+          "totalVotes": 199235,
+          "enop": 2.7,
+          "winner": "PONNUSAMY K",
+          "winnerParty": "DMK",
+          "winnerVotes": 90681,
+          "winnerVoteShare": 45.51,
+          "marginVotes": 10493,
+          "marginPct": 5.27,
+          "turnoutPct": 80.93
+        },
+        {
+          "constituency": "Namakkal",
+          "constituencyNumber": 94,
+          "reservationType": "GEN",
+          "totalElectors": 263152,
+          "totalVotes": 206759,
+          "enop": 2.44,
+          "winner": "RAMALINGAM P",
+          "winnerParty": "DMK",
+          "winnerVotes": 106494,
+          "winnerVoteShare": 51.51,
+          "marginVotes": 27861,
+          "marginPct": 13.48,
+          "turnoutPct": 78.57
+        },
+        {
+          "constituency": "Paramathi-Velur",
+          "constituencyNumber": 95,
+          "reservationType": "GEN",
+          "totalElectors": 226395,
+          "totalVotes": 183697,
+          "enop": 2.5,
+          "winner": "SEKAR S",
+          "winnerParty": "ADMK",
+          "winnerVotes": 86034,
+          "winnerVoteShare": 46.83,
+          "marginVotes": 7662,
+          "marginPct": 4.17,
+          "turnoutPct": 81.14
+        },
+        {
+          "constituency": "Tiruchengode",
+          "constituencyNumber": 96,
+          "reservationType": "GEN",
+          "totalElectors": 234619,
+          "totalVotes": 184669,
+          "enop": 2.56,
+          "winner": "ESWARAN E R",
+          "winnerParty": "DMK",
+          "winnerVotes": 81688,
+          "winnerVoteShare": 44.23,
+          "marginVotes": 2862,
+          "marginPct": 1.55,
+          "turnoutPct": 78.71
+        },
+        {
+          "constituency": "Kumarapalayam",
+          "constituencyNumber": 97,
+          "reservationType": "GEN",
+          "totalElectors": 256087,
+          "totalVotes": 201925,
+          "enop": 2.7,
+          "winner": "THANGAMANI.P",
+          "winnerParty": "ADMK",
+          "winnerVotes": 100800,
+          "winnerVoteShare": 49.92,
+          "marginVotes": 31646,
+          "marginPct": 15.67,
+          "turnoutPct": 78.85
+        }
+      ]
+    },
+    {
+      "district": "Nilgiris",
+      "districtSlug": "nilgiris",
+      "totalSeats": 3,
+      "turnoutPct": 68.5,
+      "totalElectors": 989844,
+      "totalVotes": 677582,
+      "winnerParty": "ADMK",
+      "winnerSeats": 2,
+      "winnerSeatShare": 66.7,
+      "winnerVoteShare": 46.7,
+      "closeContests": 1,
+      "meanMarginPct": 9.5,
+      "medianMarginPct": 12.5,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.7,
+          "medianEnop": 2.7,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 66.7,
+          "turnoutIqr": 6.4,
+          "turnoutRange": 12.8,
+          "winnerVoteShareMedian": 48.5,
+          "marginMedian": 12.5,
+          "reservationMix": {
+            "reservedSeats": 0,
+            "reservedSeatShare": 0,
+            "scSeats": 0,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "ADMK",
+          "seats": 2,
+          "seatShare": 66.7,
+          "voteShare": 46.7
+        },
+        {
+          "party": "DMK",
+          "seats": 1,
+          "seatShare": 33.3,
+          "voteShare": 37.9
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.1
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.8
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.3
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        },
+        {
+          "party": "Tamil Nadu Ilangyar Katchi",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.2
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "TIRUPPUR (South)",
+          "constituencyNumber": 114,
+          "reservationType": "GEN",
+          "totalElectors": 278001,
+          "totalVotes": 174418,
+          "enop": 2.78,
+          "winner": "SELVARAJ. K.",
+          "winnerParty": "DMK",
+          "winnerVotes": 75535,
+          "winnerVoteShare": 43.31,
+          "marginVotes": 4709,
+          "marginPct": 2.7,
+          "turnoutPct": 62.74
+        },
+        {
+          "constituency": "Palladam",
+          "constituencyNumber": 115,
+          "reservationType": "GEN",
+          "totalElectors": 392070,
+          "totalVotes": 261511,
+          "enop": 2.63,
+          "winner": "ANANDAN M S M",
+          "winnerParty": "ADMK",
+          "winnerVotes": 126903,
+          "winnerVoteShare": 48.53,
+          "marginVotes": 32691,
+          "marginPct": 12.5,
+          "turnoutPct": 66.7
+        },
+        {
+          "constituency": "Sulur",
+          "constituencyNumber": 116,
+          "reservationType": "GEN",
+          "totalElectors": 319773,
+          "totalVotes": 241653,
+          "enop": 2.7,
+          "winner": "KANDASAMY V.P.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 118968,
+          "winnerVoteShare": 49.23,
+          "marginVotes": 31932,
+          "marginPct": 13.21,
+          "turnoutPct": 75.57
+        }
+      ]
+    },
+    {
+      "district": "Perambalur",
+      "districtSlug": "perambalur",
+      "totalSeats": 2,
+      "turnoutPct": 79.1,
+      "totalElectors": 581615,
+      "totalVotes": 459905,
+      "winnerParty": "DMK",
+      "winnerSeats": 2,
+      "winnerSeatShare": 100,
+      "winnerVoteShare": 49.1,
+      "closeContests": 1,
+      "meanMarginPct": 7.9,
+      "medianMarginPct": 7.9,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.41,
+          "medianEnop": 2.41,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 50,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 79.1,
+          "turnoutIqr": 0.9,
+          "turnoutRange": 1.8,
+          "winnerVoteShareMedian": 49.1,
+          "marginMedian": 7.9,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 50,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 2,
+          "seatShare": 100,
+          "voteShare": 49.1
+        },
+        {
+          "party": "ADMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 41
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.1
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.1
+        },
+        {
+          "party": "DMDK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.5
+        },
+        {
+          "party": "IJK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.2
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Perambalur",
+          "constituencyNumber": 147,
+          "reservationType": "SC",
+          "totalElectors": 306938,
+          "totalVotes": 240026,
+          "enop": 2.44,
+          "winner": "PRABHAHARAN, M.",
+          "winnerParty": "DMK",
+          "winnerVotes": 122090,
+          "winnerVoteShare": 50.87,
+          "marginVotes": 31034,
+          "marginPct": 12.93,
+          "turnoutPct": 78.2
+        },
+        {
+          "constituency": "Kunnam",
+          "constituencyNumber": 148,
+          "reservationType": "GEN",
+          "totalElectors": 274677,
+          "totalVotes": 219879,
+          "enop": 2.38,
+          "winner": "SIVASANKAR, S.S.",
+          "winnerParty": "DMK",
+          "winnerVotes": 103922,
+          "winnerVoteShare": 47.26,
+          "marginVotes": 6329,
+          "marginPct": 2.88,
+          "turnoutPct": 80.05
+        }
+      ]
+    },
+    {
+      "district": "Pudukkottai",
+      "districtSlug": "pudukkottai",
+      "totalSeats": 6,
+      "turnoutPct": 76.1,
+      "totalElectors": 1372534,
+      "totalVotes": 1044856,
+      "winnerParty": "DMK",
+      "winnerSeats": 3,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 31,
+      "closeContests": 1,
+      "meanMarginPct": 10.3,
+      "medianMarginPct": 10.1,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.67,
+          "medianEnop": 2.71,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 33.3,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 16.7,
+          "turnoutMedian": 75.2,
+          "turnoutIqr": 4.5,
+          "turnoutRange": 15.2,
+          "winnerVoteShareMedian": 48.2,
+          "marginMedian": 10.1,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 16.7,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 3,
+          "seatShare": 50,
+          "voteShare": 31
+        },
+        {
+          "party": "ADMK",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 39.7
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 7.8
+        },
+        {
+          "party": "CPM",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 6.7
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.3
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.2
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.2
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Gandharvakottai",
+          "constituencyNumber": 178,
+          "reservationType": "SC",
+          "totalElectors": 211712,
+          "totalVotes": 157620,
+          "enop": 2.86,
+          "winner": "M.Chinnadurai",
+          "winnerParty": "CPM",
+          "winnerVotes": 69710,
+          "winnerVoteShare": 44.23,
+          "marginVotes": 12721,
+          "marginPct": 8.07,
+          "turnoutPct": 74.45
+        },
+        {
+          "constituency": "Viralimalai",
+          "constituencyNumber": 179,
+          "reservationType": "GEN",
+          "totalElectors": 226411,
+          "totalVotes": 193423,
+          "enop": 2.22,
+          "winner": "VIJAYA BASKER C",
+          "winnerParty": "ADMK",
+          "winnerVotes": 102179,
+          "winnerVoteShare": 52.83,
+          "marginVotes": 23598,
+          "marginPct": 12.2,
+          "turnoutPct": 85.43
+        },
+        {
+          "constituency": "Pudukkottai",
+          "constituencyNumber": 180,
+          "reservationType": "GEN",
+          "totalElectors": 246630,
+          "totalVotes": 179892,
+          "enop": 2.56,
+          "winner": "V . MUTHURAJA",
+          "winnerParty": "DMK",
+          "winnerVotes": 85802,
+          "winnerVoteShare": 47.7,
+          "marginVotes": 13001,
+          "marginPct": 7.23,
+          "turnoutPct": 72.94
+        },
+        {
+          "constituency": "Thirumayam",
+          "constituencyNumber": 181,
+          "reservationType": "GEN",
+          "totalElectors": 229441,
+          "totalVotes": 174031,
+          "enop": 2.94,
+          "winner": "S.REGUPATHY",
+          "winnerParty": "DMK",
+          "winnerVotes": 71349,
+          "winnerVoteShare": 41,
+          "marginVotes": 1382,
+          "marginPct": 0.79,
+          "turnoutPct": 75.85
+        },
+        {
+          "constituency": "Alangudi",
+          "constituencyNumber": 182,
+          "reservationType": "GEN",
+          "totalElectors": 218990,
+          "totalVotes": 171842,
+          "enop": 2.5,
+          "winner": "SIVA.V.MEYYANATHAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 87935,
+          "winnerVoteShare": 51.17,
+          "marginVotes": 25847,
+          "marginPct": 15.04,
+          "turnoutPct": 78.47
+        },
+        {
+          "constituency": "Arantangi",
+          "constituencyNumber": 183,
+          "reservationType": "GEN",
+          "totalElectors": 239350,
+          "totalVotes": 168048,
+          "enop": 2.94,
+          "winner": "RAMACHANDRAN T",
+          "winnerParty": "INC",
+          "winnerVotes": 81835,
+          "winnerVoteShare": 48.7,
+          "marginVotes": 30893,
+          "marginPct": 18.38,
+          "turnoutPct": 70.21
+        }
+      ]
+    },
+    {
+      "district": "Ramanathapuram",
+      "districtSlug": "ramanathapuram",
+      "totalSeats": 4,
+      "turnoutPct": 69.6,
+      "totalElectors": 1177584,
+      "totalVotes": 819284,
+      "winnerParty": "DMK",
+      "winnerSeats": 3,
+      "winnerSeatShare": 75,
+      "winnerVoteShare": 36.4,
+      "closeContests": 0,
+      "meanMarginPct": 11.8,
+      "medianMarginPct": 8.3,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.9,
+          "medianEnop": 2.82,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 25,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 25,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 69.6,
+          "turnoutIqr": 1.6,
+          "turnoutRange": 1.9,
+          "winnerVoteShareMedian": 46.3,
+          "marginMedian": 8.3,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 25,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 3,
+          "seatShare": 75,
+          "voteShare": 36.4
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 25,
+          "voteShare": 9.7
+        },
+        {
+          "party": "ADMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 26.6
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.5
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.4
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.3
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.8
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Paramakudi",
+          "constituencyNumber": 209,
+          "reservationType": "SC",
+          "totalElectors": 258050,
+          "totalVotes": 182158,
+          "enop": 2.63,
+          "winner": "MURUGESAN S",
+          "winnerParty": "DMK",
+          "winnerVotes": 84864,
+          "winnerVoteShare": 46.59,
+          "marginVotes": 13285,
+          "marginPct": 7.29,
+          "turnoutPct": 70.59
+        },
+        {
+          "constituency": "Tiruvadanai",
+          "constituencyNumber": 210,
+          "reservationType": "GEN",
+          "totalElectors": 293677,
+          "totalVotes": 201815,
+          "enop": 3.33,
+          "winner": "KARUMANICKAM",
+          "winnerParty": "INC",
+          "winnerVotes": 79364,
+          "winnerVoteShare": 39.33,
+          "marginVotes": 13852,
+          "marginPct": 6.86,
+          "turnoutPct": 68.72
+        },
+        {
+          "constituency": "Ramanathapuram",
+          "constituencyNumber": 211,
+          "reservationType": "GEN",
+          "totalElectors": 311143,
+          "totalVotes": 214098,
+          "enop": 2.78,
+          "winner": "KATHARBATCHA MUTHURAMALINGAM",
+          "winnerParty": "DMK",
+          "winnerVotes": 111082,
+          "winnerVoteShare": 51.88,
+          "marginVotes": 50479,
+          "marginPct": 23.58,
+          "turnoutPct": 68.81
+        },
+        {
+          "constituency": "Mudukulathur",
+          "constituencyNumber": 212,
+          "reservationType": "GEN",
+          "totalElectors": 314714,
+          "totalVotes": 221213,
+          "enop": 2.86,
+          "winner": "R.S.RAJAKANNAPPAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 101901,
+          "winnerVoteShare": 46.06,
+          "marginVotes": 20721,
+          "marginPct": 9.37,
+          "turnoutPct": 70.29
+        }
+      ]
+    },
+    {
+      "district": "Salem",
+      "districtSlug": "salem",
+      "totalSeats": 11,
+      "turnoutPct": 79.2,
+      "totalElectors": 3050943,
+      "totalVotes": 2414875,
+      "winnerParty": "ADMK",
+      "winnerSeats": 8,
+      "winnerSeatShare": 72.7,
+      "winnerVoteShare": 42.3,
+      "closeContests": 4,
+      "meanMarginPct": 11.1,
+      "medianMarginPct": 8.9,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.4,
+          "medianEnop": 2.38,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 3,
+          "majorityWinnerSeatShare": 27.3,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 9.1,
+          "turnoutMedian": 77.3,
+          "turnoutIqr": 8,
+          "turnoutRange": 13.8,
+          "winnerVoteShareMedian": 48.8,
+          "marginMedian": 8.9,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 27.3,
+            "scSeats": 2,
+            "stSeats": 1
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "ADMK",
+          "seats": 8,
+          "seatShare": 72.7,
+          "voteShare": 42.3
+        },
+        {
+          "party": "PMK",
+          "seats": 2,
+          "seatShare": 18.2,
+          "voteShare": 8.4
+        },
+        {
+          "party": "DMK",
+          "seats": 1,
+          "seatShare": 9.1,
+          "voteShare": 36
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.5
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.6
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.8
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Gangavalli",
+          "constituencyNumber": 81,
+          "reservationType": "SC",
+          "totalElectors": 241866,
+          "totalVotes": 186503,
+          "enop": 2.38,
+          "winner": "NALLATHAMBI,A.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 89568,
+          "winnerVoteShare": 48.02,
+          "marginVotes": 7361,
+          "marginPct": 3.95,
+          "turnoutPct": 77.11
+        },
+        {
+          "constituency": "Attur",
+          "constituencyNumber": 82,
+          "reservationType": "SC",
+          "totalElectors": 258533,
+          "totalVotes": 199743,
+          "enop": 2.38,
+          "winner": "JAYASANKARAN, A.P.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 95308,
+          "winnerVoteShare": 47.72,
+          "marginVotes": 8257,
+          "marginPct": 4.13,
+          "turnoutPct": 77.26
+        },
+        {
+          "constituency": "Yercaud",
+          "constituencyNumber": 83,
+          "reservationType": "ST",
+          "totalElectors": 287548,
+          "totalVotes": 238924,
+          "enop": 2.38,
+          "winner": "G. Chitra",
+          "winnerParty": "ADMK",
+          "winnerVotes": 121561,
+          "winnerVoteShare": 50.88,
+          "marginVotes": 25955,
+          "marginPct": 10.86,
+          "turnoutPct": 83.09
+        },
+        {
+          "constituency": "Omalur",
+          "constituencyNumber": 84,
+          "reservationType": "GEN",
+          "totalElectors": 299023,
+          "totalVotes": 249027,
+          "enop": 2.22,
+          "winner": "R.MANI",
+          "winnerParty": "ADMK",
+          "winnerVotes": 142488,
+          "winnerVoteShare": 57.22,
+          "marginVotes": 55294,
+          "marginPct": 22.2,
+          "turnoutPct": 83.28
+        },
+        {
+          "constituency": "Mettur",
+          "constituencyNumber": 85,
+          "reservationType": "GEN",
+          "totalElectors": 291217,
+          "totalVotes": 218442,
+          "enop": 2.56,
+          "winner": "SADHASIVAM.S",
+          "winnerParty": "PMK",
+          "winnerVotes": 97055,
+          "winnerVoteShare": 44.43,
+          "marginVotes": 656,
+          "marginPct": 0.3,
+          "turnoutPct": 75.01
+        },
+        {
+          "constituency": "Edapadi",
+          "constituencyNumber": 86,
+          "reservationType": "GEN",
+          "totalElectors": 288768,
+          "totalVotes": 247301,
+          "enop": 1.92,
+          "winner": "EDAPPADI PALANISWAMI. K",
+          "winnerParty": "ADMK",
+          "winnerVotes": 163154,
+          "winnerVoteShare": 65.97,
+          "marginVotes": 93802,
+          "marginPct": 37.93,
+          "turnoutPct": 85.64
+        },
+        {
+          "constituency": "Sankari",
+          "constituencyNumber": 87,
+          "reservationType": "GEN",
+          "totalElectors": 277442,
+          "totalVotes": 232247,
+          "enop": 2.38,
+          "winner": "SUNDARARAJAN, S.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 115472,
+          "winnerVoteShare": 49.72,
+          "marginVotes": 20045,
+          "marginPct": 8.63,
+          "turnoutPct": 83.71
+        },
+        {
+          "constituency": "SALEM (West)",
+          "constituencyNumber": 88,
+          "reservationType": "GEN",
+          "totalElectors": 301668,
+          "totalVotes": 216628,
+          "enop": 2.56,
+          "winner": "ARUL. R",
+          "winnerParty": "PMK",
+          "winnerVotes": 105483,
+          "winnerVoteShare": 48.69,
+          "marginVotes": 21499,
+          "marginPct": 9.92,
+          "turnoutPct": 71.81
+        },
+        {
+          "constituency": "SALEM (North)",
+          "constituencyNumber": 89,
+          "reservationType": "GEN",
+          "totalElectors": 280532,
+          "totalVotes": 202376,
+          "enop": 2.56,
+          "winner": "R. RAJENDRAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 93432,
+          "winnerVoteShare": 46.17,
+          "marginVotes": 7588,
+          "marginPct": 3.75,
+          "turnoutPct": 72.14
+        },
+        {
+          "constituency": "SALEM (South)",
+          "constituencyNumber": 90,
+          "reservationType": "GEN",
+          "totalElectors": 263134,
+          "totalVotes": 199982,
+          "enop": 2.63,
+          "winner": "E.BALASUBRAMANIAN",
+          "winnerParty": "ADMK",
+          "winnerVotes": 97506,
+          "winnerVoteShare": 48.76,
+          "marginVotes": 22609,
+          "marginPct": 11.31,
+          "turnoutPct": 76
+        },
+        {
+          "constituency": "Veerapandi",
+          "constituencyNumber": 91,
+          "reservationType": "GEN",
+          "totalElectors": 261212,
+          "totalVotes": 223702,
+          "enop": 2.38,
+          "winner": "RAJAMUTHU, M.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 111682,
+          "winnerVoteShare": 49.92,
+          "marginVotes": 19895,
+          "marginPct": 8.89,
+          "turnoutPct": 85.64
+        }
+      ]
+    },
+    {
+      "district": "Sivaganga",
+      "districtSlug": "sivaganga",
+      "totalSeats": 4,
+      "turnoutPct": 69,
+      "totalElectors": 1200217,
+      "totalVotes": 828327,
+      "winnerParty": "DMK",
+      "winnerSeats": 2,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 23.3,
+      "closeContests": 0,
+      "meanMarginPct": 10.1,
+      "medianMarginPct": 8.6,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.28,
+          "medianEnop": 3.08,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 25,
+          "majorityWinnerSeats": 0,
+          "majorityWinnerSeatShare": 0,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 69.1,
+          "turnoutIqr": 5.7,
+          "turnoutRange": 5.8,
+          "winnerVoteShareMedian": 42.3,
+          "marginMedian": 8.6,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 25,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 2,
+          "seatShare": 50,
+          "voteShare": 23.3
+        },
+        {
+          "party": "ADMK",
+          "seats": 1,
+          "seatShare": 25,
+          "voteShare": 27
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 25,
+          "voteShare": 9.2
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 10.2
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 9.9
+        },
+        {
+          "party": "CPI",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 8.6
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.6
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.7
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Karaikudi",
+          "constituencyNumber": 184,
+          "reservationType": "GEN",
+          "totalElectors": 320785,
+          "totalVotes": 212456,
+          "enop": 4,
+          "winner": "S.Mangudi",
+          "winnerParty": "INC",
+          "winnerVotes": 75954,
+          "winnerVoteShare": 35.75,
+          "marginVotes": 21589,
+          "marginPct": 10.16,
+          "turnoutPct": 66.23
+        },
+        {
+          "constituency": "Tiruppattur",
+          "constituencyNumber": 185,
+          "reservationType": "GEN",
+          "totalElectors": 292811,
+          "totalVotes": 210766,
+          "enop": 2.94,
+          "winner": "KR.PERIYAKARUPPAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 103682,
+          "winnerVoteShare": 49.19,
+          "marginVotes": 37374,
+          "marginPct": 17.73,
+          "turnoutPct": 71.98
+        },
+        {
+          "constituency": "Sivaganga",
+          "constituencyNumber": 186,
+          "reservationType": "GEN",
+          "totalElectors": 304788,
+          "totalVotes": 202044,
+          "enop": 3.23,
+          "winner": "PR. Senthilnathan",
+          "winnerParty": "ADMK",
+          "winnerVotes": 82153,
+          "winnerVoteShare": 40.66,
+          "marginVotes": 11253,
+          "marginPct": 5.57,
+          "turnoutPct": 66.29
+        },
+        {
+          "constituency": "Manamadurai",
+          "constituencyNumber": 187,
+          "reservationType": "SC",
+          "totalElectors": 281833,
+          "totalVotes": 203061,
+          "enop": 2.94,
+          "winner": "Tamilarasi A.",
+          "winnerParty": "DMK",
+          "winnerVotes": 89364,
+          "winnerVoteShare": 44.01,
+          "marginVotes": 14091,
+          "marginPct": 6.94,
+          "turnoutPct": 72.05
+        }
+      ]
+    },
+    {
+      "district": "Thanjavur",
+      "districtSlug": "thanjavur",
+      "totalSeats": 8,
+      "turnoutPct": 73.9,
+      "totalElectors": 2083251,
+      "totalVotes": 1539171,
+      "winnerParty": "DMK",
+      "winnerSeats": 7,
+      "winnerSeatShare": 87.5,
+      "winnerVoteShare": 46.4,
+      "closeContests": 0,
+      "meanMarginPct": 14.6,
+      "medianMarginPct": 14,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.78,
+          "medianEnop": 2.82,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 25,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 75.3,
+          "turnoutIqr": 5.7,
+          "turnoutRange": 12.6,
+          "winnerVoteShareMedian": 48.4,
+          "marginMedian": 14,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 12.5,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 7,
+          "seatShare": 87.5,
+          "voteShare": 46.4
+        },
+        {
+          "party": "ADMK",
+          "seats": 1,
+          "seatShare": 12.5,
+          "voteShare": 32.2
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.7
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.3
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.2
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.2
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.4
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.6
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Thiruvidamarudur",
+          "constituencyNumber": 170,
+          "reservationType": "SC",
+          "totalElectors": 261940,
+          "totalVotes": 198446,
+          "enop": 2.44,
+          "winner": "CHEZHIAAN,  GOVI.",
+          "winnerParty": "DMK",
+          "winnerVotes": 95763,
+          "winnerVoteShare": 48.26,
+          "marginVotes": 10680,
+          "marginPct": 5.38,
+          "turnoutPct": 75.76
+        },
+        {
+          "constituency": "Kumbakonam",
+          "constituencyNumber": 171,
+          "reservationType": "GEN",
+          "totalElectors": 276506,
+          "totalVotes": 197564,
+          "enop": 2.63,
+          "winner": "ANBALAGAN, G.",
+          "winnerParty": "DMK",
+          "winnerVotes": 96057,
+          "winnerVoteShare": 48.62,
+          "marginVotes": 21383,
+          "marginPct": 10.82,
+          "turnoutPct": 71.45
+        },
+        {
+          "constituency": "Papanasam",
+          "constituencyNumber": 172,
+          "reservationType": "GEN",
+          "totalElectors": 263485,
+          "totalVotes": 196982,
+          "enop": 2.94,
+          "winner": "Dr.JAWAHIRULLAH, M.H.",
+          "winnerParty": "DMK",
+          "winnerVotes": 86567,
+          "winnerVoteShare": 43.95,
+          "marginVotes": 16273,
+          "marginPct": 8.26,
+          "turnoutPct": 74.76
+        },
+        {
+          "constituency": "Thiruvaiyaru",
+          "constituencyNumber": 173,
+          "reservationType": "GEN",
+          "totalElectors": 270682,
+          "totalVotes": 211430,
+          "enop": 3.03,
+          "winner": "DURAI.CHANDRASEKARAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 103210,
+          "winnerVoteShare": 48.82,
+          "marginVotes": 53650,
+          "marginPct": 25.37,
+          "turnoutPct": 78.11
+        },
+        {
+          "constituency": "Thanjavur",
+          "constituencyNumber": 174,
+          "reservationType": "GEN",
+          "totalElectors": 296498,
+          "totalVotes": 194859,
+          "enop": 2.7,
+          "winner": "NEELAMEGAM, T.K.G.",
+          "winnerParty": "DMK",
+          "winnerVotes": 103772,
+          "winnerVoteShare": 53.25,
+          "marginVotes": 47149,
+          "marginPct": 24.2,
+          "turnoutPct": 65.72
+        },
+        {
+          "constituency": "Orathanad",
+          "constituencyNumber": 175,
+          "reservationType": "GEN",
+          "totalElectors": 245037,
+          "totalVotes": 191840,
+          "enop": 2.94,
+          "winner": "VAITHILINGAM, R.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 90063,
+          "winnerVoteShare": 46.95,
+          "marginVotes": 28835,
+          "marginPct": 15.03,
+          "turnoutPct": 78.29
+        },
+        {
+          "constituency": "Pattukkottai",
+          "constituencyNumber": 176,
+          "reservationType": "GEN",
+          "totalElectors": 247278,
+          "totalVotes": 177200,
+          "enop": 3.23,
+          "winner": "ANNADURAI, K.",
+          "winnerParty": "DMK",
+          "winnerVotes": 79065,
+          "winnerVoteShare": 44.62,
+          "marginVotes": 25269,
+          "marginPct": 14.26,
+          "turnoutPct": 71.66
+        },
+        {
+          "constituency": "Peravurani",
+          "constituencyNumber": 177,
+          "reservationType": "GEN",
+          "totalElectors": 221825,
+          "totalVotes": 170850,
+          "enop": 2.33,
+          "winner": "ASHOKKUMAR, N.",
+          "winnerParty": "DMK",
+          "winnerVotes": 89130,
+          "winnerVoteShare": 52.17,
+          "marginVotes": 23503,
+          "marginPct": 13.76,
+          "turnoutPct": 77.02
+        }
+      ]
+    },
+    {
+      "district": "Theni",
+      "districtSlug": "theni",
+      "totalSeats": 4,
+      "turnoutPct": 72.6,
+      "totalElectors": 1140988,
+      "totalVotes": 828407,
+      "winnerParty": "DMK",
+      "winnerSeats": 3,
+      "winnerSeatShare": 75,
+      "winnerVoteShare": 45.8,
+      "closeContests": 1,
+      "meanMarginPct": 10.2,
+      "medianMarginPct": 7.8,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.73,
+          "medianEnop": 2.71,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 25,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 72.4,
+          "turnoutIqr": 5.4,
+          "turnoutRange": 6.8,
+          "winnerVoteShareMedian": 46.1,
+          "marginMedian": 7.8,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 25,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 3,
+          "seatShare": 75,
+          "voteShare": 45.8
+        },
+        {
+          "party": "ADMK",
+          "seats": 1,
+          "seatShare": 25,
+          "voteShare": 38.4
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.9
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.6
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.1
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        },
+        {
+          "party": "Anaithu Makkal Puratchi Katchi",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Andipatti",
+          "constituencyNumber": 198,
+          "reservationType": "GEN",
+          "totalElectors": 279946,
+          "totalVotes": 209540,
+          "enop": 2.78,
+          "winner": "A.MAHARAJAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 93541,
+          "winnerVoteShare": 44.64,
+          "marginVotes": 8538,
+          "marginPct": 4.07,
+          "turnoutPct": 74.85
+        },
+        {
+          "constituency": "Periyakulam",
+          "constituencyNumber": 199,
+          "reservationType": "SC",
+          "totalElectors": 288528,
+          "totalVotes": 201797,
+          "enop": 2.94,
+          "winner": "K.S.SARAVANAKUMAAR",
+          "winnerParty": "DMK",
+          "winnerVotes": 92251,
+          "winnerVoteShare": 45.71,
+          "marginVotes": 21321,
+          "marginPct": 10.57,
+          "turnoutPct": 69.94
+        },
+        {
+          "constituency": "Bodinayakanur",
+          "constituencyNumber": 200,
+          "reservationType": "GEN",
+          "totalElectors": 281513,
+          "totalVotes": 214795,
+          "enop": 2.56,
+          "winner": "O.PANNEERSELVAM",
+          "winnerParty": "ADMK",
+          "winnerVotes": 100050,
+          "winnerVoteShare": 46.58,
+          "marginVotes": 11021,
+          "marginPct": 5.13,
+          "turnoutPct": 76.3
+        },
+        {
+          "constituency": "Cumbum",
+          "constituencyNumber": 201,
+          "reservationType": "GEN",
+          "totalElectors": 291001,
+          "totalVotes": 202275,
+          "enop": 2.63,
+          "winner": "N.Ramakrishnan",
+          "winnerParty": "DMK",
+          "winnerVotes": 104800,
+          "winnerVoteShare": 51.81,
+          "marginVotes": 42413,
+          "marginPct": 20.97,
+          "turnoutPct": 69.51
+        }
+      ]
+    },
+    {
+      "district": "Thoothukudi",
+      "districtSlug": "thoothukudi",
+      "totalSeats": 6,
+      "turnoutPct": 69.9,
+      "totalElectors": 1507474,
+      "totalVotes": 1053266,
+      "winnerParty": "DMK",
+      "winnerSeats": 4,
+      "winnerSeatShare": 66.7,
+      "winnerVoteShare": 32.7,
+      "closeContests": 1,
+      "meanMarginPct": 14.4,
+      "medianMarginPct": 12.5,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.93,
+          "medianEnop": 2.95,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 1,
+          "lowPluralitySeatShare": 16.7,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 33.3,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 69.9,
+          "turnoutIqr": 3.7,
+          "turnoutRange": 11.5,
+          "winnerVoteShareMedian": 47.9,
+          "marginMedian": 12.5,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 16.7,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 4,
+          "seatShare": 66.7,
+          "voteShare": 32.7
+        },
+        {
+          "party": "ADMK",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 33.2
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 16.7,
+          "voteShare": 7.3
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 9.7
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.3
+        },
+        {
+          "party": "CPM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.5
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.8
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.4
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Vilathikulam",
+          "constituencyNumber": 213,
+          "reservationType": "GEN",
+          "totalElectors": 218464,
+          "totalVotes": 167169,
+          "enop": 2.5,
+          "winner": "MARKANDAYAN V",
+          "winnerParty": "DMK",
+          "winnerVotes": 90348,
+          "winnerVoteShare": 54.05,
+          "marginVotes": 38549,
+          "marginPct": 23.06,
+          "turnoutPct": 76.52
+        },
+        {
+          "constituency": "Thoothukkudi",
+          "constituencyNumber": 214,
+          "reservationType": "GEN",
+          "totalElectors": 289545,
+          "totalVotes": 188407,
+          "enop": 3.12,
+          "winner": "P.Geetha Jeevan",
+          "winnerParty": "DMK",
+          "winnerVotes": 92314,
+          "winnerVoteShare": 49,
+          "marginVotes": 50310,
+          "marginPct": 26.7,
+          "turnoutPct": 65.07
+        },
+        {
+          "constituency": "Tiruchendur",
+          "constituencyNumber": 215,
+          "reservationType": "GEN",
+          "totalElectors": 249194,
+          "totalVotes": 174536,
+          "enop": 2.5,
+          "winner": "Anitha R. Radhakrishnan",
+          "winnerParty": "DMK",
+          "winnerVotes": 88274,
+          "winnerVoteShare": 50.58,
+          "marginVotes": 25263,
+          "marginPct": 14.47,
+          "turnoutPct": 70.04
+        },
+        {
+          "constituency": "Srivaikuntam",
+          "constituencyNumber": 216,
+          "reservationType": "GEN",
+          "totalElectors": 227240,
+          "totalVotes": 164386,
+          "enop": 2.78,
+          "winner": "Amirtharaj .S",
+          "winnerParty": "INC",
+          "winnerVotes": 76843,
+          "winnerVoteShare": 46.75,
+          "marginVotes": 17372,
+          "marginPct": 10.57,
+          "turnoutPct": 72.34
+        },
+        {
+          "constituency": "Ottapidaram",
+          "constituencyNumber": 217,
+          "reservationType": "SC",
+          "totalElectors": 254712,
+          "totalVotes": 177840,
+          "enop": 3.12,
+          "winner": "SHUNMUGAIAH C",
+          "winnerParty": "DMK",
+          "winnerVotes": 73110,
+          "winnerVoteShare": 41.11,
+          "marginVotes": 8510,
+          "marginPct": 4.79,
+          "turnoutPct": 69.82
+        },
+        {
+          "constituency": "Kovilpatti",
+          "constituencyNumber": 218,
+          "reservationType": "GEN",
+          "totalElectors": 268319,
+          "totalVotes": 180928,
+          "enop": 3.57,
+          "winner": "KADAMBUR RAJU",
+          "winnerParty": "ADMK",
+          "winnerVotes": 68556,
+          "winnerVoteShare": 37.89,
+          "marginVotes": 12403,
+          "marginPct": 6.86,
+          "turnoutPct": 67.43
+        }
+      ]
+    },
+    {
+      "district": "Tiruchirappalli",
+      "districtSlug": "tiruchirappalli",
+      "totalSeats": 9,
+      "turnoutPct": 73.6,
+      "totalElectors": 2368409,
+      "totalVotes": 1742011,
+      "winnerParty": "DMK",
+      "winnerSeats": 9,
+      "winnerSeatShare": 100,
+      "winnerVoteShare": 52.2,
+      "closeContests": 0,
+      "meanMarginPct": 20.5,
+      "medianMarginPct": 14.9,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.53,
+          "medianEnop": 2.56,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 5,
+          "majorityWinnerSeatShare": 55.6,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 76,
+          "turnoutIqr": 9.6,
+          "turnoutRange": 13,
+          "winnerVoteShareMedian": 50.4,
+          "marginMedian": 14.9,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 11.1,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 9,
+          "seatShare": 100,
+          "voteShare": 52.2
+        },
+        {
+          "party": "ADMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 32.3
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 8.1
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.5
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.3
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.1
+        },
+        {
+          "party": "DMDK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Manapparai",
+          "constituencyNumber": 138,
+          "reservationType": "GEN",
+          "totalElectors": 291696,
+          "totalVotes": 221748,
+          "enop": 2.78,
+          "winner": "ABDUL SAMAD P",
+          "winnerParty": "DMK",
+          "winnerVotes": 98077,
+          "winnerVoteShare": 44.23,
+          "marginVotes": 12243,
+          "marginPct": 5.52,
+          "turnoutPct": 76.02
+        },
+        {
+          "constituency": "Srirangam",
+          "constituencyNumber": 139,
+          "reservationType": "GEN",
+          "totalElectors": 315482,
+          "totalVotes": 240240,
+          "enop": 2.63,
+          "winner": "Palaniyandi.M",
+          "winnerParty": "DMK",
+          "winnerVotes": 113904,
+          "winnerVoteShare": 47.41,
+          "marginVotes": 19915,
+          "marginPct": 8.29,
+          "turnoutPct": 76.15
+        },
+        {
+          "constituency": "TIRUCHIRAPALLI (West)",
+          "constituencyNumber": 140,
+          "reservationType": "GEN",
+          "totalElectors": 273241,
+          "totalVotes": 183099,
+          "enop": 2.17,
+          "winner": "Nehru, K.N.",
+          "winnerParty": "DMK",
+          "winnerVotes": 118133,
+          "winnerVoteShare": 64.52,
+          "marginVotes": 85109,
+          "marginPct": 46.48,
+          "turnoutPct": 67.01
+        },
+        {
+          "constituency": "TIRUCHIRAPALLI (East)",
+          "constituencyNumber": 141,
+          "reservationType": "GEN",
+          "totalElectors": 258495,
+          "totalVotes": 172856,
+          "enop": 2.78,
+          "winner": "INIGO IRUDAYARAJ,S.",
+          "winnerParty": "DMK",
+          "winnerVotes": 94302,
+          "winnerVoteShare": 54.56,
+          "marginVotes": 53797,
+          "marginPct": 31.12,
+          "turnoutPct": 66.87
+        },
+        {
+          "constituency": "Thiruverambur",
+          "constituencyNumber": 142,
+          "reservationType": "GEN",
+          "totalElectors": 295859,
+          "totalVotes": 197013,
+          "enop": 2.56,
+          "winner": "ANBIL MAHESH POYYAMOZHI",
+          "winnerParty": "DMK",
+          "winnerVotes": 105424,
+          "winnerVoteShare": 53.51,
+          "marginVotes": 49697,
+          "marginPct": 25.23,
+          "turnoutPct": 66.59
+        },
+        {
+          "constituency": "Lalgudi",
+          "constituencyNumber": 143,
+          "reservationType": "GEN",
+          "totalElectors": 220565,
+          "totalVotes": 174754,
+          "enop": 2.5,
+          "winner": "A.SOUNDARAPANDIAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 84914,
+          "winnerVoteShare": 48.59,
+          "marginVotes": 16949,
+          "marginPct": 9.7,
+          "turnoutPct": 79.23
+        },
+        {
+          "constituency": "Manachanallur",
+          "constituencyNumber": 144,
+          "reservationType": "GEN",
+          "totalElectors": 247041,
+          "totalVotes": 196719,
+          "enop": 2.27,
+          "winner": "S. KATHIRAVAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 116334,
+          "winnerVoteShare": 59.14,
+          "marginVotes": 59618,
+          "marginPct": 30.31,
+          "turnoutPct": 79.63
+        },
+        {
+          "constituency": "Musiri",
+          "constituencyNumber": 145,
+          "reservationType": "GEN",
+          "totalElectors": 236517,
+          "totalVotes": 179706,
+          "enop": 2.56,
+          "winner": "N. Thiyagarajan",
+          "winnerParty": "DMK",
+          "winnerVotes": 90624,
+          "winnerVoteShare": 50.43,
+          "marginVotes": 26836,
+          "marginPct": 14.93,
+          "turnoutPct": 75.98
+        },
+        {
+          "constituency": "Thuraiyur",
+          "constituencyNumber": 146,
+          "reservationType": "SC",
+          "totalElectors": 229513,
+          "totalVotes": 175876,
+          "enop": 2.5,
+          "winner": "S.STALINKUMAR",
+          "winnerParty": "DMK",
+          "winnerVotes": 87786,
+          "winnerVoteShare": 49.91,
+          "marginVotes": 22071,
+          "marginPct": 12.55,
+          "turnoutPct": 76.63
+        }
+      ]
+    },
+    {
+      "district": "Tirunelveli",
+      "districtSlug": "tirunelveli",
+      "totalSeats": 10,
+      "turnoutPct": 69.6,
+      "totalElectors": 2728452,
+      "totalVotes": 1898370,
+      "winnerParty": "DMK",
+      "winnerSeats": 4,
+      "winnerSeatShare": 40,
+      "winnerVoteShare": 27.4,
+      "closeContests": 5,
+      "meanMarginPct": 8.3,
+      "medianMarginPct": 5.9,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.01,
+          "medianEnop": 2.99,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 4,
+          "lowPluralitySeatShare": 40,
+          "majorityWinnerSeats": 1,
+          "majorityWinnerSeatShare": 10,
+          "ultraCloseSeats": 3,
+          "ultraCloseSeatShare": 30,
+          "turnoutMedian": 70.9,
+          "turnoutIqr": 3.8,
+          "turnoutRange": 19.6,
+          "winnerVoteShareMedian": 42.4,
+          "marginMedian": 5.9,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 20,
+            "scSeats": 2,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 4,
+          "seatShare": 40,
+          "voteShare": 27.4
+        },
+        {
+          "party": "ADMK",
+          "seats": 3,
+          "seatShare": 30,
+          "voteShare": 33.8
+        },
+        {
+          "party": "INC",
+          "seats": 2,
+          "seatShare": 20,
+          "voteShare": 8.7
+        },
+        {
+          "party": "BJP",
+          "seats": 1,
+          "seatShare": 10,
+          "voteShare": 4.9
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.9
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 6.6
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.6
+        },
+        {
+          "party": "IUML",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.4
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Sankarankovil",
+          "constituencyNumber": 219,
+          "reservationType": "SC",
+          "totalElectors": 256488,
+          "totalVotes": 183338,
+          "enop": 3.23,
+          "winner": "RAJA E",
+          "winnerParty": "DMK",
+          "winnerVotes": 71347,
+          "winnerVoteShare": 38.92,
+          "marginVotes": 5297,
+          "marginPct": 2.89,
+          "turnoutPct": 71.48
+        },
+        {
+          "constituency": "Vasudevanallur",
+          "constituencyNumber": 220,
+          "reservationType": "SC",
+          "totalElectors": 244721,
+          "totalVotes": 175881,
+          "enop": 3.23,
+          "winner": "SADHAN THIRUMALAIKUMAR, DOCTOR.T",
+          "winnerParty": "DMK",
+          "winnerVotes": 68730,
+          "winnerVoteShare": 39.08,
+          "marginVotes": 2367,
+          "marginPct": 1.35,
+          "turnoutPct": 71.87
+        },
+        {
+          "constituency": "Kadayanallur",
+          "constituencyNumber": 221,
+          "reservationType": "GEN",
+          "totalElectors": 291931,
+          "totalVotes": 205374,
+          "enop": 3.12,
+          "winner": "C.KRISHNAMURALI",
+          "winnerParty": "ADMK",
+          "winnerVotes": 88474,
+          "winnerVoteShare": 43.08,
+          "marginVotes": 24349,
+          "marginPct": 11.86,
+          "turnoutPct": 70.35
+        },
+        {
+          "constituency": "Tenkasi",
+          "constituencyNumber": 222,
+          "reservationType": "GEN",
+          "totalElectors": 295729,
+          "totalVotes": 214108,
+          "enop": 2.86,
+          "winner": "PALANI NADAR.S",
+          "winnerParty": "INC",
+          "winnerVotes": 89315,
+          "winnerVoteShare": 41.71,
+          "marginVotes": 370,
+          "marginPct": 0.17,
+          "turnoutPct": 72.4
+        },
+        {
+          "constituency": "Alangulam",
+          "constituencyNumber": 223,
+          "reservationType": "GEN",
+          "totalElectors": 262891,
+          "totalVotes": 203478,
+          "enop": 3.57,
+          "winner": "PAUL MANOJ PANDIAN",
+          "winnerParty": "ADMK",
+          "winnerVotes": 74153,
+          "winnerVoteShare": 36.44,
+          "marginVotes": 3539,
+          "marginPct": 1.74,
+          "turnoutPct": 77.4
+        },
+        {
+          "constituency": "Tirunelveli",
+          "constituencyNumber": 224,
+          "reservationType": "GEN",
+          "totalElectors": 295302,
+          "totalVotes": 197587,
+          "enop": 2.86,
+          "winner": "Nainar Nagenthran",
+          "winnerParty": "BJP",
+          "winnerVotes": 92282,
+          "winnerVoteShare": 46.7,
+          "marginVotes": 23107,
+          "marginPct": 11.69,
+          "turnoutPct": 66.91
+        },
+        {
+          "constituency": "Ambasamudram",
+          "constituencyNumber": 225,
+          "reservationType": "GEN",
+          "totalElectors": 246676,
+          "totalVotes": 177681,
+          "enop": 2.56,
+          "winner": "E.SUBAYA",
+          "winnerParty": "ADMK",
+          "winnerVotes": 85211,
+          "winnerVoteShare": 47.96,
+          "marginVotes": 16915,
+          "marginPct": 9.52,
+          "turnoutPct": 72.03
+        },
+        {
+          "constituency": "Palayamcottai",
+          "constituencyNumber": 226,
+          "reservationType": "GEN",
+          "totalElectors": 278897,
+          "totalVotes": 161091,
+          "enop": 2.63,
+          "winner": "ABDUL WAHAB .M",
+          "winnerParty": "DMK",
+          "winnerVotes": 89117,
+          "winnerVoteShare": 55.32,
+          "marginVotes": 52141,
+          "marginPct": 32.37,
+          "turnoutPct": 57.76
+        },
+        {
+          "constituency": "Nanguneri",
+          "constituencyNumber": 227,
+          "reservationType": "GEN",
+          "totalElectors": 280685,
+          "totalVotes": 192522,
+          "enop": 3.33,
+          "winner": "RUBY R MANOHARAN",
+          "winnerParty": "INC",
+          "winnerVotes": 75902,
+          "winnerVoteShare": 39.43,
+          "marginVotes": 16486,
+          "marginPct": 8.56,
+          "turnoutPct": 68.59
+        },
+        {
+          "constituency": "Radhapuram",
+          "constituencyNumber": 228,
+          "reservationType": "GEN",
+          "totalElectors": 275132,
+          "totalVotes": 187310,
+          "enop": 2.7,
+          "winner": "M.Appavu",
+          "winnerParty": "DMK",
+          "winnerVotes": 82331,
+          "winnerVoteShare": 43.95,
+          "marginVotes": 5925,
+          "marginPct": 3.16,
+          "turnoutPct": 68.08
+        }
+      ]
+    },
+    {
+      "district": "Tirupur",
+      "districtSlug": "tirupur",
+      "totalSeats": 8,
+      "turnoutPct": 72.5,
+      "totalElectors": 2077003,
+      "totalVotes": 1505917,
+      "winnerParty": "ADMK",
+      "winnerSeats": 6,
+      "winnerSeatShare": 75,
+      "winnerVoteShare": 44.2,
+      "closeContests": 4,
+      "meanMarginPct": 8.9,
+      "medianMarginPct": 5.9,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.52,
+          "medianEnop": 2.5,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 25,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 25,
+          "turnoutMedian": 73.6,
+          "turnoutIqr": 6.4,
+          "turnoutRange": 20.1,
+          "winnerVoteShareMedian": 47.2,
+          "marginMedian": 5.9,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 37.5,
+            "scSeats": 3,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "ADMK",
+          "seats": 6,
+          "seatShare": 75,
+          "voteShare": 44.2
+        },
+        {
+          "party": "DMK",
+          "seats": 1,
+          "seatShare": 12.5,
+          "voteShare": 24.8
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 12.5,
+          "voteShare": 4.4
+        },
+        {
+          "party": "CPI",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 10.4
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.9
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.1
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Gobichettipalayam",
+          "constituencyNumber": 106,
+          "reservationType": "GEN",
+          "totalElectors": 259671,
+          "totalVotes": 214281,
+          "enop": 2.5,
+          "winner": "SENGOTTAIYAN K.A",
+          "winnerParty": "ADMK",
+          "winnerVotes": 108608,
+          "winnerVoteShare": 50.68,
+          "marginVotes": 28563,
+          "marginPct": 13.33,
+          "turnoutPct": 82.52
+        },
+        {
+          "constituency": "Bhavanisagar",
+          "constituencyNumber": 107,
+          "reservationType": "SC",
+          "totalElectors": 259230,
+          "totalVotes": 200567,
+          "enop": 2.44,
+          "winner": "A.Bannari",
+          "winnerParty": "ADMK",
+          "winnerVotes": 99181,
+          "winnerVoteShare": 49.45,
+          "marginVotes": 16008,
+          "marginPct": 7.98,
+          "turnoutPct": 77.37
+        },
+        {
+          "constituency": "Udhagamandalam",
+          "constituencyNumber": 108,
+          "reservationType": "GEN",
+          "totalElectors": 208053,
+          "totalVotes": 141102,
+          "enop": 2.5,
+          "winner": "GANESH, R.",
+          "winnerParty": "INC",
+          "winnerVotes": 65530,
+          "winnerVoteShare": 46.44,
+          "marginVotes": 5348,
+          "marginPct": 3.79,
+          "turnoutPct": 67.82
+        },
+        {
+          "constituency": "Gudalur",
+          "constituencyNumber": 109,
+          "reservationType": "SC",
+          "totalElectors": 191624,
+          "totalVotes": 138257,
+          "enop": 2.38,
+          "winner": "PON.JAYASEELAN",
+          "winnerParty": "ADMK",
+          "winnerVotes": 64496,
+          "winnerVoteShare": 46.65,
+          "marginVotes": 1945,
+          "marginPct": 1.41,
+          "turnoutPct": 72.15
+        },
+        {
+          "constituency": "Coonoor",
+          "constituencyNumber": 110,
+          "reservationType": "GEN",
+          "totalElectors": 194738,
+          "totalVotes": 135908,
+          "enop": 2.56,
+          "winner": "Ramachandran, K.",
+          "winnerParty": "DMK",
+          "winnerVotes": 61820,
+          "winnerVoteShare": 45.49,
+          "marginVotes": 4105,
+          "marginPct": 3.02,
+          "turnoutPct": 69.79
+        },
+        {
+          "constituency": "Mettupalayam",
+          "constituencyNumber": 111,
+          "reservationType": "GEN",
+          "totalElectors": 299551,
+          "totalVotes": 225083,
+          "enop": 2.33,
+          "winner": "SELVARAJ A K",
+          "winnerParty": "ADMK",
+          "winnerVotes": 105231,
+          "winnerVoteShare": 46.75,
+          "marginVotes": 2456,
+          "marginPct": 1.09,
+          "turnoutPct": 75.14
+        },
+        {
+          "constituency": "Avanashi",
+          "constituencyNumber": 112,
+          "reservationType": "SC",
+          "totalElectors": 282823,
+          "totalVotes": 212627,
+          "enop": 2.5,
+          "winner": "DHANAPAL, P",
+          "winnerParty": "ADMK",
+          "winnerVotes": 117284,
+          "winnerVoteShare": 55.16,
+          "marginVotes": 50902,
+          "marginPct": 23.94,
+          "turnoutPct": 75.18
+        },
+        {
+          "constituency": "TIRUPPUR (North)",
+          "constituencyNumber": 113,
+          "reservationType": "GEN",
+          "totalElectors": 381313,
+          "totalVotes": 238092,
+          "enop": 2.94,
+          "winner": "VIJEYAKUMAR.K.N",
+          "winnerParty": "ADMK",
+          "winnerVotes": 113384,
+          "winnerVoteShare": 47.62,
+          "marginVotes": 40102,
+          "marginPct": 16.84,
+          "turnoutPct": 62.44
+        }
+      ]
+    },
+    {
+      "district": "Tiruvallur",
+      "districtSlug": "tiruvallur",
+      "totalSeats": 10,
+      "turnoutPct": 69.5,
+      "totalElectors": 3539040,
+      "totalVotes": 2460818,
+      "winnerParty": "DMK",
+      "winnerSeats": 9,
+      "winnerSeatShare": 90,
+      "winnerVoteShare": 45.9,
+      "closeContests": 1,
+      "meanMarginPct": 17.2,
+      "medianMarginPct": 18,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.73,
+          "medianEnop": 2.74,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 5,
+          "majorityWinnerSeatShare": 50,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 70.2,
+          "turnoutIqr": 12.4,
+          "turnoutRange": 18.5,
+          "winnerVoteShareMedian": 50,
+          "marginMedian": 18,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 20,
+            "scSeats": 2,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 9,
+          "seatShare": 90,
+          "voteShare": 45.9
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 10,
+          "voteShare": 3.8
+        },
+        {
+          "party": "ADMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 26.9
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 9.7
+        },
+        {
+          "party": "PMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.3
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.6
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.1
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Gummidipundi",
+          "constituencyNumber": 1,
+          "reservationType": "GEN",
+          "totalElectors": 284412,
+          "totalVotes": 222069,
+          "enop": 2.27,
+          "winner": "GOVINDARAJAN T.J",
+          "winnerParty": "DMK",
+          "winnerVotes": 126452,
+          "winnerVoteShare": 56.94,
+          "marginVotes": 50938,
+          "marginPct": 22.94,
+          "turnoutPct": 78.08
+        },
+        {
+          "constituency": "Ponneri",
+          "constituencyNumber": 2,
+          "reservationType": "SC",
+          "totalElectors": 268994,
+          "totalVotes": 210354,
+          "enop": 2.7,
+          "winner": "DURAI. CHANDRASEKAR",
+          "winnerParty": "INC",
+          "winnerVotes": 94528,
+          "winnerVoteShare": 44.94,
+          "marginVotes": 9689,
+          "marginPct": 4.61,
+          "turnoutPct": 78.2
+        },
+        {
+          "constituency": "Tiruttani",
+          "constituencyNumber": 3,
+          "reservationType": "GEN",
+          "totalElectors": 295358,
+          "totalVotes": 232624,
+          "enop": 2.38,
+          "winner": "S.Chandran",
+          "winnerParty": "DMK",
+          "winnerVotes": 120314,
+          "winnerVoteShare": 51.72,
+          "marginVotes": 29253,
+          "marginPct": 12.58,
+          "turnoutPct": 78.76
+        },
+        {
+          "constituency": "Thiruvallur",
+          "constituencyNumber": 4,
+          "reservationType": "GEN",
+          "totalElectors": 277516,
+          "totalVotes": 214243,
+          "enop": 2.44,
+          "winner": "RAAJENDRAN, V.G.",
+          "winnerParty": "DMK",
+          "winnerVotes": 107709,
+          "winnerVoteShare": 50.27,
+          "marginVotes": 22701,
+          "marginPct": 10.6,
+          "turnoutPct": 77.2
+        },
+        {
+          "constituency": "Poonamallee",
+          "constituencyNumber": 5,
+          "reservationType": "SC",
+          "totalElectors": 361331,
+          "totalVotes": 263736,
+          "enop": 2.7,
+          "winner": "Krishnaswamy A",
+          "winnerParty": "DMK",
+          "winnerVotes": 149578,
+          "winnerVoteShare": 56.72,
+          "marginVotes": 94110,
+          "marginPct": 35.68,
+          "turnoutPct": 72.99
+        },
+        {
+          "constituency": "Avadi",
+          "constituencyNumber": 6,
+          "reservationType": "GEN",
+          "totalElectors": 446678,
+          "totalVotes": 300927,
+          "enop": 2.78,
+          "winner": "Nasar S M",
+          "winnerParty": "DMK",
+          "winnerVotes": 150287,
+          "winnerVoteShare": 49.94,
+          "marginVotes": 55275,
+          "marginPct": 18.37,
+          "turnoutPct": 67.37
+        },
+        {
+          "constituency": "Maduravoyal",
+          "constituencyNumber": 7,
+          "reservationType": "GEN",
+          "totalElectors": 454179,
+          "totalVotes": 273870,
+          "enop": 3.03,
+          "winner": "GANAPATHY.K",
+          "winnerParty": "DMK",
+          "winnerVotes": 121298,
+          "winnerVoteShare": 44.29,
+          "marginVotes": 31721,
+          "marginPct": 11.58,
+          "turnoutPct": 60.3
+        },
+        {
+          "constituency": "Ambattur",
+          "constituencyNumber": 8,
+          "reservationType": "GEN",
+          "totalElectors": 387516,
+          "totalVotes": 240299,
+          "enop": 2.94,
+          "winner": "JOSEPH SAMUEL",
+          "winnerParty": "DMK",
+          "winnerVotes": 114554,
+          "winnerVoteShare": 47.67,
+          "marginVotes": 42146,
+          "marginPct": 17.54,
+          "turnoutPct": 62.01
+        },
+        {
+          "constituency": "Madavaram",
+          "constituencyNumber": 9,
+          "reservationType": "GEN",
+          "totalElectors": 456079,
+          "totalVotes": 302700,
+          "enop": 2.78,
+          "winner": "SUDHARSANAM. S",
+          "winnerParty": "DMK",
+          "winnerVotes": 151485,
+          "winnerVoteShare": 50.04,
+          "marginVotes": 57071,
+          "marginPct": 18.85,
+          "turnoutPct": 66.37
+        },
+        {
+          "constituency": "Thiruvottiyur",
+          "constituencyNumber": 10,
+          "reservationType": "GEN",
+          "totalElectors": 306977,
+          "totalVotes": 199996,
+          "enop": 3.23,
+          "winner": "K.P.SHANKAR",
+          "winnerParty": "DMK",
+          "winnerVotes": 88185,
+          "winnerVoteShare": 44.09,
+          "marginVotes": 37661,
+          "marginPct": 18.83,
+          "turnoutPct": 65.15
+        }
+      ]
+    },
+    {
+      "district": "Tiruvannamalai",
+      "districtSlug": "tiruvannamalai",
+      "totalSeats": 8,
+      "turnoutPct": 79,
+      "totalElectors": 2097688,
+      "totalVotes": 1656974,
+      "winnerParty": "DMK",
+      "winnerSeats": 6,
+      "winnerSeatShare": 75,
+      "winnerVoteShare": 50.5,
+      "closeContests": 3,
+      "meanMarginPct": 12.4,
+      "medianMarginPct": 5.4,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.35,
+          "medianEnop": 2.38,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 3,
+          "majorityWinnerSeatShare": 37.5,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 12.5,
+          "turnoutMedian": 80.1,
+          "turnoutIqr": 2.2,
+          "turnoutRange": 10.6,
+          "winnerVoteShareMedian": 48.3,
+          "marginMedian": 5.4,
+          "reservationMix": {
+            "reservedSeats": 2,
+            "reservedSeatShare": 25,
+            "scSeats": 2,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 6,
+          "seatShare": 75,
+          "voteShare": 50.5
+        },
+        {
+          "party": "ADMK",
+          "seats": 2,
+          "seatShare": 25,
+          "voteShare": 28.5
+        },
+        {
+          "party": "PMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 8.7
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.3
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.6
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.1
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.9
+        },
+        {
+          "party": "NOTA",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Chengam",
+          "constituencyNumber": 62,
+          "reservationType": "SC",
+          "totalElectors": 277646,
+          "totalVotes": 223950,
+          "enop": 2.38,
+          "winner": "GIRI.M.P",
+          "winnerParty": "DMK",
+          "winnerVotes": 108081,
+          "winnerVoteShare": 48.26,
+          "marginVotes": 11570,
+          "marginPct": 5.17,
+          "turnoutPct": 80.66
+        },
+        {
+          "constituency": "Tiruvannamalai",
+          "constituencyNumber": 63,
+          "reservationType": "GEN",
+          "totalElectors": 291304,
+          "totalVotes": 208836,
+          "enop": 2.08,
+          "winner": "E V VELU",
+          "winnerParty": "DMK",
+          "winnerVotes": 137876,
+          "winnerVoteShare": 66.02,
+          "marginVotes": 94673,
+          "marginPct": 45.33,
+          "turnoutPct": 71.69
+        },
+        {
+          "constituency": "Kilpennathur",
+          "constituencyNumber": 64,
+          "reservationType": "GEN",
+          "totalElectors": 256945,
+          "totalVotes": 203886,
+          "enop": 2.44,
+          "winner": "K.Pitchandi",
+          "winnerParty": "DMK",
+          "winnerVotes": 104675,
+          "winnerVoteShare": 51.34,
+          "marginVotes": 26787,
+          "marginPct": 13.14,
+          "turnoutPct": 79.35
+        },
+        {
+          "constituency": "Kalasapakkam",
+          "constituencyNumber": 65,
+          "reservationType": "GEN",
+          "totalElectors": 244442,
+          "totalVotes": 196434,
+          "enop": 2.38,
+          "winner": "Saravanan.P.S.T",
+          "winnerParty": "DMK",
+          "winnerVotes": 94134,
+          "winnerVoteShare": 47.92,
+          "marginVotes": 9222,
+          "marginPct": 4.69,
+          "turnoutPct": 80.36
+        },
+        {
+          "constituency": "Polur",
+          "constituencyNumber": 66,
+          "reservationType": "GEN",
+          "totalElectors": 245368,
+          "totalVotes": 202012,
+          "enop": 2.38,
+          "winner": "Agri KRISHNAMURTHY. S S",
+          "winnerParty": "ADMK",
+          "winnerVotes": 97732,
+          "winnerVoteShare": 48.38,
+          "marginVotes": 9725,
+          "marginPct": 4.81,
+          "turnoutPct": 82.33
+        },
+        {
+          "constituency": "Arani",
+          "constituencyNumber": 67,
+          "reservationType": "GEN",
+          "totalElectors": 277332,
+          "totalVotes": 221422,
+          "enop": 2.38,
+          "winner": "S.RAMACHANDRAN",
+          "winnerParty": "ADMK",
+          "winnerVotes": 102961,
+          "winnerVoteShare": 46.5,
+          "marginVotes": 3128,
+          "marginPct": 1.41,
+          "turnoutPct": 79.84
+        },
+        {
+          "constituency": "Cheyyar",
+          "constituencyNumber": 68,
+          "reservationType": "GEN",
+          "totalElectors": 262529,
+          "totalVotes": 214460,
+          "enop": 2.44,
+          "winner": "JOTHI. O",
+          "winnerParty": "DMK",
+          "winnerVotes": 102460,
+          "winnerVoteShare": 47.78,
+          "marginVotes": 12271,
+          "marginPct": 5.72,
+          "turnoutPct": 81.69
+        },
+        {
+          "constituency": "Vandavasi",
+          "constituencyNumber": 69,
+          "reservationType": "SC",
+          "totalElectors": 242122,
+          "totalVotes": 185974,
+          "enop": 2.33,
+          "winner": "Ambethkumar S",
+          "winnerParty": "DMK",
+          "winnerVotes": 102064,
+          "winnerVoteShare": 54.88,
+          "marginVotes": 35953,
+          "marginPct": 19.33,
+          "turnoutPct": 76.81
+        }
+      ]
+    },
+    {
+      "district": "Tiruvarur",
+      "districtSlug": "tiruvarur",
+      "totalSeats": 4,
+      "turnoutPct": 76.3,
+      "totalElectors": 1060242,
+      "totalVotes": 809349,
+      "winnerParty": "DMK",
+      "winnerSeats": 2,
+      "winnerSeatShare": 50,
+      "winnerVoteShare": 36.5,
+      "closeContests": 1,
+      "meanMarginPct": 15.5,
+      "medianMarginPct": 17.8,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.69,
+          "medianEnop": 2.57,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 50,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 25,
+          "turnoutMedian": 75.5,
+          "turnoutIqr": 3.8,
+          "turnoutRange": 7.8,
+          "winnerVoteShareMedian": 49.5,
+          "marginMedian": 17.8,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 25,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 2,
+          "seatShare": 50,
+          "voteShare": 36.5
+        },
+        {
+          "party": "ADMK",
+          "seats": 1,
+          "seatShare": 25,
+          "voteShare": 34.4
+        },
+        {
+          "party": "CPI",
+          "seats": 1,
+          "seatShare": 25,
+          "voteShare": 12
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 8.1
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.7
+        },
+        {
+          "party": "SDPI",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.8
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 0.7
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Thiruthuraipundi",
+          "constituencyNumber": 166,
+          "reservationType": "SC",
+          "totalElectors": 242228,
+          "totalVotes": 185886,
+          "enop": 2.44,
+          "winner": "MARIMUTHU K",
+          "winnerParty": "CPI",
+          "winnerVotes": 97092,
+          "winnerVoteShare": 52.23,
+          "marginVotes": 30068,
+          "marginPct": 16.18,
+          "turnoutPct": 76.74
+        },
+        {
+          "constituency": "Mannargudi",
+          "constituencyNumber": 167,
+          "reservationType": "GEN",
+          "totalElectors": 259926,
+          "totalVotes": 193229,
+          "enop": 3.23,
+          "winner": "RAJAA T R B",
+          "winnerParty": "DMK",
+          "winnerVotes": 87172,
+          "winnerVoteShare": 45.11,
+          "marginVotes": 37393,
+          "marginPct": 19.35,
+          "turnoutPct": 74.34
+        },
+        {
+          "constituency": "Thiruvarur",
+          "constituencyNumber": 168,
+          "reservationType": "GEN",
+          "totalElectors": 284354,
+          "totalVotes": 208290,
+          "enop": 2.7,
+          "winner": "KALAIVANAN  POONDI  K.",
+          "winnerParty": "DMK",
+          "winnerVotes": 108906,
+          "winnerVoteShare": 52.29,
+          "marginVotes": 51174,
+          "marginPct": 24.57,
+          "turnoutPct": 73.25
+        },
+        {
+          "constituency": "Nannilam",
+          "constituencyNumber": 169,
+          "reservationType": "GEN",
+          "totalElectors": 273734,
+          "totalVotes": 221944,
+          "enop": 2.38,
+          "winner": "KAMARAJ R",
+          "winnerParty": "ADMK",
+          "winnerVotes": 103637,
+          "winnerVoteShare": 46.7,
+          "marginVotes": 4424,
+          "marginPct": 1.99,
+          "turnoutPct": 81.08
+        }
+      ]
+    },
+    {
+      "district": "Vellore",
+      "districtSlug": "vellore",
+      "totalSeats": 13,
+      "turnoutPct": 76.1,
+      "totalElectors": 3300418,
+      "totalVotes": 2512641,
+      "winnerParty": "DMK",
+      "winnerSeats": 9,
+      "winnerSeatShare": 69.2,
+      "winnerVoteShare": 36.7,
+      "closeContests": 5,
+      "meanMarginPct": 7.2,
+      "medianMarginPct": 6.1,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.45,
+          "medianEnop": 2.44,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 15.4,
+          "ultraCloseSeats": 2,
+          "ultraCloseSeatShare": 15.4,
+          "turnoutMedian": 76.5,
+          "turnoutIqr": 3.2,
+          "turnoutRange": 10.7,
+          "winnerVoteShareMedian": 48.6,
+          "marginMedian": 6.1,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 23.1,
+            "scSeats": 3,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 9,
+          "seatShare": 69.2,
+          "voteShare": 36.7
+        },
+        {
+          "party": "ADMK",
+          "seats": 3,
+          "seatShare": 23.1,
+          "voteShare": 33.6
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 7.7,
+          "voteShare": 4.4
+        },
+        {
+          "party": "PMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 9.4
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 5.7
+        },
+        {
+          "party": "IUML",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.3
+        },
+        {
+          "party": "VCK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.3
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.1
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Arakonam",
+          "constituencyNumber": 38,
+          "reservationType": "SC",
+          "totalElectors": 228885,
+          "totalVotes": 171412,
+          "enop": 2.63,
+          "winner": "S.RAVI",
+          "winnerParty": "ADMK",
+          "winnerVotes": 85399,
+          "winnerVoteShare": 49.82,
+          "marginVotes": 27169,
+          "marginPct": 15.85,
+          "turnoutPct": 74.89
+        },
+        {
+          "constituency": "Sholinghur",
+          "constituencyNumber": 39,
+          "reservationType": "GEN",
+          "totalElectors": 279821,
+          "totalVotes": 224109,
+          "enop": 2.63,
+          "winner": "A.M.MUNIRATHINAM",
+          "winnerParty": "INC",
+          "winnerVotes": 110228,
+          "winnerVoteShare": 49.18,
+          "marginVotes": 26698,
+          "marginPct": 11.91,
+          "turnoutPct": 80.09
+        },
+        {
+          "constituency": "Katpadi",
+          "constituencyNumber": 40,
+          "reservationType": "GEN",
+          "totalElectors": 251683,
+          "totalVotes": 186246,
+          "enop": 2.38,
+          "winner": "DURAIMURUGAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 85140,
+          "winnerVoteShare": 45.71,
+          "marginVotes": 746,
+          "marginPct": 0.4,
+          "turnoutPct": 74
+        },
+        {
+          "constituency": "Ranipet",
+          "constituencyNumber": 41,
+          "reservationType": "GEN",
+          "totalElectors": 268593,
+          "totalVotes": 207462,
+          "enop": 2.33,
+          "winner": "R.GANDHI",
+          "winnerParty": "DMK",
+          "winnerVotes": 103291,
+          "winnerVoteShare": 49.79,
+          "marginVotes": 16498,
+          "marginPct": 7.95,
+          "turnoutPct": 77.24
+        },
+        {
+          "constituency": "Arcot",
+          "constituencyNumber": 42,
+          "reservationType": "GEN",
+          "totalElectors": 263490,
+          "totalVotes": 209791,
+          "enop": 2.44,
+          "winner": "J.L.Eswarappan",
+          "winnerParty": "DMK",
+          "winnerVotes": 103885,
+          "winnerVoteShare": 49.52,
+          "marginVotes": 19958,
+          "marginPct": 9.51,
+          "turnoutPct": 79.62
+        },
+        {
+          "constituency": "Vellore",
+          "constituencyNumber": 43,
+          "reservationType": "GEN",
+          "totalElectors": 256083,
+          "totalVotes": 179899,
+          "enop": 2.56,
+          "winner": "Karthikeyan .P",
+          "winnerParty": "DMK",
+          "winnerVotes": 84299,
+          "winnerVoteShare": 46.86,
+          "marginVotes": 9181,
+          "marginPct": 5.1,
+          "turnoutPct": 70.25
+        },
+        {
+          "constituency": "Anaikattu",
+          "constituencyNumber": 44,
+          "reservationType": "GEN",
+          "totalElectors": 256722,
+          "totalVotes": 197805,
+          "enop": 2.33,
+          "winner": "A.P.Nandakumar",
+          "winnerParty": "DMK",
+          "winnerVotes": 95159,
+          "winnerVoteShare": 48.11,
+          "marginVotes": 6360,
+          "marginPct": 3.22,
+          "turnoutPct": 77.05
+        },
+        {
+          "constituency": "Kilvaithinankuppam",
+          "constituencyNumber": 45,
+          "reservationType": "SC",
+          "totalElectors": 227613,
+          "totalVotes": 174124,
+          "enop": 2.38,
+          "winner": "M.JAGAN MOORTHY",
+          "winnerParty": "ADMK",
+          "winnerVotes": 84579,
+          "winnerVoteShare": 48.57,
+          "marginVotes": 10582,
+          "marginPct": 6.08,
+          "turnoutPct": 76.5
+        },
+        {
+          "constituency": "Gudiyatham",
+          "constituencyNumber": 46,
+          "reservationType": "SC",
+          "totalElectors": 291662,
+          "totalVotes": 211630,
+          "enop": 2.33,
+          "winner": "Amulu.V",
+          "winnerParty": "DMK",
+          "winnerVotes": 100412,
+          "winnerVoteShare": 47.45,
+          "marginVotes": 6901,
+          "marginPct": 3.26,
+          "turnoutPct": 72.56
+        },
+        {
+          "constituency": "Vaniayambadi",
+          "constituencyNumber": 47,
+          "reservationType": "GEN",
+          "totalElectors": 251485,
+          "totalVotes": 189997,
+          "enop": 2.5,
+          "winner": "G.SENDHIL KUMAR",
+          "winnerParty": "ADMK",
+          "winnerVotes": 88018,
+          "winnerVoteShare": 46.33,
+          "marginVotes": 4904,
+          "marginPct": 2.58,
+          "turnoutPct": 75.55
+        },
+        {
+          "constituency": "Ambur",
+          "constituencyNumber": 48,
+          "reservationType": "GEN",
+          "totalElectors": 240343,
+          "totalVotes": 177878,
+          "enop": 2.38,
+          "winner": "VILWANATHAN.A.C",
+          "winnerParty": "DMK",
+          "winnerVotes": 90476,
+          "winnerVoteShare": 50.86,
+          "marginVotes": 20232,
+          "marginPct": 11.37,
+          "turnoutPct": 74.01
+        },
+        {
+          "constituency": "Jolarpet",
+          "constituencyNumber": 49,
+          "reservationType": "GEN",
+          "totalElectors": 242477,
+          "totalVotes": 196358,
+          "enop": 2.44,
+          "winner": "DEVARAJI.K.",
+          "winnerParty": "DMK",
+          "winnerVotes": 89490,
+          "winnerVoteShare": 45.57,
+          "marginVotes": 1091,
+          "marginPct": 0.56,
+          "turnoutPct": 80.98
+        },
+        {
+          "constituency": "Tiruppattur",
+          "constituencyNumber": 50,
+          "reservationType": "GEN",
+          "totalElectors": 241561,
+          "totalVotes": 185930,
+          "enop": 2.5,
+          "winner": "A. NALLATHAMBI",
+          "winnerParty": "DMK",
+          "winnerVotes": 96522,
+          "winnerVoteShare": 51.91,
+          "marginVotes": 28240,
+          "marginPct": 15.19,
+          "turnoutPct": 76.97
+        }
+      ]
+    },
+    {
+      "district": "Villupuram",
+      "districtSlug": "villupuram",
+      "totalSeats": 11,
+      "turnoutPct": 79.2,
+      "totalElectors": 2834334,
+      "totalVotes": 2244928,
+      "winnerParty": "DMK",
+      "winnerSeats": 7,
+      "winnerSeatShare": 63.6,
+      "winnerVoteShare": 41.1,
+      "closeContests": 3,
+      "meanMarginPct": 12.1,
+      "medianMarginPct": 11.5,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 2.43,
+          "medianEnop": 2.44,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 0,
+          "lowPluralitySeatShare": 0,
+          "majorityWinnerSeats": 5,
+          "majorityWinnerSeatShare": 45.5,
+          "ultraCloseSeats": 1,
+          "ultraCloseSeatShare": 9.1,
+          "turnoutMedian": 79.5,
+          "turnoutIqr": 1.8,
+          "turnoutRange": 6.4,
+          "winnerVoteShareMedian": 49.9,
+          "marginMedian": 11.5,
+          "reservationMix": {
+            "reservedSeats": 3,
+            "reservedSeatShare": 27.3,
+            "scSeats": 3,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 7,
+          "seatShare": 63.6,
+          "voteShare": 41.1
+        },
+        {
+          "party": "ADMK",
+          "seats": 3,
+          "seatShare": 27.3,
+          "voteShare": 28.7
+        },
+        {
+          "party": "PMK",
+          "seats": 1,
+          "seatShare": 9.1,
+          "voteShare": 10.2
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.9
+        },
+        {
+          "party": "INC",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.8
+        },
+        {
+          "party": "VCK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 3.1
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 2.3
+        },
+        {
+          "party": "DMDK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.5
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Gingee",
+          "constituencyNumber": 70,
+          "reservationType": "GEN",
+          "totalElectors": 264518,
+          "totalVotes": 206880,
+          "enop": 2.44,
+          "winner": "MASTHAN K S",
+          "winnerParty": "DMK",
+          "winnerVotes": 109625,
+          "winnerVoteShare": 52.99,
+          "marginVotes": 35803,
+          "marginPct": 17.31,
+          "turnoutPct": 78.21
+        },
+        {
+          "constituency": "Mailam",
+          "constituencyNumber": 71,
+          "reservationType": "GEN",
+          "totalElectors": 222627,
+          "totalVotes": 176989,
+          "enop": 2.44,
+          "winner": "SIVAKUMAR C",
+          "winnerParty": "PMK",
+          "winnerVotes": 81044,
+          "winnerVoteShare": 45.79,
+          "marginVotes": 2230,
+          "marginPct": 1.26,
+          "turnoutPct": 79.5
+        },
+        {
+          "constituency": "Tindivanam",
+          "constituencyNumber": 72,
+          "reservationType": "SC",
+          "totalElectors": 232740,
+          "totalVotes": 182538,
+          "enop": 2.44,
+          "winner": "ARJUNAN P",
+          "winnerParty": "ADMK",
+          "winnerVotes": 87152,
+          "winnerVoteShare": 47.74,
+          "marginVotes": 9753,
+          "marginPct": 5.34,
+          "turnoutPct": 78.43
+        },
+        {
+          "constituency": "Vanur",
+          "constituencyNumber": 73,
+          "reservationType": "SC",
+          "totalElectors": 228359,
+          "totalVotes": 182208,
+          "enop": 2.44,
+          "winner": "CHAKRAPANI M",
+          "winnerParty": "ADMK",
+          "winnerVotes": 92219,
+          "winnerVoteShare": 50.61,
+          "marginVotes": 21727,
+          "marginPct": 11.92,
+          "turnoutPct": 79.79
+        },
+        {
+          "constituency": "Villupuram",
+          "constituencyNumber": 74,
+          "reservationType": "GEN",
+          "totalElectors": 266155,
+          "totalVotes": 204860,
+          "enop": 2.33,
+          "winner": "LAKSHMANAN R",
+          "winnerParty": "DMK",
+          "winnerVotes": 102271,
+          "winnerVoteShare": 49.92,
+          "marginVotes": 14868,
+          "marginPct": 7.26,
+          "turnoutPct": 76.97
+        },
+        {
+          "constituency": "Vikravandi",
+          "constituencyNumber": 75,
+          "reservationType": "GEN",
+          "totalElectors": 237887,
+          "totalVotes": 193617,
+          "enop": 2.38,
+          "winner": "PUGAZHENTHI N",
+          "winnerParty": "DMK",
+          "winnerVotes": 93730,
+          "winnerVoteShare": 48.41,
+          "marginVotes": 9573,
+          "marginPct": 4.94,
+          "turnoutPct": 81.39
+        },
+        {
+          "constituency": "Tirukkoyilur",
+          "constituencyNumber": 76,
+          "reservationType": "GEN",
+          "totalElectors": 257266,
+          "totalVotes": 196217,
+          "enop": 2.5,
+          "winner": "K.PONMUDY",
+          "winnerParty": "DMK",
+          "winnerVotes": 110980,
+          "winnerVoteShare": 56.56,
+          "marginVotes": 59680,
+          "marginPct": 30.42,
+          "turnoutPct": 76.27
+        },
+        {
+          "constituency": "Ulundurpet",
+          "constituencyNumber": 77,
+          "reservationType": "GEN",
+          "totalElectors": 296360,
+          "totalVotes": 244853,
+          "enop": 2.38,
+          "winner": "MANIKANNAN A J",
+          "winnerParty": "DMK",
+          "winnerVotes": 115451,
+          "winnerVoteShare": 47.15,
+          "marginVotes": 5256,
+          "marginPct": 2.15,
+          "turnoutPct": 82.62
+        },
+        {
+          "constituency": "Rishivandiam",
+          "constituencyNumber": 78,
+          "reservationType": "GEN",
+          "totalElectors": 268278,
+          "totalVotes": 215106,
+          "enop": 2.56,
+          "winner": "KARTHIKEYAN K",
+          "winnerParty": "DMK",
+          "winnerVotes": 113912,
+          "winnerVoteShare": 52.96,
+          "marginVotes": 41728,
+          "marginPct": 19.4,
+          "turnoutPct": 80.18
+        },
+        {
+          "constituency": "Sankarapuram",
+          "constituencyNumber": 79,
+          "reservationType": "GEN",
+          "totalElectors": 271176,
+          "totalVotes": 215802,
+          "enop": 2.27,
+          "winner": "UDHAYASURIYAN T",
+          "winnerParty": "DMK",
+          "winnerVotes": 121186,
+          "winnerVoteShare": 56.16,
+          "marginVotes": 45963,
+          "marginPct": 21.3,
+          "turnoutPct": 79.58
+        },
+        {
+          "constituency": "Kallakurichi",
+          "constituencyNumber": 80,
+          "reservationType": "SC",
+          "totalElectors": 288968,
+          "totalVotes": 225858,
+          "enop": 2.56,
+          "winner": "Senthilkumar.M",
+          "winnerParty": "ADMK",
+          "winnerVotes": 110643,
+          "winnerVoteShare": 48.99,
+          "marginVotes": 25891,
+          "marginPct": 11.46,
+          "turnoutPct": 78.16
+        }
+      ]
+    },
+    {
+      "district": "Virudhunagar",
+      "districtSlug": "virudhunagar",
+      "totalSeats": 7,
+      "turnoutPct": 73.7,
+      "totalElectors": 1690190,
+      "totalVotes": 1246306,
+      "winnerParty": "DMK",
+      "winnerSeats": 5,
+      "winnerSeatShare": 71.4,
+      "winnerVoteShare": 33.3,
+      "closeContests": 1,
+      "meanMarginPct": 13.6,
+      "medianMarginPct": 9.4,
+      "advancedMetrics": {
+        "sourceNative": {
+          "enopAvailable": true,
+          "meanEnop": 3.07,
+          "medianEnop": 3.12,
+          "highFragmentationSeats": 0,
+          "highFragmentationSeatShare": 0
+        },
+        "custom": {
+          "lowPluralitySeats": 2,
+          "lowPluralitySeatShare": 28.6,
+          "majorityWinnerSeats": 2,
+          "majorityWinnerSeatShare": 28.6,
+          "ultraCloseSeats": 0,
+          "ultraCloseSeatShare": 0,
+          "turnoutMedian": 73.9,
+          "turnoutIqr": 3.2,
+          "turnoutRange": 7.3,
+          "winnerVoteShareMedian": 42.7,
+          "marginMedian": 9.4,
+          "reservationMix": {
+            "reservedSeats": 1,
+            "reservedSeatShare": 14.3,
+            "scSeats": 1,
+            "stSeats": 0
+          }
+        }
+      },
+      "topParties": [
+        {
+          "party": "DMK",
+          "seats": 5,
+          "seatShare": 71.4,
+          "voteShare": 33.3
+        },
+        {
+          "party": "ADMK",
+          "seats": 1,
+          "seatShare": 14.3,
+          "voteShare": 28.8
+        },
+        {
+          "party": "INC",
+          "seats": 1,
+          "seatShare": 14.3,
+          "voteShare": 11
+        },
+        {
+          "party": "NTK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 8.8
+        },
+        {
+          "party": "AMMK",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 7.3
+        },
+        {
+          "party": "BJP",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 4.2
+        },
+        {
+          "party": "IND",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.9
+        },
+        {
+          "party": "MNM",
+          "seats": 0,
+          "seatShare": 0,
+          "voteShare": 1.8
+        }
+      ],
+      "constituencies": [
+        {
+          "constituency": "Rajapalayam",
+          "constituencyNumber": 202,
+          "reservationType": "GEN",
+          "totalElectors": 241856,
+          "totalVotes": 178708,
+          "enop": 3.03,
+          "winner": "THANGAPANDIAN S.",
+          "winnerParty": "DMK",
+          "winnerVotes": 74158,
+          "winnerVoteShare": 41.5,
+          "marginVotes": 3898,
+          "marginPct": 2.18,
+          "turnoutPct": 73.89
+        },
+        {
+          "constituency": "Srivilliputhur",
+          "constituencyNumber": 203,
+          "reservationType": "SC",
+          "totalElectors": 252992,
+          "totalVotes": 185039,
+          "enop": 3.57,
+          "winner": "MANRAJ, E.M.",
+          "winnerParty": "ADMK",
+          "winnerVotes": 70475,
+          "winnerVoteShare": 38.09,
+          "marginVotes": 12738,
+          "marginPct": 6.88,
+          "turnoutPct": 73.14
+        },
+        {
+          "constituency": "Sattur",
+          "constituencyNumber": 204,
+          "reservationType": "GEN",
+          "totalElectors": 255132,
+          "totalVotes": 191783,
+          "enop": 3.45,
+          "winner": "RAGHURAMAN,  A.R.R.",
+          "winnerParty": "DMK",
+          "winnerVotes": 74174,
+          "winnerVoteShare": 38.68,
+          "marginVotes": 11179,
+          "marginPct": 5.83,
+          "turnoutPct": 75.17
+        },
+        {
+          "constituency": "Sivakasi",
+          "constituencyNumber": 205,
+          "reservationType": "GEN",
+          "totalElectors": 263750,
+          "totalVotes": 185047,
+          "enop": 3.33,
+          "winner": "Ashokan.G",
+          "winnerParty": "INC",
+          "winnerVotes": 78947,
+          "winnerVoteShare": 42.66,
+          "marginVotes": 17319,
+          "marginPct": 9.36,
+          "turnoutPct": 70.16
+        },
+        {
+          "constituency": "Virudhunagar",
+          "constituencyNumber": 206,
+          "reservationType": "GEN",
+          "totalElectors": 226907,
+          "totalVotes": 161717,
+          "enop": 3.12,
+          "winner": "SEENIVASAN A.R.R",
+          "winnerParty": "DMK",
+          "winnerVotes": 73297,
+          "winnerVoteShare": 45.32,
+          "marginVotes": 21339,
+          "marginPct": 13.2,
+          "turnoutPct": 71.27
+        },
+        {
+          "constituency": "Aruppukottai",
+          "constituencyNumber": 207,
+          "reservationType": "GEN",
+          "totalElectors": 226456,
+          "totalVotes": 171201,
+          "enop": 2.63,
+          "winner": "K.K.S.S.R.RAMACHANDRAN",
+          "winnerParty": "DMK",
+          "winnerVotes": 91040,
+          "winnerVoteShare": 53.18,
+          "marginVotes": 39034,
+          "marginPct": 22.8,
+          "turnoutPct": 75.6
+        },
+        {
+          "constituency": "Tiruchuli",
+          "constituencyNumber": 208,
+          "reservationType": "GEN",
+          "totalElectors": 223097,
+          "totalVotes": 172811,
+          "enop": 2.38,
+          "winner": "THANGAM THENARASU",
+          "winnerParty": "DMK",
+          "winnerVotes": 102225,
+          "winnerVoteShare": 59.15,
+          "marginVotes": 60992,
+          "marginPct": 35.29,
+          "turnoutPct": 77.46
+        }
+      ]
+    }
+  ]
+}
