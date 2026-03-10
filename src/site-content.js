@@ -1406,23 +1406,5 @@ export const siteContent = {
           "Yes. Arjuna offers integrated consulting support across multiple campaign functions where end-to-end strategic and operational partnership is needed."
       }
     ]
-  },
-  references: [
-    {
-      name: "Indian PAC",
-      url: "https://www.indianpac.com"
-    },
-    {
-      name: "Jarvis Consulting",
-      url: "https://jarvis.consulting"
-    },
-    {
-      name: "Rajneethi",
-      url: "https://rajneethi.com/home"
-    },
-    {
-      name: "GILP by Nation With NaMo",
-      url: "https://gilp.nationwithnamo.com"
-    }
-  ]
+  }
 };

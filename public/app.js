@@ -1834,6 +1834,24 @@ function buildSnapshotRightRail(summary, rows, mode) {
   `;
 }
 
+function buildInsightAttributes({ title, eyebrow, primary, secondary, tertiary, color }) {
+  const attributes = {
+    "data-atlas-insight": "true",
+    tabindex: "0",
+    "data-atlas-insight-title": title,
+    "data-atlas-insight-eyebrow": eyebrow,
+    "data-atlas-insight-primary": primary,
+    "data-atlas-insight-secondary": secondary,
+    "data-atlas-insight-tertiary": tertiary,
+    "data-atlas-insight-color": color
+  };
+
+  return Object.entries(attributes)
+    .filter(([, value]) => value !== null && value !== undefined && value !== "")
+    .map(([key, value]) => `${key}="${escapeHtml(String(value))}"`)
+    .join(" ");
+}
+
 function polarToCartesian(cx, cy, radius, angleInDegrees) {
   const angleInRadians = ((angleInDegrees - 90) * Math.PI) / 180;
 
@@ -1878,6 +1896,14 @@ function buildSnapshotCenterDonutChart(rows, title) {
           class="atlas-pie-segment"
           d="${path}"
           fill="${row.color}"
+          ${buildInsightAttributes({
+            title: row.label,
+            eyebrow: title,
+            primary: typeof row.value === "number" ? formatPct(row.value) : "Pending",
+            secondary: row.primary,
+            tertiary: row.secondary,
+            color: row.color
+          })}
         ></path>
       `;
     })
@@ -1911,7 +1937,17 @@ function buildSnapshotCenterBarsChart(rows, title) {
         ${rows
           .map(
             (row) => `
-              <article class="atlas-center-bar-row">
+              <article
+                class="atlas-center-bar-row"
+                ${buildInsightAttributes({
+                  title: row.label,
+                  eyebrow: title,
+                  primary: typeof row.value === "number" ? formatPct(row.value) : "Pending",
+                  secondary: row.primary,
+                  tertiary: row.secondary,
+                  color: row.color
+                })}
+              >
                 <div class="atlas-center-bar-copy">
                   <span class="atlas-party-head">
                     <span class="atlas-party-swatch" style="background:${row.color}"></span>
@@ -1960,7 +1996,17 @@ function buildSnapshotCenterGapChart(rows, title) {
             const seatLead = gap >= 0;
 
             return `
-              <article class="atlas-gap-row">
+              <article
+                class="atlas-gap-row"
+                ${buildInsightAttributes({
+                  title: row.label,
+                  eyebrow: title,
+                  primary: `${seatLead ? "+" : ""}${formatPct(gap)} gap`,
+                  secondary: `Seat ${formatPct(seatShare)}`,
+                  tertiary: `Vote ${formatPct(voteShare)}`,
+                  color: row.color
+                })}
+              >
                 <div class="atlas-gap-head">
                   <span class="atlas-party-head">
                     <span class="atlas-party-swatch" style="background:${row.color}"></span>
@@ -2006,7 +2052,17 @@ function buildSnapshotCenterCompareChart(rows, title) {
         ${comparableRows
           .map(
             (row) => `
-              <article class="atlas-compare-row">
+              <article
+                class="atlas-compare-row"
+                ${buildInsightAttributes({
+                  title: row.label,
+                  eyebrow: title,
+                  primary: `Seat ${formatPct(row.seatShare)}`,
+                  secondary: `Vote ${formatPct(row.voteShare)}`,
+                  tertiary: row.primary,
+                  color: row.color
+                })}
+              >
                 <div class="atlas-party-head">
                   <span class="atlas-party-swatch" style="background:${row.color}"></span>
                   <h3>${escapeHtml(row.label)}</h3>
@@ -2049,9 +2105,19 @@ function buildSnapshotCenterPressureChart(rows, chartType) {
         </div>
         <div class="atlas-rank-list">
           ${rows
-            .map(
-              (row) => `
-                <article class="atlas-rank-row">
+          .map(
+            (row) => `
+                <article
+                  class="atlas-rank-row"
+                  ${buildInsightAttributes({
+                    title: row.label,
+                    eyebrow: "Pressure comparison",
+                    primary: row.value,
+                    secondary: row.detail,
+                    tertiary: `Pressure score ${String(Math.round(row.score))}`,
+                    color: "#f28b24"
+                  })}
+                >
                   <div class="atlas-rank-copy">
                     <p class="atlas-rank-primary">${escapeHtml(row.label)}</p>
                     <p class="atlas-rank-secondary">${escapeHtml(row.detail)}</p>
@@ -2083,7 +2149,17 @@ function buildSnapshotCenterPressureChart(rows, chartType) {
         ${rows
           .map(
             (row) => `
-              <article class="atlas-pressure-card">
+              <article
+                class="atlas-pressure-card"
+                ${buildInsightAttributes({
+                  title: row.label,
+                  eyebrow: "Pressure signals",
+                  primary: row.value,
+                  secondary: row.detail,
+                  tertiary: `Pressure score ${String(Math.round(row.score))}`,
+                  color: "#f28b24"
+                })}
+              >
                 <p class="atlas-kpi-label">${escapeHtml(row.label)}</p>
                 <p class="atlas-pressure-value">${escapeHtml(row.value)}</p>
                 <p class="atlas-kpi-detail">${escapeHtml(row.detail)}</p>
@@ -2148,7 +2224,7 @@ function buildUnifiedSnapshotStage(summary, rows, mode, chartType, title, copy) 
             : buildSnapshotCenterDonutChart(rows, title);
 
   return `
-    <article class="atlas-snapshot-stage atlas-snapshot-stage-unified">
+    <article class="atlas-snapshot-stage atlas-snapshot-stage-unified" data-atlas-snapshot-stage>
       <div class="atlas-snapshot-shell">
         ${buildSnapshotLeftRail(summary, mode, title, copy)}
         <div class="atlas-snapshot-center">
@@ -2156,6 +2232,7 @@ function buildUnifiedSnapshotStage(summary, rows, mode, chartType, title, copy) 
         </div>
         ${buildSnapshotRightRail(summary, rows, mode)}
       </div>
+      <div class="atlas-chart-tooltip atlas-snapshot-tooltip" data-atlas-snapshot-tooltip hidden></div>
       ${buildSnapshotUnderCards(
         (summary.topParties ?? []).slice(0, 5).map((row) => ({
           label: row.party,
@@ -3023,6 +3100,94 @@ function bindAtlasChartInteractions(root) {
   });
 }
 
+function bindAtlasSnapshotInteractions(root) {
+  const stages = root.querySelectorAll("[data-atlas-snapshot-stage]");
+
+  stages.forEach((stage) => {
+    if (!(stage instanceof HTMLElement)) {
+      return;
+    }
+
+    const tooltip = stage.querySelector("[data-atlas-snapshot-tooltip]");
+    const targets = Array.from(stage.querySelectorAll("[data-atlas-insight]"));
+    let activeTarget = null;
+
+    const hideTooltip = () => {
+      if (!(tooltip instanceof HTMLElement)) {
+        return;
+      }
+
+      tooltip.hidden = true;
+      tooltip.innerHTML = "";
+
+      if (activeTarget instanceof HTMLElement || activeTarget instanceof SVGElement) {
+        activeTarget.classList.remove("is-active");
+      }
+
+      activeTarget = null;
+    };
+
+    const showTooltip = (target) => {
+      if (!(tooltip instanceof HTMLElement)) {
+        return;
+      }
+
+      if (!(target instanceof HTMLElement || target instanceof SVGElement)) {
+        return;
+      }
+
+      const frameBounds = stage.getBoundingClientRect();
+      const targetBounds = target.getBoundingClientRect();
+      const eyebrow = target.dataset.atlasInsightEyebrow ?? "";
+      const title = target.dataset.atlasInsightTitle ?? "Selection insight";
+      const primary = target.dataset.atlasInsightPrimary ?? "Pending";
+      const secondary = target.dataset.atlasInsightSecondary ?? "";
+      const tertiary = target.dataset.atlasInsightTertiary ?? "";
+      const color = target.dataset.atlasInsightColor ?? "#8aa4bf";
+      const centerX = targetBounds.left - frameBounds.left + targetBounds.width / 2;
+      const topY = targetBounds.top - frameBounds.top;
+
+      if (activeTarget && activeTarget !== target) {
+        activeTarget.classList.remove("is-active");
+      }
+
+      target.classList.add("is-active");
+      activeTarget = target;
+
+      tooltip.innerHTML = `
+        ${eyebrow ? `<p class="atlas-tooltip-eyebrow">${escapeHtml(eyebrow)}</p>` : ""}
+        <p class="atlas-tooltip-value">
+          <span class="atlas-legend-dot" style="background:${color}"></span>
+          ${escapeHtml(title)}
+        </p>
+        <p class="atlas-tooltip-meta">${escapeHtml(primary)}</p>
+        ${secondary ? `<p class="atlas-tooltip-meta">${escapeHtml(secondary)}</p>` : ""}
+        ${tertiary ? `<p class="atlas-tooltip-meta">${escapeHtml(tertiary)}</p>` : ""}
+      `;
+      tooltip.hidden = false;
+      tooltip.style.left = `${clamp(centerX, 120, frameBounds.width - 120)}px`;
+      tooltip.style.top = `${Math.max(topY - 14, 26)}px`;
+    };
+
+    targets.forEach((target) => {
+      if (!(target instanceof HTMLElement || target instanceof SVGElement)) {
+        return;
+      }
+
+      const activate = () => showTooltip(target);
+
+      target.addEventListener("mouseenter", activate);
+      target.addEventListener("mousemove", activate);
+      target.addEventListener("focus", activate);
+      target.addEventListener("click", activate);
+      target.addEventListener("mouseleave", hideTooltip);
+      target.addEventListener("blur", hideTooltip);
+    });
+
+    stage.addEventListener("mouseleave", hideTooltip);
+  });
+}
+
 function bindAtlasEvents(root, model, refresh, render) {
   const stateSelect = root.querySelector("[data-atlas-state]");
   const yearSelect = root.querySelector("[data-atlas-year]");
@@ -3225,6 +3390,7 @@ function bindAtlasEvents(root, model, refresh, render) {
   }
 
   bindAtlasChartInteractions(root);
+  bindAtlasSnapshotInteractions(root);
 }
 
 async function initElectionAtlas(root, bootstrap) {

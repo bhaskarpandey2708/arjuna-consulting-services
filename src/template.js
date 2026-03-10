@@ -306,18 +306,6 @@ function renderOrigins() {
     .join("");
 }
 
-function renderReferenceLinks() {
-  return siteContent.references
-    .map(
-      (reference) => `
-        <a href="${escapeHtml(reference.url)}" target="_blank" rel="noreferrer">
-          ${escapeHtml(reference.name)}
-        </a>
-      `
-    )
-    .join("");
-}
-
 function renderPillList(items) {
   return items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
 }
@@ -1029,6 +1017,22 @@ function buildHomePage() {
   `;
 
   const body = `
+    <section class="section atlas-launch-section">
+      <div class="atlas-launch-promo reveal">
+        <div class="atlas-launch-copy">
+          <p class="eyebrow">New Atlas Layer</p>
+          <h2>Open the live election intelligence layer inside Arjuna.</h2>
+          <p>
+            Move from brochure reading into state-by-state seat balance, vote movement, coalition pressure, district intelligence, and constituency drilldown on one decision surface.
+          </p>
+        </div>
+        <div class="atlas-launch-actions">
+          <a class="button button-primary" href="/election-atlas">Open Election Atlas</a>
+          <p class="atlas-launch-note">Built for campaign review, not archive browsing.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-soft">
       <div class="page-split">
         <div class="section-heading reveal">
@@ -1107,33 +1111,6 @@ function buildHomePage() {
         </div>
         <div class="route-card-grid">
           ${renderRouteCards()}
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-contrast">
-      <div class="page-split">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Credibility Layer</p>
-          <h2>Backed by specialist alliances and institutional campaign experience.</h2>
-          <p>
-            Technology, content, and campaign execution are supported by cross-functional partnerships and campaign environments that matter in India-wide political consulting.
-          </p>
-        </div>
-        <div class="page-stack">
-          <div class="card-grid card-grid-three">
-            ${renderPartnerships()}
-          </div>
-          <div class="origin-row reveal">
-            ${renderOrigins()}
-          </div>
-          <aside class="page-panel reveal">
-            <p class="eyebrow">Public References</p>
-            <h2 class="page-panel-title">Verifiable institutions and campaign ecosystems referenced on the page.</h2>
-            <div class="reference-links">
-              ${renderReferenceLinks()}
-            </div>
-          </aside>
         </div>
       </div>
     </section>
@@ -1836,9 +1813,6 @@ function buildLeadershipPage() {
           <div class="page-stack">
             <div class="card-grid card-grid-three">
               ${renderPartnerships()}
-            </div>
-            <div class="reference-links reveal">
-              ${renderReferenceLinks()}
             </div>
           </div>
         </div>
