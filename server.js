@@ -1,5 +1,5 @@
 import express from "express";
-import { randomBytes } from "node:crypto";
+import { createHmac, randomBytes, timingSafeEqual } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
@@ -21,7 +21,12 @@ import {
   listElectionAtlasElections,
   listElectionAtlasStates
 } from "./src/election-atlas.js";
-import { getCanonicalPageMetadata, renderPage } from "./src/template.js";
+import {
+  getCanonicalPageMetadata,
+  renderCmsDashboardPage,
+  renderCmsLoginPage,
+  renderPage
+} from "./src/template.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -50,10 +55,13 @@ const crawlCacheControl = "public, max-age=300, must-revalidate";
 const staticAssetCacheControl = "public, max-age=86400";
 const apiCacheControl = "no-store";
 const atlasApiCacheControl = "public, max-age=60, stale-while-revalidate=300";
+const cmsCacheControl = "no-store";
 const contactRateLimitWindowMs = 15 * 60 * 1000;
 const contactRateLimitMax = 5;
 const contactWebhookTimeoutMs = 5000;
 const contactRateLimitStore = new Map();
+const cmsCookieName = "arjuna_cms";
+const cmsSessionDurationMs = 1000 * 60 * 60 * 12;
 
 const app = express();
 app.set("trust proxy", true);
@@ -125,6 +133,13 @@ function getRequestOrigin(req) {
 const configuredSiteUrl = normalizeSiteUrl(process.env.SITE_URL);
 const configuredContactWebhookUrl = normalizeAbsoluteUrl(process.env.CONTACT_WEBHOOK_URL);
 const disableLocalInquiryStore = process.env.DISABLE_LOCAL_INQUIRY_STORE === "true";
+const defaultCmsAdminPassword = "ArjunaCMS@2026!";
+const configuredCmsAdminPassword = normalizeMetaToken(
+  process.env.CMS_ADMIN_PASSWORD || process.env.ADMIN_PASSWORD || defaultCmsAdminPassword
+);
+const configuredCmsSessionSecret = normalizeMetaToken(
+  process.env.CMS_SESSION_SECRET || process.env.SESSION_SECRET || `${configuredCmsAdminPassword}|arjuna-cms`
+);
 const defaultGa4MeasurementId = "G-6WWRJJT65V";
 const configuredGa4MeasurementId = normalizeGa4MeasurementId(
   process.env.GA4_MEASUREMENT_ID ||
@@ -414,7 +429,124 @@ function validateContact(payload) {
   };
 }
 
+function toBase64Url(value) {
+  return Buffer.from(value).toString("base64url");
+}
+
+function signCmsValue(value) {
+  return createHmac("sha256", configuredCmsSessionSecret).update(value).digest("base64url");
+}
+
+function createCmsSessionToken() {
+  const payload = {
+    role: "admin",
+    exp: Date.now() + cmsSessionDurationMs
+  };
+  const encodedPayload = toBase64Url(JSON.stringify(payload));
+  const signature = signCmsValue(encodedPayload);
+
+  return `${encodedPayload}.${signature}`;
+}
+
+function parseCookies(req) {
+  const raw = req.get("cookie");
+
+  if (!raw) {
+    return {};
+  }
+
+  return raw.split(";").reduce((acc, chunk) => {
+    const [name, ...rest] = chunk.trim().split("=");
+
+    if (!name) {
+      return acc;
+    }
+
+    acc[name] = decodeURIComponent(rest.join("="));
+    return acc;
+  }, {});
+}
+
+function verifyCmsSessionToken(token) {
+  if (!token || !token.includes(".")) {
+    return null;
+  }
+
+  const [encodedPayload, signature] = token.split(".");
+  const expectedSignature = signCmsValue(encodedPayload);
+
+  try {
+    const left = Buffer.from(signature);
+    const right = Buffer.from(expectedSignature);
+
+    if (left.length !== right.length || !timingSafeEqual(left, right)) {
+      return null;
+    }
+
+    const payload = JSON.parse(Buffer.from(encodedPayload, "base64url").toString("utf8"));
+
+    if (payload?.role !== "admin" || Number(payload?.exp) <= Date.now()) {
+      return null;
+    }
+
+    return payload;
+  } catch {
+    return null;
+  }
+}
+
+function getCmsSession(req) {
+  const cookies = parseCookies(req);
+  return verifyCmsSessionToken(cookies[cmsCookieName]);
+}
+
+function isCmsAuthenticated(req) {
+  return Boolean(getCmsSession(req));
+}
+
+function normalizeCmsRedirectPath(value) {
+  if (typeof value !== "string" || !value.startsWith("/cms")) {
+    return "/cms";
+  }
+
+  return value;
+}
+
+function renderCmsLogin(res, options = {}) {
+  res.type("html");
+  res.set("Cache-Control", cmsCacheControl);
+  res.set("X-Robots-Tag", "noindex, nofollow");
+  res.send(renderCmsLoginPage(options));
+}
+
+function renderCmsDashboard(res, inquiries) {
+  res.type("html");
+  res.set("Cache-Control", cmsCacheControl);
+  res.set("X-Robots-Tag", "noindex, nofollow");
+  res.send(
+    renderCmsDashboardPage({
+      inquiries,
+      generatedAt: new Intl.DateTimeFormat("en-IN", {
+        dateStyle: "medium",
+        timeStyle: "short"
+      }).format(new Date()),
+      adminLabel: "Admin"
+    })
+  );
+}
+
+function requireCmsAuth(req, res, next) {
+  if (isCmsAuthenticated(req)) {
+    next();
+    return;
+  }
+
+  const nextPath = normalizeCmsRedirectPath(req.originalUrl || "/cms");
+  res.redirect(303, `/cms/login?next=${encodeURIComponent(nextPath)}`);
+}
+
 app.use(express.json({ limit: maxRequestSize }));
+app.use(express.urlencoded({ extended: false, limit: maxRequestSize }));
 
 app.use((req, res, next) => {
   const cspNonce = randomBytes(16).toString("base64");
@@ -502,6 +634,62 @@ app.get(/^\/election-atlas(?:\/.*)?$/, (req, res) => {
   res.set("Cache-Control", atlasHtmlCacheControl);
   maybeSetNoIndexHeader(res, context.allowIndexing);
   res.send(renderPage(normalizeRoute(req.path), context));
+});
+
+app.get("/cms/login", (req, res) => {
+  if (isCmsAuthenticated(req)) {
+    res.redirect(303, "/cms");
+    return;
+  }
+
+  renderCmsLogin(res, {
+    error: typeof req.query.error === "string" ? req.query.error : "",
+    nextPath: normalizeCmsRedirectPath(
+      typeof req.query.next === "string" ? req.query.next : "/cms"
+    )
+  });
+});
+
+app.post("/cms/login", (req, res) => {
+  const password = typeof req.body?.password === "string" ? req.body.password : "";
+  const nextPath = normalizeCmsRedirectPath(req.body?.next);
+
+  if (!password || password !== configuredCmsAdminPassword) {
+    res.status(401);
+    renderCmsLogin(res, {
+      error: "Invalid password. Try again.",
+      nextPath
+    });
+    return;
+  }
+
+  res.cookie(cmsCookieName, createCmsSessionToken(), {
+    httpOnly: true,
+    sameSite: "lax",
+    secure: isSecureRequest(req),
+    path: "/cms",
+    maxAge: cmsSessionDurationMs
+  });
+  res.redirect(303, nextPath);
+});
+
+app.post("/cms/logout", (req, res) => {
+  res.clearCookie(cmsCookieName, {
+    httpOnly: true,
+    sameSite: "lax",
+    secure: isSecureRequest(req),
+    path: "/cms"
+  });
+  res.redirect(303, "/cms/login");
+});
+
+app.get("/cms", requireCmsAuth, async (req, res, next) => {
+  try {
+    const inquiries = await readInquiries();
+    renderCmsDashboard(res, inquiries);
+  } catch (error) {
+    next(error);
+  }
 });
 
 app.get(pageRoutes, (req, res) => {

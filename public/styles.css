@@ -221,6 +221,20 @@ img {
   background: rgba(231, 184, 133, 0.9);
 }
 
+.site-header-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-header-cms {
+  min-height: 2.45rem;
+  padding: 0.58rem 0.95rem;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
 .premium-strip {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -4607,6 +4621,16 @@ button.atlas-legend-item {
     font-size: 0.76rem;
   }
 
+  .site-header-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .site-header-cms {
+    width: 100%;
+    max-width: 11rem;
+  }
+
   .atlas-app-shell-route,
   .atlas-app-shell {
     padding: 0.55rem;
@@ -4653,7 +4677,318 @@ button.atlas-legend-item {
     min-height: 15.5rem;
   }
 
-  .atlas-pie-svg-large {
-    width: min(100%, 12.75rem);
+.atlas-pie-svg-large {
+  width: min(100%, 12.75rem);
+}
+}
+
+.is-cms-page .site-shell {
+  width: min(1120px, calc(100% - 1.5rem));
+}
+
+.cms-shell {
+  padding-bottom: 2.5rem;
+}
+
+.cms-main {
+  display: grid;
+  gap: 1.25rem;
+  padding-top: 1rem;
+}
+
+.cms-header {
+  position: sticky;
+}
+
+.cms-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-left: auto;
+}
+
+.cms-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: var(--font-section);
+  font-size: 0.82rem;
+}
+
+.cms-nav a:hover,
+.cms-nav a:focus-visible {
+  color: var(--text);
+}
+
+.cms-auth-card,
+.cms-dashboard-head,
+.cms-kpi-card,
+.cms-inquiry-card,
+.cms-empty-card {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.03)),
+    rgba(255, 255, 255, 0.03);
+  box-shadow: var(--shadow);
+}
+
+.cms-auth-card {
+  width: min(100%, 480px);
+  margin: 3rem auto 0;
+  padding: 1.6rem;
+}
+
+.cms-dashboard-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.9fr);
+  gap: 1rem;
+  padding: 1.4rem;
+}
+
+.cms-dashboard-copy h1,
+.cms-auth-card h1 {
+  margin: 0.35rem 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 0.98;
+  color: var(--surface-light);
+}
+
+.cms-copy,
+.cms-note {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.cms-note {
+  margin-top: 0.95rem;
+  font-size: 0.92rem;
+}
+
+.cms-dashboard-actions {
+  display: grid;
+  justify-items: end;
+  align-content: start;
+  gap: 0.7rem;
+}
+
+.cms-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-family: var(--font-section);
+  font-size: 0.8rem;
+}
+
+.cms-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cms-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.cms-field span {
+  font-family: var(--font-section);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.cms-field input {
+  min-height: 3.1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(9, 19, 28, 0.88);
+  color: var(--text);
+  font: inherit;
+}
+
+.cms-field input:focus-visible {
+  outline: 2px solid rgba(231, 184, 133, 0.5);
+  outline-offset: 2px;
+}
+
+.cms-submit,
+.cms-logout {
+  justify-content: center;
+}
+
+.cms-alert {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(205, 126, 47, 0.25);
+  background: rgba(205, 126, 47, 0.12);
+  color: var(--surface-light);
+}
+
+.cms-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cms-kpi-card {
+  padding: 1.15rem;
+}
+
+.cms-kpi-label {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-section);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--text-muted);
+}
+
+.cms-kpi-value {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  line-height: 0.96;
+  color: var(--surface-light);
+}
+
+.cms-kpi-value-small {
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.2;
+}
+
+.cms-inquiry-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.cms-inquiry-card,
+.cms-empty-card {
+  padding: 1.25rem;
+}
+
+.cms-empty-card h2 {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--surface-light);
+}
+
+.cms-empty-card p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.cms-inquiry-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cms-inquiry-head h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-section);
+  font-size: 1.1rem;
+  color: var(--surface-light);
+}
+
+.cms-inquiry-head p,
+.cms-inquiry-brief p,
+.cms-inquiry-grid dd {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.cms-inquiry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.45rem;
+}
+
+.cms-inquiry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 0 0 1rem;
+}
+
+.cms-inquiry-grid dt {
+  margin: 0 0 0.28rem;
+  font-family: var(--font-section);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.cms-inquiry-grid dd {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.cms-inquiry-brief {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cms-inquiry-brief-label {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-section);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .cms-dashboard-head,
+  .cms-kpi-grid,
+  .cms-inquiry-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cms-dashboard-actions {
+    justify-items: start;
+  }
+
+  .cms-inquiry-head {
+    flex-direction: column;
+  }
+
+  .cms-inquiry-meta {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 620px) {
+  .cms-auth-card,
+  .cms-dashboard-head,
+  .cms-kpi-card,
+  .cms-inquiry-card,
+  .cms-empty-card {
+    padding: 1rem;
+  }
+
+  .cms-dashboard-head,
+  .cms-kpi-grid,
+  .cms-inquiry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cms-dashboard-copy h1,
+  .cms-auth-card h1 {
+    font-size: clamp(1.8rem, 9vw, 2.4rem);
   }
 }

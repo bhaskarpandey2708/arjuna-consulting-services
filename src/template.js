@@ -157,6 +157,193 @@ function renderAnalyticsHead(context) {
   `;
 }
 
+function formatCmsDate(value) {
+  try {
+    return new Intl.DateTimeFormat("en-IN", {
+      dateStyle: "medium",
+      timeStyle: "short"
+    }).format(new Date(value));
+  } catch {
+    return value || "Unknown";
+  }
+}
+
+function renderCmsLayout({ title, description, body, currentPath = "/cms" }) {
+  return `<!DOCTYPE html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>${escapeHtml(title)}</title>
+    <meta name="description" content="${escapeHtml(description)}" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0f1b27" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/logo-arjuna.svg" type="image/svg+xml" />
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700;6..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=${assetVersion}" />
+  </head>
+  <body class="is-cms-page ${escapeHtml(getBodyClasses(currentPath))}">
+    <div class="site-shell cms-shell">
+      <header class="site-header cms-header">
+        <a class="brand-mark" href="/">
+          ${renderBrandLogo()}
+          <span class="brand-text">${escapeHtml(siteContent.brand.name)}</span>
+        </a>
+        <nav class="cms-nav" aria-label="CMS">
+          <a href="/">Back to site</a>
+        </nav>
+      </header>
+      <main class="cms-main">
+        ${body}
+      </main>
+    </div>
+  </body>
+</html>`;
+}
+
+export function renderCmsLoginPage({ error = "", nextPath = "/cms" } = {}) {
+  const body = `
+    <section class="cms-auth-card">
+      <p class="eyebrow">Arjuna CMS</p>
+      <h1>Admin access</h1>
+      <p class="cms-copy">Sign in with the admin password to review website inquiries.</p>
+      ${
+        error
+          ? `<div class="cms-alert" role="alert">${escapeHtml(error)}</div>`
+          : ""
+      }
+      <form class="cms-form" method="post" action="/cms/login">
+        <input type="hidden" name="next" value="${escapeHtml(nextPath)}" />
+        <label class="cms-field">
+          <span>Password</span>
+          <input name="password" type="password" autocomplete="current-password" required />
+        </label>
+        <button class="button button-primary cms-submit" type="submit">Open CMS</button>
+      </form>
+      <p class="cms-note">This route is single-admin only and is hidden from search indexing.</p>
+    </section>
+  `;
+
+  return renderCmsLayout({
+    title: "Arjuna CMS Login",
+    description: "Admin login for Arjuna website inquiries.",
+    body,
+    currentPath: "/cms/login"
+  });
+}
+
+export function renderCmsDashboardPage({
+  inquiries = [],
+  generatedAt = "",
+  adminLabel = "Admin"
+} = {}) {
+  const totalInquiries = inquiries.length;
+  const latestInquiry = inquiries[0]?.createdAt ? formatCmsDate(inquiries[0].createdAt) : "No inquiries yet";
+  const withPhone = inquiries.filter((item) => item.phone).length;
+  const withOrganization = inquiries.filter((item) => item.organization).length;
+  const inquiryCards = inquiries.length
+    ? inquiries
+        .map((entry) => {
+          const goals = entry.goals || "No campaign brief supplied.";
+          const organization = entry.organization || "Independent / not specified";
+          const constituency = entry.constituency || "Not specified";
+          const campaignType = entry.campaignType || "Not specified";
+
+          return `
+            <article class="cms-inquiry-card">
+              <div class="cms-inquiry-head">
+                <div>
+                  <h2>${escapeHtml(entry.name || "Unknown inquiry")}</h2>
+                  <p>${escapeHtml(entry.email || "No email")}</p>
+                </div>
+                <div class="cms-inquiry-meta">
+                  <span class="cms-badge">${escapeHtml(formatCmsDate(entry.createdAt))}</span>
+                  <span class="cms-badge">${escapeHtml(entry.id || "No ID")}</span>
+                </div>
+              </div>
+              <dl class="cms-inquiry-grid">
+                <div>
+                  <dt>Phone</dt>
+                  <dd>${escapeHtml(entry.phone || "Not provided")}</dd>
+                </div>
+                <div>
+                  <dt>Organisation</dt>
+                  <dd>${escapeHtml(organization)}</dd>
+                </div>
+                <div>
+                  <dt>Constituency</dt>
+                  <dd>${escapeHtml(constituency)}</dd>
+                </div>
+                <div>
+                  <dt>Campaign type</dt>
+                  <dd>${escapeHtml(campaignType)}</dd>
+                </div>
+              </dl>
+              <div class="cms-inquiry-brief">
+                <p class="cms-inquiry-brief-label">Campaign brief</p>
+                <p>${escapeHtml(goals)}</p>
+              </div>
+            </article>
+          `;
+        })
+        .join("")
+    : `
+        <article class="cms-empty-card">
+          <h2>No inquiries yet</h2>
+          <p>New website contact submissions will appear here as soon as they are received.</p>
+        </article>
+      `;
+
+  const body = `
+    <section class="cms-dashboard-head">
+      <div class="cms-dashboard-copy">
+        <p class="eyebrow">Arjuna CMS</p>
+        <h1>Inquiry dashboard</h1>
+        <p class="cms-copy">All website inquiries are available here for review. This is the single-admin view for inbound campaign requests.</p>
+      </div>
+      <div class="cms-dashboard-actions">
+        <span class="cms-badge">Signed in as ${escapeHtml(adminLabel)}</span>
+        <span class="cms-badge">Updated ${escapeHtml(generatedAt)}</span>
+        <form method="post" action="/cms/logout">
+          <button class="button button-secondary cms-logout" type="submit">Log out</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="cms-kpi-grid">
+      <article class="cms-kpi-card">
+        <p class="cms-kpi-label">Total inquiries</p>
+        <p class="cms-kpi-value">${escapeHtml(String(totalInquiries))}</p>
+      </article>
+      <article class="cms-kpi-card">
+        <p class="cms-kpi-label">Latest inquiry</p>
+        <p class="cms-kpi-value cms-kpi-value-small">${escapeHtml(latestInquiry)}</p>
+      </article>
+      <article class="cms-kpi-card">
+        <p class="cms-kpi-label">With phone</p>
+        <p class="cms-kpi-value">${escapeHtml(String(withPhone))}</p>
+      </article>
+      <article class="cms-kpi-card">
+        <p class="cms-kpi-label">With organisation</p>
+        <p class="cms-kpi-value">${escapeHtml(String(withOrganization))}</p>
+      </article>
+    </section>
+
+    <section class="cms-inquiry-list">
+      ${inquiryCards}
+    </section>
+  `;
+
+  return renderCmsLayout({
+    title: "Arjuna CMS",
+    description: "Admin dashboard for Arjuna website inquiries.",
+    body,
+    currentPath: "/cms"
+  });
+}
+
 function renderStatCards(stats = siteContent.stats) {
   return stats
     .map(
@@ -989,6 +1176,9 @@ function renderLayout(currentPath, page, context) {
         <nav class="site-nav" aria-label="Primary">
           ${renderNav(currentPath)}
         </nav>
+        <div class="site-header-actions">
+          <a class="button button-secondary site-header-cms" href="/cms/login">CMS Login</a>
+        </div>
       </header>
 
       <section class="premium-strip reveal" aria-label="Premium capability bar">

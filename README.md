@@ -57,6 +57,18 @@ DISABLE_LOCAL_INQUIRY_STORE=true
 
 If `CONTACT_WEBHOOK_URL` is set, each valid contact submission is POSTed to that endpoint as JSON. If `DISABLE_LOCAL_INQUIRY_STORE=true`, the app requires `CONTACT_WEBHOOK_URL` so submissions still have a delivery target.
 
+For the single-admin CMS, you can also set:
+
+```bash
+CMS_ADMIN_PASSWORD=change-this-now
+CMS_SESSION_SECRET=replace-with-a-long-random-string
+```
+
+CMS routes:
+
+- `GET /cms/login`
+- `GET /cms`
+
 ## SEO endpoints
 
 - `GET /robots.txt`
@@ -219,5 +231,6 @@ Form handling today:
 - `POST /api/contact` stores valid submissions in `data/inquiries.json`
 - if `CONTACT_WEBHOOK_URL` is configured, it also POSTs the same payload there
 - no database storage is wired yet
+- `/cms` reads the same inquiry data for the current admin dashboard
 
 For Hostinger production, moving inquiries into a MySQL or MariaDB table is the better long-term path than flat-file JSON.
