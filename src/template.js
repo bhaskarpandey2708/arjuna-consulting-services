@@ -135,6 +135,28 @@ function renderPremiumBar() {
     .join("");
 }
 
+function renderAnalyticsHead(context) {
+  const measurementId = context.ga4MeasurementId;
+
+  if (!measurementId) {
+    return "";
+  }
+
+  return `
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${escapeHtml(measurementId)}"></script>
+    <script nonce="${escapeHtml(context.cspNonce ?? "")}">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', '${escapeHtml(measurementId)}', {
+        anonymize_ip: true,
+        send_page_view: false
+      });
+    </script>
+  `;
+}
+
 function renderStatCards(stats = siteContent.stats) {
   return stats
     .map(
@@ -916,6 +938,10 @@ function renderLayout(currentPath, page, context) {
   const ogImageUrl = buildAbsoluteUrl(context.baseUrl, siteContent.seo.ogImagePath);
   const robots = context.allowIndexing ? "index, follow" : "noindex, nofollow";
   const structuredData = buildStructuredData(currentPath, page, context);
+  const googleSiteVerification = context.googleSiteVerification
+    ? `<meta name="google-site-verification" content="${escapeHtml(context.googleSiteVerification)}" />`
+    : "";
+  const analyticsMarkup = renderAnalyticsHead(context);
 
   return `<!DOCTYPE html>
 <html lang="en-IN">
@@ -942,11 +968,13 @@ function renderLayout(currentPath, page, context) {
     <meta name="twitter:description" content="${escapeHtml(page.description)}" />
     <meta name="twitter:image" content="${escapeHtml(ogImageUrl)}" />
     <meta name="twitter:image:alt" content="${escapeHtml(siteContent.seo.ogImageAlt)}" />
+    ${googleSiteVerification}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="/logo-arjuna.svg" type="image/svg+xml" />
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700;6..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css?v=${assetVersion}" />
+    ${analyticsMarkup}
     <script type="application/ld+json" nonce="${escapeHtml(context.cspNonce ?? "")}">
       ${structuredData}
     </script>
@@ -1910,7 +1938,9 @@ export function renderPage(pathname = "/", context = {}) {
   const resolvedContext = {
     baseUrl: context.baseUrl ?? "http://127.0.0.1:3000",
     allowIndexing: context.allowIndexing ?? false,
-    cspNonce: context.cspNonce ?? ""
+    cspNonce: context.cspNonce ?? "",
+    ga4MeasurementId: context.ga4MeasurementId ?? "",
+    googleSiteVerification: context.googleSiteVerification ?? ""
   };
 
   return renderLayout(currentPath, page, resolvedContext);

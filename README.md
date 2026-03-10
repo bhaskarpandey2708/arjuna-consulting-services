@@ -31,6 +31,23 @@ SITE_URL=https://your-production-domain.com npm start
 
 If `SITE_URL` is not set, the app falls back to the request origin and emits `noindex` metadata so preview and local environments are not indexed.
 
+Google Analytics 4 is currently configured to use `G-6WWRJJT65V` by default.
+
+If you want to override that property or add Search Console verification, you can also set:
+
+```bash
+GA4_MEASUREMENT_ID=G-XXXXXXXXXX
+GOOGLE_SITE_VERIFICATION=your-search-console-token
+```
+
+If `GA4_MEASUREMENT_ID` is set, the site loads the official Google tag and emits basic product events for:
+
+- page views
+- contact form success
+- atlas state, house, and year changes
+- atlas CSV export
+- atlas snapshot mode changes
+
 For production contact handling, you can also set:
 
 ```bash
@@ -45,6 +62,22 @@ If `CONTACT_WEBHOOK_URL` is set, each valid contact submission is POSTed to that
 - `GET /robots.txt`
 - `GET /sitemap.xml`
 - `GET /llms.txt`
+
+Current search-facing baseline already includes:
+
+- canonical URLs
+- environment-aware index or noindex behavior
+- sitemap and robots generation
+- Open Graph and Twitter cards
+- JSON-LD for `WebSite`, `ProfessionalService`, `BreadcrumbList`, and page schemas
+
+Recommended next SEO moves:
+
+1. Verify the production domain in Google Search Console using `GOOGLE_SITE_VERIFICATION`.
+2. Submit `/sitemap.xml` in Search Console after each significant content release.
+3. Keep page titles and descriptions tightly aligned to campaign consulting, surveys, and election intelligence intent.
+4. Continue improving mobile responsiveness on atlas routes, since mobile usability materially affects search performance and user retention.
+5. Add more indexable, intent-specific service pages or state explainer pages instead of only broad landing copy.
 
 ## Election Atlas beta
 
@@ -180,3 +213,11 @@ Artifacts land in:
 - `config/election-atlas/state-normalization.json`: canonical state-name normalization rules
 - `scripts/election-atlas/`: source capture and normalization scripts
 - `data/inquiries.json`: locally stored consultation requests
+
+Form handling today:
+
+- `POST /api/contact` stores valid submissions in `data/inquiries.json`
+- if `CONTACT_WEBHOOK_URL` is configured, it also POSTs the same payload there
+- no database storage is wired yet
+
+For Hostinger production, moving inquiries into a MySQL or MariaDB table is the better long-term path than flat-file JSON.

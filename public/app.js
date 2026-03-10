@@ -211,6 +211,28 @@ function setStatus(message, tone = "") {
   }
 }
 
+function trackAnalyticsEvent(eventName, params = {}) {
+  if (typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", eventName, params);
+}
+
+function trackAnalyticsPageView(pathname = window.location.pathname) {
+  if (typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", "page_view", {
+    page_title: document.title,
+    page_path: pathname,
+    page_location: `${window.location.origin}${pathname}${window.location.search}`
+  });
+}
+
+trackAnalyticsPageView();
+
 if (form instanceof HTMLFormElement) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -244,6 +266,11 @@ if (form instanceof HTMLFormElement) {
 
       form.reset();
       setStatus(data?.message ?? "Request received.", "is-success");
+      trackAnalyticsEvent("generate_lead", {
+        form_name: "contact",
+        method: "website",
+        page_path: window.location.pathname
+      });
     } catch (error) {
       setStatus(error?.message ?? "Something went wrong. Please try again.", "is-error");
     } finally {
@@ -3200,6 +3227,14 @@ function bindAtlasEvents(root, model, refresh, render) {
   const snapshotViewButtons = root.querySelectorAll("[data-atlas-snapshot-view]");
   const snapshotChartButtons = root.querySelectorAll("[data-atlas-snapshot-chart]");
   const helpToggleButton = root.querySelector("[data-atlas-help-toggle]");
+  const replaceAtlasPath = (nextPath) => {
+    if (!nextPath || window.location.pathname === nextPath) {
+      return;
+    }
+
+    window.history.replaceState({}, "", nextPath);
+    trackAnalyticsPageView(nextPath);
+  };
   const resetToOverview = () => {
     if (model.routeState?.type === "overview") {
       return;
@@ -3215,13 +3250,12 @@ function bindAtlasEvents(root, model, refresh, render) {
 
     const overviewPath = buildAtlasOverviewPath(model.selection);
 
-    if (window.location.pathname !== overviewPath) {
-      window.history.replaceState({}, "", overviewPath);
-    }
+    replaceAtlasPath(overviewPath);
   };
 
   if (stateSelect instanceof HTMLSelectElement) {
     stateSelect.addEventListener("change", async () => {
+      const previousState = model.selection.state;
       model.selection.state = stateSelect.value;
       const years = getAtlasYears(model.states, model.selection.state, model.selection.house);
       model.selection.year = years[0] ?? model.selection.year;
@@ -3231,12 +3265,20 @@ function bindAtlasEvents(root, model, refresh, render) {
       model.pagination.constituencies = 1;
       model.searchTerm = "";
       model.districtSearchTerm = "";
+      trackAnalyticsEvent("atlas_selection_change", {
+        changed_field: "state",
+        previous_value: previousState,
+        atlas_state: model.selection.state,
+        atlas_house: model.selection.house,
+        atlas_year: model.selection.year
+      });
       await refresh();
     });
   }
 
   if (yearSelect instanceof HTMLSelectElement) {
     yearSelect.addEventListener("change", async () => {
+      const previousYear = model.selection.year;
       model.selection.year = Number.parseInt(yearSelect.value, 10);
       resetToOverview();
       model.pagination.history = 1;
@@ -3244,6 +3286,13 @@ function bindAtlasEvents(root, model, refresh, render) {
       model.pagination.constituencies = 1;
       model.searchTerm = "";
       model.districtSearchTerm = "";
+      trackAnalyticsEvent("atlas_selection_change", {
+        changed_field: "year",
+        previous_value: String(previousYear),
+        atlas_state: model.selection.state,
+        atlas_house: model.selection.house,
+        atlas_year: model.selection.year
+      });
       await refresh();
     });
   }
@@ -3260,6 +3309,7 @@ function bindAtlasEvents(root, model, refresh, render) {
         return;
       }
 
+      const previousHouse = model.selection.house;
       model.selection.house = house;
       const years = getAtlasYears(model.states, model.selection.state, house);
       model.selection.year = years[0] ?? model.selection.year;
@@ -3269,6 +3319,13 @@ function bindAtlasEvents(root, model, refresh, render) {
       model.pagination.constituencies = 1;
       model.searchTerm = "";
       model.districtSearchTerm = "";
+      trackAnalyticsEvent("atlas_selection_change", {
+        changed_field: "house",
+        previous_value: previousHouse,
+        atlas_state: model.selection.state,
+        atlas_house: model.selection.house,
+        atlas_year: model.selection.year
+      });
       await refresh();
     });
   });
@@ -3292,6 +3349,12 @@ function bindAtlasEvents(root, model, refresh, render) {
       model.pagination.constituencies = 1;
       model.searchTerm = "";
       model.districtSearchTerm = "";
+      trackAnalyticsEvent("atlas_selection_change", {
+        changed_field: "timeline_jump",
+        atlas_state: model.selection.state,
+        atlas_house: model.selection.house,
+        atlas_year: model.selection.year
+      });
       await refresh();
     });
   });
@@ -3357,6 +3420,13 @@ function bindAtlasEvents(root, model, refresh, render) {
 
       model.snapshotView = nextView;
       model.snapshotChartType = getSnapshotDefaultChartType(nextView);
+      trackAnalyticsEvent("atlas_snapshot_view_change", {
+        atlas_view: nextView,
+        atlas_chart_type: model.snapshotChartType,
+        atlas_state: model.selection.state,
+        atlas_house: model.selection.house,
+        atlas_year: model.selection.year
+      });
       render();
     });
   });
@@ -3374,17 +3444,37 @@ function bindAtlasEvents(root, model, refresh, render) {
       }
 
       model.snapshotChartType = nextChartType;
+      trackAnalyticsEvent("atlas_snapshot_chart_change", {
+        atlas_view: model.snapshotView,
+        atlas_chart_type: nextChartType,
+        atlas_state: model.selection.state,
+        atlas_house: model.selection.house,
+        atlas_year: model.selection.year
+      });
       render();
     });
   });
 
   if (exportButton instanceof HTMLButtonElement) {
-    exportButton.addEventListener("click", () => downloadAtlasCsv(model));
+    exportButton.addEventListener("click", () => {
+      trackAnalyticsEvent("atlas_export_csv", {
+        atlas_state: model.selection.state,
+        atlas_house: model.selection.house,
+        atlas_year: model.selection.year
+      });
+      downloadAtlasCsv(model);
+    });
   }
 
   if (helpToggleButton instanceof HTMLButtonElement) {
     helpToggleButton.addEventListener("click", () => {
       model.helpExpanded = !model.helpExpanded;
+      trackAnalyticsEvent("atlas_help_toggle", {
+        expanded: model.helpExpanded ? "true" : "false",
+        atlas_state: model.selection.state,
+        atlas_house: model.selection.house,
+        atlas_year: model.selection.year
+      });
       render();
     });
   }
@@ -3659,6 +3749,7 @@ async function initElectionAtlas(root, bootstrap) {
 
         if (window.location.pathname !== overviewPath) {
           window.history.replaceState({}, "", overviewPath);
+          trackAnalyticsPageView(overviewPath);
         }
 
         model.districts =

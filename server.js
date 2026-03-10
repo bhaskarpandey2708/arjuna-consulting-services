@@ -87,6 +87,15 @@ function normalizeAbsoluteUrl(value) {
   }
 }
 
+function normalizeMetaToken(value) {
+  return typeof value === "string" ? value.trim() : "";
+}
+
+function normalizeGa4MeasurementId(value) {
+  const normalized = normalizeMetaToken(value).toUpperCase();
+  return /^G-[A-Z0-9]+$/.test(normalized) ? normalized : "";
+}
+
 function buildAbsoluteUrl(baseUrl, pathname = "") {
   const normalizedBase = String(baseUrl).replace(/\/+$/, "");
 
@@ -116,6 +125,15 @@ function getRequestOrigin(req) {
 const configuredSiteUrl = normalizeSiteUrl(process.env.SITE_URL);
 const configuredContactWebhookUrl = normalizeAbsoluteUrl(process.env.CONTACT_WEBHOOK_URL);
 const disableLocalInquiryStore = process.env.DISABLE_LOCAL_INQUIRY_STORE === "true";
+const defaultGa4MeasurementId = "G-6WWRJJT65V";
+const configuredGa4MeasurementId = normalizeGa4MeasurementId(
+  process.env.GA4_MEASUREMENT_ID ||
+    process.env.GOOGLE_ANALYTICS_ID ||
+    defaultGa4MeasurementId
+);
+const configuredGoogleSiteVerification = normalizeMetaToken(
+  process.env.GOOGLE_SITE_VERIFICATION
+);
 
 if (disableLocalInquiryStore && !configuredContactWebhookUrl) {
   throw new Error(
@@ -141,18 +159,30 @@ function getRenderContext(req, res) {
   return {
     baseUrl: configuredSiteUrl || requestOrigin,
     allowIndexing: Boolean(configuredSiteUrl),
-    cspNonce: res.locals?.cspNonce ?? ""
+    cspNonce: res.locals?.cspNonce ?? "",
+    ga4MeasurementId: configuredGa4MeasurementId,
+    googleSiteVerification: configuredGoogleSiteVerification
   };
 }
 
 function buildContentSecurityPolicy(nonce) {
+  const scriptSources = ["'self'", `'nonce-${nonce}'`];
+  const connectSources = ["'self'"];
+  const imgSources = ["'self'", "data:"];
+
+  if (configuredGa4MeasurementId) {
+    scriptSources.push("https://www.googletagmanager.com");
+    connectSources.push("https://www.google-analytics.com", "https://region1.google-analytics.com");
+    imgSources.push("https://www.google-analytics.com");
+  }
+
   return [
     "default-src 'self'",
-    `script-src 'self' 'nonce-${nonce}'`,
+    `script-src ${scriptSources.join(" ")}`,
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com",
-    "img-src 'self' data:",
-    "connect-src 'self'",
+    `img-src ${imgSources.join(" ")}`,
+    `connect-src ${connectSources.join(" ")}`,
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",
