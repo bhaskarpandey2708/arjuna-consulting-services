@@ -1,5 +1,12 @@
+import path from "node:path";
+import { statSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+
 import { siteContent } from "./site-content.js";
 import { buildElectionAtlasPage } from "./election-atlas.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -9,6 +16,19 @@ const navItems = [
   { href: "/surveys", label: "Surveys" },
   { href: "/leadership", label: "Connect" }
 ];
+const assetVersion = (() => {
+  try {
+    const appVersion = Math.floor(
+      statSync(path.join(__dirname, "..", "public", "app.js")).mtimeMs
+    );
+    const stylesVersion = Math.floor(
+      statSync(path.join(__dirname, "..", "public", "styles.css")).mtimeMs
+    );
+    return `${appVersion}-${stylesVersion}`;
+  } catch {
+    return "20260310";
+  }
+})();
 
 function escapeHtml(value) {
   return String(value)
@@ -87,6 +107,19 @@ function renderBrandLogo() {
       />
     </svg>
   `;
+}
+
+function getBodyClasses(currentPath) {
+  const classes = [];
+
+  if (
+    currentPath.startsWith("/election-atlas/") &&
+    currentPath !== "/election-atlas"
+  ) {
+    classes.push("is-atlas-deep-route");
+  }
+
+  return classes.join(" ");
 }
 
 function renderPremiumBar() {
@@ -925,12 +958,12 @@ function renderLayout(currentPath, page, context) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="/logo-arjuna.svg" type="image/svg+xml" />
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700;6..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles.css?v=${assetVersion}" />
     <script type="application/ld+json" nonce="${escapeHtml(context.cspNonce ?? "")}">
       ${structuredData}
     </script>
   </head>
-  <body>
+  <body class="${escapeHtml(getBodyClasses(currentPath))}">
     <div class="site-shell">
       <header class="site-header">
         <a class="brand-mark" href="/">
@@ -963,7 +996,7 @@ function renderLayout(currentPath, page, context) {
         <p>+91 ${escapeHtml(siteContent.contact.details.phones[0])} · +91 ${escapeHtml(siteContent.contact.details.phones[1])} · ${escapeHtml(siteContent.contact.details.email)}</p>
       </footer>
     </div>
-    <script type="module" src="/app.js"></script>
+    <script type="module" src="/app.js?v=${assetVersion}"></script>
   </body>
 </html>`;
 }

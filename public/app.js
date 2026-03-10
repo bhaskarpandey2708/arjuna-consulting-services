@@ -1165,6 +1165,1167 @@ function buildAtlasChart(series, key, metricLabel) {
   `;
 }
 
+function getSnapshotModes(summary) {
+  const modes = [
+    { id: "seat-share", label: "Seat share" },
+    { id: "vote-share", label: "Vote share" }
+  ];
+
+  if (summary?.allianceSummary?.available) {
+    modes.push({ id: "coalitions", label: "Coalitions" });
+  }
+
+  modes.push({ id: "pressure", label: "Pressure" });
+  return modes;
+}
+
+function getSnapshotRows(summary, mode) {
+  if (mode === "coalitions") {
+    return (summary.allianceSummary?.rows ?? []).slice(0, 6).map((row) => ({
+      label: row.label,
+      color: row.color,
+      value: typeof row.seatShare === "number" ? row.seatShare : 0,
+      seatShare: typeof row.seatShare === "number" ? row.seatShare : null,
+      voteShare: typeof row.voteShare === "number" ? row.voteShare : null,
+      seats: typeof row.seats === "number" ? row.seats : null,
+      primary: `${formatNumber(row.seats)} seats`,
+      secondary:
+        typeof row.voteShare === "number" ? `${formatPct(row.voteShare)} vote share` : "Vote share pending"
+    }));
+  }
+
+  const topRows = (summary.topParties ?? []).slice(0, 6);
+
+  if (mode === "vote-share") {
+    return topRows
+      .filter((row) => typeof row.voteShare === "number")
+      .map((row) => ({
+        label: row.party,
+        color: row.color,
+        value: row.voteShare,
+        seatShare: typeof row.seatShare === "number" ? row.seatShare : null,
+        voteShare: typeof row.voteShare === "number" ? row.voteShare : null,
+        seats: typeof row.seats === "number" ? row.seats : null,
+        primary: `${formatPct(row.voteShare)} vote share`,
+        secondary: `${formatNumber(row.seats)} seats`
+      }));
+  }
+
+  return topRows.map((row) => ({
+    label: row.party,
+    color: row.color,
+    value: typeof row.seatShare === "number" ? row.seatShare : 0,
+    seatShare: typeof row.seatShare === "number" ? row.seatShare : null,
+    voteShare: typeof row.voteShare === "number" ? row.voteShare : null,
+    seats: typeof row.seats === "number" ? row.seats : null,
+    primary: `${formatNumber(row.seats)} seats`,
+    secondary:
+      typeof row.voteShare === "number" ? `${formatPct(row.voteShare)} vote share` : "Vote share pending"
+  }));
+}
+
+function getSnapshotChartTypes(mode) {
+  if (mode === "pressure") {
+    return [
+      { id: "bars", label: "Ordered ranking" },
+      { id: "cards", label: "Signal cards" }
+    ];
+  }
+
+  return [
+    { id: "donut", label: "Pie chart" },
+    { id: "bars", label: "Ordered ranking" },
+    { id: "gap", label: "Seat-vote gap" },
+    { id: "compare", label: "Seat and vote compare" }
+  ];
+}
+
+function getSnapshotDefaultChartType(mode) {
+  if (mode === "vote-share") {
+    return "bars";
+  }
+
+  if (mode === "coalitions") {
+    return "compare";
+  }
+
+  if (mode === "pressure") {
+    return "bars";
+  }
+
+  return "donut";
+}
+
+function getSnapshotStageTitle(mode, chartType) {
+  const titles = {
+    "seat-share": {
+      donut: "Seat share by party",
+      bars: "Seat ranking",
+      gap: "Seat-vote gap",
+      compare: "Seat and vote compare"
+    },
+    "vote-share": {
+      donut: "Vote share by party",
+      bars: "Vote ranking",
+      gap: "Seat-vote gap",
+      compare: "Seat and vote compare"
+    },
+    coalitions: {
+      donut: "Coalition share",
+      bars: "Coalition ranking",
+      gap: "Coalition seat-vote gap",
+      compare: "Coalition compare"
+    },
+    pressure: {
+      bars: "Pressure ranking",
+      cards: "Pressure signals"
+    }
+  };
+
+  return titles[mode]?.[chartType] ?? "Snapshot chart";
+}
+
+function buildAtlasAnalystHeader(model, summary, states) {
+  const stateName =
+    states.find((state) => state.slug === model.selection.state)?.name ?? model.selection.state;
+  const usageNote =
+    model.selection.house === "VS"
+      ? "Best for district pressure, coalition balance, and constituency drilldown."
+      : "Best for seat balance, vote movement, and constituency drilldown.";
+  const subhead =
+    model.selection.house === "VS"
+      ? `Track seat balance, vote movement, coalition standing, and district pressure across ${stateName}'s Assembly map.`
+      : `Track seat balance, vote movement, coalition standing, and constituency pressure across ${stateName}'s parliamentary map.`;
+
+  return `
+    <section class="atlas-analyst-header">
+      <div class="atlas-analyst-copy">
+        <p class="eyebrow">Election Atlas</p>
+        <h1>${escapeHtml(stateName)} ${escapeHtml(String(model.selection.year))} ${escapeHtml(summary.houseLabel)} overview</h1>
+        <p class="atlas-analyst-subhead">${escapeHtml(subhead)}</p>
+      </div>
+      <div class="atlas-analyst-meta">
+        <div class="atlas-analyst-chips">
+          <span class="atlas-analyst-chip">${escapeHtml(summary.houseLabel)}</span>
+          <span class="atlas-analyst-chip">${escapeHtml(stateName)}</span>
+          <span class="atlas-analyst-chip">${escapeHtml(String(model.selection.year))}</span>
+        </div>
+        <p class="atlas-analyst-note">${escapeHtml(usageNote)}</p>
+      </div>
+    </section>
+  `;
+}
+
+function buildAtlasHelpStrip(model) {
+  const expanded = Boolean(model.helpExpanded);
+
+  return `
+    <section class="atlas-help-strip ${expanded ? "is-expanded" : ""}">
+      <div class="atlas-help-summary">
+        <div class="atlas-help-copy">
+          <p class="atlas-help-kicker">How to use</p>
+          <p>Switch state, house, or year, then use the chart controls to move between seats, votes, coalitions, and pressure.</p>
+        </div>
+        <button
+          class="atlas-help-toggle"
+          type="button"
+          data-atlas-help-toggle
+          aria-expanded="${expanded ? "true" : "false"}"
+        >
+          ${expanded ? "Show less" : "Read more"}
+        </button>
+      </div>
+      ${
+        expanded
+          ? `
+            <div class="atlas-help-details">
+              <ul>
+                <li>Use the toolbar to shift state, house, and cycle without leaving the page.</li>
+                <li>Switch metric and chart mode to compare seats, vote share, coalitions, or pressure in the same frame.</li>
+                <li>Open constituency or district routes for the detailed local table and candidate sheet.</li>
+              </ul>
+            </div>
+          `
+          : ""
+      }
+    </section>
+  `;
+}
+
+function buildSnapshotDonut(rows, title) {
+  const chartRows = rows.filter((row) => typeof row.value === "number" && row.value > 0);
+
+  if (chartRows.length === 0) {
+    return `
+      <article class="atlas-snapshot-stage atlas-snapshot-stage-donut">
+        <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
+          <div>
+            <p class="eyebrow">Donut View</p>
+            <h3>${escapeHtml(title)}</h3>
+          </div>
+        </div>
+        <div class="atlas-chart-empty atlas-chart-empty-tight">
+          No comparable distribution is available for this view yet.
+        </div>
+      </article>
+    `;
+  }
+
+  const radius = 70;
+  const circumference = 2 * Math.PI * radius;
+  let offset = 0;
+
+  const segments = chartRows
+    .map((row) => {
+      const segmentLength = (row.value / 100) * circumference;
+      const segment = `
+        <circle
+          class="atlas-donut-segment"
+          cx="96"
+          cy="96"
+          r="${radius}"
+          fill="none"
+          stroke="${row.color}"
+          stroke-width="18"
+          stroke-dasharray="${segmentLength} ${circumference - segmentLength}"
+          stroke-dashoffset="${-offset}"
+        ></circle>
+      `;
+      offset += segmentLength;
+      return segment;
+    })
+    .join("");
+
+  return `
+    <article class="atlas-snapshot-stage atlas-snapshot-stage-donut">
+      <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
+        <div>
+          <p class="eyebrow">Donut View</p>
+          <h3>${escapeHtml(title)}</h3>
+        </div>
+      </div>
+      <div class="atlas-snapshot-stage-grid atlas-snapshot-stage-grid-donut">
+        <div class="atlas-donut-card">
+          <svg viewBox="0 0 192 192" class="atlas-donut-svg" role="img" aria-label="${escapeHtml(title)}">
+            <circle class="atlas-donut-ring" cx="96" cy="96" r="${radius}" fill="none"></circle>
+            ${segments}
+          </svg>
+          <div class="atlas-donut-center">
+            <p class="atlas-donut-title">${escapeHtml(title)}</p>
+            <p class="atlas-donut-subtitle">${chartRows.length} groups compared</p>
+          </div>
+        </div>
+        ${buildSnapshotRankList(rows)}
+      </div>
+    </article>
+  `;
+}
+
+function buildSnapshotRankList(rows) {
+  if (rows.length === 0) {
+    return `
+      <div class="atlas-chart-empty atlas-chart-empty-tight">
+        Ranking will appear here once the selected metric is available.
+      </div>
+    `;
+  }
+
+  return `
+    <div class="atlas-rank-list">
+      ${rows
+        .map(
+          (row) => `
+            <article class="atlas-rank-row">
+              <div class="atlas-rank-copy">
+                <div class="atlas-party-head">
+                  <span class="atlas-party-swatch" style="background:${row.color}"></span>
+                  <h3>${escapeHtml(row.label)}</h3>
+                </div>
+                <p class="atlas-rank-primary">${escapeHtml(row.primary)}</p>
+                <p class="atlas-rank-secondary">${escapeHtml(row.secondary)}</p>
+              </div>
+              <div class="atlas-rank-bar">
+                <div class="atlas-rank-bar-head">
+                  <span>${escapeHtml(formatPct(row.value))}</span>
+                </div>
+                <div class="atlas-rank-track">
+                  <span class="atlas-rank-fill" style="width:${Math.max(row.value, 2)}%; background:${row.color}"></span>
+                </div>
+              </div>
+            </article>
+          `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
+function buildSnapshotBars(rows, title) {
+  return `
+    <article class="atlas-snapshot-stage">
+      <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
+        <div>
+          <p class="eyebrow">Ranked Bars</p>
+          <h3>${escapeHtml(title)}</h3>
+        </div>
+      </div>
+      ${buildSnapshotRankList(rows)}
+    </article>
+  `;
+}
+
+function buildSnapshotGap(rows, title) {
+  const comparableRows = rows.filter(
+    (row) => typeof row.seatShare === "number" && typeof row.voteShare === "number"
+  );
+
+  if (comparableRows.length === 0) {
+    return `
+      <article class="atlas-snapshot-stage">
+        <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
+          <div>
+            <p class="eyebrow">Conversion Gap</p>
+            <h3>${escapeHtml(title)}</h3>
+          </div>
+        </div>
+        <div class="atlas-chart-empty atlas-chart-empty-tight">
+          Seat-versus-vote conversion will appear here when both measures are available.
+        </div>
+      </article>
+    `;
+  }
+
+  return `
+    <article class="atlas-snapshot-stage">
+      <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
+        <div>
+          <p class="eyebrow">Conversion Gap</p>
+          <h3>${escapeHtml(title)}</h3>
+        </div>
+      </div>
+      <div class="atlas-gap-grid">
+        ${comparableRows
+          .map((row) => {
+            const seatShare = row.seatShare ?? 0;
+            const voteShare = row.voteShare ?? 0;
+            const left = Math.min(seatShare, voteShare);
+            const right = Math.max(seatShare, voteShare);
+            const gap = seatShare - voteShare;
+            const seatLead = gap >= 0;
+
+            return `
+              <article class="atlas-gap-row">
+                <div class="atlas-gap-head">
+                  <span class="atlas-party-head">
+                    <span class="atlas-party-swatch" style="background:${row.color}"></span>
+                    <strong>${escapeHtml(row.label)}</strong>
+                  </span>
+                  <span class="atlas-gap-delta ${seatLead ? "is-positive" : "is-negative"}">
+                    ${seatLead ? "+" : ""}${formatPct(gap)}
+                  </span>
+                </div>
+                <div class="atlas-gap-track">
+                  <span class="atlas-gap-line" style="left:${left}%; width:${Math.max(right - left, 1.2)}%"></span>
+                  <span class="atlas-gap-dot atlas-gap-dot-vote" style="left:${voteShare}%"></span>
+                  <span class="atlas-gap-dot atlas-gap-dot-seat" style="left:${seatShare}%; background:${row.color}"></span>
+                </div>
+                <div class="atlas-gap-meta">
+                  <span>Vote ${formatPct(voteShare)}</span>
+                  <span>Seat ${formatPct(seatShare)}</span>
+                </div>
+              </article>
+            `;
+          })
+          .join("")}
+      </div>
+    </article>
+  `;
+}
+
+function buildSnapshotComparison(rows, title) {
+  const comparableRows = rows.filter(
+    (row) => typeof row.seatShare === "number" || typeof row.voteShare === "number"
+  );
+
+  if (comparableRows.length === 0) {
+    return `
+      <article class="atlas-snapshot-stage">
+        <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
+          <div>
+            <p class="eyebrow">Dual Compare</p>
+            <h3>${escapeHtml(title)}</h3>
+          </div>
+        </div>
+        <div class="atlas-chart-empty atlas-chart-empty-tight">Seat and vote comparison will appear here when both measures are available.</div>
+      </article>
+    `;
+  }
+
+  return `
+    <article class="atlas-snapshot-stage">
+      <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
+        <div>
+          <p class="eyebrow">Dual Compare</p>
+          <h3>${escapeHtml(title)}</h3>
+        </div>
+      </div>
+      <div class="atlas-compare-grid">
+        ${comparableRows
+          .map(
+            (row) => `
+              <article class="atlas-compare-row">
+                <div class="atlas-party-head">
+                  <span class="atlas-party-swatch" style="background:${row.color}"></span>
+                  <h3>${escapeHtml(row.label)}</h3>
+                </div>
+                <div class="atlas-compare-meters">
+                  <div class="atlas-compare-meter">
+                    <div class="atlas-party-meter-head">
+                      <span>Seat</span>
+                      <strong>${formatPct(row.seatShare)}</strong>
+                    </div>
+                    <div class="atlas-rank-track">
+                      <span class="atlas-rank-fill" style="width:${Math.max(row.seatShare ?? 0, 2)}%; background:${row.color}"></span>
+                    </div>
+                  </div>
+                  <div class="atlas-compare-meter">
+                    <div class="atlas-party-meter-head">
+                      <span>Vote</span>
+                      <strong>${formatPct(row.voteShare)}</strong>
+                    </div>
+                    <div class="atlas-rank-track">
+                      <span class="atlas-rank-fill atlas-rank-fill-muted" style="width:${Math.max(row.voteShare ?? 0, 2)}%; background:${row.color}"></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </article>
+  `;
+}
+
+function buildPressureRows(summary) {
+  const sourceNative = summary.advancedMetrics?.sourceNative ?? {};
+  const custom = summary.advancedMetrics?.custom ?? {};
+
+  return [
+    {
+      label: "Close contests",
+      value: formatNumber(summary.closeContests),
+      detail: `${formatPct(summary.meanMarginPct)} average margin`,
+      score: Math.min(((summary.closeContests ?? 0) / Math.max(summary.totalSeats ?? 1, 1)) * 100, 100)
+    },
+    {
+      label: "Median margin",
+      value: formatPct(summary.medianMarginPct),
+      detail: "Lower means a tighter map",
+      score:
+        typeof summary.medianMarginPct === "number"
+          ? Math.max(0, Math.min(100, ((12 - summary.medianMarginPct) / 12) * 100))
+          : 0
+    },
+    {
+      label: "Fragmentation",
+      value: typeof sourceNative.meanEnop === "number" ? formatNumber(sourceNative.meanEnop) : "NA",
+      detail: `${formatNumber(sourceNative.highFragmentationSeats)} high-fragmentation seats`,
+      score:
+        typeof sourceNative.meanEnop === "number"
+          ? Math.max(0, Math.min(100, ((sourceNative.meanEnop - 2) / 4) * 100))
+          : 0
+    },
+    {
+      label: "Low plurality",
+      value: formatNumber(custom.lowPluralitySeats),
+      detail: `${formatNumber(custom.ultraCloseSeats)} ultra-close seats`,
+      score:
+        typeof custom.lowPluralitySeats === "number"
+          ? Math.min(((custom.lowPluralitySeats ?? 0) / Math.max(summary.totalSeats ?? 1, 1)) * 100, 100)
+          : 0
+    }
+  ];
+}
+
+function buildPressureCards(rows) {
+  return `
+    <article class="atlas-snapshot-stage">
+      <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
+        <div>
+          <p class="eyebrow">Pressure Cards</p>
+          <h3>Pressure signals</h3>
+        </div>
+      </div>
+      <div class="atlas-pressure-grid">
+        ${rows
+          .map(
+            (row) => `
+              <article class="atlas-pressure-card">
+                <p class="atlas-kpi-label">${escapeHtml(row.label)}</p>
+                <p class="atlas-pressure-value">${escapeHtml(row.value)}</p>
+                <p class="atlas-kpi-detail">${escapeHtml(row.detail)}</p>
+                <div class="atlas-rank-track">
+                  <span class="atlas-rank-fill" style="width:${Math.max(row.score, 4)}%"></span>
+                </div>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </article>
+  `;
+}
+
+function buildPressureBars(rows) {
+  return `
+    <article class="atlas-snapshot-stage">
+      <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
+        <div>
+          <p class="eyebrow">Pressure Bars</p>
+          <h3>Pressure comparison</h3>
+        </div>
+      </div>
+      <div class="atlas-rank-list">
+        ${rows
+          .map(
+            (row) => `
+              <article class="atlas-rank-row">
+                <div class="atlas-rank-copy">
+                  <p class="atlas-rank-primary">${escapeHtml(row.label)}</p>
+                  <p class="atlas-rank-secondary">${escapeHtml(row.detail)}</p>
+                </div>
+                <div class="atlas-rank-bar">
+                  <div class="atlas-rank-bar-head">
+                    <span>${escapeHtml(row.value)}</span>
+                    <strong>${Math.round(row.score)}</strong>
+                  </div>
+                  <div class="atlas-rank-track">
+                    <span class="atlas-rank-fill" style="width:${Math.max(row.score, 4)}%"></span>
+                  </div>
+                </div>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </article>
+  `;
+}
+
+function buildSnapshotLeftRail(summary, mode, title, copy) {
+  const topParty = summary.topParties?.[0] ?? null;
+  const topAlliance = summary.allianceSummary?.rows?.[0] ?? null;
+  const modeHeadlineMap = {
+    "seat-share": topParty ? `${topParty.party} leads the seat picture` : "Seat picture",
+    "vote-share": topParty ? `${topParty.party} leads the vote picture` : "Vote picture",
+    coalitions: topAlliance ? `${topAlliance.label} sets the coalition pace` : "Coalition picture",
+    pressure: "Pressure points in focus"
+  };
+  const metrics = [
+    {
+      label: "Turnout",
+      value: formatPct(summary.turnoutPct)
+    },
+    {
+      label: "Close contests",
+      value: formatNumber(summary.closeContests)
+    },
+    {
+      label: "Median margin",
+      value: `${formatPct(summary.medianMarginPct)}`
+    }
+  ];
+
+  return `
+    <aside class="atlas-snapshot-side atlas-snapshot-side-left">
+      <p class="eyebrow">Chart Read</p>
+      <h3>${escapeHtml(modeHeadlineMap[mode] ?? title)}</h3>
+      <p>${escapeHtml(copy)}</p>
+      <div class="atlas-snapshot-stat-list">
+        ${metrics
+          .map(
+            (item) => `
+              <article class="atlas-snapshot-stat">
+                <span class="atlas-snapshot-stat-label">${escapeHtml(item.label)}</span>
+                <strong>${escapeHtml(item.value)}</strong>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </aside>
+  `;
+}
+
+function buildSnapshotRightRail(summary, rows, mode) {
+  const leader = rows[0] ?? null;
+  const runnerUp = rows[1] ?? null;
+  const seatGap =
+    leader && runnerUp && typeof leader.seats === "number" && typeof runnerUp.seats === "number"
+      ? leader.seats - runnerUp.seats
+      : null;
+  const shareGap =
+    leader && runnerUp && typeof leader.value === "number" && typeof runnerUp.value === "number"
+      ? leader.value - runnerUp.value
+      : null;
+  const quickFacts = mode === "pressure"
+    ? [
+        {
+          label: "Close contests",
+          value: formatNumber(summary.closeContests),
+          detail: "Seats inside the close-margin bucket."
+        },
+        {
+          label: "Median margin",
+          value: formatPct(summary.medianMarginPct),
+          detail: "Middle winning margin across the map."
+        },
+        {
+          label: "Turnout",
+          value: formatPct(summary.turnoutPct),
+          detail: "Overall turnout for the selected cycle."
+        }
+      ]
+    : [
+        {
+          label: mode === "coalitions" ? "Front runner" : "Leader",
+          value: leader ? leader.label : "Pending",
+          detail: leader?.primary ?? "Not available"
+        },
+        {
+          label: mode === "vote-share" ? "Vote spread" : "Lead gap",
+          value:
+            typeof shareGap === "number"
+              ? formatPct(shareGap)
+              : typeof seatGap === "number"
+                ? `${formatNumber(seatGap)} seats`
+                : "Pending",
+          detail:
+            leader && runnerUp
+              ? `${leader.label} over ${runnerUp.label}`
+              : "Second line not available"
+        },
+        {
+          label: "Turnout",
+          value: formatPct(summary.turnoutPct),
+          detail: "Overall turnout for the selected cycle."
+        }
+      ];
+
+  return `
+    <aside class="atlas-snapshot-side atlas-snapshot-side-right">
+      <p class="eyebrow">Quick Read</p>
+      <h3>At a glance</h3>
+      <div class="atlas-snapshot-stat-list atlas-snapshot-stat-list-compact">
+        ${quickFacts
+          .map(
+            (item) => `
+              <article class="atlas-snapshot-stat">
+                <span class="atlas-snapshot-stat-label">${escapeHtml(item.label)}</span>
+                <strong>${escapeHtml(item.value)}</strong>
+                <small>${escapeHtml(item.detail)}</small>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </aside>
+  `;
+}
+
+function polarToCartesian(cx, cy, radius, angleInDegrees) {
+  const angleInRadians = ((angleInDegrees - 90) * Math.PI) / 180;
+
+  return {
+    x: cx + radius * Math.cos(angleInRadians),
+    y: cy + radius * Math.sin(angleInRadians)
+  };
+}
+
+function buildPieSlicePath(cx, cy, radius, startAngle, endAngle) {
+  const start = polarToCartesian(cx, cy, radius, endAngle);
+  const end = polarToCartesian(cx, cy, radius, startAngle);
+  const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+
+  return [
+    `M ${cx} ${cy}`,
+    `L ${start.x} ${start.y}`,
+    `A ${radius} ${radius} 0 ${largeArcFlag} 0 ${end.x} ${end.y}`,
+    "Z"
+  ].join(" ");
+}
+
+function buildSnapshotCenterDonutChart(rows, title) {
+  const chartRows = rows.filter((row) => typeof row.value === "number" && row.value > 0);
+
+  if (chartRows.length === 0) {
+    return '<div class="atlas-chart-empty atlas-chart-empty-tight">No share distribution is available for this view yet.</div>';
+  }
+
+  const total = chartRows.reduce((sum, row) => sum + (row.value ?? 0), 0);
+  const radius = 92;
+  let startAngle = 0;
+  const segments = chartRows
+    .map((row) => {
+      const angle = total > 0 ? (row.value / total) * 360 : 0;
+      const endAngle = startAngle + angle;
+      const path = buildPieSlicePath(128, 128, radius, startAngle, endAngle);
+      startAngle = endAngle;
+
+      return `
+        <path
+          class="atlas-pie-segment"
+          d="${path}"
+          fill="${row.color}"
+        ></path>
+      `;
+    })
+    .join("");
+
+  return `
+    <div class="atlas-snapshot-center-chart atlas-snapshot-center-chart-pie">
+      <svg viewBox="0 0 256 256" class="atlas-pie-svg-large" role="img" aria-label="${escapeHtml(title)}">
+        <circle class="atlas-pie-surface" cx="128" cy="128" r="${radius}" fill="rgba(255,255,255,0.05)"></circle>
+        ${segments}
+      </svg>
+      <div class="atlas-pie-meta">
+        <p class="atlas-pie-title">${escapeHtml(title)}</p>
+        <p class="atlas-pie-subtitle">${chartRows.length} groups compared</p>
+      </div>
+    </div>
+  `;
+}
+
+function buildSnapshotCenterBarsChart(rows, title) {
+  if (rows.length === 0) {
+    return '<div class="atlas-chart-empty atlas-chart-empty-tight">No ranked comparison is available for this view yet.</div>';
+  }
+
+  return `
+    <div class="atlas-snapshot-center-chart atlas-center-bars">
+      <div class="atlas-center-chart-head">
+        <h4>${escapeHtml(title)}</h4>
+      </div>
+      <div class="atlas-center-bars-list">
+        ${rows
+          .map(
+            (row) => `
+              <article class="atlas-center-bar-row">
+                <div class="atlas-center-bar-copy">
+                  <span class="atlas-party-head">
+                    <span class="atlas-party-swatch" style="background:${row.color}"></span>
+                    <strong>${escapeHtml(row.label)}</strong>
+                  </span>
+                  <span>${escapeHtml(row.primary)}</span>
+                </div>
+                <div class="atlas-center-bar-track">
+                  <span class="atlas-center-bar-fill" style="width:${Math.max(row.value ?? 0, 2)}%; background:${row.color}"></span>
+                </div>
+                <div class="atlas-center-bar-meta">
+                  <span>${escapeHtml(row.secondary ?? "")}</span>
+                  <strong>${formatPct(row.value)}</strong>
+                </div>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+function buildSnapshotCenterGapChart(rows, title) {
+  const comparableRows = rows.filter(
+    (row) => typeof row.seatShare === "number" && typeof row.voteShare === "number"
+  );
+
+  if (comparableRows.length === 0) {
+    return '<div class="atlas-chart-empty atlas-chart-empty-tight">Seat-versus-vote conversion is not available for this view yet.</div>';
+  }
+
+  return `
+    <div class="atlas-snapshot-center-chart atlas-center-gap">
+      <div class="atlas-center-chart-head">
+        <h4>${escapeHtml(title)}</h4>
+      </div>
+      <div class="atlas-gap-grid">
+        ${comparableRows
+          .map((row) => {
+            const seatShare = row.seatShare ?? 0;
+            const voteShare = row.voteShare ?? 0;
+            const left = Math.min(seatShare, voteShare);
+            const right = Math.max(seatShare, voteShare);
+            const gap = seatShare - voteShare;
+            const seatLead = gap >= 0;
+
+            return `
+              <article class="atlas-gap-row">
+                <div class="atlas-gap-head">
+                  <span class="atlas-party-head">
+                    <span class="atlas-party-swatch" style="background:${row.color}"></span>
+                    <strong>${escapeHtml(row.label)}</strong>
+                  </span>
+                  <span class="atlas-gap-delta ${seatLead ? "is-positive" : "is-negative"}">
+                    ${seatLead ? "+" : ""}${formatPct(gap)}
+                  </span>
+                </div>
+                <div class="atlas-gap-track">
+                  <span class="atlas-gap-line" style="left:${left}%; width:${Math.max(right - left, 1.2)}%"></span>
+                  <span class="atlas-gap-dot atlas-gap-dot-vote" style="left:${voteShare}%"></span>
+                  <span class="atlas-gap-dot atlas-gap-dot-seat" style="left:${seatShare}%; background:${row.color}"></span>
+                </div>
+                <div class="atlas-gap-meta">
+                  <span>Vote ${formatPct(voteShare)}</span>
+                  <span>Seat ${formatPct(seatShare)}</span>
+                </div>
+              </article>
+            `;
+          })
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+function buildSnapshotCenterCompareChart(rows, title) {
+  const comparableRows = rows.filter(
+    (row) => typeof row.seatShare === "number" || typeof row.voteShare === "number"
+  );
+
+  if (comparableRows.length === 0) {
+    return '<div class="atlas-chart-empty atlas-chart-empty-tight">Seat and vote comparison is not available for this view yet.</div>';
+  }
+
+  return `
+    <div class="atlas-snapshot-center-chart atlas-center-compare">
+      <div class="atlas-center-chart-head">
+        <h4>${escapeHtml(title)}</h4>
+      </div>
+      <div class="atlas-compare-grid">
+        ${comparableRows
+          .map(
+            (row) => `
+              <article class="atlas-compare-row">
+                <div class="atlas-party-head">
+                  <span class="atlas-party-swatch" style="background:${row.color}"></span>
+                  <h3>${escapeHtml(row.label)}</h3>
+                </div>
+                <div class="atlas-compare-meters">
+                  <div class="atlas-compare-meter">
+                    <div class="atlas-party-meter-head">
+                      <span>Seat</span>
+                      <strong>${formatPct(row.seatShare)}</strong>
+                    </div>
+                    <div class="atlas-rank-track">
+                      <span class="atlas-rank-fill" style="width:${Math.max(row.seatShare ?? 0, 2)}%; background:${row.color}"></span>
+                    </div>
+                  </div>
+                  <div class="atlas-compare-meter">
+                    <div class="atlas-party-meter-head">
+                      <span>Vote</span>
+                      <strong>${formatPct(row.voteShare)}</strong>
+                    </div>
+                    <div class="atlas-rank-track">
+                      <span class="atlas-rank-fill atlas-rank-fill-muted" style="width:${Math.max(row.voteShare ?? 0, 2)}%; background:${row.color}"></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+function buildSnapshotCenterPressureChart(rows, chartType) {
+  if (chartType === "bars") {
+    return `
+      <div class="atlas-snapshot-center-chart atlas-center-pressure">
+        <div class="atlas-center-chart-head">
+          <h4>Pressure comparison</h4>
+        </div>
+        <div class="atlas-rank-list">
+          ${rows
+            .map(
+              (row) => `
+                <article class="atlas-rank-row">
+                  <div class="atlas-rank-copy">
+                    <p class="atlas-rank-primary">${escapeHtml(row.label)}</p>
+                    <p class="atlas-rank-secondary">${escapeHtml(row.detail)}</p>
+                  </div>
+                  <div class="atlas-rank-bar">
+                    <div class="atlas-rank-bar-head">
+                      <span>${escapeHtml(row.value)}</span>
+                      <strong>${Math.round(row.score)}</strong>
+                    </div>
+                    <div class="atlas-rank-track">
+                      <span class="atlas-rank-fill" style="width:${Math.max(row.score, 4)}%"></span>
+                    </div>
+                  </div>
+                </article>
+              `
+            )
+            .join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="atlas-snapshot-center-chart atlas-center-pressure">
+      <div class="atlas-center-chart-head">
+        <h4>Pressure signals</h4>
+      </div>
+      <div class="atlas-pressure-grid">
+        ${rows
+          .map(
+            (row) => `
+              <article class="atlas-pressure-card">
+                <p class="atlas-kpi-label">${escapeHtml(row.label)}</p>
+                <p class="atlas-pressure-value">${escapeHtml(row.value)}</p>
+                <p class="atlas-kpi-detail">${escapeHtml(row.detail)}</p>
+                <div class="atlas-rank-track">
+                  <span class="atlas-rank-fill" style="width:${Math.max(row.score, 4)}%"></span>
+                </div>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+function buildSnapshotUnderCards(rows, mode) {
+  const items = rows.slice(0, 5);
+
+  if (items.length === 0) {
+    return "";
+  }
+
+  return `
+    <div class="atlas-snapshot-under-cards">
+      ${items
+        .map(
+          (row) => `
+            <article class="atlas-snapshot-under-card">
+              <div class="atlas-party-head">
+                <span class="atlas-party-swatch" style="background:${row.color ?? "#8aa4bf"}"></span>
+                <strong>${escapeHtml(row.label)}</strong>
+              </div>
+              <p class="atlas-snapshot-under-value">${escapeHtml(row.primary ?? "Pending")}</p>
+              <dl class="atlas-snapshot-under-stats">
+                <div>
+                  <dt>Seat share</dt>
+                  <dd>${typeof row.seatShare === "number" ? escapeHtml(formatPct(row.seatShare)) : "Pending"}</dd>
+                </div>
+                <div>
+                  <dt>Vote share</dt>
+                  <dd>${typeof row.voteShare === "number" ? escapeHtml(formatPct(row.voteShare)) : "Pending"}</dd>
+                </div>
+              </dl>
+            </article>
+          `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
+function buildUnifiedSnapshotStage(summary, rows, mode, chartType, title, copy) {
+  const centerChart =
+    mode === "pressure"
+      ? buildSnapshotCenterPressureChart(rows, chartType)
+      : chartType === "bars"
+        ? buildSnapshotCenterBarsChart(rows, title)
+        : chartType === "gap"
+          ? buildSnapshotCenterGapChart(rows, title)
+          : chartType === "compare"
+            ? buildSnapshotCenterCompareChart(rows, title)
+            : buildSnapshotCenterDonutChart(rows, title);
+
+  return `
+    <article class="atlas-snapshot-stage atlas-snapshot-stage-unified">
+      <div class="atlas-snapshot-shell">
+        ${buildSnapshotLeftRail(summary, mode, title, copy)}
+        <div class="atlas-snapshot-center">
+          ${centerChart}
+        </div>
+        ${buildSnapshotRightRail(summary, rows, mode)}
+      </div>
+      ${buildSnapshotUnderCards(
+        (summary.topParties ?? []).slice(0, 5).map((row) => ({
+          label: row.party,
+          color: row.color,
+          primary: `${formatNumber(row.seats)} seats`,
+          seatShare: row.seatShare,
+          voteShare: row.voteShare
+        })),
+        mode
+      )}
+    </article>
+  `;
+}
+
+function buildSnapshotPanel(summary, model) {
+  const modes = getSnapshotModes(summary);
+  const requestedMode = model.snapshotView ?? modes[0]?.id ?? "seat-share";
+  const activeMode = modes.some((mode) => mode.id === requestedMode) ? requestedMode : modes[0]?.id ?? "seat-share";
+  const chartTypes = getSnapshotChartTypes(activeMode);
+  const activeChartType = chartTypes.some((item) => item.id === model.snapshotChartType)
+    ? model.snapshotChartType
+    : getSnapshotDefaultChartType(activeMode);
+  const modeTitleMap = {
+    "seat-share": "Seat balance",
+    "vote-share": "Vote balance",
+    coalitions: "Coalition field",
+    pressure: "Pressure points"
+  };
+  const modeCopyMap = {
+    "seat-share": "Use this view to see who controls the seat map and how steep the seat ladder is.",
+    "vote-share": "Use this view to compare raw vote strength against the seat picture.",
+    coalitions: "Use this view to track grouped competition separately from the party table.",
+    pressure: "Use this view to find tight margins, fragmentation, and contest stress."
+  };
+  const stageTitle = getSnapshotStageTitle(activeMode, activeChartType);
+
+  if (activeMode === "pressure") {
+    const pressureRows = buildPressureRows(summary);
+
+    return `
+      <article class="atlas-snapshot-panel">
+        <div class="atlas-snapshot-panel-head">
+          <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
+            <div>
+              <p class="eyebrow">Snapshot board</p>
+              <h3>${escapeHtml(modeTitleMap[activeMode])}</h3>
+            </div>
+            <p class="atlas-card-copy atlas-card-copy-wide">${escapeHtml(modeCopyMap[activeMode])}</p>
+          </div>
+          <div class="atlas-snapshot-switches">
+            <div class="atlas-switch-group">
+              <span class="atlas-switch-label">Metric</span>
+              <div class="atlas-view-switch">
+                ${modes
+                  .map(
+                    (mode) => `
+                      <button
+                        class="atlas-view-button ${mode.id === activeMode ? "is-active" : ""}"
+                        type="button"
+                        data-atlas-snapshot-view="${mode.id}"
+                      >
+                        ${escapeHtml(mode.label)}
+                      </button>
+                    `
+                  )
+                  .join("")}
+              </div>
+            </div>
+            <div class="atlas-switch-group">
+              <span class="atlas-switch-label">Visual</span>
+              <div class="atlas-view-switch">
+                ${chartTypes
+                  .map(
+                    (chartType) => `
+                      <button
+                        class="atlas-view-button ${chartType.id === activeChartType ? "is-active" : ""}"
+                        type="button"
+                        data-atlas-snapshot-chart="${chartType.id}"
+                      >
+                        ${escapeHtml(chartType.label)}
+                      </button>
+                    `
+                  )
+                  .join("")}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="atlas-snapshot-stage-wrap">
+          ${buildUnifiedSnapshotStage(
+            summary,
+            pressureRows.map((row, index) => ({
+              ...row,
+              color: ["#f28b24", "#c03a5b", "#4f80d7", "#7e5bb3"][index % 4]
+            })),
+            activeMode,
+            activeChartType,
+            stageTitle,
+            modeCopyMap[activeMode]
+          )}
+        </div>
+      </article>
+    `;
+  }
+
+  const rows = getSnapshotRows(summary, activeMode);
+
+  return `
+    <article class="atlas-snapshot-panel">
+      <div class="atlas-snapshot-panel-head">
+        <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
+          <div>
+            <p class="eyebrow">Snapshot board</p>
+            <h3>${escapeHtml(modeTitleMap[activeMode])}</h3>
+          </div>
+          <p class="atlas-card-copy atlas-card-copy-wide">${escapeHtml(modeCopyMap[activeMode])}</p>
+        </div>
+        <div class="atlas-snapshot-switches">
+          <div class="atlas-switch-group">
+            <span class="atlas-switch-label">Metric</span>
+            <div class="atlas-view-switch">
+              ${modes
+                .map(
+                  (mode) => `
+                    <button
+                      class="atlas-view-button ${mode.id === activeMode ? "is-active" : ""}"
+                      type="button"
+                      data-atlas-snapshot-view="${mode.id}"
+                    >
+                      ${escapeHtml(mode.label)}
+                    </button>
+                  `
+                )
+                .join("")}
+            </div>
+          </div>
+          <div class="atlas-switch-group">
+            <span class="atlas-switch-label">Visual</span>
+            <div class="atlas-view-switch">
+              ${chartTypes
+                .map(
+                  (chartType) => `
+                    <button
+                      class="atlas-view-button ${chartType.id === activeChartType ? "is-active" : ""}"
+                      type="button"
+                      data-atlas-snapshot-chart="${chartType.id}"
+                    >
+                      ${escapeHtml(chartType.label)}
+                    </button>
+                  `
+                )
+                .join("")}
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="atlas-snapshot-stage-wrap">
+          ${buildUnifiedSnapshotStage(
+            summary,
+            rows,
+            activeMode,
+            activeChartType,
+            stageTitle,
+            modeCopyMap[activeMode]
+          )}
+        </div>
+      </article>
+  `;
+}
+
 function buildAtlasDashboardMarkup(model) {
   const states = [...(model.states ?? [])].sort((left, right) => left.name.localeCompare(right.name));
   const years = getAtlasYears(states, model.selection.state, model.selection.house);
@@ -1187,8 +2348,6 @@ function buildAtlasDashboardMarkup(model) {
   const districtMetrics = model.districts?.metrics ?? {};
   const constituencyRowCount =
     model.constituencies.coverage.liveRows ?? model.constituencies.coverage.seededRows ?? 0;
-  const fragmentationLabel =
-    typeof summary.fragmentationIndex === "number" ? summary.fragmentationIndex.toFixed(2) : "Pending";
   const voteShareCopy = summary.voteShareAvailable
     ? "Vote share movement is separated from seat conversion so the page behaves like a campaign review board, not a directory."
     : "Vote share will appear here wherever complete candidate totals are available for the selected cycle.";
@@ -1207,6 +2366,7 @@ function buildAtlasDashboardMarkup(model) {
       : districtCoverage.note || "District intelligence is not available for this selection yet.";
   const showDistrictSection = model.selection.house === "VS";
   const allianceSummary = summary.allianceSummary ?? { available: false, rows: [], note: "" };
+  const snapshotPanelMarkup = buildSnapshotPanel(summary, model);
   const allianceLineupEntries = allianceSummary.available
     ? allianceSummary.rows.flatMap((alliance) => {
         const allianceMembers = (alliance.parties ?? []).map((member) =>
@@ -1329,10 +2489,10 @@ function buildAtlasDashboardMarkup(model) {
     : "";
   const allianceMarkup = allianceSummary.available
     ? `
-      <div class="atlas-alliance-strip">
+      <article class="atlas-table-card atlas-table-card-wide atlas-coalition-board">
         <div class="atlas-card-head atlas-card-head-stack atlas-card-head-compact">
           <div>
-            <p class="eyebrow">Alliance Read</p>
+            <p class="eyebrow">Coalition View</p>
             <h3>Coalition pressure</h3>
           </div>
           <p class="atlas-card-copy">${escapeHtml(allianceSummary.note || "Coalition performance is summarized for this selection.")}</p>
@@ -1341,7 +2501,7 @@ function buildAtlasDashboardMarkup(model) {
           ${allianceCards}
         </div>
         ${allianceLineupMarkup}
-      </div>
+      </article>
     `
     : "";
   const electionTableRows = historyPage.rows
@@ -1467,23 +2627,6 @@ function buildAtlasDashboardMarkup(model) {
     `
     : "";
 
-  const topPartyCards = summary.topParties
-    .slice(0, 5)
-    .map(
-      (party) => `
-        <article class="atlas-party-card">
-          <div class="atlas-party-head">
-            <span class="atlas-party-swatch" style="background:${party.color}"></span>
-            <h3>${escapeHtml(party.party)}</h3>
-          </div>
-          <p class="atlas-party-value">${party.seats} seats</p>
-          <p class="atlas-party-meta">${formatPct(party.seatShare)} seat share</p>
-          <p class="atlas-party-meta">${formatPct(party.voteShare)} vote share</p>
-        </article>
-      `
-    )
-    .join("");
-
   const kpiCards = summary.kpis
     .map(
       (item) => `
@@ -1495,8 +2638,19 @@ function buildAtlasDashboardMarkup(model) {
       `
     )
     .join("");
+  const runtimeErrorMarkup = model.runtimeError
+    ? `
+      <div class="atlas-error-inline" role="status">
+        <p class="eyebrow">Selection update issue</p>
+        <h3>Could not load the new selection</h3>
+        <p>${escapeHtml(model.runtimeError)}</p>
+      </div>
+    `
+    : "";
 
   return `
+    ${buildAtlasAnalystHeader(model, summary, states)}
+
     <div class="atlas-toolbar">
       <label class="atlas-control">
         <span>State</span>
@@ -1547,25 +2701,18 @@ function buildAtlasDashboardMarkup(model) {
       </div>
     </div>
 
+    ${buildAtlasHelpStrip(model)}
+    ${runtimeErrorMarkup}
+
     <div class="atlas-kpi-grid">
       ${kpiCards}
     </div>
 
-    <div class="atlas-story-grid">
-      <article class="atlas-story-card">
-        <p class="eyebrow">State Snapshot</p>
-        <h2>${escapeHtml(model.selection.year)} ${escapeHtml(summary.houseLabel)} read</h2>
-        <p>${escapeHtml(summary.snapshot)}</p>
-        ${allianceMarkup}
-        <div class="atlas-story-meta">
-          <span>Fragmentation index ${escapeHtml(fragmentationLabel)}</span>
-          <span>${escapeHtml(formatNumber(summary.closeContests))} close contests</span>
-        </div>
-      </article>
-      <div class="atlas-party-grid">
-        ${topPartyCards}
-      </div>
-    </div>
+    <section class="atlas-snapshot-stack">
+      ${snapshotPanelMarkup}
+    </section>
+
+    ${allianceMarkup}
 
     <div class="atlas-chart-grid">
       <article class="atlas-chart-card">
@@ -1885,12 +3032,35 @@ function bindAtlasEvents(root, model, refresh, render) {
   const houseButtons = root.querySelectorAll("[data-atlas-house]");
   const jumpButtons = root.querySelectorAll("[data-atlas-jump-year]");
   const pageButtons = root.querySelectorAll("[data-atlas-page-target]");
+  const snapshotViewButtons = root.querySelectorAll("[data-atlas-snapshot-view]");
+  const snapshotChartButtons = root.querySelectorAll("[data-atlas-snapshot-chart]");
+  const helpToggleButton = root.querySelector("[data-atlas-help-toggle]");
+  const resetToOverview = () => {
+    if (model.routeState?.type === "overview") {
+      return;
+    }
+
+    model.routeState = {
+      type: "overview",
+      selection: model.selection,
+      stateLabel: model.routeState?.stateLabel ?? ""
+    };
+    model.constituencyDetail = null;
+    model.districtDetail = null;
+
+    const overviewPath = buildAtlasOverviewPath(model.selection);
+
+    if (window.location.pathname !== overviewPath) {
+      window.history.replaceState({}, "", overviewPath);
+    }
+  };
 
   if (stateSelect instanceof HTMLSelectElement) {
     stateSelect.addEventListener("change", async () => {
       model.selection.state = stateSelect.value;
       const years = getAtlasYears(model.states, model.selection.state, model.selection.house);
       model.selection.year = years[0] ?? model.selection.year;
+      resetToOverview();
       model.pagination.history = 1;
       model.pagination.districts = 1;
       model.pagination.constituencies = 1;
@@ -1903,6 +3073,7 @@ function bindAtlasEvents(root, model, refresh, render) {
   if (yearSelect instanceof HTMLSelectElement) {
     yearSelect.addEventListener("change", async () => {
       model.selection.year = Number.parseInt(yearSelect.value, 10);
+      resetToOverview();
       model.pagination.history = 1;
       model.pagination.districts = 1;
       model.pagination.constituencies = 1;
@@ -1927,6 +3098,7 @@ function bindAtlasEvents(root, model, refresh, render) {
       model.selection.house = house;
       const years = getAtlasYears(model.states, model.selection.state, house);
       model.selection.year = years[0] ?? model.selection.year;
+      resetToOverview();
       model.pagination.history = 1;
       model.pagination.districts = 1;
       model.pagination.constituencies = 1;
@@ -1949,6 +3121,7 @@ function bindAtlasEvents(root, model, refresh, render) {
       }
 
       model.selection.year = nextYear;
+      resetToOverview();
       model.pagination.history = 1;
       model.pagination.districts = 1;
       model.pagination.constituencies = 1;
@@ -2005,15 +3178,60 @@ function bindAtlasEvents(root, model, refresh, render) {
     });
   });
 
+  snapshotViewButtons.forEach((button) => {
+    if (!(button instanceof HTMLButtonElement)) {
+      return;
+    }
+
+    button.addEventListener("click", () => {
+      const nextView = button.getAttribute("data-atlas-snapshot-view");
+
+      if (!nextView || nextView === model.snapshotView) {
+        return;
+      }
+
+      model.snapshotView = nextView;
+      model.snapshotChartType = getSnapshotDefaultChartType(nextView);
+      render();
+    });
+  });
+
+  snapshotChartButtons.forEach((button) => {
+    if (!(button instanceof HTMLButtonElement)) {
+      return;
+    }
+
+    button.addEventListener("click", () => {
+      const nextChartType = button.getAttribute("data-atlas-snapshot-chart");
+
+      if (!nextChartType || nextChartType === model.snapshotChartType) {
+        return;
+      }
+
+      model.snapshotChartType = nextChartType;
+      render();
+    });
+  });
+
   if (exportButton instanceof HTMLButtonElement) {
     exportButton.addEventListener("click", () => downloadAtlasCsv(model));
+  }
+
+  if (helpToggleButton instanceof HTMLButtonElement) {
+    helpToggleButton.addEventListener("click", () => {
+      model.helpExpanded = !model.helpExpanded;
+      render();
+    });
   }
 
   bindAtlasChartInteractions(root);
 }
 
 async function initElectionAtlas(root, bootstrap) {
-  const defaultSelection = bootstrap.selection ?? { state: "bihar", house: "VS", year: 2020 };
+  const fallbackState = bootstrap.states?.[0] ?? { slug: "bihar", defaultHouse: "VS", yearsByHouse: { VS: [2020], LS: [] } };
+  const fallbackHouse = fallbackState.defaultHouse ?? "VS";
+  const fallbackYear = fallbackState.yearsByHouse?.[fallbackHouse]?.[0] ?? 2020;
+  const defaultSelection = bootstrap.selection ?? { state: fallbackState.slug, house: fallbackHouse, year: fallbackYear };
   const getStateLabel = (stateSlug) =>
     bootstrap.states?.find((entry) => entry.slug === stateSlug)?.name ?? stateSlug;
   const model = {
@@ -2029,6 +3247,10 @@ async function initElectionAtlas(root, bootstrap) {
     routeState: null,
     searchTerm: "",
     districtSearchTerm: "",
+    helpExpanded: false,
+    runtimeError: null,
+    snapshotView: "seat-share",
+    snapshotChartType: getSnapshotDefaultChartType("seat-share"),
     pagination: {
       history: 1,
       districts: 1,
@@ -2036,6 +3258,20 @@ async function initElectionAtlas(root, bootstrap) {
     }
   };
   let requestSequence = 0;
+  let refreshController = null;
+  let lastStableState =
+    bootstrap.summary && bootstrap.constituencies
+      ? {
+          selection: { ...defaultSelection },
+          summary: bootstrap.summary,
+          elections: bootstrap.elections ?? [],
+          constituencies: bootstrap.constituencies,
+          districts: bootstrap.districts ?? null,
+          constituencyDetail: null,
+          districtDetail: null,
+          routeState: null
+        }
+      : null;
 
   const render = (focusState = null) => {
     root.innerHTML = buildAtlasAppMarkup(model);
@@ -2071,6 +3307,45 @@ async function initElectionAtlas(root, bootstrap) {
       stateLabel: getStateLabel(parsed.selection.state)
     };
     model.selection = parsed.selection;
+  };
+
+  const snapshotStableState = () => ({
+    selection: { ...model.selection },
+    summary: model.summary,
+    elections: model.elections,
+    constituencies: model.constituencies,
+    districts: model.districts,
+    constituencyDetail: model.constituencyDetail,
+    districtDetail: model.districtDetail,
+    routeState: model.routeState
+      ? {
+          ...model.routeState,
+          selection: model.routeState.selection ? { ...model.routeState.selection } : model.routeState.selection
+        }
+      : null
+  });
+
+  const restoreStableState = () => {
+    if (!lastStableState) {
+      return false;
+    }
+
+    model.selection = { ...lastStableState.selection };
+    model.summary = lastStableState.summary;
+    model.elections = lastStableState.elections;
+    model.constituencies = lastStableState.constituencies;
+    model.districts = lastStableState.districts;
+    model.constituencyDetail = lastStableState.constituencyDetail;
+    model.districtDetail = lastStableState.districtDetail;
+    model.routeState = lastStableState.routeState
+      ? {
+          ...lastStableState.routeState,
+          selection: lastStableState.routeState.selection
+            ? { ...lastStableState.routeState.selection }
+            : lastStableState.routeState.selection
+        }
+      : { type: "overview", selection: { ...lastStableState.selection }, stateLabel: getStateLabel(lastStableState.selection.state) };
+    return true;
   };
 
   const loadOverviewDistricts = async (params, activeRequest) => {
@@ -2110,6 +3385,9 @@ async function initElectionAtlas(root, bootstrap) {
   const refresh = async () => {
     requestSequence += 1;
     const activeRequest = requestSequence;
+    refreshController?.abort();
+    refreshController = new AbortController();
+    const { signal } = refreshController;
     root.classList.add("is-loading");
 
     try {
@@ -2128,8 +3406,8 @@ async function initElectionAtlas(root, bootstrap) {
           slug: model.routeState.slug ?? ""
         });
         const [detailResponse, summaryResponse] = await Promise.all([
-          fetch(`/api/election-atlas/constituency-detail?${detailParams.toString()}`),
-          fetch(`/api/election-atlas/state-summary?${params.toString()}`)
+          fetch(`/api/election-atlas/constituency-detail?${detailParams.toString()}`, { signal }),
+          fetch(`/api/election-atlas/state-summary?${params.toString()}`, { signal })
         ]);
 
         if (!detailResponse.ok || !summaryResponse.ok) {
@@ -2148,8 +3426,8 @@ async function initElectionAtlas(root, bootstrap) {
           slug: model.routeState.slug ?? ""
         });
         const [detailResponse, summaryResponse] = await Promise.all([
-          fetch(`/api/election-atlas/district-detail?${detailParams.toString()}`),
-          fetch(`/api/election-atlas/state-summary?${params.toString()}`)
+          fetch(`/api/election-atlas/district-detail?${detailParams.toString()}`, { signal }),
+          fetch(`/api/election-atlas/state-summary?${params.toString()}`, { signal })
         ]);
 
         if (!detailResponse.ok || !summaryResponse.ok) {
@@ -2164,9 +3442,9 @@ async function initElectionAtlas(root, bootstrap) {
         payloads = { detailData, summaryData };
       } else {
         const [electionsResponse, summaryResponse, constituenciesResponse] = await Promise.all([
-          fetch(`/api/election-atlas/elections?${params.toString()}`),
-          fetch(`/api/election-atlas/state-summary?${params.toString()}`),
-          fetch(`/api/election-atlas/constituencies?${params.toString()}`)
+          fetch(`/api/election-atlas/elections?${params.toString()}`, { signal }),
+          fetch(`/api/election-atlas/state-summary?${params.toString()}`, { signal }),
+          fetch(`/api/election-atlas/constituencies?${params.toString()}`, { signal })
         ]);
 
         if (!electionsResponse.ok || !summaryResponse.ok || !constituenciesResponse.ok) {
@@ -2186,6 +3464,11 @@ async function initElectionAtlas(root, bootstrap) {
         return;
       }
 
+      if (!payloads.summaryData?.summary) {
+        throw new Error("This state selection is not ready yet.");
+      }
+
+      model.runtimeError = null;
       model.selection = payloads.summaryData.selection;
       model.pipeline = payloads.summaryData.pipeline ?? model.pipeline;
       model.summary = payloads.summaryData.summary;
@@ -2231,8 +3514,10 @@ async function initElectionAtlas(root, bootstrap) {
                 },
                 metrics: {},
                 districts: []
-              };
+            };
       }
+
+      lastStableState = snapshotStableState();
 
       render();
 
@@ -2240,15 +3525,18 @@ async function initElectionAtlas(root, bootstrap) {
         loadOverviewDistricts(params, activeRequest);
       }
     } catch (error) {
-      root.innerHTML = `
-        <div class="atlas-error">
-          <p class="eyebrow">Atlas error</p>
-          <h3>Refresh failed</h3>
-          <p>${escapeHtml(error?.message ?? "The election atlas could not load.")}</p>
-        </div>
-      `;
+      if (activeRequest !== requestSequence || error?.name === "AbortError") {
+        return;
+      }
+
+      console.error("Election Atlas refresh failed", error);
+      restoreStableState();
+      model.runtimeError = error?.message ?? "The election atlas could not load the selected slice.";
+      render();
     } finally {
-      root.classList.remove("is-loading");
+      if (activeRequest === requestSequence) {
+        root.classList.remove("is-loading");
+      }
     }
   };
 

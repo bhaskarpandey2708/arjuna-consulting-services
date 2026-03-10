@@ -2147,12 +2147,42 @@ function pickPreferredRealSlice(stateSlug) {
   })[0];
 }
 
+function pickGlobalPreferredRealSlice() {
+  const candidates = getAvailableStateConfigs().flatMap((stateConfig) =>
+    ["VS", "LS"]
+      .flatMap((house) => getRealSlicesForSelection(stateConfig.slug, house))
+      .map((slice) => ({ slice, stateConfig }))
+  );
+
+  if (candidates.length === 0) {
+    return null;
+  }
+
+  return [...candidates].sort((left, right) => {
+    const scoreDelta = scoreDefaultSlice(right.slice, right.stateConfig) - scoreDefaultSlice(left.slice, left.stateConfig);
+
+    if (scoreDelta !== 0) {
+      return scoreDelta;
+    }
+
+    if (right.slice.year !== left.slice.year) {
+      return right.slice.year - left.slice.year;
+    }
+
+    if (right.slice.house !== left.slice.house) {
+      return right.slice.house === right.stateConfig.defaultHouse ? 1 : -1;
+    }
+
+    return left.stateConfig.name.localeCompare(right.stateConfig.name);
+  })[0]?.slice ?? null;
+}
+
 function getSelectionDisplayName(selection) {
   return getStateConfig(selection.state)?.name ?? selection.state;
 }
 
 function buildSeatTableLeaderLine(summary, challenger) {
-  const leaderLine = `${summary.winnerParty} currently tops the party seat table with ${summary.winnerSeats} seats`;
+  const leaderLine = `${summary.winnerParty} currently holds the most seats with ${summary.winnerSeats} wins`;
 
   if (!challenger) {
     return `${leaderLine}.`;
@@ -2301,12 +2331,7 @@ function buildKpis(summary, topParties, mode = "seed", allianceSummary = null) {
     {
       label: "Total seats",
       value: String(summary.totalSeats),
-      detail:
-        mode === "indiavotes"
-          ? "Live constituency-result coverage"
-          : mode === "lokdhaba"
-            ? "Normalized LokDhaba candidate rows"
-            : "Current geography version"
+      detail: "Constituencies in the selected election map"
     },
     {
       label: "Most seats secured",
@@ -2316,22 +2341,12 @@ function buildKpis(summary, topParties, mode = "seed", allianceSummary = null) {
     {
       label: "Turnout",
       value: `${summary.turnoutPct.toFixed(1)}%`,
-      detail:
-        mode === "indiavotes"
-          ? "Derived from total votes and electors in the staged extract"
-          : mode === "lokdhaba"
-            ? "Derived from LokDhaba aggregate candidate rows"
-          : summary.house === "VS"
-            ? "Seeded Assembly participation read"
-            : "Seeded Lok Sabha participation read"
+      detail: "Participation across the selected map"
     },
     {
       label: "Close contests",
       value: String(summary.closeContests),
-      detail:
-        mode === "indiavotes" || mode === "lokdhaba"
-          ? "Seats with margin under a five-point threshold"
-          : "Modelled seats under a tight margin threshold"
+      detail: "Seats with margin under a five-point threshold"
     },
     {
       label: allianceLeader ? "Alliance edge" : "Lead over #2",
@@ -2361,10 +2376,10 @@ function buildAllianceSnapshotLine(allianceSummary) {
   }
 
   if (!challenger) {
-    return ` Coalition read currently puts ${leader.label} on ${leader.seatShare.toFixed(1)}% seat share.`;
+    return ` Coalition balance currently favors ${leader.label} on ${leader.seatShare.toFixed(1)}% of seats.`;
   }
 
-  return ` Coalition read currently puts ${leader.label} at ${leader.seatShare.toFixed(1)}% seat share versus ${challenger.label} at ${challenger.seatShare.toFixed(1)}%.`;
+  return ` Coalition balance currently puts ${leader.label} at ${leader.seatShare.toFixed(1)}% of seats versus ${challenger.label} at ${challenger.seatShare.toFixed(1)}%.`;
 }
 
 function buildSeedSnapshot(summary, topParties, geographyVersion, allianceSummary = null) {
@@ -2372,7 +2387,7 @@ function buildSeedSnapshot(summary, topParties, geographyVersion, allianceSummar
   const swingDirection = summary.swingPoints > 0 ? "up" : summary.swingPoints < 0 ? "down" : "flat";
   const swingAbs = Math.abs(summary.swingPoints).toFixed(1);
 
-  return `${getSeedStateConfig(summary.state).name}'s ${summary.year} ${houseLabels[summary.house]} board remains party-level, not alliance-aggregated. ${buildSeatTableLeaderLine(summary, challenger)}${buildAllianceSnapshotLine(allianceSummary)} That currently converts to ${summary.winnerSeatShare.toFixed(1)}% seat share and ${summary.winnerVoteShare.toFixed(1)}% vote share.${challenger ? ` ${challenger.party} remains the immediate pressure point, which is why the race still carries ${summary.closeContests} close contests.` : ""} Geography is locked to ${geographyVersion.shortLabel}, so the layout is already version-aware for split-state reporting. The winner's momentum reads ${swingDirection}${summary.swingPoints === 0 ? "" : ` by ${swingAbs} points`} against the prior cycle, while a median margin of ${summary.medianMarginPct.toFixed(1)} points keeps the map tactically live.`;
+  return `${getSeedStateConfig(summary.state).name}'s ${summary.year} ${houseLabels[summary.house]} read opens with a party-led seat picture. ${buildSeatTableLeaderLine(summary, challenger)}${buildAllianceSnapshotLine(allianceSummary)} That converts to ${summary.winnerSeatShare.toFixed(1)}% seat share and ${summary.winnerVoteShare.toFixed(1)}% vote share.${challenger ? ` ${summary.closeContests} contests still sit inside the tight-margin bucket, with ${challenger.party} as the nearest pressure point.` : ""} Turnout reads ${summary.turnoutPct.toFixed(1)}%, the median winning margin is ${summary.medianMarginPct.toFixed(1)} points, and momentum is ${swingDirection}${summary.swingPoints === 0 ? "" : ` by ${swingAbs} points`} versus the prior cycle.`;
 }
 
 function buildRealSnapshot(summary, topParties, geographyVersion, allianceSummary = null) {
@@ -2386,7 +2401,7 @@ function buildRealSnapshot(summary, topParties, geographyVersion, allianceSummar
           : "flat versus the prior extracted cycle"
       : "not yet comparable across a prior extracted cycle";
 
-  return `${getSelectionDisplayName(summary)}'s ${summary.year} ${houseLabels[summary.house]} board is party-level, with alliance rollups shown separately from the seat table. ${buildSeatTableLeaderLine(summary, challenger)}${buildAllianceSnapshotLine(allianceSummary)} That converts to ${summary.winnerSeatShare.toFixed(1)}% seat share across ${summary.totalSeats} constituencies.${challenger ? ` ${summary.closeContests} contests remain inside the tight-margin bucket.` : ""} Geography is keyed to ${geographyVersion.shortLabel}, which keeps split-state handling explicit. Turnout reads ${summary.turnoutPct.toFixed(1)}%, the median winning margin is ${summary.medianMarginPct.toFixed(1)} points, and current winner momentum reads ${swingPrefix}.`;
+  return `${getSelectionDisplayName(summary)}'s ${summary.year} ${houseLabels[summary.house]} read opens with the clearest seat picture first. ${buildSeatTableLeaderLine(summary, challenger)}${buildAllianceSnapshotLine(allianceSummary)} That converts to ${summary.winnerSeatShare.toFixed(1)}% seat share across ${summary.totalSeats} constituencies.${challenger ? ` ${summary.closeContests} contests remain inside the tight-margin bucket.` : ""} Turnout reads ${summary.turnoutPct.toFixed(1)}%, the median winning margin is ${summary.medianMarginPct.toFixed(1)} points, and momentum currently reads ${swingPrefix}.`;
 }
 
 function buildRealSummary(selection, slice) {
@@ -2671,8 +2686,7 @@ function getElectionAtlasDistrictMart(filters = {}) {
 
 export function getElectionAtlasDefaultSelection() {
   if (hasSourceCoverage()) {
-    const preferredState = getStateConfig(defaultSelection.state);
-    const preferredSlice = pickPreferredRealSlice(preferredState.slug);
+    const preferredSlice = pickGlobalPreferredRealSlice();
 
     if (preferredSlice) {
       return normalizeSelection({
@@ -2682,9 +2696,20 @@ export function getElectionAtlasDefaultSelection() {
       });
     }
 
+    const preferredState = getStateConfig(defaultSelection.state);
+    const preferredStateSlice = pickPreferredRealSlice(preferredState.slug);
+
+    if (preferredStateSlice) {
+      return normalizeSelection({
+        state: preferredStateSlice.selectionKey,
+        house: preferredStateSlice.house,
+        year: preferredStateSlice.year
+      });
+    }
+
     return normalizeSelection({
-      state: preferredState.slug,
-      house: preferredState.defaultHouse
+      state: getAvailableStateConfigs()[0]?.slug ?? defaultSelection.state,
+      house: getAvailableStateConfigs()[0]?.defaultHouse ?? defaultSelection.house
     });
   }
 
